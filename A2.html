@@ -736,7 +736,7 @@ function openLesson(number) {
     if (number === 1) {
 
         window.location.href =
-            "Lesson1-A2.html";
+            "lesson1-A2.html";
 
         return;
 
@@ -747,7 +747,7 @@ function openLesson(number) {
 
     const previousCompleted =
         localStorage.getItem(
-            "a2Lesson" + (number - 1) + "Completed"
+            "a2lesson" + (number - 1) + "Completed"
         ) === "true";
 
 
@@ -765,7 +765,7 @@ function openLesson(number) {
     /* فتح ملف الدرس الصحيح */
 
     window.location.href =
-        "Lesson" + number + "-A2.html";
+        "lesson" + number + "-A2.html";
 
 }
 
@@ -779,7 +779,7 @@ function openFinalTest() {
 
         if (
             localStorage.getItem(
-                "a2Lesson" + i + "Completed"
+                "a2lesson" + i + "Completed"
             ) !== "true"
         ) {
 
