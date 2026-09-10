@@ -230,7 +230,7 @@
 <div class="container">
 
     <!-- Back to A2 -->
-    <a href="a2.html" class="back-top">🏠 العودة إلى A2</a>
+    <a href="A2.html" class="back-top">🏠 العودة إلى A2</a>
 
     <!-- Section 1 -->
     <div class="section">
@@ -799,7 +799,7 @@
     </div>
 
     <!-- Bottom back button -->
-    <a href="a2.html" class="back-btn">🏠 العودة إلى صفحة A2</a>
+    <a href="A2.html" class="back-btn">🏠 العودة إلى صفحة A2</a>
 
 </div>
 
@@ -850,6 +850,13 @@
             }
         }
 
+        /* قفل اختيارات الاختبار بعد التصحيح */
+        document.querySelectorAll(
+            '.quiz-question input[type="radio"]'
+        ).forEach(function(input) {
+            input.disabled = true;
+        });
+
         document.getElementById("checkBtn").style.display = "none";
 
         const result = document.getElementById("result");
@@ -873,7 +880,7 @@
                 🔓 تم فتح Lesson 7.
                 ${resultHTML}
 
-                <a href="Lesson7-A2.html" class="next-btn">
+                <a href="lesson7-A2.html" class="next-btn">
                     🔓 الانتقال إلى Lesson 7 - Reflexive Verben
                 </a>
             `;
@@ -894,11 +901,31 @@
 
                 <br>
 
-                <button class="retry" onclick="location.reload()">
+                <button class="retry" onclick="retryQuiz()">
                     🔄 إعادة الاختبار
                 </button>
             `;
         }
+    }
+
+    /* إعادة الاختبار بدون إعادة تحميل الصفحة */
+    function retryQuiz() {
+
+        document.querySelectorAll(
+            '.quiz-question input[type="radio"]'
+        ).forEach(function(input) {
+
+            input.disabled = false;
+            input.checked = false;
+
+        });
+
+        document.getElementById("checkBtn").style.display = "block";
+
+        const result = document.getElementById("result");
+
+        result.innerHTML = "";
+        result.className = "";
     }
 
 </script>

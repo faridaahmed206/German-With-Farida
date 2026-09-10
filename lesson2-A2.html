@@ -103,6 +103,11 @@
             background: #38589c;
         }
 
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
         #result {
             margin-top: 20px;
             padding: 15px;
@@ -471,6 +476,11 @@
     <div class="box">
         <h2>🎯 اختبار الدرس</h2>
 
+        <p>
+            أجب عن الأسئلة الخمسة.
+            تحتاج إلى <b>3 إجابات صحيحة من 5</b> للنجاح.
+        </p>
+
         <div class="question">
             <p><b>1. ما التركيب الصحيح لـ Perfekt؟</b></p>
 
@@ -488,6 +498,8 @@
                 <input type="radio" name="q1" value="c">
                 werden + Infinitiv
             </label>
+
+            <div id="feedback1"></div>
         </div>
 
         <div class="question">
@@ -507,6 +519,8 @@
                 <input type="radio" name="q2" value="c">
                 Ich bin Deutsch gelernt.
             </label>
+
+            <div id="feedback2"></div>
         </div>
 
         <div class="question">
@@ -526,6 +540,8 @@
                 <input type="radio" name="q3" value="c">
                 lernen
             </label>
+
+            <div id="feedback3"></div>
         </div>
 
         <div class="question">
@@ -545,6 +561,8 @@
                 <input type="radio" name="q4" value="c">
                 Ich bin nach Hause gehen.
             </label>
+
+            <div id="feedback4"></div>
         </div>
 
         <div class="question">
@@ -564,22 +582,32 @@
                 <input type="radio" name="q5" value="c">
                 بعد الفاعل مباشرة دائمًا
             </label>
+
+            <div id="feedback5"></div>
         </div>
 
         <button onclick="checkQuiz()" id="checkButton">
             ✅ تصحيح الاختبار
         </button>
 
+        <button
+            onclick="retryQuiz()"
+            id="retryButton"
+            class="retry"
+            style="display:none;">
+            🔄 إعادة الاختبار
+        </button>
+
         <div id="result"></div>
 
-        <a href="Lesson3-A2.html" id="nextButton" class="next">
+        <a href="lesson3-A2.html" id="nextButton" class="next">
             ➡️ الانتقال إلى الدرس الثالث
         </a>
 
     </div>
 
     <div style="text-align:center; margin:25px;">
-        <a href="a2.html" class="back">
+        <a href="A2.html" class="back">
             🔙 الرجوع إلى مستوى A2
         </a>
     </div>
@@ -589,43 +617,34 @@
 
 <script>
 
+let quizSubmitted = false;
+
+const answers = {
+    q1: "b",
+    q2: "b",
+    q3: "b",
+    q4: "b",
+    q5: "a"
+};
+
+const correctText = {
+    q1: "haben / sein + Partizip II",
+    q2: "Ich habe Deutsch gelernt.",
+    q3: "gelernt",
+    q4: "Ich bin nach Hause gegangen.",
+    q5: "في نهاية الجملة"
+};
+
+
 function checkQuiz() {
 
-    const answers = {
-        q1: "b",
-        q2: "b",
-        q3: "b",
-        q4: "b",
-        q5: "a"
-    };
+    if (quizSubmitted) {
+        return;
+    }
 
-    const correctText = {
-        q1: "haben / sein + Partizip II",
-        q2: "Ich habe Deutsch gelernt.",
-        q3: "gelernt",
-        q4: "Ich bin nach Hause gegangen.",
-        q5: "في نهاية الجملة"
-    };
+    quizSubmitted = true;
 
     let score = 0;
-    let resultHTML = "";
-
-    /*
-       منع تغيير الإجابات بعد التصحيح
-    */
-
-    document.querySelectorAll(
-        'input[type="radio"]'
-    ).forEach(function(input) {
-
-        input.disabled = true;
-
-    });
-
-
-    /*
-       تصحيح كل سؤال
-    */
 
     for (let question in answers) {
 
@@ -633,18 +652,23 @@ function checkQuiz() {
             'input[name="' + question + '"]:checked'
         );
 
+        const inputs = document.querySelectorAll(
+            'input[name="' + question + '"]'
+        );
+
+        // قفل الاختيارات بعد التصحيح
+        inputs.forEach(function(input) {
+            input.disabled = true;
+        });
+
         const questionNumber =
             question.replace("q", "");
 
-        let userAnswer =
-            selected
-                ? selected.parentElement.innerText.trim()
-                : "لم يتم اختيار إجابة";
+        const feedback =
+            document.getElementById(
+                "feedback" + questionNumber
+            );
 
-
-        /*
-           الإجابة الصحيحة
-        */
 
         if (
             selected &&
@@ -653,151 +677,178 @@ function checkQuiz() {
 
             score++;
 
-            resultHTML += `
-                <div class="answer-box">
-
-                    <p class="correct-answer">
-                        ✅ السؤال ${questionNumber}: إجابة صحيحة!
-                    </p>
-
-                    <p>
-                        إجابتك:
-                        <strong>${userAnswer}</strong>
-                    </p>
-
-                </div>
-            `;
+            feedback.innerHTML =
+                '<p class="correct-answer">' +
+                '✅ إجابة صحيحة!' +
+                '</p>';
 
         } else {
 
-            resultHTML += `
-                <div class="answer-box">
+            let userAnswer = selected
+                ? selected.parentElement.innerText.trim()
+                : "لم يتم اختيار إجابة";
 
-                    <p class="wrong-answer">
-                        ❌ السؤال ${questionNumber}: إجابة خاطئة.
-                    </p>
+            feedback.innerHTML =
+                '<p class="wrong-answer">' +
+                '❌ إجابة خاطئة.' +
+                '</p>' +
 
-                    <p>
-                        إجابتك:
-                        <strong>${userAnswer}</strong>
-                    </p>
+                '<p>' +
+                'إجابتك: <strong>' +
+                userAnswer +
+                '</strong>' +
+                '</p>' +
 
-                    <p>
-                        ✅ الإجابة الصحيحة:
-                        <strong>${correctText[question]}</strong>
-                    </p>
-
-                </div>
-            `;
+                '<p class="correct-answer">' +
+                '✅ الإجابة الصحيحة: ' +
+                '<strong>' +
+                correctText[question] +
+                '</strong>' +
+                '</p>';
         }
     }
 
 
-    /*
-       النتيجة النهائية
-    */
+    const result =
+        document.getElementById("result");
 
-    resultHTML += `
-        <hr>
-        <h3>🎯 نتيجتك النهائية: ${score} / 5</h3>
-    `;
+    const checkButton =
+        document.getElementById("checkButton");
+
+    const retryButton =
+        document.getElementById("retryButton");
+
+    const nextButton =
+        document.getElementById("nextButton");
 
 
-    /*
-       النجاح
-    */
+    result.style.display = "block";
 
+    checkButton.style.display = "none";
+
+
+    // النجاح
     if (score >= 3) {
 
-        /*
-           حفظ إكمال الدرس
-        */
+        result.className = "success";
 
+        result.innerHTML =
+            "<h3>🎉 مبروك! لقد نجحت!</h3>" +
+            "<p>درجتك: <b>" +
+            score +
+            " / 5</b></p>" +
+
+            '<div class="save-message">' +
+            '💾 تم حفظ تقدمك بنجاح!' +
+            '<br><br>' +
+            '✅ Lesson 2 مكتمل.' +
+            '<br>' +
+            '🔓 تم فتح Lesson 3.' +
+            '</div>';
+
+        // حفظ إكمال الدرس
         localStorage.setItem(
             "a2Lesson2Completed",
             "true"
         );
 
+        // إظهار الدرس التالي
+        nextButton.style.display =
+            "inline-block";
 
-        resultHTML += `
-            <div class="save-message">
-                💾 تم حفظ تقدمك بنجاح!
-                <br><br>
-                ✅ Lesson 2 مكتمل.
-                <br>
-                🔓 تم فتح Lesson 3.
-            </div>
-
-            <p class="correct-answer">
-                🎉 مبروك! لقد اجتزت الاختبار.
-            </p>
-        `;
-
-
-        document.getElementById(
-            "nextButton"
-        ).style.display = "inline-block";
-
-
-    } else {
-
-        /*
-           لم ينجح
-        */
-
-        resultHTML += `
-            <p class="wrong-answer">
-                ❌ لم تجتز الاختبار.
-            </p>
-
-            <p>
-                تحتاج إلى 3/5 على الأقل للنجاح.
-            </p>
-
-            <button
-                class="retry"
-                onclick="location.reload()">
-                🔄 إعادة الاختبار
-            </button>
-        `;
-
-
-        document.getElementById(
-            "nextButton"
-        ).style.display = "none";
+        retryButton.style.display =
+            "none";
 
     }
 
+    // الفشل
+    else {
 
-    /*
-       إظهار النتيجة
-    */
+        result.className = "fail";
 
-    const result =
-        document.getElementById("result");
+        result.innerHTML =
+            "<h3>❌ لم تنجح هذه المرة.</h3>" +
+            "<p>درجتك: <b>" +
+            score +
+            " / 5</b></p>" +
+            "<p>" +
+            "تحتاج إلى 3 إجابات صحيحة على الأقل." +
+            "</p>";
 
-    result.innerHTML = resultHTML;
+        nextButton.style.display =
+            "none";
 
-    result.style.display = "block";
+        retryButton.style.display =
+            "inline-block";
+    }
 
-
-    /*
-       النزول للنتيجة
-    */
 
     result.scrollIntoView({
         behavior: "smooth"
     });
+}
 
 
-    /*
-       إخفاء زر التصحيح
-    */
+function retryQuiz() {
 
-    document.getElementById(
-        "checkButton"
-    ).style.display = "none";
+    quizSubmitted = false;
 
+    // إعادة فتح الاختيارات
+    for (let i = 1; i <= 5; i++) {
+
+        const inputs =
+            document.querySelectorAll(
+                'input[name="q' + i + '"]'
+            );
+
+        inputs.forEach(function(input) {
+
+            input.disabled = false;
+            input.checked = false;
+
+        });
+
+
+        const feedback =
+            document.getElementById(
+                "feedback" + i
+            );
+
+        feedback.innerHTML = "";
+    }
+
+
+    const result =
+        document.getElementById("result");
+
+    const checkButton =
+        document.getElementById("checkButton");
+
+    const retryButton =
+        document.getElementById("retryButton");
+
+    const nextButton =
+        document.getElementById("nextButton");
+
+
+    result.style.display = "none";
+    result.innerHTML = "";
+    result.className = "";
+
+    retryButton.style.display = "none";
+    nextButton.style.display = "none";
+
+    checkButton.style.display =
+        "inline-block";
+
+    checkButton.disabled = false;
+
+
+    // الرجوع لمنطقة الاختبار
+    document.querySelector(".box:last-of-type")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
 }
 
 </script>

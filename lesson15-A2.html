@@ -1,6 +1,10 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Lesson 15 - A2 Review | German with Farida</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 15 - A2 Review | German with Farida</title>
 
 <style>
     body {
@@ -159,14 +163,18 @@
     }
 </style>
 
-</head><body><header>
+</head>
+
+<body>
+
+<header>
     <h1>🇩🇪 Lesson 15 – A2 Review</h1>
     <p>مراجعة شاملة لمستوى A2</p>
 </header>
 
 <div class="container">
 
-    <a href="a2.html" class="back-button">⬅️ الرجوع إلى مستوى A2</a>
+    <a href="A2.html" class="back-button">⬅️ الرجوع إلى مستوى A2</a>
 
     <!-- مقدمة -->
     <div class="lesson-box">
@@ -783,7 +791,7 @@
 
         <p>
             ده اختبار المراجعة قبل الاختبار النهائي.
-            لازم تجيبي <strong>3 من 5</strong> على الأقل.
+            لازم تجيب 3 من 5 على الأقل.
         </p>
 
         <form id="quizForm">
@@ -918,7 +926,7 @@
 
     </div>
 
-    <a href="a2.html" class="back-button">⬅️ الرجوع إلى مستوى A2</a>
+    <a href="A2.html" class="back-button">⬅️ الرجوع إلى مستوى A2</a>
 
 </div>
 
@@ -928,93 +936,116 @@
 
 <script>
 
-    document.getElementById("checkButton").addEventListener("click", function () {
+document.getElementById("checkButton").addEventListener("click", function () {
 
-        const answers = {
-            q1: "a",
-            q2: "a",
-            q3: "d",
-            q4: "b",
-            q5: "c"
-        };
+    const answers = {
+        q1: "a",
+        q2: "a",
+        q3: "d",
+        q4: "b",
+        q5: "c"
+    };
 
-        const correctText = {
-            q1: "Ich habe Deutsch gelernt.",
-            q2: "Ich kann Deutsch sprechen.",
-            q3: "في النهاية",
-            q4: "Ich werde morgen Deutsch lernen.",
-            q5: "أنا لا أفهم."
-        };
+    const correctText = {
+        q1: "Ich habe Deutsch gelernt.",
+        q2: "Ich kann Deutsch sprechen.",
+        q3: "في النهاية",
+        q4: "Ich werde morgen Deutsch lernen.",
+        q5: "أنا لا أفهم."
+    };
 
-        let score = 0;
-        let wrongAnswers = [];
+    let score = 0;
+    let wrongAnswers = [];
 
-        for (let question in answers) {
+    for (let question in answers) {
 
-            const selected = document.querySelector(
-                'input[name="' + question + '"]:checked'
-            );
+        const selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
 
-            if (selected && selected.value === answers[question]) {
-                score++;
-            } else {
-
-                wrongAnswers.push(
-                    "<div class='correct-answer'>✅ الإجابة الصحيحة للسؤال " +
-                    question.substring(1) +
-                    ": " +
-                    correctText[question] +
-                    "</div>"
-                );
-            }
-        }
-
-        const result = document.getElementById("result");
-
-        if (score >= 3) {
-
-            localStorage.setItem("a2Lesson15Completed", "true");
-
-            result.className = "result success";
-
-            result.innerHTML =
-                "<h3>🎉 مبروك! خلصتي دروس A2!</h3>" +
-                "<p>درجتك: " + score + " / 5</p>" +
-                "<p>💾 تم حفظ تقدمك بنجاح!</p>" +
-                "<p><strong>✅ Lesson 15 مكتمل!</strong></p>" +
-                "<p>🏆 كده خلصنا كل دروس مستوى A2.</p>" +
-                (wrongAnswers.length > 0
-                    ? "<h3>📌 الإجابات الصحيحة للأسئلة اللي غلطتي فيها:</h3>" +
-                      wrongAnswers.join("")
-                    : "<p>🌟 كل إجاباتك صحيحة!</p>") +
-                "<button type='button' class='final-button' onclick=\"window.location.href='a2test.html'\">" +
-                "🎯 الانتقال إلى الاختبار النهائي A2" +
-                "</button>";
-
-            document.querySelectorAll("#quizForm input").forEach(function (input) {
-                input.disabled = true;
-            });
-
-            document.getElementById("checkButton").disabled = true;
-
+        if (selected && selected.value === answers[question]) {
+            score++;
         } else {
 
-            result.className = "result fail";
-
-            result.innerHTML =
-                "<h3>❌ لسه محتاجة مراجعة بسيطة</h3>" +
-                "<p>درجتك: " + score + " / 5</p>" +
-                "<p>لازم تجيبي 3 من 5 على الأقل للنجاح.</p>" +
-                "<h3>📌 الإجابات الصحيحة للأسئلة اللي غلطتي فيها:</h3>" +
-                wrongAnswers.join("") +
-                "<br>" +
-                "<button type='button' onclick='location.reload()'>" +
-                "🔄 إعادة الاختبار" +
-                "</button>";
+            wrongAnswers.push(
+                "<div class='correct-answer'>✅ الإجابة الصحيحة للسؤال " +
+                question.substring(1) +
+                ": " +
+                correctText[question] +
+                "</div>"
+            );
         }
+    }
 
+    const result = document.getElementById("result");
+
+    /* قفل الاختيارات بعد التصحيح سواء نجح أو لم ينجح */
+    document.querySelectorAll("#quizForm input[type='radio']").forEach(function (input) {
+        input.disabled = true;
     });
+
+    document.getElementById("checkButton").disabled = true;
+
+    if (score >= 3) {
+
+        localStorage.setItem("a2Lesson15Completed", "true");
+
+        result.className = "result success";
+
+        result.innerHTML =
+            "<h3>🎉 مبروك! خلصت دروس A2!</h3>" +
+            "<p>درجتك: " + score + " / 5</p>" +
+            "<p>💾 تم حفظ تقدمك بنجاح!</p>" +
+            "<p><strong>✅ Lesson 15 مكتمل!</strong></p>" +
+            "<p>🏆 كده خلصنا كل دروس مستوى A2.</p>" +
+            (wrongAnswers.length > 0
+                ? "<h3>📌 الإجابات الصحيحة للأسئلة اللي غلطت فيها:</h3>" +
+                  wrongAnswers.join("")
+                : "<p>🌟 كل إجاباتك صحيحة!</p>") +
+
+            "<button type='button' class='final-button' onclick=\"window.location.href='A2test.html'\">" +
+            "🎯 الانتقال إلى الاختبار النهائي A2" +
+            "</button>";
+
+    } else {
+
+        result.className = "result fail";
+
+        result.innerHTML =
+            "<h3>❌ محتاج مراجعة بسيطة</h3>" +
+            "<p>درجتك: " + score + " / 5</p>" +
+            "<p>لازم تجيب 3 من 5 على الأقل للنجاح.</p>" +
+            "<h3>📌 الإجابات الصحيحة للأسئلة اللي غلطت فيها:</h3>" +
+            wrongAnswers.join("") +
+            "<br>" +
+            "<button type='button' id='retryButton'>" +
+            "🔄 إعادة الاختبار" +
+            "</button>";
+
+        document.getElementById("retryButton").addEventListener("click", retryQuiz);
+    }
+
+});
+
+
+function retryQuiz() {
+
+    /* فتح الاختيارات من جديد */
+    document.querySelectorAll("#quizForm input[type='radio']").forEach(function (input) {
+        input.disabled = false;
+        input.checked = false;
+    });
+
+    /* فتح زر التصحيح */
+    document.getElementById("checkButton").disabled = false;
+
+    /* مسح النتيجة القديمة */
+    const result = document.getElementById("result");
+    result.innerHTML = "";
+    result.className = "";
+}
 
 </script>
 
-</body></html>
+</body>
+</html>

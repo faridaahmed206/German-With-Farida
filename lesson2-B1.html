@@ -553,7 +553,7 @@
 
             <div id="result"></div>
 
-            <a href="Lesson3-B1.html" class="next-button" id="nextButton">
+            <a href="lesson3-B1.html" class="next-button" id="nextButton">
                 ➡️ الانتقال إلى Lesson 3
             </a>
 
@@ -599,7 +599,9 @@
             for (let i = 1; i <= 5; i++) {
 
                 const selected =
-                    document.querySelector('input[name="q' + i + '"]:checked');
+                    document.querySelector(
+                        'input[name="q' + i + '"]:checked'
+                    );
 
                 if (selected && selected.value === answers["q" + i]) {
                     score++;
@@ -633,9 +635,25 @@
             }
 
 
+            /* قفل اختيارات الاختبار بعد التصحيح */
+
+            document.querySelectorAll(
+                "#quizForm input[type='radio']"
+            ).forEach(function(input) {
+
+                input.disabled = true;
+
+            });
+
+            document.getElementById("checkButton").disabled = true;
+
+
             if (score >= 3) {
 
-                localStorage.setItem("b1Lesson2Completed", "true");
+                localStorage.setItem(
+                    "b1Lesson2Completed",
+                    "true"
+                );
 
                 html +=
                     "<br>🎉 أحسنت! نجحت في Lesson 2.<br>" +
@@ -667,30 +685,33 @@
 
 
             result.innerHTML = html;
-
-
-            document.querySelectorAll("input").forEach(function(input) {
-                input.disabled = true;
-            });
-
-            document.getElementById("checkButton").disabled = true;
         }
 
 
         function retryQuiz() {
 
-            document.querySelectorAll("input").forEach(function(input) {
+            document.querySelectorAll(
+                "#quizForm input[type='radio']"
+            ).forEach(function(input) {
+
                 input.checked = false;
                 input.disabled = false;
+
             });
 
             document.getElementById("result").style.display = "none";
 
+            document.getElementById("result").innerHTML = "";
+
+            document.getElementById("result").className = "";
+
             document.getElementById("checkButton").disabled = false;
 
-            document.getElementById("retryButton").style.display = "none";
+            document.getElementById("retryButton").style.display =
+                "none";
 
-            document.getElementById("nextButton").style.display = "none";
+            document.getElementById("nextButton").style.display =
+                "none";
         }
 
 

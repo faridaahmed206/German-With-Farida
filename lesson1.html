@@ -5,30 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lektion 1 - A2 | German with Farida</title>
+    <title>Lektion 1 - Das Alphabet | German with Farida</title>
 
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background: #f5f7fb;
+            background: #f5f7fa;
             color: #222;
         }
 
         header {
-            background: #4b6cb7;
+            background: linear-gradient(135deg, #111827, #374151);
             color: white;
             text-align: center;
-            padding: 25px 15px;
+            padding: 30px 15px;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 28px;
+            margin: 0 0 10px;
+            font-size: 30px;
         }
 
         header p {
-            margin-top: 10px;
+            margin: 0;
             font-size: 17px;
         }
 
@@ -38,119 +38,181 @@
             padding: 0 15px;
         }
 
-        .lesson-box {
+        .card {
             background: white;
             border-radius: 15px;
-            padding: 25px;
+            padding: 22px;
             margin-bottom: 20px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
         h2 {
-            color: #4b6cb7;
-            border-bottom: 2px solid #e5e9f2;
-            padding-bottom: 10px;
+            color: #1f2937;
+            margin-top: 0;
         }
 
-        h3 {
-            color: #34495e;
+        .letters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 12px;
+            direction: ltr;
         }
 
-        .word {
-            background: #eef3ff;
-            padding: 12px;
-            border-radius: 10px;
-            margin: 8px 0;
+        .letter {
+            background: #eef2ff;
+            border-radius: 12px;
+            padding: 15px 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.2s;
         }
 
-        .example {
-            background: #f0f9f4;
-            border-right: 5px solid #4caf50;
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 8px;
+        .letter:hover {
+            transform: translateY(-3px);
+            background: #e0e7ff;
         }
 
-        .important {
-            background: #fff7df;
-            border-right: 5px solid #f0ad00;
+        .letter strong {
+            display: block;
+            font-size: 30px;
+            margin-bottom: 6px;
+        }
+
+        .letter span {
+            font-size: 15px;
+            color: #374151;
+        }
+
+        .special {
+            background: #fff7ed;
+        }
+
+        .special:hover {
+            background: #ffedd5;
+        }
+
+        .note {
+            background: #f0fdf4;
+            border-right: 5px solid #22c55e;
             padding: 15px;
             border-radius: 10px;
-            margin: 15px 0;
+            line-height: 1.8;
         }
 
         .quiz-question {
-            background: #f8f9fc;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 15px 0;
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 18px;
+            border: 1px solid #e5e7eb;
         }
 
-        .quiz-question label {
+        .quiz-question h3 {
+            margin-top: 0;
+        }
+
+        label {
             display: block;
-            margin: 10px 0;
+            background: white;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
             cursor: pointer;
         }
 
-        .quiz-button {
-            background: #4b6cb7;
-            color: white;
-            border: none;
-            padding: 13px 25px;
-            border-radius: 10px;
-            font-size: 17px;
-            cursor: pointer;
+        label:hover {
+            background: #f3f4f6;
+        }
+
+        input[type="radio"] {
+            margin-left: 8px;
+        }
+
+        .correct-answer {
+            color: #15803d;
+            background: #dcfce7;
+            padding: 10px;
+            border-radius: 8px;
             margin-top: 10px;
-        }
-
-        .quiz-button:hover {
-            background: #39589c;
+            display: none;
         }
 
         .result {
             margin-top: 20px;
-            padding: 15px;
+            padding: 18px;
+            border-radius: 12px;
+            display: none;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .success {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .retry {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        button,
+        .button {
+            border: none;
             border-radius: 10px;
-            background: #f5f7fb;
-        }
-
-        .correct {
-            color: green;
-            font-weight: bold;
-        }
-
-        .wrong {
-            color: #d62828;
-            font-weight: bold;
-        }
-
-        .answer-box {
-            background: white;
-            border-radius: 8px;
-            padding: 10px;
-            margin-top: 8px;
-            border: 1px solid #ddd;
-        }
-
-        .back-button {
-            display: inline-block;
+            padding: 13px 20px;
+            font-size: 16px;
+            cursor: pointer;
             text-decoration: none;
-            background: #555;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .check-button {
+            background: #2563eb;
             color: white;
-            padding: 10px 18px;
-            border-radius: 8px;
-            margin-bottom: 20px;
+        }
+
+        .check-button:hover {
+            background: #1d4ed8;
         }
 
         .next-button {
-            display: inline-block;
-            text-decoration: none;
-            background: #28a745;
+            background: #16a34a;
             color: white;
-            padding: 13px 25px;
-            border-radius: 10px;
-            font-size: 17px;
-            margin-top: 10px;
+            display: none;
+        }
+
+        .back-button {
+            background: #6b7280;
+            color: white;
+        }
+
+        .retry-button {
+            background: #dc2626;
+            color: white;
+            display: none;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .locked {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .letters {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
     </style>
 </head>
@@ -158,495 +220,527 @@
 <body>
 
     <header>
-        <h1>🇩🇪 Lektion 1 - A2</h1>
-        <p>مراجعة مهمة من مستوى A1</p>
+        <h1>🇩🇪 Lektion 1 - Das Alphabet</h1>
+        <p>الحروف الأبجدية الألمانية والنطق</p>
     </header>
 
     <div class="container">
 
-        <a href="a2.html" class="back-button">⬅️ العودة إلى مستوى A2</a>
-
-        <!-- التحيات والتعارف -->
-        <div class="lesson-box">
-            <h2>1️⃣ التحيات والتعارف</h2>
-
-            <div class="word">
-                <strong>Hallo!</strong> = مرحبًا!
-            </div>
-
-            <div class="word">
-                <strong>Wie heißt du?</strong> = ما اسمك؟
-            </div>
-
-            <div class="word">
-                <strong>Ich heiße Farida.</strong> = اسمي فريدة.
-            </div>
-
-            <div class="word">
-                <strong>Wie geht es dir?</strong> = كيف حالك؟
-            </div>
-
-            <div class="word">
-                <strong>Mir geht es gut.</strong> = أنا بخير.
-            </div>
+        <!-- الهدف -->
+        <div class="card">
+            <h2>🎯 هدف الدرس</h2>
+            <p>
+                في هذا الدرس هنتعرف على الحروف الأبجدية في اللغة الألمانية
+                وطريقة نطقها، بالإضافة إلى الحروف الخاصة في الألمانية.
+            </p>
         </div>
 
-        <!-- sein -->
-        <div class="lesson-box">
-            <h2>2️⃣ الفعل sein</h2>
-
-            <p>الفعل <strong>sein</strong> يعني "يكون"، وتصريفه مهم جدًا:</p>
-
-            <div class="word">
-                <strong>ich → bin</strong>
-            </div>
-
-            <div class="word">
-                <strong>du → bist</strong>
-            </div>
-
-            <div class="word">
-                <strong>er / sie / es → ist</strong>
-            </div>
-
-            <div class="word">
-                <strong>wir → sind</strong>
-            </div>
-
-            <div class="word">
-                <strong>ihr → seid</strong>
-            </div>
-
-            <div class="word">
-                <strong>sie / Sie → sind</strong>
-            </div>
-
-            <div class="example">
-                <strong>Ich bin 12 Jahre alt.</strong><br>
-                أنا عمري 12 سنة.
-            </div>
-
-            <div class="example">
-                <strong>Wir sind Schüler.</strong><br>
-                نحن طلاب.
-            </div>
-        </div>
-
-        <!-- تصريف الأفعال -->
-        <div class="lesson-box">
-            <h2>3️⃣ تصريف الأفعال</h2>
-
-            <p>مثال على الفعل <strong>lernen</strong> = يتعلم:</p>
-
-            <div class="word">
-                ich <strong>lerne</strong>
-            </div>
-
-            <div class="word">
-                du <strong>lernst</strong>
-            </div>
-
-            <div class="word">
-                er / sie / es <strong>lernt</strong>
-            </div>
-
-            <div class="word">
-                wir <strong>lernen</strong>
-            </div>
-
-            <div class="word">
-                ihr <strong>lernt</strong>
-            </div>
-
-            <div class="word">
-                sie / Sie <strong>lernen</strong>
-            </div>
-
-            <div class="example">
-                <strong>Ich lerne Deutsch.</strong><br>
-                أنا أتعلم الألمانية.
-            </div>
-        </div>
-
-        <!-- النفي -->
-        <div class="lesson-box">
-            <h2>4️⃣ النفي: nicht / kein</h2>
-
-            <h3>nicht</h3>
+        <!-- الحروف -->
+        <div class="card">
+            <h2>🔤 Das deutsche Alphabet</h2>
 
             <p>
-                نستخدم <strong>nicht</strong> لنفي الفعل أو الصفة أو الجملة.
+                اضغط على أي حرف لسماع نطقه.
             </p>
 
-            <div class="example">
-                <strong>Ich bin nicht müde.</strong><br>
-                أنا لست متعبًا.
-            </div>
+            <div class="letters">
 
-            <h3>kein / keine</h3>
+                <div class="letter" onclick="speak('A')">
+                    <strong>A</strong>
+                    <span>آه</span>
+                </div>
 
-            <p>
-                نستخدم <strong>kein / keine</strong> مع الأسماء.
-            </p>
+                <div class="letter" onclick="speak('B')">
+                    <strong>B</strong>
+                    <span>بيه</span>
+                </div>
 
-            <div class="example">
-                <strong>Ich habe kein Buch.</strong><br>
-                ليس لدي كتاب.
-            </div>
+                <div class="letter" onclick="speak('C')">
+                    <strong>C</strong>
+                    <span>تسي</span>
+                </div>
 
-            <div class="example">
-                <strong>Ich habe keine Schwester.</strong><br>
-                ليس لدي أخت.
+                <div class="letter" onclick="speak('D')">
+                    <strong>D</strong>
+                    <span>ديه</span>
+                </div>
+
+                <div class="letter" onclick="speak('E')">
+                    <strong>E</strong>
+                    <span>إيه</span>
+                </div>
+
+                <div class="letter" onclick="speak('F')">
+                    <strong>F</strong>
+                    <span>إف</span>
+                </div>
+
+                <div class="letter" onclick="speak('G')">
+                    <strong>G</strong>
+                    <span>جيه</span>
+                </div>
+
+                <div class="letter" onclick="speak('H')">
+                    <strong>H</strong>
+                    <span>ها</span>
+                </div>
+
+                <div class="letter" onclick="speak('I')">
+                    <strong>I</strong>
+                    <span>إي</span>
+                </div>
+
+                <div class="letter" onclick="speak('J')">
+                    <strong>J</strong>
+                    <span>يُوت</span>
+                </div>
+
+                <div class="letter" onclick="speak('K')">
+                    <strong>K</strong>
+                    <span>كا</span>
+                </div>
+
+                <div class="letter" onclick="speak('L')">
+                    <strong>L</strong>
+                    <span>إل</span>
+                </div>
+
+                <div class="letter" onclick="speak('M')">
+                    <strong>M</strong>
+                    <span>إم</span>
+                </div>
+
+                <div class="letter" onclick="speak('N')">
+                    <strong>N</strong>
+                    <span>إن</span>
+                </div>
+
+                <div class="letter" onclick="speak('O')">
+                    <strong>O</strong>
+                    <span>أو</span>
+                </div>
+
+                <div class="letter" onclick="speak('P')">
+                    <strong>P</strong>
+                    <span>بيه</span>
+                </div>
+
+                <div class="letter" onclick="speak('Q')">
+                    <strong>Q</strong>
+                    <span>كو</span>
+                </div>
+
+                <div class="letter" onclick="speak('R')">
+                    <strong>R</strong>
+                    <span>إر</span>
+                </div>
+
+                <div class="letter" onclick="speak('S')">
+                    <strong>S</strong>
+                    <span>إس</span>
+                </div>
+
+                <div class="letter" onclick="speak('T')">
+                    <strong>T</strong>
+                    <span>تيه</span>
+                </div>
+
+                <div class="letter" onclick="speak('U')">
+                    <strong>U</strong>
+                    <span>أو</span>
+                </div>
+
+                <div class="letter" onclick="speak('V')">
+                    <strong>V</strong>
+                    <span>فاو</span>
+                </div>
+
+                <div class="letter" onclick="speak('W')">
+                    <strong>W</strong>
+                    <span>فيه</span>
+                </div>
+
+                <div class="letter" onclick="speak('X')">
+                    <strong>X</strong>
+                    <span>إكس</span>
+                </div>
+
+                <div class="letter" onclick="speak('Y')">
+                    <strong>Y</strong>
+                    <span>إبسيلون</span>
+                </div>
+
+                <div class="letter" onclick="speak('Z')">
+                    <strong>Z</strong>
+                    <span>تسِت</span>
+                </div>
+
             </div>
         </div>
 
-        <!-- أدوات التعريف -->
-        <div class="lesson-box">
-            <h2>5️⃣ der / die / das</h2>
+        <!-- الحروف الخاصة -->
+        <div class="card">
+            <h2>⭐ الحروف الخاصة في الألمانية</h2>
 
-            <div class="word">
-                <strong>der Tisch</strong> = الطاولة
+            <div class="letters">
+
+                <div class="letter special" onclick="speak('Ä')">
+                    <strong>Ä</strong>
+                    <span>أوملاوت</span>
+                </div>
+
+                <div class="letter special" onclick="speak('Ö')">
+                    <strong>Ö</strong>
+                    <span>أوملاوت</span>
+                </div>
+
+                <div class="letter special" onclick="speak('Ü')">
+                    <strong>Ü</strong>
+                    <span>أوملاوت</span>
+                </div>
+
+                <div class="letter special" onclick="speak('ß')">
+                    <strong>ß</strong>
+                    <span>إس تسِت</span>
+                </div>
+
             </div>
 
-            <div class="word">
-                <strong>die Tasche</strong> = الحقيبة
-            </div>
+            <br>
 
-            <div class="word">
-                <strong>das Buch</strong> = الكتاب
-            </div>
-
-            <div class="important">
-                ⭐ لازم تحفظ الاسم مع أداة التعريف بتاعته.
-            </div>
-        </div>
-
-        <!-- Akkusativ -->
-        <div class="lesson-box">
-            <h2>6️⃣ Akkusativ</h2>
-
-            <p>في حالة المفعول به يتغير <strong>der</strong> إلى <strong>den</strong>.</p>
-
-            <div class="word">
-                der → <strong>den</strong>
-            </div>
-
-            <div class="word">
-                die → <strong>die</strong>
-            </div>
-
-            <div class="word">
-                das → <strong>das</strong>
-            </div>
-
-            <div class="example">
-                <strong>Ich sehe den Tisch.</strong><br>
-                أنا أرى الطاولة.
+            <div class="note">
+                💡 <strong>معلومة مهمة:</strong><br>
+                Ä و Ö و Ü اسمهم <strong>Umlaute</strong>،
+                أما ß فيُسمى <strong>Eszett</strong> أو <strong>scharfes S</strong>.
             </div>
         </div>
 
-        <!-- الأسئلة -->
-        <div class="lesson-box">
-            <h2>7️⃣ تكوين الأسئلة والجمل</h2>
+        <!-- ملاحظات النطق -->
+        <div class="card">
+            <h2>🗣️ ملاحظات مهمة على النطق</h2>
 
-            <div class="example">
-                <strong>Wo wohnst du?</strong><br>
-                أين تسكن؟
+            <div class="note">
+                <p><strong>C</strong> غالبًا تُنطق «تسي» عند نطق اسم الحرف.</p>
+
+                <p><strong>J</strong> اسم الحرف يُنطق مثل «يُوت»، وصوته في الكلمات غالبًا مثل صوت الياء.</p>
+
+                <p><strong>V</strong> اسم الحرف «فاو»، وفي كثير من الكلمات الألمانية يُنطق مثل ف.</p>
+
+                <p><strong>W</strong> اسم الحرف «فيه»، ويُعطي غالبًا صوت «ف» في الكلمات.</p>
+
+                <p><strong>Z</strong> اسم الحرف «تسِت»، ويبدأ صوته بـ «تس».</p>
             </div>
-
-            <div class="example">
-                <strong>Ich wohne in Ägypten.</strong><br>
-                أنا أعيش في مصر.
-            </div>
-
-            <div class="example">
-                <strong>Was machst du?</strong><br>
-                ماذا تفعل؟
-            </div>
-
-            <div class="example">
-                <strong>Ich lerne Deutsch.</strong><br>
-                أنا أتعلم الألمانية.
-            </div>
-        </div>
-
-        <!-- أهم المراجعة -->
-        <div class="lesson-box">
-            <h2>⭐ أهم نقاط المراجعة</h2>
-
-            <ul>
-                <li>sein → bin, bist, ist, sind, seid</li>
-                <li>تصريف الأفعال مع الضمائر.</li>
-                <li>nicht و kein / keine.</li>
-                <li>der / die / das.</li>
-                <li>Akkusativ: der → den.</li>
-                <li>ترتيب الكلمات في الجملة الألمانية.</li>
-            </ul>
         </div>
 
         <!-- الاختبار -->
-        <div class="lesson-box" id="quiz">
-
-            <h2>📝 اختبار Lesson 1</h2>
+        <div class="card">
+            <h2>📝 اختبار الدرس</h2>
 
             <p>
-                اختار إجابة واحدة لكل سؤال.
-                لازم تحصل على <strong>3/5</strong> على الأقل للنجاح.
+                لازم تحصل على <strong>4 من 5</strong> عشان تنجح وتفتح الدرس الثاني.
             </p>
 
             <!-- السؤال 1 -->
             <div class="quiz-question">
-                <h3>1️⃣ أي ضمير يأخذ "bin"؟</h3>
+                <h3>1️⃣ ما اسم الحرف Z بالألمانية؟</h3>
 
                 <label>
-                    <input type="radio" name="q1" value="ich">
-                    ich
+                    <input type="radio" name="q1" value="A">
+                    آه
                 </label>
 
                 <label>
-                    <input type="radio" name="q1" value="du">
-                    du
+                    <input type="radio" name="q1" value="B">
+                    تسِت
                 </label>
 
                 <label>
-                    <input type="radio" name="q1" value="wir">
-                    wir
+                    <input type="radio" name="q1" value="C">
+                    فاو
                 </label>
 
-                <label>
-                    <input type="radio" name="q1" value="ihr">
-                    ihr
-                </label>
+                <div class="correct-answer" id="correct1">
+                    ✅ الإجابة الصحيحة: تسِت
+                </div>
             </div>
 
             <!-- السؤال 2 -->
             <div class="quiz-question">
-                <h3>2️⃣ اختار الجملة الصحيحة:</h3>
+                <h3>2️⃣ أي حرف يُنطق اسمه «يُوت»؟</h3>
 
                 <label>
-                    <input type="radio" name="q2" value="Ich bist müde.">
-                    Ich bist müde.
+                    <input type="radio" name="q2" value="A">
+                    J
                 </label>
 
                 <label>
-                    <input type="radio" name="q2" value="Ich bin müde.">
-                    Ich bin müde.
+                    <input type="radio" name="q2" value="B">
+                    Y
                 </label>
 
                 <label>
-                    <input type="radio" name="q2" value="Ich ist müde.">
-                    Ich ist müde.
+                    <input type="radio" name="q2" value="C">
+                    G
                 </label>
 
-                <label>
-                    <input type="radio" name="q2" value="Ich sind müde.">
-                    Ich sind müde.
-                </label>
+                <div class="correct-answer" id="correct2">
+                    ✅ الإجابة الصحيحة: J
+                </div>
             </div>
 
             <!-- السؤال 3 -->
             <div class="quiz-question">
-                <h3>3️⃣ ما أداة التعريف الصحيحة لكلمة "Buch"؟</h3>
+                <h3>3️⃣ أي حرف من الحروف التالية هو Eszett؟</h3>
 
                 <label>
-                    <input type="radio" name="q3" value="der">
-                    der
+                    <input type="radio" name="q3" value="A">
+                    Ö
                 </label>
 
                 <label>
-                    <input type="radio" name="q3" value="die">
-                    die
+                    <input type="radio" name="q3" value="B">
+                    ß
                 </label>
 
                 <label>
-                    <input type="radio" name="q3" value="das">
-                    das
+                    <input type="radio" name="q3" value="C">
+                    Ü
                 </label>
 
-                <label>
-                    <input type="radio" name="q3" value="den">
-                    den
-                </label>
+                <div class="correct-answer" id="correct3">
+                    ✅ الإجابة الصحيحة: ß
+                </div>
             </div>
 
             <!-- السؤال 4 -->
             <div class="quiz-question">
-                <h3>4️⃣ اختار الجملة الصحيحة في Akkusativ:</h3>
+                <h3>4️⃣ أي مجموعة تحتوي على الـ Umlaute؟</h3>
 
                 <label>
-                    <input type="radio" name="q4" value="Ich sehe der Tisch.">
-                    Ich sehe der Tisch.
+                    <input type="radio" name="q4" value="A">
+                    A - E - I
                 </label>
 
                 <label>
-                    <input type="radio" name="q4" value="Ich sehe den Tisch.">
-                    Ich sehe den Tisch.
+                    <input type="radio" name="q4" value="B">
+                    Ä - Ö - Ü
                 </label>
 
                 <label>
-                    <input type="radio" name="q4" value="Ich sehe die Tisch.">
-                    Ich sehe die Tisch.
+                    <input type="radio" name="q4" value="C">
+                    B - C - D
                 </label>
 
-                <label>
-                    <input type="radio" name="q4" value="Ich sehe das Tisch.">
-                    Ich sehe das Tisch.
-                </label>
+                <div class="correct-answer" id="correct4">
+                    ✅ الإجابة الصحيحة: Ä - Ö - Ü
+                </div>
             </div>
 
             <!-- السؤال 5 -->
             <div class="quiz-question">
-                <h3>5️⃣ اختار النفي الصحيح:</h3>
+                <h3>5️⃣ أي حرف اسمه «فاو»؟</h3>
 
                 <label>
-                    <input type="radio" name="q5" value="Ich habe nicht Buch.">
-                    Ich habe nicht Buch.
+                    <input type="radio" name="q5" value="A">
+                    W
                 </label>
 
                 <label>
-                    <input type="radio" name="q5" value="Ich habe kein Buch.">
-                    Ich habe kein Buch.
+                    <input type="radio" name="q5" value="B">
+                    V
                 </label>
 
                 <label>
-                    <input type="radio" name="q5" value="Ich habe keine Buch.">
-                    Ich habe keine Buch.
+                    <input type="radio" name="q5" value="C">
+                    F
                 </label>
 
-                <label>
-                    <input type="radio" name="q5" value="Ich habe nicht ein Buch.">
-                    Ich habe nicht ein Buch.
-                </label>
+                <div class="correct-answer" id="correct5">
+                    ✅ الإجابة الصحيحة: V
+                </div>
             </div>
 
-            <button class="quiz-button" onclick="checkQuiz()">
-                ✅ تصحيح الاختبار
-            </button>
+            <div class="buttons">
 
-            <div id="result" class="result"></div>
+                <button class="check-button" id="checkButton" onclick="checkQuiz()">
+                    ✅ تصحيح الاختبار
+                </button>
+
+                <button class="retry-button" id="retryButton" onclick="retryQuiz()">
+                    🔄 إعادة الاختبار
+                </button>
+
+                <a href="lesson2.html" class="next-button" id="nextButton">
+                    ➡️ الدرس الثاني
+                </a>
+
+                <a href="A1.html" class="button back-button">
+                    ↩️ العودة إلى مستوى A1
+                </a>
+
+            </div>
+
+            <div class="result" id="result"></div>
 
         </div>
 
     </div>
 
     <script>
+
+        // نطق الحروف
+        function speak(text) {
+
+            speechSynthesis.cancel();
+
+            const utterance = new SpeechSynthesisUtterance(text);
+
+            utterance.lang = "de-DE";
+            utterance.rate = 0.8;
+
+            speechSynthesis.speak(utterance);
+        }
+
+
+        // الإجابات الصحيحة
+        const correctAnswers = {
+            q1: "B",
+            q2: "A",
+            q3: "B",
+            q4: "B",
+            q5: "B"
+        };
+
+
+        // تصحيح الاختبار
         function checkQuiz() {
 
-            const correctAnswers = {
-                q1: "ich",
-                q2: "Ich bin müde.",
-                q3: "das",
-                q4: "Ich sehe den Tisch.",
-                q5: "Ich habe kein Buch."
-            };
-
             let score = 0;
-            let resultHTML = "";
 
-            // منع تغيير الإجابات بعد التصحيح
-            document.querySelectorAll('#quiz input').forEach(function(input) {
-                input.disabled = true;
-            });
+            // منع التصحيح مرة ثانية
+            document.getElementById("checkButton").disabled = true;
 
-            for (let question in correctAnswers) {
+            for (let i = 1; i <= 5; i++) {
 
                 const selected = document.querySelector(
-                    'input[name="' + question + '"]:checked'
+                    `input[name="q${i}"]:checked`
                 );
 
-                const questionNumber = question.replace("q", "");
+                // إظهار الإجابة الصحيحة لو الإجابة غلط
+                if (selected) {
 
-                if (selected && selected.value === correctAnswers[question]) {
-
-                    score++;
-
-                    resultHTML += `
-                        <div class="answer-box">
-                            <p class="correct">
-                                ✅ السؤال ${questionNumber}: إجابة صحيحة!
-                            </p>
-
-                            <p>
-                                إجابتك:
-                                <strong>${selected.value}</strong>
-                            </p>
-                        </div>
-                    `;
+                    if (selected.value === correctAnswers["q" + i]) {
+                        score++;
+                    } else {
+                        document.getElementById("correct" + i).style.display = "block";
+                    }
 
                 } else {
 
-                    const userAnswer = selected
-                        ? selected.value
-                        : "لم يتم اختيار إجابة";
-
-                    resultHTML += `
-                        <div class="answer-box">
-                            <p class="wrong">
-                                ❌ السؤال ${questionNumber}: إجابة خاطئة.
-                            </p>
-
-                            <p>
-                                إجابتك:
-                                <strong>${userAnswer}</strong>
-                            </p>
-
-                            <p>
-                                ✅ الإجابة الصحيحة:
-                                <strong>${correctAnswers[question]}</strong>
-                            </p>
-                        </div>
-                    `;
+                    // لو لم يختار إجابة
+                    document.getElementById("correct" + i).style.display = "block";
                 }
             }
 
-            resultHTML += `
-                <hr>
-                <h3>🎯 نتيجتك النهائية: ${score} / 5</h3>
-            `;
 
-            // النجاح
-            if (score >= 3) {
+            // تعطيل الاختيارات بعد التصحيح
+            const inputs = document.querySelectorAll(
+                'input[type="radio"]'
+            );
 
-                localStorage.setItem("a2Lesson1Completed", "true");
+            inputs.forEach(input => {
+                input.disabled = true;
+            });
 
-                resultHTML += `
-                    <p class="correct">
-                        🎉 مبروك! لقد اجتزت اختبار Lesson 1.
-                    </p>
 
-                    <p>
-                        تم فتح الدرس الثاني من مستوى A2.
-                    </p>
+            const result = document.getElementById("result");
 
-                    <a href="Lesson2-A2.html" class="next-button">
-                        ➡️ الانتقال إلى Lesson 2
-                    </a>
-                `;
+            result.style.display = "block";
 
-            } else {
 
-                resultHTML += `
-                    <p class="wrong">
-                        ❌ لم تجتز الاختبار.
-                    </p>
+            // النجاح: 4 أو 5
+            if (score >= 4) {
 
-                    <p>
-                        تحتاج إلى 3/5 على الأقل للنجاح.
-                    </p>
+                result.className = "result success";
 
-                    <button class="quiz-button" onclick="location.reload()">
-                        🔄 إعادة الاختبار
-                    </button>
-                `;
+                result.innerHTML =
+                    `🎉 أحسنت! حصلت على <strong>${score}/5</strong><br>
+                     لقد نجحت في الدرس ويمكنك الانتقال إلى الدرس الثاني.`;
+
+                // حفظ نجاح الدرس
+                localStorage.setItem(
+                    "lesson1Completed",
+                    "true"
+                );
+
+                document.getElementById("nextButton").style.display =
+                    "inline-block";
+
             }
 
-            document.getElementById("result").innerHTML = resultHTML;
+            // الرسوب: 3 أو أقل
+            else {
 
-            // النزول تلقائيًا إلى النتيجة
-            document.getElementById("result").scrollIntoView({
-                behavior: "smooth"
-            });
+                result.className = "result retry";
+
+                result.innerHTML =
+                    `📚 حصلت على <strong>${score}/5</strong><br>
+                     تحتاج إلى 4 درجات على الأقل للنجاح. راجع الدرس وحاول مرة أخرى.`;
+
+                document.getElementById("retryButton").style.display =
+                    "inline-block";
+            }
+
         }
+
+
+        // إعادة الاختبار
+        function retryQuiz() {
+
+            // إلغاء الاختيارات
+            const inputs = document.querySelectorAll(
+                'input[type="radio"]'
+            );
+
+            inputs.forEach(input => {
+
+                input.disabled = false;
+                input.checked = false;
+
+            });
+
+
+            // إخفاء الإجابات الصحيحة
+            for (let i = 1; i <= 5; i++) {
+
+                document.getElementById(
+                    "correct" + i
+                ).style.display = "none";
+
+            }
+
+
+            // إخفاء النتيجة
+            document.getElementById("result").style.display =
+                "none";
+
+
+            // إخفاء زر الإعادة
+            document.getElementById("retryButton").style.display =
+                "none";
+
+
+            // إخفاء زر الدرس الثاني
+            document.getElementById("nextButton").style.display =
+                "none";
+
+
+            // تفعيل زر التصحيح
+            document.getElementById("checkButton").disabled =
+                false;
+
+        }
+
     </script>
 
 </body>

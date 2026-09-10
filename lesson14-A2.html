@@ -1,6 +1,10 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Lesson 14 - Alltag & Gespräche | German with Farida</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 14 - Alltag & Gespräche | German with Farida</title>
 
 <style>
     body {
@@ -154,14 +158,18 @@
     }
 </style>
 
-</head><body><header>
+</head>
+
+<body>
+
+<header>
     <h1>🇩🇪 Lesson 14 – Alltag & Gespräche</h1>
     <p>الحياة اليومية والمحادثات</p>
 </header>
 
 <div class="container">
 
-    <a href="a2.html" class="back-button">⬅️ الرجوع إلى مستوى A2</a>
+    <a href="A2.html" class="back-button">⬅️ الرجوع إلى مستوى A2</a>
 
     <!-- المقدمة -->
     <div class="lesson-box">
@@ -714,7 +722,7 @@
 
     </div>
 
-    <a href="a2.html" class="back-button">⬅️ الرجوع إلى مستوى A2</a>
+    <a href="A2.html" class="back-button">⬅️ الرجوع إلى مستوى A2</a>
 
 </div>
 
@@ -724,23 +732,23 @@
 
 <script>
 
+    const answers = {
+        q1: "b",
+        q2: "c",
+        q3: "b",
+        q4: "a",
+        q5: "c"
+    };
+
+    const correctText = {
+        q1: "كيف حالك؟",
+        q2: "Wie viel kostet das?",
+        q3: "أنا لا أفهم.",
+        q4: "Morgen treffe ich meine Freunde.",
+        q5: "كيف أصل إلى محطة القطار؟"
+    };
+
     document.getElementById("checkButton").addEventListener("click", function () {
-
-        const answers = {
-            q1: "b",
-            q2: "c",
-            q3: "b",
-            q4: "a",
-            q5: "c"
-        };
-
-        const correctText = {
-            q1: "كيف حالك؟",
-            q2: "Wie viel kostet das?",
-            q3: "أنا لا أفهم.",
-            q4: "Morgen treffe ich meine Freunde.",
-            q5: "كيف أصل إلى محطة القطار؟"
-        };
 
         let score = 0;
         let wrongAnswers = [];
@@ -767,6 +775,13 @@
 
         const result = document.getElementById("result");
 
+        // قفل الاختيارات بعد التصحيح في كل الحالات
+        document.querySelectorAll("#quizForm input[type='radio']").forEach(function (input) {
+            input.disabled = true;
+        });
+
+        document.getElementById("checkButton").disabled = true;
+
         if (score >= 3) {
 
             localStorage.setItem("a2Lesson14Completed", "true");
@@ -774,43 +789,55 @@
             result.className = "result success";
 
             result.innerHTML =
-                "<h3>🎉 أحسنتِ!</h3>" +
+                "<h3>🎉 أحسنت!</h3>" +
                 "<p>درجتك: " + score + " / 5</p>" +
                 "<p>💾 تم حفظ تقدمك بنجاح!</p>" +
                 "<p><strong>✅ Lesson 14 مكتمل!</strong></p>" +
                 "<p>🔓 تم فتح Lesson 15.</p>" +
                 (wrongAnswers.length > 0
-                    ? "<h3>📌 الإجابات الصحيحة للأسئلة اللي غلطتي فيها:</h3>" +
+                    ? "<h3>📌 الإجابات الصحيحة للأسئلة اللي غلطت فيها:</h3>" +
                       wrongAnswers.join("")
                     : "<p>🌟 كل إجاباتك صحيحة!</p>") +
-                "<button type='button' class='next-button' onclick=\"window.location.href='Lesson15-A2.html'\">" +
+                "<button type='button' class='next-button' onclick=\"window.location.href='lesson15-A2.html'\">" +
                 "➡️ الانتقال إلى Lesson 15" +
                 "</button>";
-
-            document.querySelectorAll("#quizForm input").forEach(function (input) {
-                input.disabled = true;
-            });
-
-            document.getElementById("checkButton").disabled = true;
 
         } else {
 
             result.className = "result fail";
 
             result.innerHTML =
-                "<h3>❌ لسه محتاجة مراجعة بسيطة</h3>" +
+                "<h3>❌ لسه محتاج مراجعة بسيطة</h3>" +
                 "<p>درجتك: " + score + " / 5</p>" +
-                "<p>لازم تجيبي 3 من 5 على الأقل للنجاح.</p>" +
-                "<h3>📌 الإجابات الصحيحة للأسئلة اللي غلطتي فيها:</h3>" +
+                "<p>لازم تجيب 3 من 5 على الأقل للنجاح.</p>" +
+                "<h3>📌 الإجابات الصحيحة للأسئلة اللي غلطت فيها:</h3>" +
                 wrongAnswers.join("") +
                 "<br>" +
-                "<button type='button' onclick='location.reload()'>" +
+                "<button type='button' onclick='retryQuiz()'>" +
                 "🔄 إعادة الاختبار" +
                 "</button>";
         }
 
     });
 
+    function retryQuiz() {
+
+        // إعادة تفعيل الاختيارات
+        document.querySelectorAll("#quizForm input[type='radio']").forEach(function (input) {
+            input.disabled = false;
+            input.checked = false;
+        });
+
+        // إعادة تفعيل زر التصحيح
+        document.getElementById("checkButton").disabled = false;
+
+        // مسح النتيجة القديمة
+        const result = document.getElementById("result");
+        result.innerHTML = "";
+        result.className = "result";
+    }
+
 </script>
 
-</body></html>
+</body>
+</html>

@@ -116,6 +116,11 @@
             opacity: 0.9;
         }
 
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
         .correct {
             color: green;
             font-weight: bold;
@@ -765,7 +770,7 @@
             </div>
 
 
-            <button onclick="checkQuiz()">
+            <button id="checkButton" onclick="checkQuiz()">
                 تصحيح الاختبار
             </button>
 
@@ -798,7 +803,16 @@
 
     <script>
 
+        let quizSubmitted = false;
+
         function checkQuiz() {
+
+            // منع تصحيح الاختبار أكثر من مرة
+            if (quizSubmitted) {
+                return;
+            }
+
+            quizSubmitted = true;
 
             const answers = {
                 q1: "b",
@@ -806,6 +820,14 @@
                 q3: "a",
                 q4: "b",
                 q5: "b"
+            };
+
+            const correctAnswersText = {
+                q1: "b) الاثنين",
+                q2: "a) ديسمبر",
+                q3: "a) Heute ist Freitag.",
+                q4: "b) am",
+                q5: "b) متى عيد ميلادك؟"
             };
 
             let score = 0;
@@ -820,23 +842,40 @@
                     "feedback" + i
                 );
 
+                // قفل اختيارات السؤال بعد التصحيح
+                const options = document.querySelectorAll(
+                    'input[name="q' + i + '"]'
+                );
+
+                options.forEach(function(option) {
+                    option.disabled = true;
+                });
+
+
                 if (!selected) {
 
-                    feedback.textContent = "❌ لم يتم اختيار إجابة.";
+                    feedback.textContent =
+                        "❌ لم يتم اختيار إجابة. الصحيحة: " +
+                        correctAnswersText["q" + i];
+
                     feedback.className = "wrong";
 
                 } else if (selected.value === answers["q" + i]) {
 
                     score++;
 
-                    feedback.textContent = "✅ إجابة صحيحة!";
+                    feedback.textContent =
+                        "✅ إجابة صحيحة!";
+
                     feedback.className = "correct";
 
                 } else {
 
-                    feedback.textContent = "❌ إجابة خاطئة.";
-                    feedback.className = "wrong";
+                    feedback.textContent =
+                        "❌ إجابة خاطئة. الصحيحة: " +
+                        correctAnswersText["q" + i];
 
+                    feedback.className = "wrong";
                 }
             }
 
@@ -858,16 +897,13 @@
                     "successMessage"
                 ).style.display = "block";
 
-
                 document.getElementById(
                     "nextLesson"
                 ).style.display = "block";
 
-
                 document.getElementById(
                     "backToA1"
                 ).style.display = "block";
-
 
                 alert("✅ تم حفظ الدرس السادس بنجاح!");
 
@@ -877,17 +913,20 @@
                     "successMessage"
                 ).style.display = "none";
 
-
                 document.getElementById(
                     "nextLesson"
                 ).style.display = "none";
-
 
                 document.getElementById(
                     "backToA1"
                 ).style.display = "none";
 
             }
+
+            // قفل زر التصحيح
+            document.getElementById(
+                "checkButton"
+            ).disabled = true;
 
         }
 

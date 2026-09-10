@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>A1 - German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7ff;
+            color: #222;
+        }
+
+        header {
+            background: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #6c63ff;
+            margin-bottom: 10px;
+        }
+
+        .home-button {
+            display: inline-block;
+            background: #6c63ff;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+
+        .home-button:hover {
+            background: #574fd6;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .lesson {
+            background: white;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .lesson-info {
+            flex: 1;
+        }
+
+        .lesson h2 {
+            margin: 0 0 7px;
+            font-size: 20px;
+        }
+
+        .lesson p {
+            margin: 0;
+            color: #666;
+        }
+
+        .status {
+            font-size: 24px;
+            min-width: 35px;
+            text-align: center;
+        }
+
+        .lesson button {
+            background: #6c63ff;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .lesson button:disabled {
+            background: #aaa;
+            cursor: not-allowed;
+        }
+
+        .locked {
+            opacity: 0.6;
+        }
+
+        .final-test {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px #ddd;
+            margin-top: 30px;
+        }
+
+        .final-test button {
+            background: #aaa;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: not-allowed;
+        }
+
+        .final-test button.active {
+            background: #27ae60;
+            cursor: pointer;
+        }
+
+        .final-status {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 المستوى A1</h1>
+        <p>German with Farida</p>
+        <p>تابع تقدمك في دروس المستوى 👇</p>
+
+        <!-- زر الصفحة الرئيسية -->
+        <a href="index.html" class="home-button">
+            🏠 الصفحة الرئيسية
+        </a>
+    </header>
+
+    <div class="container">
+
+        <!-- الدرس 1 -->
+        <div class="lesson">
+            <div class="status">🔓</div>
+            <div class="lesson-info">
+                <h2>الدرس 1 — Das Alphabet</h2>
+                <p>الحروف الأبجدية والنطق</p>
+            </div>
+
+            <a href="lesson1.html">
+                <button id="lesson1Button">فتح الدرس</button>
+            </a>
+        </div>
+
+
+        <!-- الدرس 2 -->
+        <div class="lesson locked">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 2 — Begrüßung & Kennenlernen</h2>
+                <p>التحية والتعارف</p>
+            </div>
+
+            <button id="lesson2Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 3 -->
+        <div class="lesson locked">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 3 — Zahlen & Alter</h2>
+                <p>الأرقام والعمر</p>
+            </div>
+
+            <button id="lesson3Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 4 -->
+        <div class="lesson locked">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 4 — Land, Nationalität & Sprachen</h2>
+                <p>البلد والجنسية واللغات</p>
+            </div>
+
+            <button id="lesson4Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 5 -->
+        <div class="lesson locked">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 5 — Die Familie</h2>
+                <p>العائلة</p>
+            </div>
+
+            <button id="lesson5Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 6 -->
+        <div class="lesson locked" id="lesson6">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 6 — Tage, Monate & Datum</h2>
+                <p>الأيام والشهور والتاريخ</p>
+            </div>
+
+            <button id="lesson6Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 7 -->
+        <div class="lesson locked" id="lesson7">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 7 — Farben & Alltagsgegenstände</h2>
+                <p>الألوان والأشياء اليومية</p>
+            </div>
+
+            <button id="lesson7Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 8 -->
+        <div class="lesson locked" id="lesson8">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 8 — der / die / das</h2>
+                <p>أدوات التعريف</p>
+            </div>
+
+            <button id="lesson8Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 9 -->
+        <div class="lesson locked" id="lesson9">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 9 — Pronomen & sein</h2>
+                <p>ضمائر الفاعل وفعل sein</p>
+            </div>
+
+            <button id="lesson9Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 10 -->
+        <div class="lesson locked" id="lesson10">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 10 — Verben</h2>
+                <p>الأفعال وتصريفها</p>
+            </div>
+
+            <button id="lesson10Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 11 -->
+        <div class="lesson locked" id="lesson11">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 11 — nicht / kein</h2>
+                <p>النفي</p>
+            </div>
+
+            <button id="lesson11Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 12 -->
+        <div class="lesson locked" id="lesson12">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 12 — Fragen & Satzbau</h2>
+                <p>السؤال وتكوين الجملة</p>
+            </div>
+
+            <button id="lesson12Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 13 -->
+        <div class="lesson locked" id="lesson13">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 13 — Akkusativ</h2>
+                <p>حالة المفعول به</p>
+            </div>
+
+            <button id="lesson13Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 14 -->
+        <div class="lesson locked" id="lesson14">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 14 — mein / dein / sein / ihr</h2>
+                <p>الملكية</p>
+            </div>
+
+            <button id="lesson14Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 15 -->
+        <div class="lesson locked" id="lesson15">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 15 — Uhrzeit & Termine</h2>
+                <p>الوقت والمواعيد</p>
+            </div>
+
+            <button id="lesson15Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 16 -->
+        <div class="lesson locked" id="lesson16">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 16 — Das Haus</h2>
+                <p>البيت والغرف والأثاث</p>
+            </div>
+
+            <button id="lesson16Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 17 -->
+        <div class="lesson locked" id="lesson17">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 17 — Essen & Trinken</h2>
+                <p>الأكل والشرب</p>
+            </div>
+
+            <button id="lesson17Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 18 -->
+        <div class="lesson locked" id="lesson18">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 18 — Einkaufen & Preise</h2>
+                <p>التسوق والأسعار</p>
+            </div>
+
+            <button id="lesson18Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 19 -->
+        <div class="lesson locked" id="lesson19">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 19 — Alltag & Hobbys</h2>
+                <p>الروتين اليومي والهوايات</p>
+            </div>
+
+            <button id="lesson19Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الدرس 20 -->
+        <div class="lesson locked" id="lesson20">
+            <div class="status">🔒</div>
+            <div class="lesson-info">
+                <h2>الدرس 20 — Wiederholung</h2>
+                <p>المراجعة الشاملة</p>
+            </div>
+
+            <button id="lesson20Button" disabled>
+                مغلق
+            </button>
+        </div>
+
+
+        <!-- الاختبار النهائي -->
+        <div class="final-test">
+
+            <h2>📝 اختبار A1 النهائي</h2>
+
+            <p id="finalTestDescription">
+                يظهر بعد إنهاء المراجعة الشاملة.
+            </p>
+
+            <div id="finalStatus" class="final-status">
+                🔒 الاختبار النهائي مغلق
+            </div>
+
+            <button id="finalTestButton" disabled>
+                🔒 الاختبار النهائي
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        const lesson1Completed =
+            localStorage.getItem("lesson1Completed") === "true";
+
+        const lesson2Completed =
+            localStorage.getItem("lesson2Completed") === "true";
+
+        const lesson3Completed =
+            localStorage.getItem("lesson3Completed") === "true";
+
+        const lesson4Completed =
+            localStorage.getItem("lesson4Completed") === "true";
+
+        const lesson5Completed =
+            localStorage.getItem("lesson5Completed") === "true";
+
+        const lesson6Completed =
+            localStorage.getItem("lesson6Completed") === "true";
+
+        const lesson7Completed =
+            localStorage.getItem("lesson7Completed") === "true";
+
+        const lesson8Completed =
+            localStorage.getItem("lesson8Completed") === "true";
+
+        const lesson9Completed =
+            localStorage.getItem("lesson9Completed") === "true";
+
+        const lesson10Completed =
+            localStorage.getItem("lesson10Completed") === "true";
+
+        const lesson11Completed =
+            localStorage.getItem("lesson11Completed") === "true";
+
+        const lesson12Completed =
+            localStorage.getItem("lesson12Completed") === "true";
+
+        const lesson13Completed =
+            localStorage.getItem("lesson13Completed") === "true";
+
+        const lesson14Completed =
+            localStorage.getItem("lesson14Completed") === "true";
+
+        const lesson15Completed =
+            localStorage.getItem("lesson15Completed") === "true";
+
+        const lesson16Completed =
+            localStorage.getItem("lesson16Completed") === "true";
+
+        const lesson17Completed =
+            localStorage.getItem("lesson17Completed") === "true";
+
+        const lesson18Completed =
+            localStorage.getItem("lesson18Completed") === "true";
+
+        const lesson19Completed =
+            localStorage.getItem("lesson19Completed") === "true";
+
+        const lesson20Completed =
+            localStorage.getItem("lesson20Completed") === "true";
+
+        const a1TestCompleted =
+            localStorage.getItem("a1TestCompleted") === "true";
+
+
+        const lessons =
+            document.querySelectorAll(".lesson");
+
+
+        const lesson1 = lessons[0];
+        const lesson2 = lessons[1];
+        const lesson3 = lessons[2];
+        const lesson4 = lessons[3];
+        const lesson5 = lessons[4];
+        const lesson6 = lessons[5];
+        const lesson7 = lessons[6];
+        const lesson8 = lessons[7];
+        const lesson9 = lessons[8];
+        const lesson10 = lessons[9];
+        const lesson11 = lessons[10];
+        const lesson12 = lessons[11];
+        const lesson13 = lessons[12];
+        const lesson14 = lessons[13];
+        const lesson15 = lessons[14];
+        const lesson16 = lessons[15];
+        const lesson17 = lessons[16];
+        const lesson18 = lessons[17];
+        const lesson19 = lessons[18];
+        const lesson20 = lessons[19];
+
+
+        const button1 =
+            document.getElementById("lesson1Button");
+
+        const button2 =
+            document.getElementById("lesson2Button");
+
+        const button3 =
+            document.getElementById("lesson3Button");
+
+        const button4 =
+            document.getElementById("lesson4Button");
+
+        const button5 =
+            document.getElementById("lesson5Button");
+
+        const button6 =
+            document.getElementById("lesson6Button");
+
+        const button7 =
+            document.getElementById("lesson7Button");
+
+        const button8 =
+            document.getElementById("lesson8Button");
+
+        const button9 =
+            document.getElementById("lesson9Button");
+
+        const button10 =
+            document.getElementById("lesson10Button");
+
+        const button11 =
+            document.getElementById("lesson11Button");
+
+        const button12 =
+            document.getElementById("lesson12Button");
+
+        const button13 =
+            document.getElementById("lesson13Button");
+
+        const button14 =
+            document.getElementById("lesson14Button");
+
+        const button15 =
+            document.getElementById("lesson15Button");
+
+        const button16 =
+            document.getElementById("lesson16Button");
+
+        const button17 =
+            document.getElementById("lesson17Button");
+
+        const button18 =
+            document.getElementById("lesson18Button");
+
+        const button19 =
+            document.getElementById("lesson19Button");
+
+        const button20 =
+            document.getElementById("lesson20Button");
+
+        const finalTestButton =
+            document.getElementById("finalTestButton");
+
+        const finalStatus =
+            document.getElementById("finalStatus");
+
+        const finalTestDescription =
+            document.getElementById("finalTestDescription");
+
+
+        /* =========================
+           الدرس الأول
+        ========================= */
+
+        if (lesson1Completed) {
+
+            lesson1.querySelector(".status").textContent = "✅";
+
+            button1.textContent = "مراجعة الدرس";
+
+
+            /* الدرس الثاني */
+
+            lesson2.classList.remove("locked");
+
+            lesson2.querySelector(".status").textContent = "🔓";
+
+            button2.disabled = false;
+
+            button2.textContent = "فتح الدرس";
+
+            button2.onclick = function () {
+                window.location.href = "lesson2.html";
+            };
+
+
+            if (lesson2Completed) {
+
+                lesson2.querySelector(".status").textContent = "✅";
+
+                button2.textContent = "مراجعة الدرس الثاني";
+
+
+                /* الدرس الثالث */
+
+                lesson3.classList.remove("locked");
+
+                lesson3.querySelector(".status").textContent = "🔓";
+
+                button3.disabled = false;
+
+                button3.textContent = "فتح الدرس";
+
+                button3.onclick = function () {
+                    window.location.href = "lesson3.html";
+                };
+
+
+                if (lesson3Completed) {
+
+                    lesson3.querySelector(".status").textContent = "✅";
+
+                    button3.textContent = "مراجعة الدرس الثالث";
+
+
+                    /* الدرس الرابع */
+
+                    lesson4.classList.remove("locked");
+
+                    lesson4.querySelector(".status").textContent = "🔓";
+
+                    button4.disabled = false;
+
+                    button4.textContent = "فتح الدرس";
+
+                    button4.onclick = function () {
+                        window.location.href = "lesson4.html";
+                    };
+
+
+                    if (lesson4Completed) {
+
+                        lesson4.querySelector(".status").textContent = "✅";
+
+                        button4.textContent = "مراجعة الدرس الرابع";
+
+
+                        /* الدرس الخامس */
+
+                        lesson5.classList.remove("locked");
+
+                        lesson5.querySelector(".status").textContent = "🔓";
+
+                        button5.disabled = false;
+
+                        button5.textContent = "فتح الدرس";
+
+                        button5.onclick = function () {
+                            window.location.href = "lesson5.html";
+                        };
+
+
+                        if (lesson5Completed) {
+
+                            lesson5.querySelector(".status").textContent = "✅";
+
+                            button5.textContent = "مراجعة الدرس الخامس";
+
+
+                            /* الدرس السادس */
+
+                            lesson6.classList.remove("locked");
+
+                            lesson6.querySelector(".status").textContent = "🔓";
+
+                            button6.disabled = false;
+
+                            button6.textContent = "فتح الدرس";
+
+                            button6.onclick = function () {
+                                window.location.href = "lesson6.html";
+                            };
+
+
+                            if (lesson6Completed) {
+
+                                lesson6.querySelector(".status").textContent = "✅";
+
+                                button6.textContent = "مراجعة الدرس السادس";
+
+
+                                /* الدرس السابع */
+
+                                lesson7.classList.remove("locked");
+
+                                lesson7.querySelector(".status").textContent = "🔓";
+
+                                button7.disabled = false;
+
+                                button7.textContent = "فتح الدرس";
+
+                                button7.onclick = function () {
+                                    window.location.href = "lesson7.html";
+                                };
+
+
+                                if (lesson7Completed) {
+
+                                    lesson7.querySelector(".status").textContent = "✅";
+
+                                    button7.textContent = "مراجعة الدرس السابع";
+
+
+                                    /* الدرس الثامن */
+
+                                    lesson8.classList.remove("locked");
+
+                                    lesson8.querySelector(".status").textContent = "🔓";
+
+                                    button8.disabled = false;
+
+                                    button8.textContent = "فتح الدرس";
+
+                                    button8.onclick = function () {
+                                        window.location.href = "lesson8.html";
+                                    };
+
+
+                                    if (lesson8Completed) {
+
+                                        lesson8.querySelector(".status").textContent = "✅";
+
+                                        button8.textContent = "مراجعة الدرس الثامن";
+
+
+                                        /* الدرس التاسع */
+
+                                        lesson9.classList.remove("locked");
+
+                                        lesson9.querySelector(".status").textContent = "🔓";
+
+                                        button9.disabled = false;
+
+                                        button9.textContent = "فتح الدرس";
+
+                                        button9.onclick = function () {
+                                            window.location.href = "lesson9.html";
+                                        };
+
+
+                                        if (lesson9Completed) {
+
+                                            lesson9.querySelector(".status").textContent = "✅";
+
+                                            button9.textContent = "مراجعة الدرس التاسع";
+
+
+                                            /* الدرس العاشر */
+
+                                            lesson10.classList.remove("locked");
+
+                                            lesson10.querySelector(".status").textContent = "🔓";
+
+                                            button10.disabled = false;
+
+                                            button10.textContent = "فتح الدرس";
+
+                                            button10.onclick = function () {
+                                                window.location.href = "lesson10.html";
+                                            };
+
+
+                                            if (lesson10Completed) {
+
+                                                lesson10.querySelector(".status").textContent = "✅";
+
+                                                button10.textContent = "مراجعة الدرس العاشر";
+
+
+                                                /* الدرس الحادي عشر */
+
+                                                lesson11.classList.remove("locked");
+
+                                                lesson11.querySelector(".status").textContent = "🔓";
+
+                                                button11.disabled = false;
+
+                                                button11.textContent = "فتح الدرس";
+
+                                                button11.onclick = function () {
+                                                    window.location.href = "lesson11.html";
+                                                };
+
+
+                                                if (lesson11Completed) {
+
+                                                    lesson11.querySelector(".status").textContent = "✅";
+
+                                                    button11.textContent = "مراجعة الدرس الحادي عشر";
+
+
+                                                    /* الدرس الثاني عشر */
+
+                                                    lesson12.classList.remove("locked");
+
+                                                    lesson12.querySelector(".status").textContent = "🔓";
+
+                                                    button12.disabled = false;
+
+                                                    button12.textContent = "فتح الدرس";
+
+                                                    button12.onclick = function () {
+                                                        window.location.href = "lesson12.html";
+                                                    };
+
+
+                                                    if (lesson12Completed) {
+
+                                                        lesson12.querySelector(".status").textContent = "✅";
+
+                                                        button12.textContent = "مراجعة الدرس الثاني عشر";
+
+
+                                                        /* الدرس الثالث عشر */
+
+                                                        lesson13.classList.remove("locked");
+
+                                                        lesson13.querySelector(".status").textContent = "🔓";
+
+                                                        button13.disabled = false;
+
+                                                        button13.textContent = "فتح الدرس";
+
+                                                        button13.onclick = function () {
+                                                            window.location.href = "lesson13.html";
+                                                        };
+
+
+                                                        if (lesson13Completed) {
+
+                                                            lesson13.querySelector(".status").textContent = "✅";
+
+                                                            button13.textContent = "مراجعة الدرس الثالث عشر";
+
+
+                                                            /* الدرس الرابع عشر */
+
+                                                            lesson14.classList.remove("locked");
+
+                                                            lesson14.querySelector(".status").textContent = "🔓";
+
+                                                            button14.disabled = false;
+
+                                                            button14.textContent = "فتح الدرس";
+
+                                                            button14.onclick = function () {
+                                                                window.location.href = "lesson14.html";
+                                                            };
+
+
+                                                            if (lesson14Completed) {
+
+                                                                lesson14.querySelector(".status").textContent = "✅";
+
+                                                                button14.textContent = "مراجعة الدرس الرابع عشر";
+
+
+                                                                /* الدرس الخامس عشر */
+
+                                                                lesson15.classList.remove("locked");
+
+                                                                lesson15.querySelector(".status").textContent = "🔓";
+
+                                                                button15.disabled = false;
+
+                                                                button15.textContent = "فتح الدرس";
+
+                                                                button15.onclick = function () {
+                                                                    window.location.href = "lesson15.html";
+                                                                };
+
+
+                                                                if (lesson15Completed) {
+
+                                                                    lesson15.querySelector(".status").textContent = "✅";
+
+                                                                    button15.textContent = "مراجعة الدرس الخامس عشر";
+
+
+                                                                    /* الدرس السادس عشر */
+
+                                                                    lesson16.classList.remove("locked");
+
+                                                                    lesson16.querySelector(".status").textContent = "🔓";
+
+                                                                    button16.disabled = false;
+
+                                                                    button16.textContent = "فتح الدرس";
+
+                                                                    button16.onclick = function () {
+                                                                        window.location.href = "lesson16.html";
+                                                                    };
+
+
+                                                                    if (lesson16Completed) {
+
+                                                                        lesson16.querySelector(".status").textContent = "✅";
+
+                                                                        button16.textContent = "مراجعة الدرس السادس عشر";
+
+
+                                                                        /* الدرس السابع عشر */
+
+                                                                        lesson17.classList.remove("locked");
+
+                                                                        lesson17.querySelector(".status").textContent = "🔓";
+
+                                                                        button17.disabled = false;
+
+                                                                        button17.textContent = "فتح الدرس";
+
+                                                                        button17.onclick = function () {
+                                                                            window.location.href = "lesson17.html";
+                                                                        };
+
+
+                                                                        if (lesson17Completed) {
+
+                                                                            lesson17.querySelector(".status").textContent = "✅";
+
+                                                                            button17.textContent = "مراجعة الدرس السابع عشر";
+
+
+                                                                            /* الدرس الثامن عشر */
+
+                                                                            lesson18.classList.remove("locked");
+
+                                                                            lesson18.querySelector(".status").textContent = "🔓";
+
+                                                                            button18.disabled = false;
+
+                                                                            button18.textContent = "فتح الدرس";
+
+                                                                            button18.onclick = function () {
+                                                                                window.location.href = "lesson18.html";
+                                                                            };
+
+
+                                                                            if (lesson18Completed) {
+
+                                                                                lesson18.querySelector(".status").textContent = "✅";
+
+                                                                                button18.textContent = "مراجعة الدرس الثامن عشر";
+
+
+                                                                                /* الدرس التاسع عشر */
+
+                                                                                lesson19.classList.remove("locked");
+
+                                                                                lesson19.querySelector(".status").textContent = "🔓";
+
+                                                                                button19.disabled = false;
+
+                                                                                button19.textContent = "فتح الدرس";
+
+                                                                                button19.onclick = function () {
+                                                                                    window.location.href = "lesson19.html";
+                                                                                };
+
+
+                                                                                if (lesson19Completed) {
+
+                                                                                    lesson19.querySelector(".status").textContent = "✅";
+
+                                                                                    button19.textContent = "مراجعة الدرس التاسع عشر";
+
+
+                                                                                    /* =========================
+                                                                                       الدرس العشرون
+                                                                                    ========================= */
+
+                                                                                    lesson20.classList.remove("locked");
+
+                                                                                    lesson20.querySelector(".status").textContent = "🔓";
+
+                                                                                    button20.disabled = false;
+
+                                                                                    button20.textContent = "فتح الدرس";
+
+                                                                                    button20.onclick = function () {
+                                                                                        window.location.href = "lesson20.html";
+                                                                                    };
+
+
+                                                                                    if (lesson20Completed) {
+
+                                                                                        lesson20.querySelector(".status").textContent = "✅";
+
+                                                                                        button20.textContent = "مراجعة الدرس العشرين";
+
+
+                                                                                        /* =========================
+                                                                                           الاختبار النهائي
+                                                                                        ========================= */
+
+                                                                                        finalTestButton.disabled = false;
+
+                                                                                        finalTestButton.classList.add("active");
+
+                                                                                        finalTestButton.onclick = function () {
+                                                                                            window.location.href = "A1-test.html";
+                                                                                        };
+
+
+                                                                                        if (a1TestCompleted) {
+
+                                                                                            finalStatus.textContent =
+                                                                                                "✅ تم حل اختبار A1 بالفعل";
+
+                                                                                            finalTestDescription.textContent =
+                                                                                                "تم حفظ نتيجة الاختبار وإجاباتك. يمكنك الدخول لعرض النتيجة المحفوظة.";
+
+                                                                                            finalTestButton.textContent =
+                                                                                                "📋 عرض النتيجة";
+
+                                                                                        } else {
+
+                                                                                            finalStatus.textContent =
+                                                                                                "🔓 الاختبار النهائي متاح";
+
+                                                                                            finalTestDescription.textContent =
+                                                                                                "تم إنهاء مراجعة A1. يمكنك الآن دخول الاختبار النهائي.";
+
+                                                                                            finalTestButton.textContent =
+                                                                                                "🏆 دخول اختبار A1 النهائي";
+
+                                                                                        }
+
+                                                                                    }
+
+                                                                                }
+
+                                                                            }
+
+                                                                        }
+
+                                                                    }
+
+                                                                }
+
+                                                            }
+
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                            }
+
+                                        }
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

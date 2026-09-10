@@ -1,188 +1,197 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Lesson 4 - German with Farida</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+    <title>Lesson 4 - German with Farida</title>
 
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background: #f5f7ff;
-        color: #222;
-        line-height: 1.8;
-    }
+    <style>
 
-    header {
-        background: white;
-        padding: 25px;
-        text-align: center;
-        box-shadow: 0 2px 10px #ddd;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7ff;
+            color: #222;
+            line-height: 1.8;
+        }
 
-    header h1 {
-        color: #6c63ff;
-        margin-bottom: 5px;
-    }
+        header {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 2px 10px #ddd;
+        }
 
-    .container {
-        max-width: 800px;
-        margin: 25px auto;
-        padding: 20px;
-    }
+        header h1 {
+            color: #6c63ff;
+            margin-bottom: 5px;
+        }
 
-    .box {
-        background: white;
-        padding: 22px;
-        margin-bottom: 20px;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px #ddd;
-    }
+        .container {
+            max-width: 800px;
+            margin: 25px auto;
+            padding: 20px;
+        }
 
-    h2 {
-        color: #6c63ff;
-    }
+        .box {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #ddd;
+        }
 
-    h3 {
-        color: #444;
-    }
+        h2 {
+            color: #6c63ff;
+        }
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 15px;
-    }
+        h3 {
+            color: #444;
+        }
 
-    th,
-    td {
-        border: 1px solid #ddd;
-        padding: 10px;
-        text-align: center;
-    }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
 
-    th {
-        background: #f0efff;
-    }
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
 
-    .german {
-        font-weight: bold;
-        color: #5a50d6;
-    }
+        th {
+            background: #f0efff;
+        }
 
-    .example {
-        background: #f5f4ff;
-        padding: 12px;
-        border-radius: 10px;
-        margin: 10px 0;
-    }
+        .german {
+            font-weight: bold;
+            color: #5a50d6;
+        }
 
-    .word {
-        background: #fafafa;
-        padding: 10px;
-        border-radius: 10px;
-        margin: 8px 0;
-    }
+        .example {
+            background: #f5f4ff;
+            padding: 12px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
 
-    input[type="text"] {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        width: 80%;
-        max-width: 400px;
-        font-size: 16px;
-        margin: 5px 0;
-    }
+        .word {
+            background: #fafafa;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 8px 0;
+        }
 
-    .question {
-        background: #fafafa;
-        padding: 15px;
-        margin: 15px 0;
-        border-radius: 12px;
-    }
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 400px;
+            font-size: 16px;
+            margin: 5px 0;
+        }
 
-    .choice {
-        display: block;
-        margin: 10px 0;
-        padding: 10px;
-        border-radius: 8px;
-        cursor: pointer;
-    }
+        .question {
+            background: #fafafa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 12px;
+        }
 
-    .choice:hover {
-        background: #f0efff;
-    }
+        .choice {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
 
-    .correct-choice {
-        background: #dff7e5 !important;
-    }
+        .choice:hover {
+            background: #f0efff;
+        }
 
-    .wrong-choice {
-        background: #ffe0e0 !important;
-    }
+        .correct-choice {
+            background: #dff7e5 !important;
+        }
 
-    .correct-answer {
-        color: green;
-        font-weight: bold;
-        margin-top: 8px;
-    }
+        .wrong-choice {
+            background: #ffe0e0 !important;
+        }
 
-    .wrong-answer {
-        color: #d00000;
-        font-weight: bold;
-        margin-top: 8px;
-    }
+        .correct-answer {
+            color: green;
+            font-weight: bold;
+            margin-top: 8px;
+        }
 
-    .speak-btn {
-        background: #6c63ff;
-        color: white;
-        border: none;
-        padding: 8px 14px;
-        border-radius: 8px;
-        cursor: pointer;
-        margin: 5px;
-    }
+        .wrong-answer {
+            color: #d00000;
+            font-weight: bold;
+            margin-top: 8px;
+        }
 
-    .check-btn {
-        background: #6c63ff;
-        color: white;
-        border: none;
-        padding: 12px 25px;
-        border-radius: 10px;
-        cursor: pointer;
-        font-size: 16px;
-        margin-top: 10px;
-    }
+        .speak-btn {
+            background: #6c63ff;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 5px;
+        }
 
-    #result {
-        margin-top: 20px;
-        font-size: 20px;
-        font-weight: bold;
-        text-align: center;
-    }
+        .check-btn {
+            background: #6c63ff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
 
-    .success {
-        color: green;
-    }
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
 
-    .fail {
-        color: #d00000;
-    }
+        .success {
+            color: green;
+        }
 
-    /* زر الرجوع إلى A1 */
-    #backToA1 {
-        display: none;
-        background: #6c63ff;
-        color: white;
-        border: none;
-        padding: 12px 25px;
-        border-radius: 10px;
-        cursor: pointer;
-        font-size: 17px;
-        margin: 20px auto;
-    }
+        .fail {
+            color: #d00000;
+        }
 
-</style>
+        .next-button,
+        #backToA1 {
+            display: none;
+            background: #6c63ff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 17px;
+            margin: 20px auto;
+        }
 
-</head><body><header>
+    </style>
+
+</head>
+
+<body>
+
+<header>
 
     <h1>🇩🇪 الدرس الرابع</h1>
 
@@ -209,17 +218,11 @@
         <p>في نهاية الدرس هتعرف:</p>
 
         <ul>
-
             <li>تقول إنت منين.</li>
-
             <li>تسأل شخص هو منين.</li>
-
             <li>تقول جنسيتك.</li>
-
             <li>تقول اللغات اللي بتتكلمها.</li>
-
             <li>تسأل شخص بيتكلم إيه.</li>
-
         </ul>
 
     </div>
@@ -230,7 +233,6 @@
     <div class="box">
 
         <h2>🌍 1. البلد — Das Land</h2>
-
 
         <table>
 
@@ -249,7 +251,7 @@
             <tr>
                 <td class="german">Ägypten</td>
                 <td>مصر</td>
-                <td>إيجِبتِن</td>
+                <td>إيگِبتِن</td>
             </tr>
 
             <tr>
@@ -322,7 +324,7 @@
 
             <br>
 
-            النطق: إيش كومَه آوس إيجِبتِن
+            النطق: إيش كومَه آوس إيگِبتِن
 
         </div>
 
@@ -392,7 +394,6 @@
     <div class="box">
 
         <h2>🧑‍🤝‍🧑 2. الجنسية — Nationalität</h2>
-
 
         <table>
 
@@ -496,9 +497,7 @@
         </div>
 
 
-        <p>
-            📌 الفرق مهم:
-        </p>
+        <p>📌 الفرق مهم:</p>
 
         <div class="example">
 
@@ -546,7 +545,6 @@
     <div class="box">
 
         <h2>🗣️ 3. اللغات — Sprachen</h2>
-
 
         <table>
 
@@ -749,9 +747,7 @@
         </div>
 
 
-        <p>
-            لاحظ:
-        </p>
+        <p>لاحظ:</p>
 
         <div class="example">
 
@@ -774,14 +770,12 @@
 
         <h2>🆕 5 كلمات جديدة</h2>
 
-
         <div class="word">
             <strong>1. das Land</strong>
             = البلد
             <br>
             النطق: داس لاند
         </div>
-
 
         <div class="word">
             <strong>2. die Nationalität</strong>
@@ -790,7 +784,6 @@
             النطق: دي ناتسيوناليتيت
         </div>
 
-
         <div class="word">
             <strong>3. die Sprache</strong>
             = اللغة
@@ -798,14 +791,12 @@
             النطق: دي شبراخه
         </div>
 
-
         <div class="word">
             <strong>4. sprechen</strong>
             = يتكلم
             <br>
             النطق: شبرِخِن
         </div>
-
 
         <div class="word">
             <strong>5. kommen</strong>
@@ -823,9 +814,7 @@
 
         <h2>✍️ التدريب الأول — البلاد</h2>
 
-        <p>
-            اكتب بالألماني:
-        </p>
+        <p>اكتب بالألماني:</p>
 
 
         <div class="question">
@@ -884,9 +873,7 @@
 
         <h2>✍️ التدريب الثاني — اللغات</h2>
 
-        <p>
-            كمّل الجملة:
-        </p>
+        <p>كمّل الجملة:</p>
 
 
         <div class="question">
@@ -951,9 +938,7 @@
 
         <h2>🗣️ 6. تحدث — Sprechen</h2>
 
-        <p>
-            جرّب الحوار القصير ده:
-        </p>
+        <p>جرّب الحوار القصير ده:</p>
 
 
         <div class="example">
@@ -1040,6 +1025,7 @@
 
         <h2>📝 اختبار الدرس الرابع</h2>
 
+
         <!-- السؤال 1 -->
 
         <div class="question" id="q1">
@@ -1053,18 +1039,15 @@
                 </span>
             </p>
 
-
             <label class="choice">
                 <input type="radio" name="q1" value="a">
                 أ) ما اللغات التي تتحدثها؟
             </label>
 
-
             <label class="choice">
                 <input type="radio" name="q1" value="b">
                 ب) إنت منين؟
             </label>
-
 
             <label class="choice">
                 <input type="radio" name="q1" value="c">
@@ -1086,18 +1069,15 @@
                 أنا من مصر.
             </p>
 
-
             <label class="choice">
                 <input type="radio" name="q2" value="a">
                 أ) Ich bin Ägypten.
             </label>
 
-
             <label class="choice">
                 <input type="radio" name="q2" value="b">
                 ب) Ich komme aus Ägypten.
             </label>
-
 
             <label class="choice">
                 <input type="radio" name="q2" value="c">
@@ -1113,26 +1093,21 @@
 
             <strong>السؤال 3:</strong>
 
-            <p>
-                أكمِل:
-            </p>
+            <p>أكمِل:</p>
 
             <p class="german">
                 Ich ______ Deutsch.
             </p>
-
 
             <label class="choice">
                 <input type="radio" name="q3" value="a">
                 أ) komme
             </label>
 
-
             <label class="choice">
                 <input type="radio" name="q3" value="b">
                 ب) bin
             </label>
-
 
             <label class="choice">
                 <input type="radio" name="q3" value="c">
@@ -1155,18 +1130,15 @@
                 </span>
             </p>
 
-
             <label class="choice">
                 <input type="radio" name="q4" value="a">
                 أ) إنت منين؟
             </label>
 
-
             <label class="choice">
                 <input type="radio" name="q4" value="b">
                 ب) إيه اللغات اللي بتتكلمها؟
             </label>
-
 
             <label class="choice">
                 <input type="radio" name="q4" value="c">
@@ -1188,18 +1160,15 @@
                 أنا مصرية.
             </p>
 
-
             <label class="choice">
                 <input type="radio" name="q5" value="a">
                 أ) Ich bin Ägypter.
             </label>
 
-
             <label class="choice">
                 <input type="radio" name="q5" value="b">
                 ب) Ich bin Ägypten.
             </label>
-
 
             <label class="choice">
                 <input type="radio" name="q5" value="c">
@@ -1215,6 +1184,20 @@
 
 
         <div id="result"></div>
+
+
+        <!-- زر الدرس الخامس -->
+
+        <button
+            id="nextLesson5"
+            class="next-button"
+            onclick="window.location.href='lesson5.html'"
+        >
+            ➡️ الدرس الخامس
+        </button>
+
+
+        <!-- زر الرجوع -->
 
         <button
             id="backToA1"
@@ -1250,13 +1233,9 @@
         const answers = {
 
             q1: "b",
-
             q2: "b",
-
             q3: "c",
-
             q4: "b",
-
             q5: "c"
 
         };
@@ -1284,7 +1263,9 @@
                     ".correct-answer, .wrong-answer"
                 )
                 .forEach(function (element) {
+
                     element.remove();
+
                 });
 
 
@@ -1304,13 +1285,17 @@
                     selected.parentElement;
 
 
-                if (selected.value === answers["q" + i]) {
+                if (
+                    selected.value ===
+                    answers["q" + i]
+                ) {
 
                     score++;
 
                     selectedChoice.classList.add(
                         "correct-choice"
                     );
+
 
                     const feedback =
                         document.createElement("div");
@@ -1337,7 +1322,8 @@
 
                         if (
                             input &&
-                            input.value === answers["q" + i]
+                            input.value ===
+                            answers["q" + i]
                         ) {
 
                             choice.classList.add(
@@ -1360,20 +1346,24 @@
 
                         q1: "ب) إنت منين؟",
 
-                        q2: "ب) Ich komme aus Ägypten.",
+                        q2:
+                            "ب) Ich komme aus Ägypten.",
 
-                        q3: "ج) spreche",
+                        q3:
+                            "ج) spreche",
 
-                        q4: "ب) إيه اللغات اللي بتتكلمها؟",
+                        q4:
+                            "ب) إيه اللغات اللي بتتكلمها؟",
 
-                        q5: "ج) Ich bin Ägypterin."
+                        q5:
+                            "ج) Ich bin Ägypterin."
 
                     };
 
 
                     feedback.textContent =
-                        "❌ إجابة غلط — الصحيحة: "
-                        + correctText["q" + i];
+                        "❌ إجابة غلط — الصحيحة: " +
+                        correctText["q" + i];
 
 
                     question.appendChild(feedback);
@@ -1388,24 +1378,29 @@
                 feedback.className =
                     "wrong-answer";
 
+
                 const correctText = {
 
                     q1: "ب) إنت منين؟",
 
-                    q2: "ب) Ich komme aus Ägypten.",
+                    q2:
+                        "ب) Ich komme aus Ägypten.",
 
-                    q3: "ج) spreche",
+                    q3:
+                        "ج) spreche",
 
-                    q4: "ب) إيه اللغات اللي بتتكلمها؟",
+                    q4:
+                        "ب) إيه اللغات اللي بتتكلمها؟",
 
-                    q5: "ج) Ich bin Ägypterin."
+                    q5:
+                        "ج) Ich bin Ägypterin."
 
                 };
 
 
                 feedback.textContent =
-                    "❌ لم يتم اختيار إجابة — الصحيحة: "
-                    + correctText["q" + i];
+                    "❌ لم يتم اختيار إجابة — الصحيحة: " +
+                    correctText["q" + i];
 
 
                 question.appendChild(feedback);
@@ -1418,13 +1413,20 @@
         const result =
             document.getElementById("result");
 
-        // إظهار زر الرجوع بعد الانتهاء من الاختبار
-        document.getElementById("backToA1").style.display = "block";
 
+        // إظهار زر الرجوع بعد الاختبار
+
+        document.getElementById(
+            "backToA1"
+        ).style.display = "block";
+
+
+        // النجاح من 3/5
 
         if (score >= 3) {
 
             result.className = "success";
+
 
             result.innerHTML =
                 "🎉 ممتاز! نتيجتك " +
@@ -1440,6 +1442,13 @@
             );
 
 
+            // إظهار زر الدرس الخامس
+
+            document.getElementById(
+                "nextLesson5"
+            ).style.display = "block";
+
+
             setTimeout(function () {
 
                 alert(
@@ -1448,9 +1457,11 @@
 
             }, 100);
 
+
         } else {
 
             result.className = "fail";
+
 
             result.innerHTML =
                 "❌ نتيجتك " +
@@ -1459,10 +1470,19 @@
                 "<br>" +
                 "محتاج 3/5 على الأقل للنجاح. جرّب مرة تانية!";
 
+
+            // إخفاء زر الدرس الخامس
+
+            document.getElementById(
+                "nextLesson5"
+            ).style.display = "none";
+
         }
 
     }
 
 </script>
 
-</body></html>
+</body>
+
+</html>

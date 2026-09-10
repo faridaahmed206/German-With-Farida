@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Lesson 3 B1 - Passiv</title>
 
     <style>
@@ -17,99 +16,69 @@
         }
 
         header {
-            background: #1976d2;
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
+            padding: 30px 20px;
             text-align: center;
-            padding: 25px 15px;
         }
 
         header h1 {
-            margin: 0 0 8px;
+            margin: 0;
             font-size: 30px;
         }
 
         header p {
-            margin: 0;
+            margin: 8px 0 0;
             font-size: 17px;
         }
 
         .container {
-            max-width: 850px;
-            margin: 25px auto;
+            max-width: 900px;
+            margin: 30px auto;
             padding: 0 15px;
-        }
-
-        .back {
-            display: inline-block;
-            margin-bottom: 20px;
-            text-decoration: none;
-            color: #1976d2;
-            font-weight: bold;
         }
 
         .box {
             background: white;
-            padding: 22px;
-            border-radius: 14px;
+            border-radius: 15px;
+            padding: 25px;
             margin-bottom: 20px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        .box h2 {
-            color: #1976d2;
+        h2 {
+            color: #667eea;
             margin-top: 0;
         }
 
+        h3 {
+            color: #764ba2;
+        }
+
         .example {
-            background: #f0f6ff;
-            padding: 12px 15px;
-            border-radius: 10px;
-            margin: 10px 0;
+            background: #f0f3ff;
+            border-right: 5px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
         }
 
         .german {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
-            direction: ltr;
-            text-align: left;
+            color: #333;
         }
 
         .meaning {
             color: #555;
         }
 
-        .formula {
-            background: #fff8e1;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background: #1976d2;
-            color: white;
-        }
-
         .question {
-            background: #f8f9fc;
-            padding: 16px;
-            border-radius: 10px;
+            background: #f8f9ff;
+            padding: 18px;
             margin-bottom: 15px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
         }
 
         .question p {
@@ -118,695 +87,588 @@
 
         label {
             display: block;
-            margin: 8px 0;
+            background: white;
+            padding: 10px;
+            margin: 7px 0;
+            border-radius: 7px;
             cursor: pointer;
+            border: 1px solid #ddd;
         }
 
-        .check {
-            background: #1976d2;
-            color: white;
-            border: none;
-            border-radius: 9px;
+        label:hover {
+            background: #eef1ff;
+        }
+
+        button,
+        .next-button,
+        .back-button {
+            display: inline-block;
             padding: 12px 22px;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
             font-size: 16px;
             cursor: pointer;
+            margin: 5px;
         }
 
-        .check:disabled {
+        button {
+            background: #667eea;
+            color: white;
+        }
+
+        button:hover {
+            background: #5568d9;
+        }
+
+        button:disabled {
             background: #aaa;
             cursor: not-allowed;
         }
 
-        #result {
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 10px;
-            display: none;
-        }
-
-        .success {
-            background: #e8f5e9;
-            color: #176b2c;
-        }
-
-        .fail {
-            background: #ffebee;
-            color: #a51d2a;
+        .back-button {
+            background: #555;
+            color: white;
         }
 
         .next-button {
-            display: none;
-            background: #16803c;
+            background: #28a745;
             color: white;
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 9px;
-            margin-top: 15px;
+        }
+
+        .next-button:hover {
+            background: #218838;
         }
 
         .retry-button {
-            display: none;
-            background: #d88900;
+            background: #ff9800;
             color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 9px;
-            cursor: pointer;
-            margin-top: 15px;
-            font-size: 15px;
+        }
+
+        .retry-button:hover {
+            background: #e68900;
+        }
+
+        #result {
+            display: none;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .fail {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        ul {
+            padding-right: 25px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .box {
+                padding: 18px;
+            }
+
+            .german {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>🇩🇪 Lesson 3 – Passiv</h1>
-        <p>المبني للمجهول في اللغة الألمانية</p>
-    </header>
+<header>
+    <h1>🇩🇪 Lesson 3 – Passiv</h1>
+    <p>المبني للمجهول في اللغة الألمانية</p>
+</header>
 
-    <div class="container">
+<div class="container">
 
-        <a class="back" href="B1.html">
-            ⬅️ العودة إلى مستوى B1
-        </a>
+    <div class="box">
+        <a href="B1.html" class="back-button">⬅️ العودة إلى B1</a>
+    </div>
 
+    <div class="box">
+        <h2>📘 What is Passiv?</h2>
 
-        <!-- المقدمة -->
-        <div class="box">
+        <p>
+            نستخدم <strong>Passiv</strong> عندما يكون التركيز على الفعل أو الشيء الذي حدث،
+            وليس على الشخص الذي قام بالفعل.
+        </p>
 
-            <h2>📚 ما هو Passiv؟</h2>
-
-            <p>
-                نستخدم <b>Passiv</b> عندما يكون التركيز على الفعل أو الشيء الذي حدث،
-                وليس على الشخص الذي قام بالفعل.
-            </p>
-
-            <div class="example">
-                <div class="german">
-                    Der Lehrer erklärt die Grammatik.
-                </div>
-                <div class="meaning">
-                    المعلم يشرح القواعد.
-                </div>
-            </div>
-
-            <div class="example">
-                <div class="german">
-                    Die Grammatik wird erklärt.
-                </div>
-                <div class="meaning">
-                    يتم شرح القواعد.
-                </div>
-            </div>
-
+        <div class="example">
+            <div class="german">Der Mann repariert das Auto.</div>
+            <div class="meaning">الرجل يصلح السيارة.</div>
         </div>
 
+        <div class="example">
+            <div class="german">Das Auto wird repariert.</div>
+            <div class="meaning">يتم إصلاح السيارة.</div>
+        </div>
+    </div>
 
-        <!-- Aktiv und Passiv -->
-        <div class="box">
+    <div class="box">
+        <h2>🔄 Aktiv und Passiv</h2>
 
-            <h2>1️⃣ Aktiv und Passiv</h2>
+        <h3>Aktiv – المبني للمعلوم</h3>
 
-            <table>
-
-                <tr>
-                    <th>Aktiv</th>
-                    <th>Passiv</th>
-                </tr>
-
-                <tr>
-                    <td>Der Schüler schreibt den Brief.</td>
-                    <td>Der Brief wird geschrieben.</td>
-                </tr>
-
-                <tr>
-                    <td>Die Mutter kocht das Essen.</td>
-                    <td>Das Essen wird gekocht.</td>
-                </tr>
-
-                <tr>
-                    <td>Der Mechaniker repariert das Auto.</td>
-                    <td>Das Auto wird repariert.</td>
-                </tr>
-
-            </table>
-
+        <div class="example">
+            <div class="german">Der Lehrer erklärt die Grammatik.</div>
+            <div class="meaning">المعلم يشرح القواعد.</div>
         </div>
 
+        <h3>Passiv – المبني للمجهول</h3>
 
-        <!-- Präsens -->
-        <div class="box">
+        <div class="example">
+            <div class="german">Die Grammatik wird erklärt.</div>
+            <div class="meaning">يتم شرح القواعد.</div>
+        </div>
+    </div>
 
-            <h2>2️⃣ Passiv im Präsens</h2>
+    <div class="box">
+        <h2>⏰ Passiv im Präsens</h2>
 
-            <p>
-                في زمن المضارع نستخدم:
-            </p>
+        <p>
+            في المضارع نستخدم:
+        </p>
 
-            <div class="formula">
-                werden + Partizip II
-            </div>
-
-            <div class="example">
-                <div class="german">
-                    Das Auto wird repariert.
-                </div>
-
-                <div class="meaning">
-                    يتم إصلاح السيارة.
-                </div>
-            </div>
-
-            <div class="example">
-                <div class="german">
-                    Das Essen wird gekocht.
-                </div>
-
-                <div class="meaning">
-                    يتم طهي الطعام.
-                </div>
-            </div>
-
+        <div class="example">
+            <div class="german">werden + Partizip II</div>
+            <div class="meaning">werden + التصريف الثالث للفعل</div>
         </div>
 
-
-        <!-- werden -->
-        <div class="box">
-
-            <h2>3️⃣ تصريف werden</h2>
-
-            <table>
-
-                <tr>
-                    <th>الضمير</th>
-                    <th>werden</th>
-                </tr>
-
-                <tr>
-                    <td>ich</td>
-                    <td>werde</td>
-                </tr>
-
-                <tr>
-                    <td>du</td>
-                    <td>wirst</td>
-                </tr>
-
-                <tr>
-                    <td>er / sie / es</td>
-                    <td>wird</td>
-                </tr>
-
-                <tr>
-                    <td>wir</td>
-                    <td>werden</td>
-                </tr>
-
-                <tr>
-                    <td>ihr</td>
-                    <td>werdet</td>
-                </tr>
-
-                <tr>
-                    <td>sie / Sie</td>
-                    <td>werden</td>
-                </tr>
-
-            </table>
-
+        <div class="example">
+            <div class="german">Das Auto wird repariert.</div>
+            <div class="meaning">يتم إصلاح السيارة.</div>
         </div>
 
-
-        <!-- Partizip II -->
-        <div class="box">
-
-            <h2>4️⃣ Partizip II</h2>
-
-            <p>
-                الفعل الأساسي في Passiv يأتي في آخر الجملة بصيغة
-                <b>Partizip II</b>.
-            </p>
-
-            <table>
-
-                <tr>
-                    <th>Infinitiv</th>
-                    <th>Partizip II</th>
-                    <th>المعنى</th>
-                </tr>
-
-                <tr>
-                    <td>machen</td>
-                    <td>gemacht</td>
-                    <td>يفعل</td>
-                </tr>
-
-                <tr>
-                    <td>schreiben</td>
-                    <td>geschrieben</td>
-                    <td>يكتب</td>
-                </tr>
-
-                <tr>
-                    <td>reparieren</td>
-                    <td>repariert</td>
-                    <td>يصلح</td>
-                </tr>
-
-                <tr>
-                    <td>bauen</td>
-                    <td>gebaut</td>
-                    <td>يبني</td>
-                </tr>
-
-            </table>
-
+        <div class="example">
+            <div class="german">Das Essen wird gekocht.</div>
+            <div class="meaning">يتم طبخ الطعام.</div>
         </div>
 
+        <div class="example">
+            <div class="german">Die Tür wird geöffnet.</div>
+            <div class="meaning">يتم فتح الباب.</div>
+        </div>
+    </div>
 
-        <!-- von -->
-        <div class="box">
+    <div class="box">
+        <h2>📝 تصريف werden</h2>
 
-            <h2>5️⃣ استخدام von</h2>
+        <ul>
+            <li>ich → werde</li>
+            <li>du → wirst</li>
+            <li>er/sie/es → wird</li>
+            <li>wir → werden</li>
+            <li>ihr → werdet</li>
+            <li>sie/Sie → werden</li>
+        </ul>
 
-            <p>
-                لو عايزين نذكر الشخص الذي قام بالفعل، يمكن استخدام
-                <b>von + Dativ</b>.
-            </p>
+        <div class="example">
+            <div class="german">Das Haus wird gebaut.</div>
+            <div class="meaning">يتم بناء المنزل.</div>
+        </div>
+    </div>
 
-            <div class="example">
-                <div class="german">
-                    Der Brief wird von dem Schüler geschrieben.
-                </div>
+    <div class="box">
+        <h2>🔤 Partizip II</h2>
 
-                <div class="meaning">
-                    يتم كتابة الخطاب بواسطة الطالب.
-                </div>
-            </div>
+        <p>
+            في الـ Passiv نستخدم <strong>Partizip II</strong>.
+        </p>
 
-            <div class="example">
-                <div class="german">
-                    Das Auto wird von dem Mechaniker repariert.
-                </div>
-
-                <div class="meaning">
-                    يتم إصلاح السيارة بواسطة الميكانيكي.
-                </div>
-            </div>
-
+        <div class="example">
+            <div class="german">reparieren → repariert</div>
+            <div class="meaning">يصلح → تم إصلاحه</div>
         </div>
 
-
-        <!-- الماضي -->
-        <div class="box">
-
-            <h2>6️⃣ Passiv في الماضي البسيط</h2>
-
-            <p>
-                في Präteritum Passiv نستخدم:
-            </p>
-
-            <div class="formula">
-                wurde / wurden + Partizip II
-            </div>
-
-            <div class="example">
-                <div class="german">
-                    Das Haus wurde gebaut.
-                </div>
-
-                <div class="meaning">
-                    تم بناء المنزل.
-                </div>
-            </div>
-
-            <div class="example">
-                <div class="german">
-                    Die Häuser wurden gebaut.
-                </div>
-
-                <div class="meaning">
-                    تم بناء المنازل.
-                </div>
-            </div>
-
+        <div class="example">
+            <div class="german">schreiben → geschrieben</div>
+            <div class="meaning">يكتب → مكتوب</div>
         </div>
 
+        <div class="example">
+            <div class="german">bauen → gebaut</div>
+            <div class="meaning">يبني → مبني</div>
+        </div>
+    </div>
 
-        <!-- ملخص -->
-        <div class="box">
+    <div class="box">
+        <h2>👤 استخدام von</h2>
 
-            <h2>📝 ملخص سريع</h2>
+        <p>
+            إذا أردنا ذكر الشخص الذي قام بالفعل، نستخدم <strong>von + Dativ</strong>.
+        </p>
 
-            <ul>
-                <li><b>Präsens Passiv:</b> werden + Partizip II</li>
-                <li><b>Präteritum Passiv:</b> wurde / wurden + Partizip II</li>
-                <li>Partizip II يأتي في نهاية الجملة.</li>
-                <li><b>von + Dativ</b> يستخدم لذكر الشخص الذي قام بالفعل.</li>
-                <li>Passiv يركز على الحدث أو الشيء الذي وقع عليه الفعل.</li>
-            </ul>
-
+        <div class="example">
+            <div class="german">Das Auto wird von dem Mann repariert.</div>
+            <div class="meaning">يتم إصلاح السيارة بواسطة الرجل.</div>
         </div>
 
+        <div class="example">
+            <div class="german">Das Buch wird von der Lehrerin gelesen.</div>
+            <div class="meaning">يتم قراءة الكتاب بواسطة المعلمة.</div>
+        </div>
+    </div>
 
-        <!-- الاختبار -->
-        <div class="box">
+    <div class="box">
+        <h2>⏳ Passiv في الماضي البسيط</h2>
 
-            <h2>📝 اختبار Lesson 3</h2>
+        <p>
+            في الماضي البسيط نستخدم:
+        </p>
 
-            <p>
-                لازم تجيب على الأقل <b>3 من 5</b> عشان تنجح ويتفتح Lesson 4.
-            </p>
+        <div class="example">
+            <div class="german">wurde + Partizip II</div>
+            <div class="meaning">wurde + التصريف الثالث</div>
+        </div>
 
+        <div class="example">
+            <div class="german">Das Haus wurde gebaut.</div>
+            <div class="meaning">تم بناء المنزل.</div>
+        </div>
 
-            <!-- Q1 -->
-            <div class="question">
+        <div class="example">
+            <div class="german">Das Auto wurde repariert.</div>
+            <div class="meaning">تم إصلاح السيارة.</div>
+        </div>
+    </div>
 
-                <p>1️⃣ اختر جملة الـ Passiv الصحيحة:</p>
+    <div class="box">
+        <h2>📌 Zusammenfassung</h2>
 
-                <label>
-                    <input type="radio" name="q1" value="a">
-                    Das Auto wird repariert.
-                </label>
+        <ul>
+            <li><strong>Präsens:</strong> werden + Partizip II</li>
+            <li><strong>Präteritum:</strong> wurde + Partizip II</li>
+            <li><strong>von + Dativ:</strong> لذكر الشخص الذي قام بالفعل</li>
+        </ul>
+    </div>
 
-                <label>
-                    <input type="radio" name="q1" value="b">
-                    Das Auto wird reparieren.
-                </label>
+    <div class="box">
+        <h2>📝 Quiz – اختبار الدرس</h2>
 
-                <label>
-                    <input type="radio" name="q1" value="c">
-                    Das Auto repariert wird.
-                </label>
+        <div class="question">
+            <p>1️⃣ اختر الجملة الصحيحة في Passiv:</p>
 
-                <label>
-                    <input type="radio" name="q1" value="d">
-                    Das Auto ist reparieren.
-                </label>
+            <label>
+                <input type="radio" name="q1" value="a">
+                Das Auto wird repariert.
+            </label>
 
-            </div>
+            <label>
+                <input type="radio" name="q1" value="b">
+                Das Auto repariert wird.
+            </label>
 
+            <label>
+                <input type="radio" name="q1" value="c">
+                Das Auto werden repariert.
+            </label>
+        </div>
 
-            <!-- Q2 -->
-            <div class="question">
+        <div class="question">
+            <p>2️⃣ أكمل الجملة: Das Auto ___ repariert.</p>
 
-                <p>2️⃣ أكمل:</p>
+            <label>
+                <input type="radio" name="q2" value="a">
+                wird
+            </label>
 
-                <p class="german">
-                    Der Brief ______ geschrieben.
-                </p>
+            <label>
+                <input type="radio" name="q2" value="b">
+                werden
+            </label>
 
-                <label>
-                    <input type="radio" name="q2" value="a">
-                    wird
-                </label>
+            <label>
+                <input type="radio" name="q2" value="c">
+                wurde
+            </label>
+        </div>
 
-                <label>
-                    <input type="radio" name="q2" value="b">
-                    werden
-                </label>
+        <div class="question">
+            <p>3️⃣ ما هو Partizip II من schreiben؟</p>
 
-                <label>
-                    <input type="radio" name="q2" value="c">
-                    wurde
-                </label>
+            <label>
+                <input type="radio" name="q3" value="a">
+                geschrieben
+            </label>
 
-                <label>
-                    <input type="radio" name="q2" value="d">
-                    sein
-                </label>
+            <label>
+                <input type="radio" name="q3" value="b">
+                geschreibt
+            </label>
 
-            </div>
+            <label>
+                <input type="radio" name="q3" value="c">
+                schreibte
+            </label>
+        </div>
 
+        <div class="question">
+            <p>4️⃣ اختر الجملة الصحيحة في Passiv بالماضي:</p>
 
-            <!-- Q3 -->
-            <div class="question">
+            <label>
+                <input type="radio" name="q4" value="a">
+                Das Haus wurde gebaut.
+            </label>
 
-                <p>3️⃣ ما هو Partizip II من <b>schreiben</b>؟</p>
+            <label>
+                <input type="radio" name="q4" value="b">
+                Das Haus wird gebaut gestern.
+            </label>
 
-                <label>
-                    <input type="radio" name="q3" value="a">
-                    geschrieben
-                </label>
+            <label>
+                <input type="radio" name="q4" value="c">
+                Das Haus wurde bauen.
+            </label>
+        </div>
 
-                <label>
-                    <input type="radio" name="q3" value="b">
-                    geschreibt
-                </label>
+        <div class="question">
+            <p>5️⃣ ماذا نستخدم لذكر الشخص الذي قام بالفعل؟</p>
 
-                <label>
-                    <input type="radio" name="q3" value="c">
-                    schreibte
-                </label>
+            <label>
+                <input type="radio" name="q5" value="a">
+                von
+            </label>
 
-                <label>
-                    <input type="radio" name="q3" value="d">
-                    schreiben
-                </label>
+            <label>
+                <input type="radio" name="q5" value="b">
+                mit
+            </label>
 
-            </div>
+            <label>
+                <input type="radio" name="q5" value="c">
+                für
+            </label>
+        </div>
 
-
-            <!-- Q4 -->
-            <div class="question">
-
-                <p>4️⃣ أي جملة صحيحة في Präteritum Passiv؟</p>
-
-                <label>
-                    <input type="radio" name="q4" value="a">
-                    Das Haus wurde gebaut.
-                </label>
-
-                <label>
-                    <input type="radio" name="q4" value="b">
-                    Das Haus wird gebaut gestern.
-                </label>
-
-                <label>
-                    <input type="radio" name="q4" value="c">
-                    Das Haus wurde bauen.
-                </label>
-
-                <label>
-                    <input type="radio" name="q4" value="d">
-                    Das Haus ist wurde gebaut.
-                </label>
-
-            </div>
-
-
-            <!-- Q5 -->
-            <div class="question">
-
-                <p>5️⃣ أكمل الجملة:</p>
-
-                <p class="german">
-                    Der Brief wird ______ dem Schüler geschrieben.
-                </p>
-
-                <label>
-                    <input type="radio" name="q5" value="a">
-                    von
-                </label>
-
-                <label>
-                    <input type="radio" name="q5" value="b">
-                    für
-                </label>
-
-                <label>
-                    <input type="radio" name="q5" value="c">
-                    mit
-                </label>
-
-                <label>
-                    <input type="radio" name="q5" value="d">
-                    nach
-                </label>
-
-            </div>
-
-
-            <button class="check" id="checkButton" onclick="checkQuiz()">
+        <div class="buttons">
+            <button id="checkButton" onclick="checkQuiz()">
                 ✅ تصحيح الاختبار
             </button>
 
-            <div id="result"></div>
-
-            <a href="Lesson4-B1.html" class="next-button" id="nextButton">
-                ➡️ الانتقال إلى Lesson 4
-            </a>
-
-            <button class="retry-button" id="retryButton" onclick="retryQuiz()">
-                🔄 إعادة الاختبار
+            <button
+                id="retryButton"
+                class="retry-button"
+                onclick="retryQuiz()"
+                style="display:none;">
+                🔄 إعادة المحاولة
             </button>
 
+            <a
+                href="lesson4-B1.html"
+                class="next-button"
+                id="nextButton"
+                style="display:none;">
+                ➡️ الانتقال إلى Lesson 4
+            </a>
         </div>
 
-
-        <a class="back" href="B1.html">
-            ⬅️ العودة إلى مستوى B1
-        </a>
-
+        <div id="result"></div>
     </div>
 
+    <div class="box">
+        <a href="B1.html" class="back-button">⬅️ العودة إلى B1</a>
 
-    <script>
+        <a
+            href="lesson4-B1.html"
+            class="next-button"
+            id="bottomNextButton"
+            style="display:none;">
+            ➡️ الانتقال إلى Lesson 4
+        </a>
+    </div>
 
-        const answers = {
-            q1: "a",
-            q2: "a",
-            q3: "a",
-            q4: "a",
-            q5: "a"
-        };
+</div>
 
+<script>
 
-        const correctText = {
-            q1: "Das Auto wird repariert.",
-            q2: "wird",
-            q3: "geschrieben",
-            q4: "Das Haus wurde gebaut.",
-            q5: "von"
-        };
+const answers = {
+    q1: "a",
+    q2: "a",
+    q3: "a",
+    q4: "a",
+    q5: "a"
+};
 
+const correctText = {
+    q1: "Das Auto wird repariert.",
+    q2: "wird",
+    q3: "geschrieben",
+    q4: "Das Haus wurde gebaut.",
+    q5: "von"
+};
 
-        function checkQuiz() {
+function checkQuiz() {
 
-            let score = 0;
-            let wrongAnswers = [];
+    let score = 0;
+    let wrongAnswers = [];
 
-            for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 5; i++) {
 
-                const selected =
-                    document.querySelector(
-                        'input[name="q' + i + '"]:checked'
-                    );
-
-                if (selected && selected.value === answers["q" + i]) {
-                    score++;
-                } else {
-                    wrongAnswers.push(i);
-                }
-            }
-
-
-            const result = document.getElementById("result");
-
-            result.style.display = "block";
-
-
-            let html =
-                "<strong>نتيجتك: " + score + "/5</strong><br><br>";
-
-
-            if (wrongAnswers.length > 0) {
-
-                html +=
-                    "<b>❌ الأسئلة التي أخطأت فيها وإجابتها الصحيحة:</b><br>";
-
-                wrongAnswers.forEach(function(number) {
-
-                    html +=
-                        "السؤال " + number +
-                        ": ✅ " +
-                        correctText["q" + number] +
-                        "<br>";
-
-                });
-            }
-
-
-            if (score >= 3) {
-
-                localStorage.setItem(
-                    "b1Lesson3Completed",
-                    "true"
-                );
-
-                html +=
-                    "<br>🎉 أحسنت! نجحت في Lesson 3.<br>" +
-                    "💾 تم حفظ تقدمك بنجاح!<br>" +
-                    "🔓 تم فتح Lesson 4.";
-
-                result.className = "success";
-
-                document.getElementById("nextButton").style.display =
-                    "inline-block";
-
-                document.getElementById("retryButton").style.display =
-                    "none";
-
-            } else {
-
-                html +=
-                    "<br><br>❌ تحتاج إلى مراجعة بسيطة.<br>" +
-                    "لازم تجيب 3/5 على الأقل للنجاح.";
-
-                result.className = "fail";
-
-                document.getElementById("nextButton").style.display =
-                    "none";
-
-                document.getElementById("retryButton").style.display =
-                    "inline-block";
-            }
-
-
-            result.innerHTML = html;
-
-
-            document.querySelectorAll("input").forEach(function(input) {
-                input.disabled = true;
-            });
-
-            document.getElementById("checkButton").disabled = true;
-        }
-
-
-        function retryQuiz() {
-
-            document.querySelectorAll("input").forEach(function(input) {
-                input.checked = false;
-                input.disabled = false;
-            });
-
-            document.getElementById("result").style.display =
-                "none";
-
-            document.getElementById("checkButton").disabled =
-                false;
-
-            document.getElementById("retryButton").style.display =
-                "none";
-
-            document.getElementById("nextButton").style.display =
-                "none";
-        }
-
+        const selected =
+            document.querySelector(
+                'input[name="q' + i + '"]:checked'
+            );
 
         if (
-            localStorage.getItem("b1Lesson3Completed") === "true"
+            selected &&
+            selected.value === answers["q" + i]
         ) {
-
-            document.getElementById("result").style.display =
-                "block";
-
-            document.getElementById("result").className =
-                "success";
-
-            document.getElementById("result").innerHTML =
-                "✅ Lesson 3 مكتمل بالفعل.<br>" +
-                "💾 تقدمك محفوظ.<br>" +
-                "🔓 Lesson 4 مفتوح.";
-
-            document.getElementById("nextButton").style.display =
-                "inline-block";
+            score++;
+        } else {
+            wrongAnswers.push(i);
         }
+    }
 
-    </script>
+    const result =
+        document.getElementById("result");
+
+    result.style.display = "block";
+
+    let html =
+        "<strong>نتيجتك: " + score + "/5</strong><br><br>";
+
+    if (wrongAnswers.length > 0) {
+
+        html +=
+            "<b>❌ الأسئلة التي أخطأت فيها وإجابتها الصحيحة:</b><br>";
+
+        wrongAnswers.forEach(function(number) {
+
+            html +=
+                "السؤال " +
+                number +
+                ": ✅ " +
+                correctText["q" + number] +
+                "<br>";
+        });
+    }
+
+    if (score >= 3) {
+
+        localStorage.setItem(
+            "b1Lesson3Completed",
+            "true"
+        );
+
+        html +=
+            "<br>🎉 أحسنت! نجحت في Lesson 3.<br>" +
+            "💾 تم حفظ تقدمك بنجاح!<br>" +
+            "🔓 تم فتح Lesson 4.";
+
+        result.className = "success";
+
+        document.getElementById("nextButton").style.display =
+            "inline-block";
+
+        document.getElementById("bottomNextButton").style.display =
+            "inline-block";
+
+        document.getElementById("retryButton").style.display =
+            "none";
+
+    } else {
+
+        html +=
+            "<br><br>❌ تحتاج إلى مراجعة بسيطة.<br>" +
+            "لازم تجيب 3/5 على الأقل للنجاح.";
+
+        result.className = "fail";
+
+        document.getElementById("nextButton").style.display =
+            "none";
+
+        document.getElementById("bottomNextButton").style.display =
+            "none";
+
+        document.getElementById("retryButton").style.display =
+            "inline-block";
+    }
+
+    result.innerHTML = html;
+
+    // قفل اختيارات اختبار الدرس فقط
+    document
+        .querySelectorAll(".question input[type='radio']")
+        .forEach(function(input) {
+            input.disabled = true;
+        });
+
+    document.getElementById("checkButton").disabled =
+        true;
+}
+
+
+function retryQuiz() {
+
+    // إعادة تفعيل اختيارات الاختبار فقط
+    document
+        .querySelectorAll(".question input[type='radio']")
+        .forEach(function(input) {
+            input.checked = false;
+            input.disabled = false;
+        });
+
+    document.getElementById("result").style.display =
+        "none";
+
+    document.getElementById("checkButton").disabled =
+        false;
+
+    document.getElementById("retryButton").style.display =
+        "none";
+
+    document.getElementById("nextButton").style.display =
+        "none";
+
+    document.getElementById("bottomNextButton").style.display =
+        "none";
+}
+
+
+if (
+    localStorage.getItem("b1Lesson3Completed") === "true"
+) {
+
+    document.getElementById("result").style.display =
+        "block";
+
+    document.getElementById("result").className =
+        "success";
+
+    document.getElementById("result").innerHTML =
+        "✅ Lesson 3 مكتمل بالفعل.<br>" +
+        "💾 تقدمك محفوظ.<br>" +
+        "🔓 Lesson 4 مفتوح.";
+
+    document.getElementById("nextButton").style.display =
+        "inline-block";
+
+    document.getElementById("bottomNextButton").style.display =
+        "inline-block";
+}
+
+</script>
 
 </body>
-
 </html>

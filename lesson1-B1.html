@@ -665,6 +665,21 @@ document.getElementById("checkButton").addEventListener("click", function () {
     const result = document.getElementById("result");
 
 
+    /* قفل الاختيارات بعد التصحيح في كل الحالات */
+
+    document.querySelectorAll(
+        "#quizForm input[type='radio']"
+    ).forEach(function (input) {
+
+        input.disabled = true;
+
+    });
+
+    document.getElementById(
+        "checkButton"
+    ).disabled = true;
+
+
     if (score >= 3) {
 
         localStorage.setItem(
@@ -689,23 +704,9 @@ document.getElementById("checkButton").addEventListener("click", function () {
             ) +
 
             "<button type='button' class='next-button' " +
-            "onclick=\"window.location.href='Lesson2-B1.html'\">" +
+            "onclick=\"window.location.href='lesson2-B1.html'\">" +
             "➡️ الانتقال إلى Lesson 2" +
             "</button>";
-
-
-        document.querySelectorAll(
-            "#quizForm input"
-        ).forEach(function (input) {
-
-            input.disabled = true;
-
-        });
-
-
-        document.getElementById(
-            "checkButton"
-        ).disabled = true;
 
 
     } else {
@@ -720,13 +721,42 @@ document.getElementById("checkButton").addEventListener("click", function () {
             wrongAnswers.join("") +
             "<br>" +
             "<button type='button' class='retry-button' " +
-            "onclick='location.reload()'>" +
+            "onclick='retryQuiz()'>" +
             "🔄 إعادة الاختبار" +
             "</button>";
 
     }
 
 });
+
+
+function retryQuiz() {
+
+    document.querySelectorAll(
+        "#quizForm input[type='radio']"
+    ).forEach(function (input) {
+
+        input.disabled = false;
+        input.checked = false;
+
+    });
+
+
+    const checkButton = document.getElementById(
+        "checkButton"
+    );
+
+    checkButton.disabled = false;
+
+
+    const result = document.getElementById(
+        "result"
+    );
+
+    result.innerHTML = "";
+    result.className = "";
+
+}
 
 </script>
 

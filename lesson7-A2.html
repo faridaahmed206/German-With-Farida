@@ -4,151 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 7 - Reflexive Verben | A2</title>
+    <title>Lesson 7 – Reflexive Verben | German with Farida</title>
 
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background: #f5f7fb;
+            background: #f5f7fa;
             color: #222;
             line-height: 1.8;
         }
 
+        header {
+            background: #1f4e79;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
         .container {
             max-width: 900px;
-            margin: auto;
-            padding: 20px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
 
-        .back-top,
-        .back-btn {
+        .back-top {
             display: inline-block;
-            text-decoration: none;
-            background: #444;
-            color: white;
-            padding: 10px 18px;
-            border-radius: 10px;
             margin-bottom: 20px;
+            text-decoration: none;
+            color: #1f4e79;
+            font-weight: bold;
         }
 
-        .back-btn {
-            margin-top: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #6a1b9a;
-            margin-bottom: 5px;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        .lesson {
+        .section {
             background: white;
             padding: 25px;
             margin-bottom: 20px;
-            border-radius: 15px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         h2 {
-            color: #6a1b9a;
+            color: #1f4e79;
+            margin-top: 0;
         }
 
         h3 {
             color: #333;
         }
 
-        .german {
-            color: #6a1b9a;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        .meaning {
-            color: #555;
-        }
-
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 15px 0;
+            margin-top: 15px;
         }
 
-        th,
-        td {
+        th, td {
             border: 1px solid #ddd;
             padding: 10px;
             text-align: center;
         }
 
         th {
-            background: #eee;
+            background: #1f4e79;
+            color: white;
         }
 
-        .note {
-            background: #fff3cd;
+        .example {
+            background: #eef5fb;
             padding: 15px;
-            border-radius: 10px;
-            margin: 15px 0;
+            border-radius: 8px;
+            margin: 10px 0;
         }
 
-        .important {
-            background: #e8f5e9;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 15px 0;
-        }
-
-        .quiz {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-            margin-top: 25px;
+        .german {
+            font-weight: bold;
+            color: #1f4e79;
         }
 
         .question {
             margin-bottom: 25px;
             padding: 15px;
-            background: #f8f8f8;
+            background: #f8fafc;
             border-radius: 10px;
         }
 
-        .question p {
-            font-weight: bold;
-        }
-
-        label {
+        .question label {
             display: block;
-            margin: 8px 0;
+            padding: 8px;
             cursor: pointer;
         }
 
         button {
-            border: none;
-            background: #6a1b9a;
+            background: #1f4e79;
             color: white;
-            padding: 12px 25px;
-            border-radius: 10px;
-            font-size: 16px;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
             cursor: pointer;
+            font-size: 16px;
         }
 
         button:hover {
-            opacity: 0.9;
+            background: #163a5c;
+        }
+
+        button:disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
         }
 
         #result {
             margin-top: 20px;
             padding: 15px;
             border-radius: 10px;
-            display: none;
+            font-weight: bold;
         }
 
         .success {
@@ -161,639 +131,603 @@
             color: #721c24;
         }
 
-        .save {
-            background: #e3f2fd;
-            color: #0d47a1;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
+        .correct-answer {
+            margin-top: 8px;
+            color: #155724;
+            font-weight: bold;
         }
 
         .next-btn {
             display: inline-block;
-            text-decoration: none;
-            background: #2e7d32;
-            color: white;
-            padding: 12px 22px;
-            border-radius: 10px;
             margin-top: 15px;
+            background: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
         }
 
-        .retry-btn {
-            margin-top: 15px;
-            background: #c62828;
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background: #6c757d;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-
-        <a href="a2.html" class="back-top">🏠 العودة إلى A2</a>
-
-        <h1>🇩🇪 Lesson 7 – Reflexive Verben</h1>
-        <div class="subtitle">الأفعال الانعكاسية</div>
-
-        <div class="lesson">
-
-            <h2>1️⃣ يعني إيه Reflexive Verben؟</h2>
-
-            <p>
-                الأفعال الانعكاسية هي أفعال بيكون الفعل فيها راجع على نفس الشخص اللي بيعمله.
-            </p>
-
-            <p class="german">Ich wasche mich.</p>
-            <p class="meaning">أنا أغسل نفسي.</p>
-
-            <div class="note">
-                📌 أنا اللي بعمل الفعل، والفعل راجع عليَّ أنا.
-            </div>
-
-        </div>
-
-
-        <div class="lesson">
-
-            <h2>2️⃣ الضمائر الانعكاسية</h2>
-
-            <table>
-                <tr>
-                    <th>الضمير</th>
-                    <th>Reflexivpronomen</th>
-                    <th>المعنى</th>
-                </tr>
-
-                <tr>
-                    <td>ich</td>
-                    <td><b>mich</b></td>
-                    <td>نفسي</td>
-                </tr>
-
-                <tr>
-                    <td>du</td>
-                    <td><b>dich</b></td>
-                    <td>نفسك</td>
-                </tr>
-
-                <tr>
-                    <td>er</td>
-                    <td><b>sich</b></td>
-                    <td>نفسه</td>
-                </tr>
-
-                <tr>
-                    <td>sie</td>
-                    <td><b>sich</b></td>
-                    <td>نفسها</td>
-                </tr>
-
-                <tr>
-                    <td>es</td>
-                    <td><b>sich</b></td>
-                    <td>نفسه / نفسها</td>
-                </tr>
-
-                <tr>
-                    <td>wir</td>
-                    <td><b>uns</b></td>
-                    <td>نفسنا</td>
-                </tr>
-
-                <tr>
-                    <td>ihr</td>
-                    <td><b>euch</b></td>
-                    <td>نفسكم</td>
-                </tr>
-
-                <tr>
-                    <td>sie / Sie</td>
-                    <td><b>sich</b></td>
-                    <td>نفسهم / نفس حضرتك</td>
-                </tr>
-            </table>
-
-            <div class="important">
-                ⭐ احفظ الجدول ده كويس:
-                <br>
-                <b>mich – dich – sich – uns – euch – sich</b>
-            </div>
-
-        </div>
-
-
-        <div class="lesson">
-
-            <h2>3️⃣ مثال مع الفعل waschen</h2>
-
-            <p><b>waschen = يغسل</b></p>
-
-            <p>Ich wasche <b>mich</b>. → أنا أغسل نفسي.</p>
-            <p>Du wäschst <b>dich</b>. → أنت تغسل نفسك.</p>
-            <p>Er wäscht <b>sich</b>. → هو يغسل نفسه.</p>
-            <p>Wir waschen <b>uns</b>. → نحن نغسل أنفسنا.</p>
-            <p>Ihr wascht <b>euch</b>. → أنتم تغسلون أنفسكم.</p>
-            <p>Sie waschen <b>sich</b>. → هم يغسلون أنفسهم.</p>
-
-        </div>
-
-
-        <div class="lesson">
-
-            <h2>4️⃣ أفعال انعكاسية مهمة</h2>
-
-            <h3>🧼 sich waschen</h3>
-            <p>يغسل نفسه</p>
-            <p class="german">Ich wasche mich.</p>
-            <p>أنا أغسل نفسي.</p>
-
-            <h3>👕 sich anziehen</h3>
-            <p>يرتدي ملابسه</p>
-            <p class="german">Ich ziehe mich an.</p>
-            <p>أنا أرتدي ملابسي.</p>
-
-            <div class="note">
-                📌 <b>anziehen</b> فعل منفصل، لذلك <b>an</b> تأتي في آخر الجملة.
-            </div>
-
-            <h3>🪮 sich kämmen</h3>
-            <p>يمشط شعره</p>
-            <p class="german">Sie kämmt sich.</p>
-            <p>هي تمشط شعرها.</p>
-
-            <h3>🪥 sich die Zähne putzen</h3>
-            <p>ينظف أسنانه</p>
-            <p class="german">Ich putze mir die Zähne.</p>
-            <p>أنا أنظف أسناني.</p>
-
-            <h3>😴 sich ausruhen</h3>
-            <p>يستريح</p>
-            <p class="german">Ich ruhe mich aus.</p>
-            <p>أنا أستريح.</p>
-
-            <h3>💭 sich erinnern</h3>
-            <p>يتذكر</p>
-            <p class="german">Ich erinnere mich.</p>
-            <p>أنا أتذكر.</p>
-
-        </div>
-
-
-        <div class="lesson">
-
-            <h2>5️⃣ ترتيب الجملة</h2>
-
-            <div class="important">
-                <b>فاعل + فعل متصرف + الضمير الانعكاسي + باقي الجملة</b>
-            </div>
-
-            <p class="german">Ich wasche mich jeden Morgen.</p>
-            <p>أنا أغسل نفسي كل صباح.</p>
-
-            <p class="german">Du erinnerst dich an ihn.</p>
-            <p>أنت تتذكره.</p>
-
-        </div>
-
-
-        <div class="lesson">
-
-            <h2>6️⃣ في السؤال ❓</h2>
-
-            <p class="german">Wäschst du dich jeden Morgen?</p>
-            <p>هل تغسل نفسك كل صباح؟</p>
-
-            <p class="german">Ziehst du dich an?</p>
-            <p>هل ترتدي ملابسك؟</p>
-
-            <p class="german">Erinnerst du dich an den Tag?</p>
-            <p>هل تتذكر اليوم؟</p>
-
-        </div>
-
-
-        <div class="lesson">
-
-            <h2>7️⃣ النفي بـ nicht</h2>
-
-            <p class="german">Ich wasche mich nicht.</p>
-            <p>أنا لا أغسل نفسي.</p>
-
-            <p class="german">Ich erinnere mich nicht.</p>
-            <p>أنا لا أتذكر.</p>
-
-        </div>
-
-
-        <div class="lesson">
-
-            <h2>8️⃣ Reflexive Verben مع أجزاء الجسم</h2>
-
-            <p>
-                لما نتكلم عن جزء من الجسم، غالبًا بنستخدم:
-            </p>
-
-            <div class="important">
-                <b>Dativ + جزء الجسم</b>
-            </div>
-
-            <p class="german">Ich putze mir die Zähne.</p>
-            <p>أنا أنظف أسناني.</p>
-
-            <p class="german">Du wäschst dir die Hände.</p>
-            <p>أنت تغسل يديك.</p>
-
-            <p class="german">Er kämmt sich die Haare.</p>
-            <p>هو يمشط شعره.</p>
-
-            <div class="note">
-                📌 هنا بنستخدم:
-                <br>
-                <b>mir</b> = لي
-                <br>
-                <b>dir</b> = لك
-                <br>
-                <b>sich</b> = له / لها
-            </div>
-
-        </div>
-
-
-        <div class="lesson">
-
-            <h2>9️⃣ أفعال مهمة تحفظها ⭐</h2>
-
-            <table>
-                <tr>
-                    <th>الفعل</th>
-                    <th>المعنى</th>
-                </tr>
-
-                <tr>
-                    <td>sich waschen</td>
-                    <td>يغسل نفسه</td>
-                </tr>
-
-                <tr>
-                    <td>sich anziehen</td>
-                    <td>يرتدي ملابسه</td>
-                </tr>
-
-                <tr>
-                    <td>sich ausziehen</td>
-                    <td>يخلع ملابسه</td>
-                </tr>
-
-                <tr>
-                    <td>sich kämmen</td>
-                    <td>يمشط نفسه</td>
-                </tr>
-
-                <tr>
-                    <td>sich ausruhen</td>
-                    <td>يستريح</td>
-                </tr>
-
-                <tr>
-                    <td>sich erinnern</td>
-                    <td>يتذكر</td>
-                </tr>
-
-                <tr>
-                    <td>sich treffen</td>
-                    <td>يلتقي</td>
-                </tr>
-
-                <tr>
-                    <td>sich freuen</td>
-                    <td>يفرح / يسعد</td>
-                </tr>
-            </table>
-
-        </div>
-
-
-        <div class="lesson">
-
-            <h2>🔟 أمثلة مهمة</h2>
-
-            <p class="german">Ich freue mich.</p>
-            <p>أنا سعيد/فرحان.</p>
-
-            <p class="german">Wir treffen uns morgen.</p>
-            <p>نحن نلتقي غدًا.</p>
-
-            <p class="german">Er zieht sich an.</p>
-            <p>هو يرتدي ملابسه.</p>
-
-            <p class="german">Sie ruht sich aus.</p>
-            <p>هي تستريح.</p>
-
-            <p class="german">Ich erinnere mich an meine Schule.</p>
-            <p>أنا أتذكر مدرستي.</p>
-
-        </div>
-
-
-        <div class="lesson">
-
-            <h2>⭐ الخلاصة</h2>
-
-            <p>احفظ الضمائر دي كويس:</p>
-
-            <div class="important">
-                <b>mich – dich – sich – uns – euch – sich</b>
-            </div>
-
-            <p>
-                القاعدة الأساسية:
-            </p>
-
-            <div class="important">
-                <b>فاعل + فعل + Reflexivpronomen</b>
-            </div>
-
-            <p class="german">Ich wasche mich.</p>
-            <p class="german">Du wäschst dich.</p>
-            <p class="german">Er wäscht sich.</p>
-
-            <p>
-                ومع أجزاء الجسم:
-            </p>
-
-            <p class="german">Ich putze mir die Zähne.</p>
-
-        </div>
-
-
-        <!-- QUIZ -->
-
-        <div class="quiz">
-
-            <h2>📝 اختبار Lesson 7</h2>
-
-            <p>
-                اختار الإجابة الصحيحة. لازم تجيب <b>3 من 5</b> على الأقل عشان تفتح Lesson 8.
-            </p>
-
-
-            <div class="question">
-                <p>1️⃣ Ich wasche ___ .</p>
-
-                <label>
-                    <input type="radio" name="q1" value="a">
-                    dich
-                </label>
-
-                <label>
-                    <input type="radio" name="q1" value="b">
-                    mich
-                </label>
-
-                <label>
-                    <input type="radio" name="q1" value="c">
-                    uns
-                </label>
-
-                <label>
-                    <input type="radio" name="q1" value="d">
-                    euch
-                </label>
-            </div>
-
-
-            <div class="question">
-                <p>2️⃣ Du erinnerst ___ an den Tag.</p>
-
-                <label>
-                    <input type="radio" name="q2" value="a">
-                    mich
-                </label>
-
-                <label>
-                    <input type="radio" name="q2" value="b">
-                    dich
-                </label>
-
-                <label>
-                    <input type="radio" name="q2" value="c">
-                    sich
-                </label>
-
-                <label>
-                    <input type="radio" name="q2" value="d">
-                    uns
-                </label>
-            </div>
-
-
-            <div class="question">
-                <p>3️⃣ Wir treffen ___ morgen.</p>
-
-                <label>
-                    <input type="radio" name="q3" value="a">
-                    euch
-                </label>
-
-                <label>
-                    <input type="radio" name="q3" value="b">
-                    sich
-                </label>
-
-                <label>
-                    <input type="radio" name="q3" value="c">
-                    uns
-                </label>
-
-                <label>
-                    <input type="radio" name="q3" value="d">
-                    dich
-                </label>
-            </div>
-
-
-            <div class="question">
-                <p>4️⃣ أي جملة صحيحة؟</p>
-
-                <label>
-                    <input type="radio" name="q4" value="a">
-                    Ich putze mich die Zähne.
-                </label>
-
-                <label>
-                    <input type="radio" name="q4" value="b">
-                    Ich putze mir die Zähne.
-                </label>
-
-                <label>
-                    <input type="radio" name="q4" value="c">
-                    Ich putze dich die Zähne.
-                </label>
-
-                <label>
-                    <input type="radio" name="q4" value="d">
-                    Ich putze sich die Zähne.
-                </label>
-            </div>
-
-
-            <div class="question">
-                <p>5️⃣ Er ___ sich an.</p>
-
-                <label>
-                    <input type="radio" name="q5" value="a">
-                    ziehst
-                </label>
-
-                <label>
-                    <input type="radio" name="q5" value="b">
-                    ziehe
-                </label>
-
-                <label>
-                    <input type="radio" name="q5" value="c">
-                    ziehen
-                </label>
-
-                <label>
-                    <input type="radio" name="q5" value="d">
-                    zieht
-                </label>
-            </div>
-
-
-            <button type="button" id="checkButton">
-                ✅ تصحيح الاختبار
-            </button>
-
-            <div id="result"></div>
-
-        </div>
-
-
-        <a href="a2.html" class="back-btn">🏠 العودة إلى صفحة A2</a>
-
+<header>
+    <h1>Lesson 7 – Reflexive Verben</h1>
+    <p>الأفعال الانعكاسية</p>
+</header>
+
+<div class="container">
+
+    <a href="A2.html" class="back-top">🏠 العودة إلى A2</a>
+
+    <div class="section">
+        <h2>🎯 Ziel – الهدف</h2>
+        <p>
+            في هذا الدرس هنتعلم الأفعال الانعكاسية
+            <span class="german">Reflexive Verben</span>
+            وإزاي نستخدم الضمائر الانعكاسية في الجملة.
+        </p>
     </div>
 
+    <div class="section">
+        <h2>📚 1. ما هي الأفعال الانعكاسية؟</h2>
 
-    <script>
+        <p>
+            الأفعال الانعكاسية هي أفعال بيكون فيها الفعل راجع على نفس الشخص اللي بيعمل الفعل.
+        </p>
 
-        document.getElementById("checkButton").addEventListener("click", function () {
+        <div class="example">
+            <p class="german">Ich wasche mich.</p>
+            <p>أنا أغسل نفسي.</p>
+        </div>
 
-            const answers = {
-                q1: "b",
-                q2: "b",
-                q3: "c",
-                q4: "b",
-                q5: "d"
-            };
+        <p>
+            الفعل هنا هو <span class="german">waschen</span>،
+            والضمير الانعكاسي مع <span class="german">ich</span> هو
+            <span class="german">mich</span>.
+        </p>
+    </div>
 
-            const correctText = {
-                q1: "mich",
-                q2: "dich",
-                q3: "uns",
-                q4: "Ich putze mir die Zähne.",
-                q5: "zieht"
-            };
+    <div class="section">
+        <h2>📌 2. Reflexive Pronomen – الضمائر الانعكاسية</h2>
 
-            let score = 0;
-            let wrongAnswers = [];
+        <table>
+            <tr>
+                <th>الضمير</th>
+                <th>الضمير الانعكاسي</th>
+            </tr>
 
-            for (let question in answers) {
+            <tr>
+                <td>ich</td>
+                <td>mich</td>
+            </tr>
 
-                const selected = document.querySelector(
-                    'input[name="' + question + '"]:checked'
-                );
+            <tr>
+                <td>du</td>
+                <td>dich</td>
+            </tr>
 
-                if (selected && selected.value === answers[question]) {
-                    score++;
-                } else {
-                    wrongAnswers.push(question);
-                }
-            }
+            <tr>
+                <td>er</td>
+                <td>sich</td>
+            </tr>
 
-            const result = document.getElementById("result");
+            <tr>
+                <td>sie</td>
+                <td>sich</td>
+            </tr>
 
-            result.style.display = "block";
+            <tr>
+                <td>es</td>
+                <td>sich</td>
+            </tr>
 
-            if (score >= 3) {
+            <tr>
+                <td>wir</td>
+                <td>uns</td>
+            </tr>
 
-                localStorage.setItem("a2Lesson7Completed", "true");
+            <tr>
+                <td>ihr</td>
+                <td>euch</td>
+            </tr>
 
-                result.className = "success";
+            <tr>
+                <td>sie / Sie</td>
+                <td>sich</td>
+            </tr>
+        </table>
+    </div>
 
-                result.innerHTML = `
-                    <h3>🎉 أحسنت!</h3>
+    <div class="section">
+        <h2>🧠 3. مثال مهم</h2>
 
-                    <p>
-                        نتيجتك: <b>${score}/5</b>
-                    </p>
+        <div class="example">
+            <p class="german">Ich wasche mich.</p>
+            <p>أنا أغسل نفسي.</p>
+        </div>
 
-                    <div class="save">
-                        💾 تم حفظ تقدمك بنجاح!
-                    </div>
+        <div class="example">
+            <p class="german">Du wäschst dich.</p>
+            <p>أنت تغسل نفسك.</p>
+        </div>
 
-                    <p>
-                        ✅ Lesson 7 مكتمل!
-                    </p>
+        <div class="example">
+            <p class="german">Er wäscht sich.</p>
+            <p>هو يغسل نفسه.</p>
+        </div>
+    </div>
 
-                    <p>
-                        🔓 تم فتح <b>Lesson 8</b>.
-                    </p>
+    <div class="section">
+        <h2>⭐ 4. أهم الأفعال الانعكاسية</h2>
 
-                    <a href="Lesson8-A2.html" class="next-btn">
-                        🔓 الانتقال إلى Lesson 8
-                    </a>
-                `;
+        <table>
+            <tr>
+                <th>الفعل</th>
+                <th>المعنى</th>
+            </tr>
+
+            <tr>
+                <td class="german">sich waschen</td>
+                <td>يغسل نفسه</td>
+            </tr>
+
+            <tr>
+                <td class="german">sich anziehen</td>
+                <td>يرتدي ملابسه</td>
+            </tr>
+
+            <tr>
+                <td class="german">sich kämmen</td>
+                <td>يمشط شعره</td>
+            </tr>
+
+            <tr>
+                <td class="german">sich die Zähne putzen</td>
+                <td>ينظف أسنانه</td>
+            </tr>
+
+            <tr>
+                <td class="german">sich ausruhen</td>
+                <td>يرتاح</td>
+            </tr>
+
+            <tr>
+                <td class="german">sich erinnern</td>
+                <td>يتذكر</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>📝 5. ترتيب الجملة</h2>
+
+        <p>
+            في الجملة العادية بييجي الضمير الانعكاسي بعد الفعل.
+        </p>
+
+        <div class="example">
+            <p class="german">Ich wasche mich jeden Morgen.</p>
+            <p>أنا أغسل نفسي كل صباح.</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Du ziehst dich an.</p>
+            <p>أنت ترتدي ملابسك.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>❓ 6. الأسئلة</h2>
+
+        <div class="example">
+            <p class="german">Wäschst du dich jeden Morgen?</p>
+            <p>هل تغسل نفسك كل صباح؟</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Erinnert er sich an mich?</p>
+            <p>هل يتذكرني؟</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🚫 7. النفي باستخدام nicht</h2>
+
+        <div class="example">
+            <p class="german">Ich wasche mich nicht.</p>
+            <p>أنا لا أغسل نفسي.</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Er zieht sich nicht an.</p>
+            <p>هو لا يرتدي ملابسه.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🪥 8. الأفعال الانعكاسية مع أجزاء الجسم</h2>
+
+        <p>
+            أحيانًا بنستخدم الضمير الانعكاسي مع جزء من الجسم.
+        </p>
+
+        <div class="example">
+            <p class="german">Ich putze mir die Zähne.</p>
+            <p>أنا أنظف أسناني.</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Du wäschst dir die Hände.</p>
+            <p>أنت تغسل يديك.</p>
+        </div>
+
+        <p>
+            هنا بنستخدم:
+            <span class="german">mir / dir / sich...</span>
+            مع جزء الجسم.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>📖 9. أفعال مهمة</h2>
+
+        <table>
+            <tr>
+                <th>الفعل</th>
+                <th>مثال</th>
+            </tr>
+
+            <tr>
+                <td class="german">sich waschen</td>
+                <td class="german">Ich wasche mich.</td>
+            </tr>
+
+            <tr>
+                <td class="german">sich anziehen</td>
+                <td class="german">Ich ziehe mich an.</td>
+            </tr>
+
+            <tr>
+                <td class="german">sich erinnern</td>
+                <td class="german">Ich erinnere mich.</td>
+            </tr>
+
+            <tr>
+                <td class="german">sich ausruhen</td>
+                <td class="german">Ich ruhe mich aus.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>💡 10. أمثلة إضافية</h2>
+
+        <div class="example">
+            <p class="german">Ich kämme mich.</p>
+            <p>أنا أمشط شعري.</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Wir treffen uns morgen.</p>
+            <p>نحن نلتقي غدًا.</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Sie erinnert sich an den Tag.</p>
+            <p>هي تتذكر ذلك اليوم.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📌 11. الخلاصة</h2>
+
+        <p>
+            أهم حاجة في الأفعال الانعكاسية إنك تحفظ الفعل مع الضمير الانعكاسي المناسب.
+        </p>
+
+        <div class="example">
+            <p class="german">ich → mich</p>
+            <p class="german">du → dich</p>
+            <p class="german">er / sie / es → sich</p>
+            <p class="german">wir → uns</p>
+            <p class="german">ihr → euch</p>
+            <p class="german">sie / Sie → sich</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📝 اختبار الدرس – Quiz</h2>
+
+        <div class="question">
+            <p><strong>1. Ich wasche ___.</strong></p>
+
+            <label>
+                <input type="radio" name="q1" value="a">
+                dich
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="b">
+                mich
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="c">
+                uns
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="d">
+                euch
+            </label>
+
+            <div id="correct-q1"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>2. Du erinnerst ___ an den Tag.</strong></p>
+
+            <label>
+                <input type="radio" name="q2" value="a">
+                mich
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="b">
+                dich
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="c">
+                sich
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="d">
+                uns
+            </label>
+
+            <div id="correct-q2"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>3. Wir treffen ___ morgen.</strong></p>
+
+            <label>
+                <input type="radio" name="q3" value="a">
+                euch
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="b">
+                sich
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="c">
+                uns
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="d">
+                dich
+            </label>
+
+            <div id="correct-q3"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>4. أي جملة صحيحة؟</strong></p>
+
+            <label>
+                <input type="radio" name="q4" value="a">
+                Ich putze mich die Zähne.
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="b">
+                Ich putze mir die Zähne.
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="c">
+                Ich putze mich den Zähne.
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="d">
+                Ich putze mir mich Zähne.
+            </label>
+
+            <div id="correct-q4"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>5. Er ___ sich an.</strong></p>
+
+            <label>
+                <input type="radio" name="q5" value="a">
+                ziehst
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="b">
+                ziehe
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="c">
+                ziehen
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="d">
+                zieht
+            </label>
+
+            <div id="correct-q5"></div>
+        </div>
+
+        <button id="checkButton" type="button" onclick="checkQuiz()">
+            ✅ تصحيح الاختبار
+        </button>
+
+        <div id="result"></div>
+
+        <div id="nextContainer"></div>
+    </div>
+
+    <a href="A2.html" class="back-btn">
+        🏠 العودة إلى صفحة A2
+    </a>
+
+</div>
+
+<script>
+
+    const answers = {
+        q1: "b",
+        q2: "b",
+        q3: "c",
+        q4: "b",
+        q5: "d"
+    };
+
+    const correctText = {
+        q1: "mich",
+        q2: "dich",
+        q3: "uns",
+        q4: "Ich putze mir die Zähne.",
+        q5: "zieht"
+    };
+
+    function checkQuiz() {
+
+        let score = 0;
+
+        for (let i = 1; i <= 5; i++) {
+
+            const questionName = "q" + i;
+
+            const selected = document.querySelector(
+                'input[name="' + questionName + '"]:checked'
+            );
+
+            const correctBox = document.getElementById(
+                "correct-" + questionName
+            );
+
+            correctBox.innerHTML = "";
+
+            if (selected && selected.value === answers[questionName]) {
+
+                score++;
 
             } else {
 
-                result.className = "fail";
+                correctBox.innerHTML =
+                    "✅ الإجابة الصحيحة: " + correctText[questionName];
 
-                let wrongHTML = `
-                    <h3>❌ لم تنجح في الاختبار هذه المرة.</h3>
-
-                    <p>
-                        نتيجتك: <b>${score}/5</b>
-                    </p>
-
-                    <p>
-                        لازم تجيب 3/5 على الأقل.
-                    </p>
-
-                    <hr>
-
-                    <h3>✅ الإجابات الصحيحة للأسئلة الخطأ:</h3>
-                `;
-
-                wrongAnswers.forEach(function (question) {
-
-                    wrongHTML += `
-                        <p>
-                            ❌ السؤال ${question.substring(1)}: إجابة خاطئة.
-                            <br>
-                            ✅ الإجابة الصحيحة:
-                            <b>${correctText[question]}</b>
-                        </p>
-                    `;
-
-                });
-
-                wrongHTML += `
-                    <button type="button"
-                            class="retry-btn"
-                            onclick="location.reload()">
-                        🔄 إعادة الاختبار
-                    </button>
-                `;
-
-                result.innerHTML = wrongHTML;
+                correctBox.className = "correct-answer";
             }
+        }
+
+        // قفل إجابات الاختبار بعد التصحيح
+        document.querySelectorAll(
+            '.question input[type="radio"]'
+        ).forEach(function(input) {
+            input.disabled = true;
+        });
+
+        const result = document.getElementById("result");
+        const nextContainer = document.getElementById("nextContainer");
+        const checkButton = document.getElementById("checkButton");
+
+        checkButton.style.display = "none";
+
+        if (score >= 3) {
+
+            result.className = "success";
+
+            result.innerHTML =
+                "🎉 ممتاز! نتيجتك: " + score + "/5<br>" +
+                "لقد نجحت في الدرس ويمكنك الانتقال إلى الدرس التالي.";
+
+            localStorage.setItem(
+                "a2Lesson7Completed",
+                "true"
+            );
+
+            nextContainer.innerHTML = `
+                <a href="lesson8-A2.html" class="next-btn">
+                    🔓 الانتقال إلى Lesson 8
+                </a>
+            `;
+
+        } else {
+
+            result.className = "fail";
+
+            result.innerHTML =
+                "❌ نتيجتك: " + score + "/5<br>" +
+                "تحتاج إلى 3 إجابات صحيحة على الأقل. راجع الدرس وحاول مرة أخرى.";
+
+            nextContainer.innerHTML = `
+                <button type="button" onclick="retryQuiz()">
+                    🔄 إعادة الاختبار
+                </button>
+            `;
+        }
+    }
+
+
+    function retryQuiz() {
+
+        // إعادة تفعيل الاختيارات
+        document.querySelectorAll(
+            '.question input[type="radio"]'
+        ).forEach(function(input) {
+
+            input.disabled = false;
+            input.checked = false;
 
         });
 
-    </script>
+        // مسح الإجابات الصحيحة القديمة
+        document.querySelectorAll(
+            '[id^="correct-q"]'
+        ).forEach(function(box) {
+
+            box.innerHTML = "";
+            box.className = "";
+
+        });
+
+        // مسح النتيجة
+        const result = document.getElementById("result");
+
+        result.innerHTML = "";
+        result.className = "";
+
+        // إظهار زر التصحيح
+        document.getElementById("checkButton").style.display = "inline-block";
+
+        // إخفاء زر الانتقال / إعادة الاختبار
+        document.getElementById("nextContainer").innerHTML = "";
+    }
+
+</script>
 
 </body>
-
 </html>

@@ -229,7 +229,7 @@
 <div class="container">
 
     <!-- Back to A2 -->
-    <a href="a2.html" class="back-top">🏠 العودة إلى A2</a>
+    <a href="A2.html" class="back-top">🏠 العودة إلى A2</a>
 
     <!-- Section 1 -->
     <div class="section">
@@ -769,11 +769,12 @@
     </div>
 
     <!-- Bottom back button -->
-    <a href="a2.html" class="back-btn">🏠 العودة إلى صفحة A2</a>
+    <a href="A2.html" class="back-btn">🏠 العودة إلى صفحة A2</a>
 
 </div>
 
 <script>
+
     function checkQuiz() {
 
         const answers = {
@@ -819,12 +820,23 @@
             }
         }
 
+        /* قفل اختيارات الاختبار بعد التصحيح */
+        const allInputs = document.querySelectorAll(
+            '.quiz-question input[type="radio"]'
+        );
+
+        allInputs.forEach(input => {
+            input.disabled = true;
+        });
+
+        /* إخفاء زر التصحيح */
         document.getElementById("checkBtn").style.display = "none";
 
         const result = document.getElementById("result");
 
         if (score >= 3) {
 
+            /* حفظ نجاح Lesson 4 */
             localStorage.setItem("a2Lesson4Completed", "true");
 
             result.className = "success";
@@ -842,7 +854,7 @@
                 🔓 تم فتح Lesson 5.
                 ${resultHTML}
 
-                <a href="Lesson5-A2.html" class="next-btn">
+                <a href="lesson5-A2.html" class="next-btn">
                     🔓 الانتقال إلى Lesson 5 - Dativ
                 </a>
             `;
@@ -863,12 +875,36 @@
 
                 <br>
 
-                <button class="retry" onclick="location.reload()">
+                <button class="retry" onclick="retryQuiz()">
                     🔄 إعادة الاختبار
                 </button>
             `;
         }
     }
+
+
+    /* إعادة الاختبار بدون مغادرة الصفحة */
+    function retryQuiz() {
+
+        const allInputs = document.querySelectorAll(
+            '.quiz-question input[type="radio"]'
+        );
+
+        allInputs.forEach(input => {
+            input.disabled = false;
+            input.checked = false;
+        });
+
+        /* إظهار زر التصحيح */
+        document.getElementById("checkBtn").style.display = "block";
+
+        /* مسح النتيجة القديمة */
+        const result = document.getElementById("result");
+
+        result.innerHTML = "";
+        result.className = "";
+    }
+
 </script>
 
 </body>

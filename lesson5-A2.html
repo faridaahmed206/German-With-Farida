@@ -230,7 +230,7 @@
 <div class="container">
 
     <!-- Back to A2 -->
-    <a href="a2.html" class="back-top">🏠 العودة إلى A2</a>
+    <a href="A2.html" class="back-top">🏠 العودة إلى A2</a>
 
     <!-- Section 1 -->
     <div class="section">
@@ -247,9 +247,7 @@
             أنا أعطي الرجل الكتاب.
         </div>
 
-        <p>
-            هنا:
-        </p>
+        <p>هنا:</p>
 
         <ul>
             <li><strong>das Buch</strong> = الشيء الذي أعطيه → Akkusativ</li>
@@ -593,9 +591,7 @@
             أنا أعطي الطفل الكرة.
         </div>
 
-        <p>
-            نسأل:
-        </p>
+        <p>نسأل:</p>
 
         <div class="golden">
             <strong>ماذا أعطي؟</strong>
@@ -608,9 +604,7 @@
             dem Kind → Dativ
         </div>
 
-        <p>
-            يعني ببساطة:
-        </p>
+        <p>يعني ببساطة:</p>
 
         <ul>
             <li>🟢 Dativ → لمن؟</li>
@@ -824,11 +818,12 @@
     </div>
 
     <!-- Bottom back button -->
-    <a href="a2.html" class="back-btn">🏠 العودة إلى صفحة A2</a>
+    <a href="A2.html" class="back-btn">🏠 العودة إلى صفحة A2</a>
 
 </div>
 
 <script>
+
     function checkQuiz() {
 
         const answers = {
@@ -874,12 +869,23 @@
             }
         }
 
+        /* قفل اختيارات الاختبار بعد التصحيح */
+        const allInputs = document.querySelectorAll(
+            '.quiz-question input[type="radio"]'
+        );
+
+        allInputs.forEach(input => {
+            input.disabled = true;
+        });
+
+        /* إخفاء زر التصحيح */
         document.getElementById("checkBtn").style.display = "none";
 
         const result = document.getElementById("result");
 
         if (score >= 3) {
 
+            /* حفظ نجاح Lesson 5 */
             localStorage.setItem("a2Lesson5Completed", "true");
 
             result.className = "success";
@@ -897,8 +903,8 @@
                 🔓 تم فتح Lesson 6.
                 ${resultHTML}
 
-                <a href="Lesson6-A2.html" class="next-btn">
-                    🔓 الانتقال إلى Lesson 6 - Wechselpräpositionen
+                <a href="lesson6-A2.html" class="next-btn">
+                    🔓 الانتقال إلى Lesson 6
                 </a>
             `;
 
@@ -918,12 +924,36 @@
 
                 <br>
 
-                <button class="retry" onclick="location.reload()">
+                <button class="retry" onclick="retryQuiz()">
                     🔄 إعادة الاختبار
                 </button>
             `;
         }
     }
+
+
+    /* إعادة الاختبار بدون مغادرة الصفحة */
+    function retryQuiz() {
+
+        const allInputs = document.querySelectorAll(
+            '.quiz-question input[type="radio"]'
+        );
+
+        allInputs.forEach(input => {
+            input.disabled = false;
+            input.checked = false;
+        });
+
+        /* إظهار زر التصحيح */
+        document.getElementById("checkBtn").style.display = "block";
+
+        /* مسح النتيجة القديمة */
+        const result = document.getElementById("result");
+
+        result.innerHTML = "";
+        result.className = "";
+    }
+
 </script>
 
 </body>

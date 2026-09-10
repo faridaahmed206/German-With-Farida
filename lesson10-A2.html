@@ -134,6 +134,11 @@
             background: #163a5c;
         }
 
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
         .back-button {
             display: inline-block;
             background: #6c757d;
@@ -203,10 +208,8 @@
 
     <div class="container">
 
-        <!-- زر الرجوع -->
-        <a href="a2.html" class="back-button">⬅️ العودة إلى مستوى A2</a>
+        <a href="A2.html" class="back-button">⬅️ العودة إلى مستوى A2</a>
 
-        <!-- مقدمة -->
         <div class="lesson-box">
             <h2>📚 هدف الدرس</h2>
 
@@ -226,7 +229,6 @@
             </ul>
         </div>
 
-        <!-- Hauptsatz / Nebensatz -->
         <div class="lesson-box">
             <h2>1️⃣ Hauptsatz و Nebensatz</h2>
 
@@ -253,7 +255,6 @@
             </p>
         </div>
 
-        <!-- القاعدة الأساسية -->
         <div class="lesson-box">
             <h2>2️⃣ ⭐ أهم قاعدة في الدرس</h2>
 
@@ -282,7 +283,6 @@
             </p>
         </div>
 
-        <!-- مقارنة -->
         <div class="lesson-box">
             <h2>3️⃣ Hauptsatz vs. Nebensatz</h2>
 
@@ -317,7 +317,6 @@
             </div>
         </div>
 
-        <!-- كلمات الربط -->
         <div class="lesson-box">
             <h2>4️⃣ 🔗 كلمات الربط المهمة</h2>
 
@@ -361,7 +360,6 @@
             </p>
         </div>
 
-        <!-- weil -->
         <div class="lesson-box">
             <h2>5️⃣ weil = لأن</h2>
 
@@ -384,7 +382,6 @@
             </p>
         </div>
 
-        <!-- dass -->
         <div class="lesson-box">
             <h2>6️⃣ dass = أن</h2>
 
@@ -410,7 +407,6 @@
             </div>
         </div>
 
-        <!-- wenn -->
         <div class="lesson-box">
             <h2>7️⃣ wenn = عندما / إذا</h2>
 
@@ -436,7 +432,6 @@
             </div>
         </div>
 
-        <!-- Nebensatz first -->
         <div class="lesson-box">
             <h2>8️⃣ لو الـ Nebensatz جه الأول</h2>
 
@@ -466,7 +461,6 @@
             </div>
         </div>
 
-        <!-- بعد الجملة الرئيسية -->
         <div class="lesson-box">
             <h2>9️⃣ لو الـ Nebensatz جه بعد Hauptsatz</h2>
 
@@ -483,7 +477,6 @@
             </div>
         </div>
 
-        <!-- Modalverb -->
         <div class="lesson-box">
             <h2>🔟 Nebensatz + Modalverb</h2>
 
@@ -518,7 +511,6 @@
             </div>
         </div>
 
-        <!-- أمثلة إضافية -->
         <div class="lesson-box">
             <h2>1️⃣1️⃣ أمثلة إضافية</h2>
 
@@ -539,7 +531,6 @@
             </div>
         </div>
 
-        <!-- القاعدة الذهبية -->
         <div class="lesson-box">
             <h2>🏆 القاعدة الذهبية</h2>
 
@@ -572,7 +563,6 @@
             </div>
         </div>
 
-        <!-- تدريب سريع -->
         <div class="lesson-box">
             <h2>✏️ تدريب سريع</h2>
 
@@ -597,7 +587,6 @@
             </div>
         </div>
 
-        <!-- ملخص -->
         <div class="lesson-box">
             <h2>📌 ملخص الدرس</h2>
 
@@ -613,7 +602,6 @@
             </ul>
         </div>
 
-        <!-- الاختبار -->
         <div class="lesson-box">
             <h2>📝 اختبار Lesson 10</h2>
 
@@ -756,8 +744,7 @@
             <div id="result"></div>
         </div>
 
-        <!-- زر الرجوع -->
-        <a href="a2.html" class="back-button">⬅️ العودة إلى مستوى A2</a>
+        <a href="A2.html" class="back-button">⬅️ العودة إلى مستوى A2</a>
 
     </div>
 
@@ -766,23 +753,27 @@
     </footer>
 
     <script>
-        document.getElementById("checkButton").addEventListener("click", function () {
 
-            const answers = {
-                q1: "c",
-                q2: "c",
-                q3: "a",
-                q4: "a",
-                q5: "d"
-            };
+        const checkButton = document.getElementById("checkButton");
+        const result = document.getElementById("result");
 
-            const correctText = {
-                q1: "في نهاية الجملة",
-                q2: "weil ich müde bin",
-                q3: "Ich weiß, dass du Deutsch lernst.",
-                q4: "Wenn ich Zeit habe, lerne ich Deutsch.",
-                q5: "في نهاية الجملة"
-            };
+        const answers = {
+            q1: "c",
+            q2: "c",
+            q3: "a",
+            q4: "a",
+            q5: "d"
+        };
+
+        const correctText = {
+            q1: "في نهاية الجملة",
+            q2: "weil ich müde bin",
+            q3: "Ich weiß, dass du Deutsch lernst.",
+            q4: "Wenn ich Zeit habe, lerne ich Deutsch.",
+            q5: "في نهاية الجملة"
+        };
+
+        checkButton.addEventListener("click", function () {
 
             let score = 0;
             let wrongAnswers = [];
@@ -797,7 +788,8 @@
                     score++;
                 } else {
                     wrongAnswers.push(
-                        "<div class='correct-answer'>✅ الإجابة الصحيحة للسؤال " +
+                        "<div class='correct-answer'>" +
+                        "✅ الإجابة الصحيحة للسؤال " +
                         question.substring(1) +
                         ": " +
                         correctText[question] +
@@ -806,7 +798,13 @@
                 }
             }
 
-            const result = document.getElementById("result");
+            // قفل أسئلة الاختبار فقط
+            document.querySelectorAll("#quizForm input[type='radio']")
+                .forEach(function (input) {
+                    input.disabled = true;
+                });
+
+            checkButton.disabled = true;
 
             if (score >= 3) {
 
@@ -815,20 +813,15 @@
                 result.className = "result success";
 
                 result.innerHTML =
-                    "<h3>🎉 أحسنتِ!</h3>" +
+                    "<h3>🎉 أحسنت!</h3>" +
                     "<p>درجتك: " + score + " / 5</p>" +
                     "<p>💾 تم حفظ تقدمك بنجاح!</p>" +
                     "<p><strong>✅ Lesson 10 مكتمل!</strong></p>" +
                     "<p>🔓 تم فتح Lesson 11.</p>" +
-                    "<button type='button' class='next-button' onclick=\"window.location.href='Lesson11-A2.html'\">" +
+                    "<button type='button' class='next-button' " +
+                    "onclick=\"window.location.href='lesson11-A2.html'\">" +
                     "➡️ الانتقال إلى Lesson 11" +
                     "</button>";
-
-                document.querySelectorAll("#quizForm input").forEach(function (input) {
-                    input.disabled = true;
-                });
-
-                document.getElementById("checkButton").disabled = true;
 
             } else {
 
@@ -841,11 +834,29 @@
                     "<h3>الإجابات الصحيحة:</h3>" +
                     wrongAnswers.join("") +
                     "<br>" +
-                    "<button type='button' onclick='location.reload()'>" +
+                    "<button type='button' id='retryButton'>" +
                     "🔄 إعادة الاختبار" +
                     "</button>";
+
+                document.getElementById("retryButton")
+                    .addEventListener("click", retryQuiz);
             }
         });
+
+        function retryQuiz() {
+
+            document.querySelectorAll("#quizForm input[type='radio']")
+                .forEach(function (input) {
+                    input.disabled = false;
+                    input.checked = false;
+                });
+
+            result.innerHTML = "";
+            result.className = "result";
+
+            checkButton.disabled = false;
+        }
+
     </script>
 
 </body>

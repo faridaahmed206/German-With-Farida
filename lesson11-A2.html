@@ -142,6 +142,11 @@
             background: #163a5c;
         }
 
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
         .back-button {
             display: inline-block;
             background: #6c757d;
@@ -200,7 +205,7 @@
 
     <div class="container">
 
-        <a href="a2.html" class="back-button">
+        <a href="A2.html" class="back-button">
             ⬅️ العودة إلى مستوى A2
         </a>
 
@@ -758,7 +763,7 @@
             <div id="result"></div>
         </div>
 
-        <a href="a2.html" class="back-button">
+        <a href="A2.html" class="back-button">
             ⬅️ العودة إلى مستوى A2
         </a>
 
@@ -770,23 +775,26 @@
 
     <script>
 
-        document.getElementById("checkButton").addEventListener("click", function () {
+        const checkButton = document.getElementById("checkButton");
+        const result = document.getElementById("result");
 
-            const answers = {
-                q1: "b",
-                q2: "c",
-                q3: "b",
-                q4: "a",
-                q5: "a"
-            };
+        const answers = {
+            q1: "b",
+            q2: "c",
+            q3: "b",
+            q4: "a",
+            q5: "a"
+        };
 
-            const correctText = {
-                q1: "لأن",
-                q2: "weil ich müde bin",
-                q3: "أن",
-                q4: "Ich glaube, dass er heute kommt.",
-                q5: "muss"
-            };
+        const correctText = {
+            q1: "لأن",
+            q2: "weil ich müde bin",
+            q3: "أن",
+            q4: "Ich glaube, dass er heute kommt.",
+            q5: "muss"
+        };
+
+        checkButton.addEventListener("click", function () {
 
             let score = 0;
             let wrongAnswers = [];
@@ -800,9 +808,9 @@
                 if (selected && selected.value === answers[question]) {
                     score++;
                 } else {
-
                     wrongAnswers.push(
-                        "<div class='correct-answer'>✅ الإجابة الصحيحة للسؤال " +
+                        "<div class='correct-answer'>" +
+                        "✅ الإجابة الصحيحة للسؤال " +
                         question.substring(1) +
                         ": " +
                         correctText[question] +
@@ -811,7 +819,13 @@
                 }
             }
 
-            const result = document.getElementById("result");
+            // قفل اختيارات الاختبار بعد التصحيح
+            document.querySelectorAll("#quizForm input[type='radio']")
+                .forEach(function (input) {
+                    input.disabled = true;
+                });
+
+            checkButton.disabled = true;
 
             if (score >= 3) {
 
@@ -820,24 +834,21 @@
                 result.className = "result success";
 
                 result.innerHTML =
-                    "<h3>🎉 أحسنتِ!</h3>" +
+                    "<h3>🎉 أحسنت!</h3>" +
                     "<p>درجتك: " + score + " / 5</p>" +
                     "<p>💾 تم حفظ تقدمك بنجاح!</p>" +
                     "<p><strong>✅ Lesson 11 مكتمل!</strong></p>" +
                     "<p>🔓 تم فتح Lesson 12.</p>" +
+
                     (wrongAnswers.length > 0
                         ? "<h3>📌 الإجابات الصحيحة للأسئلة اللي غلطتي فيها:</h3>" +
                           wrongAnswers.join("")
                         : "<p>🌟 كل إجاباتك صحيحة!</p>") +
-                    "<button type='button' class='next-button' onclick=\"window.location.href='Lesson12-A2.html'\">" +
+
+                    "<button type='button' class='next-button' " +
+                    "onclick=\"window.location.href='lesson12-A2.html'\">" +
                     "➡️ الانتقال إلى Lesson 12" +
                     "</button>";
-
-                document.querySelectorAll("#quizForm input").forEach(function (input) {
-                    input.disabled = true;
-                });
-
-                document.getElementById("checkButton").disabled = true;
 
             } else {
 
@@ -850,12 +861,28 @@
                     "<h3>📌 الإجابات الصحيحة للأسئلة اللي غلطتي فيها:</h3>" +
                     wrongAnswers.join("") +
                     "<br>" +
-                    "<button type='button' onclick='location.reload()'>" +
+                    "<button type='button' id='retryButton'>" +
                     "🔄 إعادة الاختبار" +
                     "</button>";
-            }
 
+                document.getElementById("retryButton")
+                    .addEventListener("click", retryQuiz);
+            }
         });
+
+        function retryQuiz() {
+
+            document.querySelectorAll("#quizForm input[type='radio']")
+                .forEach(function (input) {
+                    input.disabled = false;
+                    input.checked = false;
+                });
+
+            result.innerHTML = "";
+            result.className = "result";
+
+            checkButton.disabled = false;
+        }
 
     </script>
 
