@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 3 - Zahlen & Alter</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f3ff;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: #6c63ff;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 25px auto;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #6c63ff;
+        }
+
+        h3 {
+            color: #444;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #eeeaff;
+        }
+
+        .german {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .arabic {
+            color: #666;
+        }
+
+        button {
+            background: #6c63ff;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 5px;
+            max-width: 90%;
+        }
+
+        .quiz-question {
+            background: #faf9ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .answer-result {
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        .correct-answer {
+            color: green;
+        }
+
+        .wrong-answer {
+            color: red;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #nextLesson4 {
+            display: none;
+            background: #6c63ff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 17px;
+            margin: 20px auto;
+        }
+
+        .back-button {
+            display: block;
+            margin: 25px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 الدرس الثالث</h1>
+        <h2 style="color:white;">Zahlen & Alter</h2>
+        <p>الأرقام والعمر</p>
+    </header>
+
+    <div class="container">
+
+        <!-- أهداف الدرس -->
+        <div class="box">
+            <h2>🎯 أهداف الدرس</h2>
+
+            <p>في نهاية الدرس هتعرف:</p>
+
+            <ul>
+                <li>تعد من 0 إلى 20 بالألماني.</li>
+                <li>تسأل عن العمر.</li>
+                <li>تقول عمرك بالألماني.</li>
+                <li>تفهم جمل بسيطة عن العمر.</li>
+            </ul>
+        </div>
+
+
+        <!-- الأرقام -->
+        <div class="box">
+
+            <h2>🔢 الأرقام من 0 إلى 20</h2>
+
+            <table>
+
+                <tr>
+                    <th>الرقم</th>
+                    <th>بالألماني</th>
+                    <th>النطق بالعربي</th>
+                </tr>
+
+                <tr>
+                    <td>0</td>
+                    <td class="german">null</td>
+                    <td>نول</td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td class="german">eins</td>
+                    <td>آينس</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td class="german">zwei</td>
+                    <td>تسفاي</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td class="german">drei</td>
+                    <td>دراي</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td class="german">vier</td>
+                    <td>فير</td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td class="german">fünf</td>
+                    <td>فونف</td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td class="german">sechs</td>
+                    <td>زيكس</td>
+                </tr>
+
+                <tr>
+                    <td>7</td>
+                    <td class="german">sieben</td>
+                    <td>زيبن</td>
+                </tr>
+
+                <tr>
+                    <td>8</td>
+                    <td class="german">acht</td>
+                    <td>أخت</td>
+                </tr>
+
+                <tr>
+                    <td>9</td>
+                    <td class="german">neun</td>
+                    <td>نوين</td>
+                </tr>
+
+                <tr>
+                    <td>10</td>
+                    <td class="german">zehn</td>
+                    <td>تسين</td>
+                </tr>
+
+                <tr>
+                    <td>11</td>
+                    <td class="german">elf</td>
+                    <td>إلف</td>
+                </tr>
+
+                <tr>
+                    <td>12</td>
+                    <td class="german">zwölf</td>
+                    <td>تسفولف</td>
+                </tr>
+
+                <tr>
+                    <td>13</td>
+                    <td class="german">dreizehn</td>
+                    <td>دراي تسين</td>
+                </tr>
+
+                <tr>
+                    <td>14</td>
+                    <td class="german">vierzehn</td>
+                    <td>فير تسين</td>
+                </tr>
+
+                <tr>
+                    <td>15</td>
+                    <td class="german">fünfzehn</td>
+                    <td>فونف تسين</td>
+                </tr>
+
+                <tr>
+                    <td>16</td>
+                    <td class="german">sechzehn</td>
+                    <td>زيخ تسين</td>
+                </tr>
+
+                <tr>
+                    <td>17</td>
+                    <td class="german">siebzehn</td>
+                    <td>زيب تسين</td>
+                </tr>
+
+                <tr>
+                    <td>18</td>
+                    <td class="german">achtzehn</td>
+                    <td>أخت تسين</td>
+                </tr>
+
+                <tr>
+                    <td>19</td>
+                    <td class="german">neunzehn</td>
+                    <td>نوين تسين</td>
+                </tr>
+
+                <tr>
+                    <td>20</td>
+                    <td class="german">zwanzig</td>
+                    <td>تسفانتسيش</td>
+                </tr>
+
+            </table>
+
+            <br>
+
+            <button onclick="speakNumbers()">
+                🔊 اسمع الأرقام
+            </button>
+
+        </div>
+
+
+        <!-- العمر -->
+        <div class="box">
+
+            <h2>🎂 السؤال عن العمر</h2>
+
+            <p class="german">
+                Wie alt bist du?
+            </p>
+
+            <p class="arabic">
+                عندك كام سنة؟
+            </p>
+
+            <button onclick="speak('Wie alt bist du?')">
+                🔊 اسمع الجملة
+            </button>
+
+            <hr>
+
+            <p class="german">
+                Ich bin 12 Jahre alt.
+            </p>
+
+            <p class="arabic">
+                أنا عندي 12 سنة.
+            </p>
+
+            <button onclick="speak('Ich bin zwölf Jahre alt.')">
+                🔊 اسمع المثال
+            </button>
+
+        </div>
+
+
+        <!-- أمثلة -->
+        <div class="box">
+
+            <h2>📝 أمثلة</h2>
+
+            <p class="german">
+                Ich bin 10 Jahre alt.
+            </p>
+
+            <p class="arabic">
+                أنا عندي 10 سنين.
+            </p>
+
+            <p class="german">
+                Ich bin 15 Jahre alt.
+            </p>
+
+            <p class="arabic">
+                أنا عندي 15 سنة.
+            </p>
+
+            <p class="german">
+                Er ist 16 Jahre alt.
+            </p>
+
+            <p class="arabic">
+                هو عنده 16 سنة.
+            </p>
+
+            <p class="german">
+                Sie ist 14 Jahre alt.
+            </p>
+
+            <p class="arabic">
+                هي عندها 14 سنة.
+            </p>
+
+        </div>
+
+
+        <!-- أشخاص آخرين -->
+        <div class="box">
+
+            <h2>👥 السؤال عن عمر شخص آخر</h2>
+
+            <p class="german">
+                Wie alt ist er?
+            </p>
+
+            <p class="arabic">
+                هو عنده كام سنة؟
+            </p>
+
+            <p class="german">
+                Er ist 16 Jahre alt.
+            </p>
+
+            <p class="arabic">
+                هو عنده 16 سنة.
+            </p>
+
+            <hr>
+
+            <p class="german">
+                Wie alt ist sie?
+            </p>
+
+            <p class="arabic">
+                هي عندها كام سنة؟
+            </p>
+
+            <p class="german">
+                Sie ist 14 Jahre alt.
+            </p>
+
+            <p class="arabic">
+                هي عندها 14 سنة.
+            </p>
+
+        </div>
+
+
+        <!-- كلمات جديدة -->
+        <div class="box">
+
+            <h2>📚 5 كلمات جديدة</h2>
+
+            <table>
+
+                <tr>
+                    <th>الكلمة</th>
+                    <th>النطق</th>
+                    <th>المعنى</th>
+                </tr>
+
+                <tr>
+                    <td class="german">alt</td>
+                    <td>ألت</td>
+                    <td>كبير في السن / العمر</td>
+                </tr>
+
+                <tr>
+                    <td class="german">Jahr</td>
+                    <td>يار</td>
+                    <td>سنة</td>
+                </tr>
+
+                <tr>
+                    <td class="german">Jahre</td>
+                    <td>ياره</td>
+                    <td>سنين / سنوات</td>
+                </tr>
+
+                <tr>
+                    <td class="german">sein</td>
+                    <td>زاين</td>
+                    <td>يكون</td>
+                </tr>
+
+                <tr>
+                    <td class="german">Alter</td>
+                    <td>ألتر</td>
+                    <td>العمر</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- تدريب 1 -->
+        <div class="box">
+
+            <h2>✏️ تدريب 1</h2>
+
+            <p>اكتب الرقم بالألماني:</p>
+
+            <p>
+                13 =
+                <input type="text" id="practice13">
+            </p>
+
+            <p>
+                18 =
+                <input type="text" id="practice18">
+            </p>
+
+            <p>
+                20 =
+                <input type="text" id="practice20">
+            </p>
+
+            <button onclick="checkPractice1()">
+                تصحيح
+            </button>
+
+            <div id="practiceResult"></div>
+
+        </div>
+
+
+        <!-- تدريب 2 -->
+        <div class="box">
+
+            <h2>🎂 تدريب 2</h2>
+
+            <p>
+                اكتب عمرك بالأرقام:
+            </p>
+
+            <input
+                type="number"
+                id="agePractice"
+                placeholder="مثال: 12"
+            >
+
+            <button onclick="checkAge()">
+                تصحيح
+            </button>
+
+            <div id="ageResult"></div>
+
+        </div>
+
+
+        <!-- التحدث -->
+        <div class="box">
+
+            <h2>🗣️ تحدث</h2>
+
+            <p>
+                جرّب تقول الجملة دي بصوتك:
+            </p>
+
+            <p class="german">
+                Hallo! Ich heiße ______.
+                Ich bin ___ Jahre alt.
+            </p>
+
+            <button onclick="speak('Hallo! Ich heiße. Ich bin zwölf Jahre alt.')">
+                🔊 اسمع الجملة
+            </button>
+
+        </div>
+
+
+        <!-- الاختبار -->
+        <div class="box">
+
+            <h2>📝 اختبار الدرس الثالث</h2>
+
+            <!-- السؤال 1 -->
+            <div class="quiz-question">
+
+                <p>
+                    <strong>1. ماذا تعني: Wie alt bist du?</strong>
+                </p>
+
+                <label>
+                    <input type="radio" name="q1" value="wrong">
+                    أ) اسمك إيه؟
+                </label>
+
+                <br>
+
+                <label>
+                    <input type="radio" name="q1" value="correct">
+                    ب) عندك كام سنة؟
+                </label>
+
+                <br>
+
+                <label>
+                    <input type="radio" name="q1" value="wrong">
+                    ج) إنت منين؟
+                </label>
+
+            </div>
+
+
+            <!-- السؤال 2 -->
+            <div class="quiz-question">
+
+                <p>
+                    <strong>2. اختر الجملة الصحيحة:</strong>
+                </p>
+
+                <label>
+                    <input type="radio" name="q2" value="correct">
+                    Ich bin 12 Jahre alt.
+                </label>
+
+                <br>
+
+                <label>
+                    <input type="radio" name="q2" value="wrong">
+                    Ich ist 12 Jahre alt.
+                </label>
+
+                <br>
+
+                <label>
+                    <input type="radio" name="q2" value="wrong">
+                    Ich bist 12 Jahre alt.
+                </label>
+
+            </div>
+
+
+            <!-- السؤال 3 -->
+            <div class="quiz-question">
+
+                <p>
+                    <strong>
+                        3. كيف تكتب 18 بالألماني؟
+                    </strong>
+                </p>
+
+                <label>
+                    <input type="radio" name="q3" value="correct">
+                    achtzehn
+                </label>
+
+                <br>
+
+                <label>
+                    <input type="radio" name="q3" value="wrong">
+                    achtzig
+                </label>
+
+                <br>
+
+                <label>
+                    <input type="radio" name="q3" value="wrong">
+                    acht
+                </label>
+
+            </div>
+
+
+            <!-- السؤال 4 -->
+            <div class="quiz-question">
+
+                <p>
+                    <strong>
+                        4. أكمل الجملة:
+                        Sie ___ 14 Jahre alt.
+                    </strong>
+                </p>
+
+                <label>
+                    <input type="radio" name="q4" value="correct">
+                    ist
+                </label>
+
+                <br>
+
+                <label>
+                    <input type="radio" name="q4" value="wrong">
+                    bin
+                </label>
+
+                <br>
+
+                <label>
+                    <input type="radio" name="q4" value="wrong">
+                    bist
+                </label>
+
+            </div>
+
+
+            <!-- السؤال 5 -->
+            <div class="quiz-question">
+
+                <p>
+                    <strong>
+                        5. اكتب بالألماني:
+                        "هو عنده 16 سنة."
+                    </strong>
+                </p>
+
+                <input
+                    type="text"
+                    id="q5"
+                    placeholder="اكتب الإجابة هنا"
+                >
+
+            </div>
+
+
+            <button onclick="checkQuiz()">
+                ✅ تصحيح الاختبار
+            </button>
+
+            <div id="result"></div>
+
+
+            <!-- زر الدرس الرابع -->
+            <button
+                id="nextLesson4"
+                onclick="window.location.href='lesson4.html'"
+            >
+                ➡️ الدرس الرابع
+            </button>
+
+        </div>
+
+
+        <!-- الرجوع -->
+        <button
+            class="back-button"
+            onclick="window.location.href='A1.html'"
+        >
+            🔙 الرجوع إلى مستوى A1
+        </button>
+
+    </div>
+
+
+    <script>
+
+        // تشغيل النطق
+        function speak(text) {
+
+            const speech =
+                new SpeechSynthesisUtterance(text);
+
+            speech.lang = "de-DE";
+
+            window.speechSynthesis.speak(speech);
+        }
+
+
+        // نطق الأرقام
+        function speakNumbers() {
+
+            speak(
+                "null, eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn, elf, zwölf, dreizehn, vierzehn, fünfzehn, sechzehn, siebzehn, achtzehn, neunzehn, zwanzig"
+            );
+
+        }
+
+
+        // تدريب الأرقام
+        function checkPractice1() {
+
+            const p13 =
+                document.getElementById("practice13").value
+                .trim()
+                .toLowerCase();
+
+            const p18 =
+                document.getElementById("practice18").value
+                .trim()
+                .toLowerCase();
+
+            const p20 =
+                document.getElementById("practice20").value
+                .trim()
+                .toLowerCase();
+
+            let score = 0;
+
+            if (p13 === "dreizehn") {
+                score++;
+            }
+
+            if (p18 === "achtzehn") {
+                score++;
+            }
+
+            if (p20 === "zwanzig") {
+                score++;
+            }
+
+            document.getElementById("practiceResult").innerHTML =
+                "النتيجة: " + score + " / 3";
+
+        }
+
+
+        // تدريب العمر
+        function checkAge() {
+
+            const age =
+                document.getElementById("agePractice").value;
+
+            if (age === "12") {
+
+                document.getElementById("ageResult").innerHTML =
+                    "✅ ممتاز!";
+
+            } else {
+
+                document.getElementById("ageResult").innerHTML =
+                    "❌ جرّب مرة تانية.";
+
+            }
+
+        }
+
+
+        // توحيد الإجابة العربية
+        function normalizeAnswer(answer) {
+
+            return answer
+                .trim()
+                .toLowerCase()
+                .replace(/[أإآ]/g, "ا")
+                .replace(/ة/g, "ه")
+                .replace(/\s+/g, " ");
+
+        }
+
+
+        // الاختبار
+        function checkQuiz() {
+
+            let score = 0;
+
+
+            // إزالة النتائج القديمة
+            document
+                .querySelectorAll(".answer-result")
+                .forEach(function (element) {
+                    element.remove();
+                });
+
+
+            // السؤال 1
+            const q1 =
+                document.querySelector('input[name="q1"]:checked');
+
+            const q1Question =
+                document.querySelectorAll(".quiz-question")[0];
+
+            const q1Result =
+                document.createElement("div");
+
+            if (q1 && q1.value === "correct") {
+
+                score++;
+
+                q1Result.className =
+                    "correct-answer";
+
+                q1Result.textContent =
+                    "✅ إجابة صحيحة";
+
+            } else {
+
+                q1Result.className =
+                    "wrong-answer";
+
+                q1Result.textContent =
+                    "❌ إجابة غلط — الصحيحة: ب) عندك كام سنة؟";
+
+            }
+
+            q1Result.classList.add("answer-result");
+
+            q1Question.appendChild(q1Result);
+
+
+            // السؤال 2
+            const q2 =
+                document.querySelector('input[name="q2"]:checked');
+
+            const q2Question =
+                document.querySelectorAll(".quiz-question")[1];
+
+            const q2Result =
+                document.createElement("div");
+
+            if (q2 && q2.value === "correct") {
+
+                score++;
+
+                q2Result.className =
+                    "correct-answer";
+
+                q2Result.textContent =
+                    "✅ إجابة صحيحة";
+
+            } else {
+
+                q2Result.className =
+                    "wrong-answer";
+
+                q2Result.textContent =
+                    "❌ إجابة غلط — الصحيحة: Ich bin 12 Jahre alt.";
+
+            }
+
+            q2Result.classList.add("answer-result");
+
+            q2Question.appendChild(q2Result);
+
+
+            // السؤال 3
+            const q3 =
+                document.querySelector('input[name="q3"]:checked');
+
+            const q3Question =
+                document.querySelectorAll(".quiz-question")[2];
+
+            const q3Result =
+                document.createElement("div");
+
+            if (q3 && q3.value === "correct") {
+
+                score++;
+
+                q3Result.className =
+                    "correct-answer";
+
+                q3Result.textContent =
+                    "✅ إجابة صحيحة";
+
+            } else {
+
+                q3Result.className =
+                    "wrong-answer";
+
+                q3Result.textContent =
+                    "❌ إجابة غلط — الصحيحة: achtzehn";
+
+            }
+
+            q3Result.classList.add("answer-result");
+
+            q3Question.appendChild(q3Result);
+
+
+            // السؤال 4
+            const q4 =
+                document.querySelector('input[name="q4"]:checked');
+
+            const q4Question =
+                document.querySelectorAll(".quiz-question")[3];
+
+            const q4Result =
+                document.createElement("div");
+
+            if (q4 && q4.value === "correct") {
+
+                score++;
+
+                q4Result.className =
+                    "correct-answer";
+
+                q4Result.textContent =
+                    "✅ إجابة صحيحة";
+
+            } else {
+
+                q4Result.className =
+                    "wrong-answer";
+
+                q4Result.textContent =
+                    "❌ إجابة غلط — الصحيحة: ist";
+
+            }
+
+            q4Result.classList.add("answer-result");
+
+            q4Question.appendChild(q4Result);
+
+
+            // السؤال 5
+            const q5 =
+                document.getElementById("q5").value;
+
+            const q5Normalized =
+                normalizeAnswer(q5);
+
+            const q5Question =
+                document.querySelectorAll(".quiz-question")[4];
+
+            const q5Result =
+                document.createElement("div");
+
+
+            const acceptedAnswers = [
+
+                "ich bin 16 jahre alt",
+
+                "er ist 16 jahre alt"
+
+            ];
+
+
+            if (
+                q5Normalized === "er ist 16 jahre alt"
+            ) {
+
+                score++;
+
+                q5Result.className =
+                    "correct-answer";
+
+                q5Result.textContent =
+                    "✅ إجابة صحيحة";
+
+            } else {
+
+                q5Result.className =
+                    "wrong-answer";
+
+                q5Result.textContent =
+                    "❌ إجابة غلط — الصحيحة: Er ist 16 Jahre alt.";
+
+            }
+
+            q5Result.classList.add("answer-result");
+
+            q5Question.appendChild(q5Result);
+
+
+            // النتيجة
+            document.getElementById("result").innerHTML =
+                "🎯 نتيجتك: " + score + " / 5";
+
+
+            // النجاح
+            if (score >= 3) {
+
+                localStorage.setItem(
+                    "lesson3Completed",
+                    "true"
+                );
+
+                alert(
+                    "🎉 ممتاز! نجحت في الدرس الثالث وتم حفظه."
+                );
+
+
+                // إظهار زر الدرس الرابع
+                document.getElementById(
+                    "nextLesson4"
+                ).style.display = "block";
+
+
+            } else {
+
+                document.getElementById(
+                    "nextLesson4"
+                ).style.display = "none";
+
+                alert(
+                    "لسه محتاج تراجع الدرس شوية وتحاول تاني ❤️"
+                );
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

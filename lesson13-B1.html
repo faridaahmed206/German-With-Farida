@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 13 - obwohl / trotzdem | German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #1f3c88;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #555;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background: #333;
+        }
+
+        .lesson-box,
+        .quiz-box,
+        .summary-box {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            margin-bottom: 22px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #1f3c88;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .example {
+            background: #eef3ff;
+            border-right: 5px solid #1f3c88;
+            padding: 12px 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        .important {
+            background: #fff4d6;
+            border-right: 5px solid #e0a000;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .compare {
+            background: #f1f8f4;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background: #1f3c88;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f7f8fb;
+        }
+
+        .question {
+            margin-bottom: 22px;
+            padding: 15px;
+            background: #f8f9fc;
+            border-radius: 10px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 9px 0;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-left: 8px;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        .submit-btn,
+        .retry-btn,
+        .next-btn {
+            border: none;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .submit-btn {
+            background: #1f3c88;
+        }
+
+        .submit-btn:hover {
+            background: #162d68;
+        }
+
+        .retry-btn {
+            background: #e67e22;
+        }
+
+        .retry-btn:hover {
+            background: #c9630d;
+        }
+
+        .next-btn {
+            background: #27ae60;
+        }
+
+        .next-btn:hover {
+            background: #1f8a4c;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .success {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .fail {
+            background: #fff0f0;
+            border-right: 5px solid #e74c3c;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .wrong-answer {
+            background: #fff7e6;
+            border-right: 5px solid #f39c12;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .completed {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        #nextContainer {
+            margin-top: 15px;
+        }
+
+        .de-note {
+            direction: ltr;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .lesson-box,
+            .quiz-box,
+            .summary-box {
+                padding: 16px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 Lesson 13 – obwohl / trotzdem</h1>
+        <p>German with Farida | مستوى B1</p>
+    </header>
+
+    <div class="container">
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+        <div id="completedBox"></div>
+
+        <div class="lesson-box">
+
+            <h2>📚 obwohl / trotzdem</h2>
+
+            <p>
+                في الدرس ده هنتعلم إزاي نعبر عن <strong>التناقض</strong> في اللغة الألمانية.
+            </p>
+
+            <div class="important">
+                ⭐ أهم فرق في الدرس:
+                <br><br>
+                <strong>obwohl</strong> = رغم أن / بالرغم من أن
+                <br>
+                <strong>trotzdem</strong> = رغم ذلك / مع ذلك
+            </div>
+
+            <h3>🔹 أولًا: obwohl</h3>
+
+            <p>
+                <strong>obwohl</strong> أداة ربط بتدخل على جملة فرعية
+                <strong>Nebensatz</strong>.
+            </p>
+
+            <p>
+                وبعد <strong>obwohl</strong> الفعل المصرف بييجي في <strong>آخر الجملة</strong>.
+            </p>
+
+            <div class="example">
+                <div class="de-note">
+                    Obwohl es regnet, gehe ich spazieren.
+                </div>
+                <div>
+                    رغم أن الجو ممطر، أذهب للمشي.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Obwohl ich müde bin, lerne ich Deutsch.
+                </div>
+                <div>
+                    رغم أنني متعب، أدرس الألمانية.
+                </div>
+            </div>
+
+            <div class="important">
+                📌 تذكر:
+                <br><br>
+                <strong>obwohl + Nebensatz</strong>
+                <br>
+                والفعل في آخر الجملة.
+                <br><br>
+                Obwohl ich müde <strong>bin</strong> ...
+            </div>
+
+            <h3>🔹 ترتيب الجملة مع obwohl</h3>
+
+            <p>
+                ممكن نبدأ الجملة بـ <strong>obwohl</strong>:
+            </p>
+
+            <div class="example">
+                <div class="de-note">
+                    Obwohl ich krank bin, gehe ich zur Schule.
+                </div>
+                <div>
+                    رغم أنني مريض، أذهب إلى المدرسة.
+                </div>
+            </div>
+
+            <p>
+                وممكن نحط الجملة الرئيسية أولًا:
+            </p>
+
+            <div class="example">
+                <div class="de-note">
+                    Ich gehe zur Schule, obwohl ich krank bin.
+                </div>
+                <div>
+                    أذهب إلى المدرسة رغم أنني مريض.
+                </div>
+            </div>
+
+            <h3>🔹 ثانيًا: trotzdem</h3>
+
+            <p>
+                <strong>trotzdem</strong> معناها:
+                <strong>رغم ذلك / مع ذلك</strong>.
+            </p>
+
+            <p>
+                وهي ليست مثل <strong>obwohl</strong>؛ فهي لا تجعل الفعل في آخر الجملة.
+            </p>
+
+            <div class="example">
+                <div class="de-note">
+                    Es regnet. Trotzdem gehe ich spazieren.
+                </div>
+                <div>
+                    الجو ممطر. رغم ذلك أذهب للمشي.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Ich bin müde. Trotzdem lerne ich Deutsch.
+                </div>
+                <div>
+                    أنا متعب. مع ذلك أدرس الألمانية.
+                </div>
+            </div>
+
+            <div class="important">
+                📌 مع <strong>trotzdem</strong> لو بدأت الجملة بها:
+                <br><br>
+                <strong>Trotzdem + Verb + Subjekt ...</strong>
+                <br><br>
+                مثال:
+                <br>
+                Trotzdem <strong>gehe</strong> ich spazieren.
+            </div>
+
+            <h3>🔹 الفرق بين obwohl و trotzdem</h3>
+
+            <table>
+                <tr>
+                    <th>الكلمة</th>
+                    <th>المعنى</th>
+                    <th>مكان الفعل</th>
+                </tr>
+
+                <tr>
+                    <td>obwohl</td>
+                    <td>رغم أن</td>
+                    <td>آخر الجملة الفرعية</td>
+                </tr>
+
+                <tr>
+                    <td>trotzdem</td>
+                    <td>رغم ذلك / مع ذلك</td>
+                    <td>المركز الثاني</td>
+                </tr>
+            </table>
+
+            <h3>🔄 نفس المعنى بطريقتين</h3>
+
+            <div class="compare">
+
+                <p><strong>باستخدام obwohl:</strong></p>
+
+                <div class="de-note">
+                    Obwohl es regnet, gehe ich spazieren.
+                </div>
+
+                <p>
+                    رغم أن الجو ممطر، أذهب للمشي.
+                </p>
+
+                <hr>
+
+                <p><strong>باستخدام trotzdem:</strong></p>
+
+                <div class="de-note">
+                    Es regnet. Trotzdem gehe ich spazieren.
+                </div>
+
+                <p>
+                    الجو ممطر. رغم ذلك أذهب للمشي.
+                </p>
+
+            </div>
+
+            <h3>🔹 أمثلة إضافية</h3>
+
+            <div class="example">
+                <div class="de-note">
+                    Obwohl der Film lang ist, ist er interessant.
+                </div>
+                <div>
+                    رغم أن الفيلم طويل، فهو ممتع.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Der Film ist lang. Trotzdem ist er interessant.
+                </div>
+                <div>
+                    الفيلم طويل. مع ذلك هو ممتع.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Obwohl ich wenig Zeit habe, helfe ich dir.
+                </div>
+                <div>
+                    رغم أن لدي وقتًا قليلًا، أساعدك.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Ich habe wenig Zeit. Trotzdem helfe ich dir.
+                </div>
+                <div>
+                    لدي وقت قليل. رغم ذلك أساعدك.
+                </div>
+            </div>
+
+            <h3>⚠️ خطأ شائع</h3>
+
+            <div class="important">
+
+                ❌ Obwohl ich bin müde, lerne ich Deutsch.
+
+                <br><br>
+
+                ✅ Obwohl ich müde <strong>bin</strong>, lerne ich Deutsch.
+
+                <br><br>
+
+                لأن <strong>obwohl</strong> تجعل الفعل في نهاية الجملة الفرعية.
+
+            </div>
+
+            <div class="important">
+
+                ❌ Trotzdem ich müde bin, lerne ich Deutsch.
+
+                <br><br>
+
+                دي مش الطريقة اللي بنتعلمها هنا.
+
+                <br><br>
+
+                ✅ Ich bin müde. Trotzdem <strong>lerne</strong> ich Deutsch.
+
+            </div>
+
+        </div>
+
+        <div class="summary-box">
+
+            <h2>📌 ملخص الدرس</h2>
+
+            <table>
+                <tr>
+                    <th>الكلمة</th>
+                    <th>المعنى</th>
+                    <th>مثال</th>
+                </tr>
+
+                <tr>
+                    <td>obwohl</td>
+                    <td>رغم أن</td>
+                    <td>Obwohl ich müde bin, lerne ich.</td>
+                </tr>
+
+                <tr>
+                    <td>trotzdem</td>
+                    <td>رغم ذلك</td>
+                    <td>Ich bin müde. Trotzdem lerne ich.</td>
+                </tr>
+            </table>
+
+            <p>
+                ⭐ افتكر:
+                <strong>obwohl → الفعل في الآخر</strong>
+            </p>
+
+            <p>
+                ⭐ و:
+                <strong>trotzdem → الفعل في المركز الثاني</strong>
+            </p>
+
+        </div>
+
+        <div class="quiz-box" id="quiz">
+
+            <h2>📝 اختبار Lesson 13</h2>
+
+            <p>
+                لازم تجيب <strong>3 من 5</strong> على الأقل عشان تنجح وتفتح Lesson 14.
+            </p>
+
+            <div class="question">
+
+                <p>1️⃣ اختر الجملة الصحيحة:</p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    Obwohl ich müde bin, lerne ich Deutsch.
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    Obwohl ich bin müde, lerne ich Deutsch.
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    Obwohl ich müde, bin lerne ich Deutsch.
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>2️⃣ ما معنى <strong>trotzdem</strong>؟</p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    بسبب ذلك
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    رغم ذلك / مع ذلك
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    قبل ذلك
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>3️⃣ أكمل الجملة:</p>
+
+                <p class="de-note">
+                    Obwohl es regnet, ______ ich spazieren.
+                </p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    gehe
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    geht
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    gehen
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>4️⃣ اختر الجملة الصحيحة مع <strong>trotzdem</strong>:</p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    Ich bin müde. Trotzdem lerne ich Deutsch.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    Ich bin müde. Trotzdem ich lerne Deutsch.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    Ich bin müde. Trotzdem Deutsch lerne ich.
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>5️⃣ اختر الإجابة الصحيحة:</p>
+
+                <p class="de-note">
+                    Ich habe wenig Zeit. ______ helfe ich dir.
+                </p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    Obwohl
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    Während
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    Trotzdem
+                </label>
+
+            </div>
+
+            <button class="submit-btn" id="submitBtn" onclick="checkQuiz()">
+                ✅ تصحيح الاختبار
+            </button>
+
+            <div id="result"></div>
+
+            <div id="nextContainer"></div>
+
+        </div>
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+    </div>
+
+    <script>
+
+        const answers = {
+            q1: "a",
+            q2: "b",
+            q3: "a",
+            q4: "a",
+            q5: "c"
+        };
+
+        const correctText = {
+            q1: "Obwohl ich müde bin, lerne ich Deutsch.",
+            q2: "رغم ذلك / مع ذلك",
+            q3: "gehe",
+            q4: "Ich bin müde. Trotzdem lerne ich Deutsch.",
+            q5: "Trotzdem"
+        };
+
+        function checkQuiz() {
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            if (submitBtn.disabled) {
+                return;
+            }
+
+            let score = 0;
+            let wrongAnswers = [];
+
+            for (let i = 1; i <= 5; i++) {
+
+                const selected = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                if (selected && selected.value === answers["q" + i]) {
+                    score++;
+                } else {
+                    wrongAnswers.push(i);
+                }
+            }
+
+            const result = document.getElementById("result");
+            const nextContainer = document.getElementById("nextContainer");
+
+            submitBtn.disabled = true;
+
+            let html = "";
+
+            if (score >= 3) {
+
+                localStorage.setItem("b1Lesson13Completed", "true");
+
+                html += `
+                    <div class="success">
+                        🎉 <strong>أحسنت! نجحت في Lesson 13.</strong>
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        💾 تم حفظ تقدمك بنجاح!
+                        <br><br>
+                        ✅ Lesson 13 مكتمل!
+                        <br>
+                        🔓 تم فتح Lesson 14.
+                    </div>
+                `;
+
+                if (score < 5 && wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function (q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+
+                nextContainer.innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson14-B1.html'">
+                        ➡️ الانتقال إلى Lesson 14
+                    </button>
+                `;
+
+            } else {
+
+                html += `
+                    <div class="fail">
+                        ❌ لم تنجح في الاختبار هذه المرة.
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        لازم تجيب 3 من 5 على الأقل.
+                    </div>
+                `;
+
+                if (wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function (q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+            }
+
+            html += `
+                <button class="retry-btn" onclick="retryQuiz()">
+                    🔄 إعادة الاختبار
+                </button>
+            `;
+
+            result.innerHTML = html;
+        }
+
+        function retryQuiz() {
+
+            const radios = document.querySelectorAll(
+                'input[type="radio"]'
+            );
+
+            radios.forEach(function (radio) {
+                radio.checked = false;
+                radio.disabled = false;
+            });
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            submitBtn.disabled = false;
+
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("nextContainer").innerHTML = "";
+
+            document.getElementById("quiz").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        function checkCompleted() {
+
+            if (localStorage.getItem("b1Lesson13Completed") === "true") {
+
+                document.getElementById("completedBox").innerHTML = `
+                    <div class="completed">
+                        ✅ Lesson 13 مكتمل بالفعل!
+                        <br><br>
+                        💾 تقدمك محفوظ.
+                        <br><br>
+                        🔓 Lesson 14 مفتوح.
+                        <br><br>
+                        يمكنك مراجعة الدرس والاختبار مرة أخرى.
+                    </div>
+                `;
+
+                document.getElementById("nextContainer").innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson14-B1.html'">
+                        ➡️ الانتقال إلى Lesson 14
+                    </button>
+                `;
+            }
+        }
+
+        checkCompleted();
+
+    </script>
+
+</body>
+
+</html>

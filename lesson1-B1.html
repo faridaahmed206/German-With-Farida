@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 1 B1 - Wiederholung A2</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7ff;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2563eb, #60a5fa);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 20px;
+        }
+
+        .lesson-box,
+        .quiz-box,
+        .result {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #ddd;
+        }
+
+        h2 {
+            color: #2563eb;
+        }
+
+        h3 {
+            color: #1d4ed8;
+        }
+
+        .example {
+            background: #eef4ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .german {
+            font-size: 18px;
+            font-weight: bold;
+            direction: ltr;
+            text-align: left;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #eef4ff;
+        }
+
+        .question {
+            background: #f8fafc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            padding: 7px;
+            cursor: pointer;
+        }
+
+        button {
+            border: none;
+            border-radius: 10px;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #checkButton {
+            background: #2563eb;
+            color: white;
+            width: 100%;
+        }
+
+        #checkButton:disabled {
+            background: #999;
+            cursor: not-allowed;
+        }
+
+        .success {
+            border: 2px solid #22c55e;
+        }
+
+        .fail {
+            border: 2px solid #ef4444;
+        }
+
+        .correct-answer {
+            background: #eef8ee;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            text-align: right;
+        }
+
+        .next-button {
+            background: #22c55e;
+            color: white;
+            margin-top: 15px;
+        }
+
+        .retry-button {
+            background: #ef4444;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .note {
+            background: #fff8dc;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🇩🇪 B1 – Lesson 1</h1>
+    <p>Wiederholung A2 – مراجعة مستوى A2</p>
+</header>
+
+<div class="container">
+
+    <a href="B1.html" class="back">🔙 العودة إلى مستوى B1</a>
+
+    <div class="lesson-box">
+
+        <h2>📘 مراجعة A2</h2>
+
+        <p>
+            قبل أن نبدأ قواعد B1، هنراجع أهم النقاط اللي اتعلمناها في A2.
+        </p>
+
+        <h3>1️⃣ Perfekt</h3>
+
+        <p>
+            نستخدم Perfekt للتحدث عن أحداث حصلت في الماضي.
+        </p>
+
+        <div class="example">
+            <div class="german">Ich habe Deutsch gelernt.</div>
+            <div>أنا درست الألمانية.</div>
+        </div>
+
+        <div class="example">
+            <div class="german">Ich bin nach Hause gegangen.</div>
+            <div>أنا ذهبت إلى المنزل.</div>
+        </div>
+
+        <div class="note">
+            القاعدة الأساسية:
+            <strong>haben / sein + Partizip II</strong>
+        </div>
+
+
+        <h3>2️⃣ Präteritum</h3>
+
+        <p>
+            نستخدم Präteritum كثيرًا مع أفعال مثل
+            <strong>sein</strong> و <strong>haben</strong>.
+        </p>
+
+        <div class="example">
+            <div class="german">Ich war gestern zu Hause.</div>
+            <div>كنت في المنزل أمس.</div>
+        </div>
+
+        <div class="example">
+            <div class="german">Ich hatte keine Zeit.</div>
+            <div>لم يكن لدي وقت.</div>
+        </div>
+
+
+        <h3>3️⃣ Modalverben</h3>
+
+        <table>
+            <tr>
+                <th>الفعل</th>
+                <th>المعنى</th>
+            </tr>
+            <tr>
+                <td>können</td>
+                <td>يستطيع</td>
+            </tr>
+            <tr>
+                <td>müssen</td>
+                <td>يجب / يضطر</td>
+            </tr>
+            <tr>
+                <td>dürfen</td>
+                <td>يُسمح له</td>
+            </tr>
+            <tr>
+                <td>wollen</td>
+                <td>يريد</td>
+            </tr>
+            <tr>
+                <td>sollen</td>
+                <td>ينبغي / من المفترض</td>
+            </tr>
+            <tr>
+                <td>möchten</td>
+                <td>يود / يرغب</td>
+            </tr>
+        </table>
+
+        <div class="example">
+            <div class="german">Ich kann Deutsch sprechen.</div>
+            <div>أستطيع التحدث بالألمانية.</div>
+        </div>
+
+        <div class="example">
+            <div class="german">Ich muss heute lernen.</div>
+            <div>يجب أن أدرس اليوم.</div>
+        </div>
+
+
+        <h3>4️⃣ Dativ</h3>
+
+        <p>
+            من الأدوات المهمة في Dativ:
+        </p>
+
+        <table>
+            <tr>
+                <th>Nominativ</th>
+                <th>Dativ</th>
+            </tr>
+            <tr>
+                <td>der</td>
+                <td>dem</td>
+            </tr>
+            <tr>
+                <td>die</td>
+                <td>der</td>
+            </tr>
+            <tr>
+                <td>das</td>
+                <td>dem</td>
+            </tr>
+            <tr>
+                <td>die – Plural</td>
+                <td>den</td>
+            </tr>
+        </table>
+
+        <div class="example">
+            <div class="german">Ich helfe dem Mann.</div>
+            <div>أنا أساعد الرجل.</div>
+        </div>
+
+
+        <h3>5️⃣ Wechselpräpositionen</h3>
+
+        <p>
+            من أشهرها:
+        </p>
+
+        <p>
+            <strong>an – auf – hinter – in – neben – über – unter – vor – zwischen</strong>
+        </p>
+
+        <p>
+            السؤال <strong>Wo?</strong> غالبًا يأخذ Dativ،
+            والسؤال <strong>Wohin?</strong> يأخذ Akkusativ.
+        </p>
+
+        <div class="example">
+            <div class="german">Das Buch liegt auf dem Tisch.</div>
+            <div>الكتاب موجود على الطاولة.</div>
+        </div>
+
+        <div class="example">
+            <div class="german">Ich lege das Buch auf den Tisch.</div>
+            <div>أضع الكتاب على الطاولة.</div>
+        </div>
+
+
+        <h3>6️⃣ Reflexive Verben</h3>
+
+        <p>
+            نستخدم الضمائر الانعكاسية مع الأفعال الانعكاسية.
+        </p>
+
+        <table>
+            <tr>
+                <th>الفاعل</th>
+                <th>الضمير</th>
+            </tr>
+            <tr>
+                <td>ich</td>
+                <td>mich</td>
+            </tr>
+            <tr>
+                <td>du</td>
+                <td>dich</td>
+            </tr>
+            <tr>
+                <td>er / sie / es</td>
+                <td>sich</td>
+            </tr>
+            <tr>
+                <td>wir</td>
+                <td>uns</td>
+            </tr>
+            <tr>
+                <td>ihr</td>
+                <td>euch</td>
+            </tr>
+            <tr>
+                <td>sie / Sie</td>
+                <td>sich</td>
+            </tr>
+        </table>
+
+        <div class="example">
+            <div class="german">Ich wasche mich.</div>
+            <div>أنا أغسل نفسي.</div>
+        </div>
+
+
+        <h3>7️⃣ Komparativ</h3>
+
+        <p>
+            نستخدم Komparativ للمقارنة بين شيئين.
+        </p>
+
+        <div class="example">
+            <div class="german">Mein Bruder ist größer als ich.</div>
+            <div>أخي أكبر مني.</div>
+        </div>
+
+        <p>
+            القاعدة غالبًا:
+            <strong>Adjektiv + er + als</strong>
+        </p>
+
+        <div class="example">
+            <div class="german">gut → besser</div>
+            <div>جيد → أفضل</div>
+        </div>
+
+
+        <h3>8️⃣ Superlativ</h3>
+
+        <p>
+            نستخدم Superlativ عندما نقارن شيئًا أو شخصًا بكل المجموعة.
+        </p>
+
+        <div class="example">
+            <div class="german">Er ist am schnellsten.</div>
+            <div>هو الأسرع.</div>
+        </div>
+
+        <div class="example">
+            <div class="german">Das ist das größte Haus.</div>
+            <div>هذا أكبر منزل.</div>
+        </div>
+
+
+        <h3>9️⃣ Nebensätze</h3>
+
+        <p>
+            في الجملة الثانوية يأتي الفعل المتصرف في النهاية.
+        </p>
+
+        <div class="example">
+            <div class="german">Ich bleibe zu Hause, weil ich müde bin.</div>
+            <div>أبقى في المنزل لأنني متعب.</div>
+        </div>
+
+        <div class="example">
+            <div class="german">Ich weiß, dass du Deutsch lernst.</div>
+            <div>أعرف أنك تتعلم الألمانية.</div>
+        </div>
+
+
+        <h3>🔟 Relativsätze</h3>
+
+        <p>
+            الجملة الموصولة تربط معلومات عن شخص أو شيء.
+        </p>
+
+        <div class="example">
+            <div class="german">Das ist der Mann, den ich kenne.</div>
+            <div>هذا هو الرجل الذي أعرفه.</div>
+        </div>
+
+
+        <h3>1️⃣1️⃣ Futur I</h3>
+
+        <p>
+            القاعدة:
+            <strong>werden + Infinitiv</strong>
+        </p>
+
+        <div class="example">
+            <div class="german">Ich werde morgen Deutsch lernen.</div>
+            <div>سأدرس الألمانية غدًا.</div>
+        </div>
+
+
+        <h3>📌 أهم قاعدة نراجعها قبل B1</h3>
+
+        <div class="note">
+            في الألمانية، ترتيب الكلمات مهم جدًا.
+            خصوصًا مع الجمل الثانوية، الأفعال المساعدة، وModalverben.
+        </div>
+
+    </div>
+
+
+    <!-- الاختبار -->
+
+    <div class="quiz-box">
+
+        <h2>📝 اختبار Lesson 1</h2>
+
+        <p>
+            أجب عن الأسئلة الخمسة. تحتاج إلى <strong>3 من 5</strong> على الأقل للنجاح.
+        </p>
+
+        <form id="quizForm">
+
+            <div class="question">
+                <h3>1. اختر الجملة الصحيحة في Perfekt:</h3>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    Ich habe Deutsch gelernt.
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    Ich bin Deutsch gelernt.
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    Ich habe Deutsch lernen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="d">
+                    Ich Deutsch habe gelernt.
+                </label>
+            </div>
+
+
+            <div class="question">
+                <h3>2. اختر التصريف الصحيح:</h3>
+
+                <p>Ich ___ gestern zu Hause.</p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    war
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    bin
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    werde
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="d">
+                    sein
+                </label>
+            </div>
+
+
+            <div class="question">
+                <h3>3. اختر الجملة الصحيحة مع Modalverb:</h3>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    Ich kann Deutsch sprechen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    Ich kann Deutsch spreche.
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    Ich Deutsch kann sprechen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="d">
+                    Ich kann Deutsch gesprochen.
+                </label>
+            </div>
+
+
+            <div class="question">
+                <h3>4. اختر أداة Dativ الصحيحة:</h3>
+
+                <p>Ich helfe ___ Mann.</p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    den
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    der
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    dem
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="d">
+                    die
+                </label>
+            </div>
+
+
+            <div class="question">
+                <h3>5. اختر الجملة الصحيحة في Futur I:</h3>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    Ich werde morgen Deutsch lernen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    Ich werde morgen Deutsch lerne.
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    Ich morgen werde Deutsch lernen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="d">
+                    Ich werde Deutsch morgen lerne.
+                </label>
+            </div>
+
+
+            <button type="button" id="checkButton">
+                ✅ تصحيح الاختبار
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div id="result"></div>
+
+</div>
+
+
+<script>
+
+const answers = {
+    q1: "a",
+    q2: "a",
+    q3: "a",
+    q4: "c",
+    q5: "a"
+};
+
+const correctText = {
+    q1: "Ich habe Deutsch gelernt.",
+    q2: "war",
+    q3: "Ich kann Deutsch sprechen.",
+    q4: "dem",
+    q5: "Ich werde morgen Deutsch lernen."
+};
+
+
+document.getElementById("checkButton").addEventListener("click", function () {
+
+    let score = 0;
+    let wrongAnswers = [];
+
+    for (let i = 1; i <= 5; i++) {
+
+        const questionName = "q" + i;
+
+        const selected = document.querySelector(
+            'input[name="' + questionName + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[questionName]) {
+
+            score++;
+
+        } else {
+
+            wrongAnswers.push(
+                "<div class='correct-answer'>" +
+                "<strong>السؤال " + i + ":</strong> " +
+                correctText[questionName] +
+                "</div>"
+            );
+
+        }
+
+    }
+
+
+    const result = document.getElementById("result");
+
+
+    if (score >= 3) {
+
+        localStorage.setItem(
+            "b1Lesson1Completed",
+            "true"
+        );
+
+        result.className = "result success";
+
+        result.innerHTML =
+            "<h2>🎉 أحسنت!</h2>" +
+            "<p>درجتك: <strong>" + score + " / 5</strong></p>" +
+            "<p>💾 تم حفظ تقدمك بنجاح!</p>" +
+            "<p><strong>✅ Lesson 1 مكتمل!</strong></p>" +
+            "<p>🔓 تم فتح Lesson 2.</p>" +
+
+            (
+                wrongAnswers.length > 0
+                    ? "<h3>📌 الإجابات الصحيحة للأسئلة التي أخطأت فيها:</h3>" +
+                      wrongAnswers.join("")
+                    : "<p>🌟 كل إجاباتك صحيحة!</p>"
+            ) +
+
+            "<button type='button' class='next-button' " +
+            "onclick=\"window.location.href='Lesson2-B1.html'\">" +
+            "➡️ الانتقال إلى Lesson 2" +
+            "</button>";
+
+
+        document.querySelectorAll(
+            "#quizForm input"
+        ).forEach(function (input) {
+
+            input.disabled = true;
+
+        });
+
+
+        document.getElementById(
+            "checkButton"
+        ).disabled = true;
+
+
+    } else {
+
+        result.className = "result fail";
+
+        result.innerHTML =
+            "<h2>❌ تحتاج إلى مراجعة بسيطة</h2>" +
+            "<p>درجتك: <strong>" + score + " / 5</strong></p>" +
+            "<p>لازم تجيب 3 من 5 على الأقل للنجاح.</p>" +
+            "<h3>📌 الإجابات الصحيحة للأسئلة التي أخطأت فيها:</h3>" +
+            wrongAnswers.join("") +
+            "<br>" +
+            "<button type='button' class='retry-button' " +
+            "onclick='location.reload()'>" +
+            "🔄 إعادة الاختبار" +
+            "</button>";
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>

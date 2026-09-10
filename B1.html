@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B1 - German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        header {
+            background: #1976d2;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0 0 8px;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .progress-box {
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .progress-box h2 {
+            margin-top: 0;
+            color: #1976d2;
+        }
+
+        #progressText {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 18px;
+            background: #e0e0e0;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        #progressFill {
+            height: 100%;
+            width: 0%;
+            background: #1976d2;
+            transition: width 0.4s;
+        }
+
+        .lesson {
+            background: white;
+            margin-bottom: 14px;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .lesson-info {
+            flex: 1;
+        }
+
+        .lesson-number {
+            color: #1976d2;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .lesson-title {
+            font-size: 19px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .lesson-status {
+            margin-top: 7px;
+            font-size: 14px;
+        }
+
+        .open {
+            color: #16803c;
+        }
+
+        .locked {
+            color: #777;
+        }
+
+        .completed {
+            color: #16803c;
+            font-weight: bold;
+        }
+
+        button {
+            border: none;
+            border-radius: 9px;
+            padding: 11px 17px;
+            font-size: 15px;
+            cursor: pointer;
+            background: #1976d2;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        button:disabled {
+            background: #bdbdbd;
+            cursor: not-allowed;
+        }
+
+        .final-test {
+            background: white;
+            margin-top: 25px;
+            padding: 22px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .final-test h2 {
+            color: #d88900;
+            margin-top: 0;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #1976d2;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .lesson {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 مستوى B1</h1>
+        <p>German with Farida</p>
+    </header>
+
+    <div class="container">
+
+        <div class="progress-box">
+            <h2>📚 تقدمك في B1</h2>
+
+            <div id="progressText">
+                تم إكمال 0 من 20 درس
+            </div>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+        </div>
+
+
+        <!-- Lesson 1 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 1</div>
+                <div class="lesson-title">Wiederholung A2 – مراجعة A2</div>
+                <div id="status1" class="lesson-status"></div>
+            </div>
+
+            <button id="button1" onclick="openLesson(1)">
+                دخول الدرس
+            </button>
+        </div>
+
+
+        <!-- Lesson 2 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 2</div>
+                <div class="lesson-title">Konjunktiv II – التمني والاحتمالات والطلبات بأدب</div>
+                <div id="status2" class="lesson-status"></div>
+            </div>
+
+            <button id="button2" onclick="openLesson(2)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 3 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 3</div>
+                <div class="lesson-title">Passiv – المبني للمجهول</div>
+                <div id="status3" class="lesson-status"></div>
+            </div>
+
+            <button id="button3" onclick="openLesson(3)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 4 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 4</div>
+                <div class="lesson-title">Plusquamperfekt – الماضي الأسبق</div>
+                <div id="status4" class="lesson-status"></div>
+            </div>
+
+            <button id="button4" onclick="openLesson(4)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 5 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 5</div>
+                <div class="lesson-title">Futur II – المستقبل التام</div>
+                <div id="status5" class="lesson-status"></div>
+            </div>
+
+            <button id="button5" onclick="openLesson(5)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 6 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 6</div>
+                <div class="lesson-title">Adjektivdeklination – نهايات الصفات</div>
+                <div id="status6" class="lesson-status"></div>
+            </div>
+
+            <button id="button6" onclick="openLesson(6)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 7 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 7</div>
+                <div class="lesson-title">N-Deklination – أسماء N-Deklination</div>
+                <div id="status7" class="lesson-status"></div>
+            </div>
+
+            <button id="button7" onclick="openLesson(7)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 8 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 8</div>
+                <div class="lesson-title">Präpositionen mit Genitiv – حروف الجر مع Genitiv</div>
+                <div id="status8" class="lesson-status"></div>
+            </div>
+
+            <button id="button8" onclick="openLesson(8)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 9 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 9</div>
+                <div class="lesson-title">Genitiv – حالة Genitiv</div>
+                <div id="status9" class="lesson-status"></div>
+            </div>
+
+            <button id="button9" onclick="openLesson(9)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 10 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 10</div>
+                <div class="lesson-title">Indirekte Fragen – الأسئلة غير المباشرة</div>
+                <div id="status10" class="lesson-status"></div>
+            </div>
+
+            <button id="button10" onclick="openLesson(10)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 11 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 11</div>
+                <div class="lesson-title">Infinitiv mit zu – المصدر مع zu</div>
+                <div id="status11" class="lesson-status"></div>
+            </div>
+
+            <button id="button11" onclick="openLesson(11)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 12 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 12</div>
+                <div class="lesson-title">um … zu / damit – التعبير عن الهدف</div>
+                <div id="status12" class="lesson-status"></div>
+            </div>
+
+            <button id="button12" onclick="openLesson(12)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 13 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 13</div>
+                <div class="lesson-title">obwohl / trotzdem – التناقض</div>
+                <div id="status13" class="lesson-status"></div>
+            </div>
+
+            <button id="button13" onclick="openLesson(13)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 14 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 14</div>
+                <div class="lesson-title">während / bevor / nachdem – العلاقات الزمنية</div>
+                <div id="status14" class="lesson-status"></div>
+            </div>
+
+            <button id="button14" onclick="openLesson(14)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 15 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 15</div>
+                <div class="lesson-title">deshalb / trotzdem / außerdem – ربط الأفكار</div>
+                <div id="status15" class="lesson-status"></div>
+            </div>
+
+            <button id="button15" onclick="openLesson(15)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 16 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 16</div>
+                <div class="lesson-title">Relativsätze B1 – الجمل الموصولة بشكل أعمق</div>
+                <div id="status16" class="lesson-status"></div>
+            </div>
+
+            <button id="button16" onclick="openLesson(16)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 17 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 17</div>
+                <div class="lesson-title">Partizip I & II als Adjektive – الصفات المشتقة من الأفعال</div>
+                <div id="status17" class="lesson-status"></div>
+            </div>
+
+            <button id="button17" onclick="openLesson(17)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 18 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 18</div>
+                <div class="lesson-title">Wortbildung – تكوين الكلمات</div>
+                <div id="status18" class="lesson-status"></div>
+            </div>
+
+            <button id="button18" onclick="openLesson(18)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 19 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 19</div>
+                <div class="lesson-title">Schreiben & Sprechen – الكتابة والتحدث B1</div>
+                <div id="status19" class="lesson-status"></div>
+            </div>
+
+            <button id="button19" onclick="openLesson(19)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Lesson 20 -->
+        <div class="lesson">
+            <div class="lesson-info">
+                <div class="lesson-number">Lesson 20</div>
+                <div class="lesson-title">Wiederholung B1 – مراجعة شاملة</div>
+                <div id="status20" class="lesson-status"></div>
+            </div>
+
+            <button id="button20" onclick="openLesson(20)">
+                🔒 مقفول
+            </button>
+        </div>
+
+
+        <!-- Final Test -->
+        <div class="final-test">
+            <h2>🏆 اختبار B1 النهائي</h2>
+
+            <p id="finalMessage">
+                🔒 الاختبار النهائي مقفول حاليًا.
+            </p>
+
+            <button id="finalButton" onclick="openFinalTest()" disabled>
+                🔒 الاختبار مقفول
+            </button>
+        </div>
+
+
+        <a class="back" href="index.html">
+            ⬅️ العودة إلى الصفحة الرئيسية
+        </a>
+
+    </div>
+
+
+    <script>
+
+        const totalLessons = 20;
+
+
+        function isCompleted(number) {
+            return localStorage.getItem("b1Lesson" + number + "Completed") === "true";
+        }
+
+
+        function updatePage() {
+
+            let completedCount = 0;
+
+            for (let i = 1; i <= totalLessons; i++) {
+
+                if (isCompleted(i)) {
+                    completedCount++;
+                }
+
+                const status = document.getElementById("status" + i);
+                const button = document.getElementById("button" + i);
+
+                if (isCompleted(i)) {
+
+                    status.innerHTML = "✅ مكتمل";
+                    status.className = "lesson-status completed";
+
+                    button.innerHTML = "✅ مراجعة الدرس";
+                    button.disabled = false;
+
+                } else if (i === 1 || isCompleted(i - 1)) {
+
+                    status.innerHTML = "🔓 مفتوح";
+                    status.className = "lesson-status open";
+
+                    button.innerHTML = "▶️ دخول الدرس";
+                    button.disabled = false;
+
+                } else {
+
+                    status.innerHTML = "🔒 مقفول";
+                    status.className = "lesson-status locked";
+
+                    button.innerHTML = "🔒 مقفول";
+                    button.disabled = true;
+                }
+            }
+
+
+            document.getElementById("progressText").innerHTML =
+                "تم إكمال " + completedCount + " من " + totalLessons + " درس";
+
+
+            const percentage = (completedCount / totalLessons) * 100;
+
+            document.getElementById("progressFill").style.width =
+                percentage + "%";
+
+
+            const finalButton = document.getElementById("finalButton");
+            const finalMessage = document.getElementById("finalMessage");
+
+
+            if (localStorage.getItem("b1FinalTestCompleted") === "true") {
+
+                const score = localStorage.getItem("b1FinalTestScore");
+
+                finalMessage.innerHTML =
+                    "🎉 تم حل اختبار B1 من قبل — نتيجتك: " + score + "/15";
+
+                finalButton.innerHTML =
+                    "🏆 عرض نتيجة الاختبار";
+
+                finalButton.disabled = false;
+
+            } else if (completedCount === totalLessons) {
+
+                finalMessage.innerHTML =
+                    "🎉 أحسنت! أنهيت جميع دروس B1. الاختبار النهائي مفتوح الآن.";
+
+                finalButton.innerHTML =
+                    "🏆 دخول اختبار B1";
+
+                finalButton.disabled = false;
+
+            } else {
+
+                finalMessage.innerHTML =
+                    "🔒 لازم تخلص جميع دروس B1 أولًا لفتح الاختبار النهائي.";
+
+                finalButton.innerHTML =
+                    "🔒 الاختبار مقفول";
+
+                finalButton.disabled = true;
+            }
+        }
+
+
+        function openLesson(number) {
+
+            window.location.href = "Lesson" + number + "-B1.html";
+        }
+
+
+        function openFinalTest() {
+
+            window.location.href = "B1test.html";
+        }
+
+
+        updatePage();
+
+    </script>
+
+</body>
+
+</html>

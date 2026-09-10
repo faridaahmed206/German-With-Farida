@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدرس الثالث عشر - Akkusativ</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        header {
+            background: #1f4e79;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1f4e79;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .german {
+            font-size: 21px;
+            font-weight: bold;
+            color: #1f4e79;
+        }
+
+        .pronunciation {
+            color: #777;
+            margin: 5px 0;
+        }
+
+        .meaning {
+            color: #444;
+        }
+
+        .note {
+            background: #eef6ff;
+            padding: 15px;
+            border-right: 5px solid #1f4e79;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #eaf2f8;
+        }
+
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            background: #fafafa;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .question label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 12px;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        button {
+            background: #1f4e79;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 8px 5px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .feedback {
+            margin-top: 8px;
+            padding: 10px;
+            border-radius: 7px;
+        }
+
+        .correct {
+            background: #e8f7e8;
+            color: #176b17;
+        }
+
+        .wrong {
+            background: #ffeaea;
+            color: #a00000;
+        }
+
+        #nextLesson,
+        #backToA1,
+        #retryQuiz {
+            display: none;
+        }
+
+        .dialogue {
+            background: #f8f8f8;
+            padding: 18px;
+            border-radius: 10px;
+            line-height: 2;
+        }
+
+        .word {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🇩🇪 الدرس الثالث عشر</h1>
+    <p>Akkusativ</p>
+    <p>حالة المفعول به في اللغة الألمانية</p>
+</header>
+
+<div class="container">
+
+    <!-- الأهداف -->
+    <div class="section">
+        <h2>🎯 أهداف الدرس</h2>
+
+        <ul>
+            <li>فهم معنى Akkusativ ببساطة.</li>
+            <li>معرفة المفعول به في الجملة.</li>
+            <li>استخدام der → den.</li>
+            <li>استخدام ein → einen.</li>
+            <li>تكوين جمل بسيطة باستخدام Akkusativ.</li>
+        </ul>
+    </div>
+
+    <!-- شرح Akkusativ -->
+    <div class="section">
+        <h2>📌 1. يعني إيه Akkusativ؟</h2>
+
+        <p>
+            ببساطة، الـ <b>Akkusativ</b> بيظهر غالبًا مع الشيء أو الشخص
+            اللي بيقع عليه الفعل.
+        </p>
+
+        <p class="german">Ich sehe den Tisch.</p>
+        <p class="pronunciation">إش زيه دين تِش</p>
+        <p class="meaning">أنا أرى الطاولة.</p>
+
+        <p>
+            أنا أرى ماذا؟ → الطاولة.
+            إذن <b>den Tisch</b> هو المفعول به.
+        </p>
+
+        <p class="german">Ich kaufe die Tasche.</p>
+        <p class="pronunciation">إش كاوفه دي تاشه</p>
+        <p class="meaning">أنا أشتري الحقيبة.</p>
+
+        <p>
+            أشتري ماذا؟ → الحقيبة.
+        </p>
+    </div>
+
+    <!-- أدوات التعريف -->
+    <div class="section">
+        <h2>📚 2. أدوات التعريف في Akkusativ</h2>
+
+        <table>
+            <tr>
+                <th>Nominativ</th>
+                <th>Akkusativ</th>
+            </tr>
+
+            <tr>
+                <td>der</td>
+                <td><b>den</b></td>
+            </tr>
+
+            <tr>
+                <td>die</td>
+                <td>die</td>
+            </tr>
+
+            <tr>
+                <td>das</td>
+                <td>das</td>
+            </tr>
+
+            <tr>
+                <td>die (جمع)</td>
+                <td>die</td>
+            </tr>
+        </table>
+
+        <div class="note">
+            ⭐ أهم حاجة في الدرس:
+            <br><br>
+            <b>der → den</b>
+            <br><br>
+            التغيير الأساسي بيحصل مع المذكر.
+        </div>
+
+        <p><b>der Tisch → den Tisch</b></p>
+        <p>الطاولة</p>
+
+        <p><b>der Kugelschreiber → den Kugelschreiber</b></p>
+        <p>القلم</p>
+
+        <p><b>die Tasche → die Tasche</b></p>
+        <p>الحقيبة</p>
+
+        <p><b>das Buch → das Buch</b></p>
+        <p>الكتاب</p>
+    </div>
+
+    <!-- أدوات النكرة -->
+    <div class="section">
+        <h2>📌 3. أدوات النكرة في Akkusativ</h2>
+
+        <table>
+            <tr>
+                <th>Nominativ</th>
+                <th>Akkusativ</th>
+            </tr>
+
+            <tr>
+                <td>ein</td>
+                <td><b>einen</b></td>
+            </tr>
+
+            <tr>
+                <td>eine</td>
+                <td>eine</td>
+            </tr>
+
+            <tr>
+                <td>ein</td>
+                <td>ein</td>
+            </tr>
+        </table>
+
+        <div class="note">
+            ⭐ مع المذكر:
+            <br><br>
+            <b>ein → einen</b>
+        </div>
+
+        <p class="german">Ich habe einen Bruder.</p>
+        <p class="pronunciation">إش هابه آينِن برودر</p>
+        <p class="meaning">لدي أخ.</p>
+
+        <p class="german">Ich habe eine Schwester.</p>
+        <p class="meaning">لدي أخت.</p>
+
+        <p class="german">Ich sehe ein Buch.</p>
+        <p class="meaning">أنا أرى كتابًا.</p>
+    </div>
+
+    <!-- أمثلة -->
+    <div class="section">
+        <h2>✏️ 4. أمثلة مهمة</h2>
+
+        <p class="german">Ich sehe den Tisch.</p>
+        <p class="meaning">أنا أرى الطاولة.</p>
+
+        <p class="german">Ich kaufe den Kugelschreiber.</p>
+        <p class="meaning">أنا أشتري القلم.</p>
+
+        <p class="german">Ich habe einen Bruder.</p>
+        <p class="meaning">لدي أخ.</p>
+
+        <p class="german">Ich habe eine Tasche.</p>
+        <p class="meaning">لدي حقيبة.</p>
+
+        <p class="german">Ich sehe das Buch.</p>
+        <p class="meaning">أنا أرى الكتاب.</p>
+
+        <p class="german">Ich kaufe die Tasche.</p>
+        <p class="meaning">أنا أشتري الحقيبة.</p>
+    </div>
+
+    <!-- القاعدة -->
+    <div class="section">
+        <h2>🧠 قاعدة سريعة جدًا</h2>
+
+        <div class="note">
+            لو الاسم مذكر:
+            <br><br>
+            <b>der → den</b>
+            <br>
+            <b>ein → einen</b>
+            <br><br>
+
+            أما:
+            <br><br>
+            <b>die → die</b>
+            <br>
+            <b>das → das</b>
+        </div>
+    </div>
+
+    <!-- كلمات جديدة -->
+    <div class="section">
+        <h2>🆕 3 كلمات جديدة</h2>
+
+        <div class="word">
+            <b>sehen</b><br>
+            النطق: زيـن<br>
+            المعنى: يرى
+        </div>
+
+        <div class="word">
+            <b>kaufen</b><br>
+            النطق: كاوفِن<br>
+            المعنى: يشتري
+        </div>
+
+        <div class="word">
+            <b>brauchen</b><br>
+            النطق: براوخِن<br>
+            المعنى: يحتاج
+        </div>
+    </div>
+
+    <!-- التدريب -->
+    <div class="section">
+        <h2>📝 التدريب</h2>
+
+        <div class="question">
+            <p><b>1. Ich sehe ___ Tisch.</b></p>
+
+            <label>
+                <input type="radio" name="training1" value="a">
+                a) der
+            </label>
+
+            <label>
+                <input type="radio" name="training1" value="b">
+                b) den
+            </label>
+
+            <label>
+                <input type="radio" name="training1" value="c">
+                c) die
+            </label>
+        </div>
+
+        <div class="question">
+            <p><b>2. Ich habe ___ Bruder.</b></p>
+
+            <label>
+                <input type="radio" name="training2" value="a">
+                a) ein
+            </label>
+
+            <label>
+                <input type="radio" name="training2" value="b">
+                b) eine
+            </label>
+
+            <label>
+                <input type="radio" name="training2" value="c">
+                c) einen
+            </label>
+        </div>
+
+        <div class="question">
+            <p><b>3. اكتب بالألماني: أنا أشتري الحقيبة.</b></p>
+
+            <input
+                type="text"
+                id="training3"
+                placeholder="اكتب الإجابة هنا"
+            >
+        </div>
+
+        <button onclick="checkTraining()">تصحيح التدريب</button>
+
+        <div id="trainingResult"></div>
+    </div>
+
+    <!-- المحادثة -->
+    <div class="section">
+        <h2>🗣️ محادثة قصيرة</h2>
+
+        <div class="dialogue">
+
+            <b>A:</b> Was kaufst du?<br>
+            ماذا تشتري؟
+
+            <br><br>
+
+            <b>B:</b> Ich kaufe die Tasche.<br>
+            أنا أشتري الحقيبة.
+
+            <br><br>
+
+            <b>A:</b> Was siehst du?<br>
+            ماذا ترى؟
+
+            <br><br>
+
+            <b>B:</b> Ich sehe den Tisch.<br>
+            أنا أرى الطاولة.
+
+            <br><br>
+
+            <b>A:</b> Brauchst du einen Kugelschreiber?<br>
+            هل تحتاج قلمًا؟
+
+            <br><br>
+
+            <b>B:</b> Ja, ich brauche einen Kugelschreiber.<br>
+            نعم، أحتاج قلمًا.
+
+        </div>
+    </div>
+
+    <!-- الاختبار -->
+    <div class="section">
+        <h2>🧪 اختبار الدرس 13</h2>
+
+        <p>
+            درجة النجاح: <b>3 من 5</b> ✅
+        </p>
+
+        <!-- السؤال 1 -->
+        <div class="question">
+            <p><b>1. der → ? في Akkusativ</b></p>
+
+            <label>
+                <input type="radio" name="q1" value="a">
+                a) der
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="b">
+                b) den
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="c">
+                c) die
+            </label>
+
+            <div id="feedback1"></div>
+        </div>
+
+        <!-- السؤال 2 -->
+        <div class="question">
+            <p><b>2. Ich habe ___ Bruder.</b></p>
+
+            <label>
+                <input type="radio" name="q2" value="a">
+                a) ein
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="b">
+                b) eine
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="c">
+                c) einen
+            </label>
+
+            <div id="feedback2"></div>
+        </div>
+
+        <!-- السؤال 3 -->
+        <div class="question">
+            <p><b>3. Ich sehe ___ Tasche.</b></p>
+
+            <label>
+                <input type="radio" name="q3" value="a">
+                a) die
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="b">
+                b) den
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="c">
+                c) das
+            </label>
+
+            <div id="feedback3"></div>
+        </div>
+
+        <!-- السؤال 4 -->
+        <div class="question">
+            <p><b>4. Ich kaufe ___ Buch.</b></p>
+
+            <label>
+                <input type="radio" name="q4" value="a">
+                a) den
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="b">
+                b) das
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="c">
+                c) die
+            </label>
+
+            <div id="feedback4"></div>
+        </div>
+
+        <!-- السؤال 5 -->
+        <div class="question">
+            <p><b>5. أي جملة صحيحة؟</b></p>
+
+            <label>
+                <input type="radio" name="q5" value="a">
+                a) Ich brauche ein Kugelschreiber.
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="b">
+                b) Ich brauche der Kugelschreiber.
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="c">
+                c) Ich brauche einen Kugelschreiber.
+            </label>
+
+            <div id="feedback5"></div>
+        </div>
+
+        <button onclick="checkQuiz()">تصحيح الاختبار</button>
+
+        <button id="retryQuiz" onclick="retryQuiz()">
+            🔄 إعادة الاختبار
+        </button>
+
+        <div id="quizResult"></div>
+
+        <button id="nextLesson" onclick="window.location.href='lesson14.html'">
+            ➡️ الدرس الرابع عشر
+        </button>
+
+        <button id="backToA1" onclick="window.location.href='A1.html'">
+            🔙 الرجوع إلى مستوى A1
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+    // تصحيح التدريب
+    function checkTraining() {
+
+        let score = 0;
+
+        const answer1 = document.querySelector(
+            'input[name="training1"]:checked'
+        );
+
+        const answer2 = document.querySelector(
+            'input[name="training2"]:checked'
+        );
+
+        const answer3 = document
+            .getElementById("training3")
+            .value
+            .trim()
+            .toLowerCase();
+
+        if (answer1 && answer1.value === "b") {
+            score++;
+        }
+
+        if (answer2 && answer2.value === "c") {
+            score++;
+        }
+
+        if (
+            answer3 === "ich kaufe die tasche." ||
+            answer3 === "ich kaufe die tasche"
+        ) {
+            score++;
+        }
+
+        const result = document.getElementById("trainingResult");
+
+        if (score === 3) {
+            result.className = "result correct";
+            result.innerHTML =
+                "✅ ممتاز! كل إجابات التدريب صحيحة.";
+        } else {
+            result.className = "result wrong";
+            result.innerHTML =
+                "❌ عندك " + score + " من 3 صحيحة. راجع الإجابات وحاول مرة تانية.";
+        }
+    }
+
+
+    // الإجابات الصحيحة للاختبار
+    const correctAnswers = {
+        q1: "b",
+        q2: "c",
+        q3: "a",
+        q4: "b",
+        q5: "c"
+    };
+
+
+    // نص الإجابات الصحيحة
+    const correctText = {
+        q1: "b) den",
+        q2: "c) einen",
+        q3: "a) die",
+        q4: "b) das",
+        q5: "c) Ich brauche einen Kugelschreiber."
+    };
+
+
+    // تصحيح الاختبار
+    function checkQuiz() {
+
+        let score = 0;
+
+        for (let i = 1; i <= 5; i++) {
+
+            const answer = document.querySelector(
+                'input[name="q' + i + '"]:checked'
+            );
+
+            const feedback = document.getElementById(
+                "feedback" + i
+            );
+
+            if (!answer) {
+
+                feedback.className = "feedback wrong";
+
+                feedback.innerHTML =
+                    "⚠️ لم يتم اختيار إجابة. الإجابة الصحيحة: " +
+                    correctText["q" + i];
+
+            } else if (
+                answer.value === correctAnswers["q" + i]
+            ) {
+
+                score++;
+
+                feedback.className = "feedback correct";
+
+                feedback.innerHTML =
+                    "✅ إجابة صحيحة!";
+
+            } else {
+
+                feedback.className = "feedback wrong";
+
+                feedback.innerHTML =
+                    "❌ إجابة خاطئة — الإجابة الصحيحة: " +
+                    correctText["q" + i];
+            }
+        }
+
+
+        const result = document.getElementById("quizResult");
+
+        if (score >= 3) {
+
+            result.className = "result correct";
+
+            result.innerHTML =
+                "🎉 ممتاز! نجحت في الدرس 13 بدرجة " +
+                score +
+                " من 5.";
+
+            // حفظ إتمام الدرس
+            localStorage.setItem(
+                "lesson13Completed",
+                "true"
+            );
+
+            // إظهار الأزرار
+            document.getElementById("nextLesson").style.display =
+                "inline-block";
+
+            document.getElementById("backToA1").style.display =
+                "inline-block";
+
+            document.getElementById("retryQuiz").style.display =
+                "none";
+
+            alert("✅ تم حفظ الدرس الثالث عشر بنجاح!");
+
+        } else {
+
+            result.className = "result wrong";
+
+            result.innerHTML =
+                "❌ درجتك " +
+                score +
+                " من 5. تحتاج إلى 3 على الأقل للنجاح.";
+
+            document.getElementById("retryQuiz").style.display =
+                "inline-block";
+
+            document.getElementById("nextLesson").style.display =
+                "none";
+
+            document.getElementById("backToA1").style.display =
+                "inline-block";
+        }
+    }
+
+
+    // إعادة الاختبار
+    function retryQuiz() {
+
+        for (let i = 1; i <= 5; i++) {
+
+            const answers = document.querySelectorAll(
+                'input[name="q' + i + '"]'
+            );
+
+            answers.forEach(function(answer) {
+                answer.checked = false;
+            });
+
+            document.getElementById(
+                "feedback" + i
+            ).innerHTML = "";
+
+            document.getElementById(
+                "feedback" + i
+            ).className = "";
+        }
+
+        document.getElementById("quizResult").innerHTML = "";
+
+        document.getElementById("quizResult").className = "";
+
+        document.getElementById("retryQuiz").style.display =
+            "none";
+
+        document.getElementById("nextLesson").style.display =
+            "none";
+    }
+
+</script>
+
+</body>
+</html>

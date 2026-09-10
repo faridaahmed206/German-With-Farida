@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الدرس العاشر - Verben</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        header {
+            background: #1f4e79;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 18px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 25px auto;
+        }
+
+        .section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1f4e79;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .german {
+            font-size: 21px;
+            font-weight: bold;
+            direction: ltr;
+            text-align: left;
+            margin: 8px 0;
+        }
+
+        .pronunciation {
+            color: #777;
+            font-size: 15px;
+        }
+
+        .meaning {
+            color: #444;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #e8f1f8;
+        }
+
+        .example {
+            background: #f0f6fb;
+            padding: 12px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .new-words {
+            background: #fff8e1;
+        }
+
+        .dialogue {
+            background: #eef7ee;
+            padding: 15px;
+            border-radius: 10px;
+            line-height: 2;
+        }
+
+        .question {
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            background: #1f4e79;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .correct {
+            background: #dff0d8;
+            color: #267326;
+        }
+
+        .wrong {
+            background: #f8d7da;
+            color: #842029;
+        }
+
+        #nextLesson,
+        #backToA1,
+        #retryQuiz {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .note {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🇩🇪 الدرس العاشر</h1>
+    <p>Verben — الأفعال وتصريفها</p>
+</header>
+
+<div class="container">
+
+    <!-- الأهداف -->
+    <div class="section">
+        <h2>🎯 أهداف الدرس</h2>
+
+        <p>في نهاية الدرس هتعرف:</p>
+
+        <ul>
+            <li>يعني إيه Verb في الألماني.</li>
+            <li>تصريف الأفعال مع الضمائر.</li>
+            <li>تصريف الأفعال المنتظمة البسيطة.</li>
+            <li>تكوين جمل يومية باستخدام الأفعال.</li>
+        </ul>
+    </div>
+
+
+    <!-- معنى Verb -->
+    <div class="section">
+
+        <h2>1️⃣ يعني إيه Verb؟</h2>
+
+        <p>
+            <strong>Verb = فعل</strong>
+        </p>
+
+        <p>
+            الفعل هو كلمة بتعبّر عن فعل أو نشاط.
+        </p>
+
+        <div class="example">
+            <p class="german">lernen</p>
+            <p class="pronunciation">النطق: ليرنِن</p>
+            <p class="meaning">المعنى: يتعلم</p>
+        </div>
+
+        <div class="example">
+            <p class="german">machen</p>
+            <p class="pronunciation">النطق: ماخِن</p>
+            <p class="meaning">المعنى: يفعل / يعمل</p>
+        </div>
+
+        <div class="example">
+            <p class="german">spielen</p>
+            <p class="pronunciation">النطق: شبيلِن</p>
+            <p class="meaning">المعنى: يلعب</p>
+        </div>
+
+        <div class="example">
+            <p class="german">wohnen</p>
+            <p class="pronunciation">النطق: فونِن</p>
+            <p class="meaning">المعنى: يسكن</p>
+        </div>
+
+        <div class="note">
+            📌 في القاموس، الفعل غالبًا بيكون في صورته الأصلية وينتهي بـ
+            <strong>-en</strong>.
+        </div>
+
+    </div>
+
+
+    <!-- تصريف lernen -->
+    <div class="section">
+
+        <h2>2️⃣ تصريف الفعل</h2>
+
+        <p>
+            خلينا ناخد الفعل:
+        </p>
+
+        <p class="german">lernen = يتعلم</p>
+
+        <p>
+            بنحذف <strong>-en</strong> من آخر الفعل:
+        </p>
+
+        <p class="german">lern + النهايات</p>
+
+        <table>
+
+            <tr>
+                <th>الضمير</th>
+                <th>النهاية</th>
+                <th>التصريف</th>
+            </tr>
+
+            <tr>
+                <td>ich</td>
+                <td>-e</td>
+                <td>ich lerne</td>
+            </tr>
+
+            <tr>
+                <td>du</td>
+                <td>-st</td>
+                <td>du lernst</td>
+            </tr>
+
+            <tr>
+                <td>er</td>
+                <td>-t</td>
+                <td>er lernt</td>
+            </tr>
+
+            <tr>
+                <td>sie</td>
+                <td>-t</td>
+                <td>sie lernt</td>
+            </tr>
+
+            <tr>
+                <td>es</td>
+                <td>-t</td>
+                <td>es lernt</td>
+            </tr>
+
+            <tr>
+                <td>wir</td>
+                <td>-en</td>
+                <td>wir lernen</td>
+            </tr>
+
+            <tr>
+                <td>ihr</td>
+                <td>-t</td>
+                <td>ihr lernt</td>
+            </tr>
+
+            <tr>
+                <td>sie</td>
+                <td>-en</td>
+                <td>sie lernen</td>
+            </tr>
+
+            <tr>
+                <td>Sie</td>
+                <td>-en</td>
+                <td>Sie lernen</td>
+            </tr>
+
+        </table>
+
+        <div class="note">
+            🧠 النهايات المهمة:
+
+            <br><br>
+
+            <strong>ich → e</strong>
+            <br>
+            <strong>du → st</strong>
+            <br>
+            <strong>er / sie / es → t</strong>
+            <br>
+            <strong>wir → en</strong>
+            <br>
+            <strong>ihr → t</strong>
+            <br>
+            <strong>sie / Sie → en</strong>
+        </div>
+
+    </div>
+
+
+    <!-- machen -->
+    <div class="section">
+
+        <h2>3️⃣ مثال تاني: machen</h2>
+
+        <p class="german">machen = يفعل / يعمل</p>
+
+        <div class="example">
+            <p class="german">Ich mache.</p>
+            <p class="meaning">أنا أفعل.</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Du machst.</p>
+            <p class="meaning">أنت تفعل.</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Er macht.</p>
+            <p class="meaning">هو يفعل.</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Wir machen.</p>
+            <p class="meaning">نحن نفعل.</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Ihr macht.</p>
+            <p class="meaning">أنتم تفعلون.</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Sie machen.</p>
+            <p class="meaning">هم يفعلون.</p>
+        </div>
+
+    </div>
+
+
+    <!-- spielen -->
+    <div class="section">
+
+        <h2>4️⃣ مثال تالت: spielen</h2>
+
+        <p class="german">spielen = يلعب</p>
+
+        <div class="example">
+            <p class="german">Ich spiele Fußball.</p>
+            <p class="meaning">أنا ألعب كرة القدم.</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Du spielst Fußball.</p>
+            <p class="meaning">أنت تلعب كرة القدم.</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Er spielt Fußball.</p>
+            <p class="meaning">هو يلعب كرة القدم.</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Wir spielen Fußball.</p>
+            <p class="meaning">نحن نلعب كرة القدم.</p>
+        </div>
+
+        <div class="note">
+            📌 لاحظ إن الفعل بيتغير حسب الضمير.
+        </div>
+
+    </div>
+
+
+    <!-- ترتيب الجملة -->
+    <div class="section">
+
+        <h2>5️⃣ ترتيب الجملة</h2>
+
+        <p>
+            في الجملة العادية البسيطة:
+        </p>
+
+        <p class="german">
+            الضمير + الفعل + باقي الجملة
+        </p>
+
+        <div class="example">
+            <p class="german">Ich lerne Deutsch.</p>
+            <p class="meaning">أنا أتعلم الألمانية.</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Du machst die Hausaufgaben.</p>
+            <p class="meaning">أنت تعمل الواجب.</p>
+        </div>
+
+        <div class="example">
+            <p class="german">Wir spielen Fußball.</p>
+            <p class="meaning">نحن نلعب كرة القدم.</p>
+        </div>
+
+    </div>
+
+
+    <!-- الكلمات الجديدة -->
+    <div class="section new-words">
+
+        <h2>🆕 3 كلمات جديدة</h2>
+
+        <div class="example">
+            <p class="german">arbeiten</p>
+            <p class="pronunciation">النطق: آربايتِن</p>
+            <p class="meaning">يعمل</p>
+        </div>
+
+        <div class="example">
+            <p class="german">lernen</p>
+            <p class="pronunciation">النطق: ليرنِن</p>
+            <p class="meaning">يتعلم</p>
+        </div>
+
+        <div class="example">
+            <p class="german">spielen</p>
+            <p class="pronunciation">النطق: شبيلِن</p>
+            <p class="meaning">يلعب</p>
+        </div>
+
+    </div>
+
+
+    <!-- التدريب -->
+    <div class="section">
+
+        <h2>📝 تدريب</h2>
+
+        <div class="question">
+
+            <p><strong>1. Ich ___ Deutsch.</strong></p>
+
+            <label>
+                <input type="radio" name="training1" value="a">
+                a) lernst
+            </label>
+
+            <label>
+                <input type="radio" name="training1" value="b">
+                b) lerne
+            </label>
+
+            <label>
+                <input type="radio" name="training1" value="c">
+                c) lernt
+            </label>
+
+        </div>
+
+
+        <div class="question">
+
+            <p><strong>2. Du ___ Fußball.</strong></p>
+
+            <label>
+                <input type="radio" name="training2" value="a">
+                a) spielst
+            </label>
+
+            <label>
+                <input type="radio" name="training2" value="b">
+                b) spiele
+            </label>
+
+            <label>
+                <input type="radio" name="training2" value="c">
+                c) spielt
+            </label>
+
+        </div>
+
+
+        <div class="question">
+
+            <p><strong>3. اكتب الجملة بالألماني:</strong></p>
+
+            <p>نحن نتعلم الألمانية.</p>
+
+            <input
+                type="text"
+                id="training3"
+                placeholder="اكتب الإجابة هنا"
+            >
+
+        </div>
+
+        <button onclick="checkTraining()">
+            تصحيح التدريب
+        </button>
+
+        <div id="trainingResult"></div>
+
+    </div>
+
+
+    <!-- المحادثة -->
+    <div class="section">
+
+        <h2>🗣️ محادثة قصيرة</h2>
+
+        <div class="dialogue">
+
+            <strong>A:</strong> Was machst du?
+            <br>
+            ماذا تفعل؟
+
+            <br><br>
+
+            <strong>B:</strong> Ich lerne Deutsch.
+            <br>
+            أنا أتعلم الألمانية.
+
+            <br><br>
+
+            <strong>A:</strong> Spielst du Fußball?
+            <br>
+            هل تلعب كرة القدم؟
+
+            <br><br>
+
+            <strong>B:</strong> Ja, ich spiele Fußball.
+
+            <br><br>
+
+            <strong>A:</strong> Arbeitest du?
+            <br>
+            هل تعمل؟
+
+            <br><br>
+
+            <strong>B:</strong> Ja, ich arbeite.
+
+        </div>
+
+    </div>
+
+
+    <!-- الاختبار -->
+    <div class="section">
+
+        <h2>🎯 الاختبار النهائي</h2>
+
+        <!-- السؤال 1 -->
+        <div class="question">
+
+            <p><strong>1. ما معنى lernen؟</strong></p>
+
+            <label>
+                <input type="radio" name="q1" value="a">
+                a) يلعب
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="b">
+                b) يتعلم
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="c">
+                c) يسكن
+            </label>
+
+            <div id="feedback1"></div>
+
+        </div>
+
+
+        <!-- السؤال 2 -->
+        <div class="question">
+
+            <p><strong>2. Ich ___ Deutsch.</strong></p>
+
+            <label>
+                <input type="radio" name="q2" value="a">
+                a) lerne
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="b">
+                b) lernst
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="c">
+                c) lernt
+            </label>
+
+            <div id="feedback2"></div>
+
+        </div>
+
+
+        <!-- السؤال 3 -->
+        <div class="question">
+
+            <p><strong>3. Du ___ Fußball.</strong></p>
+
+            <label>
+                <input type="radio" name="q3" value="a">
+                a) spiele
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="b">
+                b) spielt
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="c">
+                c) spielst
+            </label>
+
+            <div id="feedback3"></div>
+
+        </div>
+
+
+        <!-- السؤال 4 -->
+        <div class="question">
+
+            <p><strong>4. اختار الجملة الصحيحة:</strong></p>
+
+            <label>
+                <input type="radio" name="q4" value="a">
+                a) Wir lernt Deutsch.
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="b">
+                b) Wir lernen Deutsch.
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="c">
+                c) Wir lernst Deutsch.
+            </label>
+
+            <div id="feedback4"></div>
+
+        </div>
+
+
+        <!-- السؤال 5 -->
+        <div class="question">
+
+            <p><strong>5. اختار الجملة الصحيحة:</strong></p>
+
+            <label>
+                <input type="radio" name="q5" value="a">
+                a) Er spielen Fußball.
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="b">
+                b) Er spiele Fußball.
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="c">
+                c) Er spielt Fußball.
+            </label>
+
+            <div id="feedback5"></div>
+
+        </div>
+
+
+        <button onclick="checkQuiz()">
+            تصحيح الاختبار
+        </button>
+
+        <div id="result"></div>
+
+        <button id="retryQuiz" onclick="retryQuiz()">
+            🔄 إعادة الاختبار
+        </button>
+
+        <button id="nextLesson" onclick="goToNextLesson()">
+            ➡️ الدرس الحادي عشر
+        </button>
+
+        <button id="backToA1" onclick="goToA1()">
+            🔙 الرجوع إلى مستوى A1
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    // تصحيح التدريب
+    function checkTraining() {
+
+        let score = 0;
+
+        const t1 = document.querySelector(
+            'input[name="training1"]:checked'
+        );
+
+        const t2 = document.querySelector(
+            'input[name="training2"]:checked'
+        );
+
+        const t3 = document.getElementById("training3").value
+            .trim()
+            .toLowerCase();
+
+        if (t1 && t1.value === "b") {
+            score++;
+        }
+
+        if (t2 && t2.value === "a") {
+            score++;
+        }
+
+        if (
+            t3 === "wir lernen deutsch." ||
+            t3 === "wir lernen deutsch"
+        ) {
+            score++;
+        }
+
+        document.getElementById("trainingResult").innerHTML =
+            "⭐ نتيجتك في التدريب: " + score + " / 3";
+
+    }
+
+
+    // الإجابات الصحيحة
+    const correctAnswers = {
+        q1: "b",
+        q2: "a",
+        q3: "c",
+        q4: "b",
+        q5: "c"
+    };
+
+
+    // نص الإجابات الصحيحة
+    const correctText = {
+        q1: "b) يتعلم",
+        q2: "a) lerne",
+        q3: "c) spielst",
+        q4: "b) Wir lernen Deutsch.",
+        q5: "c) Er spielt Fußball."
+    };
+
+
+    // تصحيح الاختبار
+    function checkQuiz() {
+
+        let score = 0;
+
+        for (let i = 1; i <= 5; i++) {
+
+            const selected = document.querySelector(
+                'input[name="q' + i + '"]:checked'
+            );
+
+            const feedback =
+                document.getElementById("feedback" + i);
+
+            feedback.className = "feedback";
+
+            if (!selected) {
+
+                feedback.innerHTML =
+                    "⚠️ لم يتم اختيار إجابة. الإجابة الصحيحة: "
+                    + correctText["q" + i];
+
+                feedback.classList.add("wrong");
+
+            } else if (
+                selected.value === correctAnswers["q" + i]
+            ) {
+
+                score++;
+
+                feedback.innerHTML =
+                    "✅ إجابة صحيحة!";
+
+                feedback.classList.add("correct");
+
+            } else {
+
+                feedback.innerHTML =
+                    "❌ إجابة خاطئة — الإجابة الصحيحة: "
+                    + correctText["q" + i];
+
+                feedback.classList.add("wrong");
+            }
+        }
+
+
+        document.getElementById("result").innerHTML =
+            "⭐ نتيجتك: " + score + " / 5";
+
+
+        const nextButton =
+            document.getElementById("nextLesson");
+
+        const retryButton =
+            document.getElementById("retryQuiz");
+
+        const backButton =
+            document.getElementById("backToA1");
+
+
+        backButton.style.display = "block";
+
+
+        if (score >= 3) {
+
+            localStorage.setItem(
+                "lesson10Completed",
+                "true"
+            );
+
+            document.getElementById("result").innerHTML +=
+                "<br>🎉 مبروك! تم اجتياز الدرس العاشر بنجاح!";
+
+            nextButton.style.display = "inline-block";
+
+            retryButton.style.display = "none";
+
+            alert("✅ تم حفظ الدرس العاشر بنجاح!");
+
+        } else {
+
+            nextButton.style.display = "none";
+
+            retryButton.style.display = "inline-block";
+
+            document.getElementById("result").innerHTML +=
+                "<br>❌ تحتاج إلى 3 إجابات صحيحة على الأقل. حاول مرة أخرى!";
+
+        }
+
+    }
+
+
+    // إعادة الاختبار
+    function retryQuiz() {
+
+        for (let i = 1; i <= 5; i++) {
+
+            const answers =
+                document.querySelectorAll(
+                    'input[name="q' + i + '"]'
+                );
+
+            answers.forEach(function(answer) {
+                answer.checked = false;
+            });
+
+            const feedback =
+                document.getElementById("feedback" + i);
+
+            feedback.innerHTML = "";
+            feedback.className = "feedback";
+        }
+
+
+        document.getElementById("result").innerHTML = "";
+
+        document.getElementById("retryQuiz").style.display =
+            "none";
+
+        document.getElementById("nextLesson").style.display =
+            "none";
+
+    }
+
+
+    // الانتقال للدرس 11
+    function goToNextLesson() {
+
+        window.location.href = "lesson11.html";
+
+    }
+
+
+    // الرجوع إلى A1
+    function goToA1() {
+
+        window.location.href = "A1.html";
+
+    }
+
+</script>
+
+</body>
+</html>

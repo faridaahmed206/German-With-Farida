@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار A2 النهائي - German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        header {
+            background: #1f3c88;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 20px;
+        }
+
+        .question {
+            background: white;
+            padding: 20px;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .question h3 {
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        button {
+            border: none;
+            border-radius: 10px;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #checkButton {
+            background: #1f3c88;
+            color: white;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        #checkButton:disabled {
+            background: #999;
+            cursor: not-allowed;
+        }
+
+        .result {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .success {
+            border: 2px solid #2e8b57;
+        }
+
+        .fail {
+            border: 2px solid #d9534f;
+        }
+
+        .correct-answer {
+            background: #eef8ee;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            text-align: right;
+        }
+
+        .final-button,
+        .retry-button {
+            margin-top: 15px;
+            color: white;
+        }
+
+        .final-button {
+            background: #2e8b57;
+        }
+
+        .retry-button {
+            background: #d9534f;
+        }
+
+        .saved-result {
+            background: #fff8dc;
+            border: 2px solid #e0b400;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🎯 الاختبار النهائي A2</h1>
+        <p>German with Farida</p>
+    </header>
+
+    <div class="container">
+
+        <div id="previousResult"></div>
+
+        <form id="quizForm">
+
+            <div class="question">
+                <h3>1. اختر الجملة الصحيحة في Perfekt:</h3>
+                <label><input type="radio" name="q1" value="a"> Ich habe Deutsch gelernt.</label>
+                <label><input type="radio" name="q1" value="b"> Ich bin Deutsch gelernt.</label>
+                <label><input type="radio" name="q1" value="c"> Ich habe Deutsch lernen.</label>
+                <label><input type="radio" name="q1" value="d"> Ich Deutsch habe gelernt.</label>
+            </div>
+
+            <div class="question">
+                <h3>2. اختر التصريف الصحيح:</h3>
+                <p>Ich ___ gestern zu Hause.</p>
+                <label><input type="radio" name="q2" value="a"> war</label>
+                <label><input type="radio" name="q2" value="b"> bin</label>
+                <label><input type="radio" name="q2" value="c"> hatte</label>
+                <label><input type="radio" name="q2" value="d"> werde</label>
+            </div>
+
+            <div class="question">
+                <h3>3. اختر التصريف الصحيح للفعل werden:</h3>
+                <p>Du ___ morgen kommen.</p>
+                <label><input type="radio" name="q3" value="a"> wirst</label>
+                <label><input type="radio" name="q3" value="b"> wirst</label>
+                <label><input type="radio" name="q3" value="c"> wird</label>
+                <label><input type="radio" name="q3" value="d"> werden</label>
+            </div>
+
+            <div class="question">
+                <h3>4. اختر الجملة الصحيحة مع Modalverb:</h3>
+                <label><input type="radio" name="q4" value="a"> Ich kann Deutsch sprechen.</label>
+                <label><input type="radio" name="q4" value="b"> Ich kann spreche Deutsch.</label>
+                <label><input type="radio" name="q4" value="c"> Ich Deutsch kann sprechen.</label>
+                <label><input type="radio" name="q4" value="d"> Ich kann Deutsch gesprochen.</label>
+            </div>
+
+            <div class="question">
+                <h3>5. اختر أداة الـ Dativ الصحيحة:</h3>
+                <p>Ich helfe ___ Mann.</p>
+                <label><input type="radio" name="q5" value="a"> den</label>
+                <label><input type="radio" name="q5" value="b"> der</label>
+                <label><input type="radio" name="q5" value="c"> dem</label>
+                <label><input type="radio" name="q5" value="d"> die</label>
+            </div>
+
+            <div class="question">
+                <h3>6. اختر الجملة الصحيحة:</h3>
+                <label><input type="radio" name="q6" value="a"> Das Buch liegt auf den Tisch.</label>
+                <label><input type="radio" name="q6" value="b"> Das Buch liegt auf dem Tisch.</label>
+                <label><input type="radio" name="q6" value="c"> Das Buch liegt auf der Tisch.</label>
+                <label><input type="radio" name="q6" value="d"> Das Buch liegt auf die Tisch.</label>
+            </div>
+
+            <div class="question">
+                <h3>7. اختر الضمير الانعكاسي الصحيح:</h3>
+                <p>Ich wasche ___.</p>
+                <label><input type="radio" name="q7" value="a"> mich</label>
+                <label><input type="radio" name="q7" value="b"> dich</label>
+                <label><input type="radio" name="q7" value="c"> sich</label>
+                <label><input type="radio" name="q7" value="d"> uns</label>
+            </div>
+
+            <div class="question">
+                <h3>8. اختر الـ Komparativ الصحيح:</h3>
+                <p>Mein Bruder ist ___ als ich.</p>
+                <label><input type="radio" name="q8" value="a"> groß</label>
+                <label><input type="radio" name="q8" value="b"> größer</label>
+                <label><input type="radio" name="q8" value="c"> am größten</label>
+                <label><input type="radio" name="q8" value="d"> größte</label>
+            </div>
+
+            <div class="question">
+                <h3>9. اختر الـ Superlativ الصحيح:</h3>
+                <p>Das ist ___ Auto.</p>
+                <label><input type="radio" name="q9" value="a"> schnell</label>
+                <label><input type="radio" name="q9" value="b"> schneller</label>
+                <label><input type="radio" name="q9" value="c"> das schnellste</label>
+                <label><input type="radio" name="q9" value="d"> am schnellsten</label>
+            </div>
+
+            <div class="question">
+                <h3>10. أين يأتي الفعل المتصرف في Nebensatz؟</h3>
+                <label><input type="radio" name="q10" value="a"> في البداية</label>
+                <label><input type="radio" name="q10" value="b"> بعد الفاعل مباشرة</label>
+                <label><input type="radio" name="q10" value="c"> في النهاية</label>
+                <label><input type="radio" name="q10" value="d"> بعد الفاصلة مباشرة</label>
+            </div>
+
+            <div class="question">
+                <h3>11. اختر الجملة الصحيحة مع weil:</h3>
+                <label><input type="radio" name="q11" value="a"> Ich bleibe zu Hause, weil ich müde bin.</label>
+                <label><input type="radio" name="q11" value="b"> Ich bleibe zu Hause, weil ich bin müde.</label>
+                <label><input type="radio" name="q11" value="c"> Ich bleibe zu Hause, weil müde ich bin.</label>
+                <label><input type="radio" name="q11" value="d"> Ich bleibe zu Hause, weil bin ich müde.</label>
+            </div>
+
+            <div class="question">
+                <h3>12. اختر الجملة الصحيحة مع dass:</h3>
+                <label><input type="radio" name="q12" value="a"> Ich glaube, dass er heute kommt.</label>
+                <label><input type="radio" name="q12" value="b"> Ich glaube, dass kommt er heute.</label>
+                <label><input type="radio" name="q12" value="c"> Ich glaube, dass er kommt heute.</label>
+                <label><input type="radio" name="q12" value="d"> Ich glaube, dass heute er kommt.</label>
+            </div>
+
+            <div class="question">
+                <h3>13. اختر Relativpronomen الصحيح:</h3>
+                <p>Das ist der Mann, ___ ich kenne.</p>
+                <label><input type="radio" name="q13" value="a"> der</label>
+                <label><input type="radio" name="q13" value="b"> den</label>
+                <label><input type="radio" name="q13" value="c"> dem</label>
+                <label><input type="radio" name="q13" value="d"> die</label>
+            </div>
+
+            <div class="question">
+                <h3>14. ماذا تعني الجملة؟</h3>
+                <p><strong>Wie viel kostet das?</strong></p>
+                <label><input type="radio" name="q14" value="a"> أين يوجد هذا؟</label>
+                <label><input type="radio" name="q14" value="b"> كم سعر هذا؟</label>
+                <label><input type="radio" name="q14" value="c"> ماذا تريد؟</label>
+                <label><input type="radio" name="q14" value="d"> كيف حالك؟</label>
+            </div>
+
+            <div class="question">
+                <h3>15. اختر جملة Futur I الصحيحة:</h3>
+                <label><input type="radio" name="q15" value="a"> Ich werde morgen Deutsch lernen.</label>
+                <label><input type="radio" name="q15" value="b"> Ich werde morgen Deutsch lerne.</label>
+                <label><input type="radio" name="q15" value="c"> Ich morgen werde Deutsch lernen.</label>
+                <label><input type="radio" name="q15" value="d"> Ich werde Deutsch morgen lerne.</label>
+            </div>
+
+            <button type="button" id="checkButton">✅ تصحيح الاختبار</button>
+
+        </form>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script>
+        const answers = {
+            q1: "a",
+            q2: "a",
+            q3: "b",
+            q4: "a",
+            q5: "c",
+            q6: "b",
+            q7: "a",
+            q8: "b",
+            q9: "c",
+            q10: "c",
+            q11: "a",
+            q12: "a",
+            q13: "b",
+            q14: "b",
+            q15: "a"
+        };
+
+        const correctText = {
+            q1: "Ich habe Deutsch gelernt.",
+            q2: "war",
+            q3: "wirst",
+            q4: "Ich kann Deutsch sprechen.",
+            q5: "dem",
+            q6: "Das Buch liegt auf dem Tisch.",
+            q7: "mich",
+            q8: "größer",
+            q9: "das schnellste",
+            q10: "في النهاية",
+            q11: "Ich bleibe zu Hause, weil ich müde bin.",
+            q12: "Ich glaube, dass er heute kommt.",
+            q13: "den",
+            q14: "كم سعر هذا؟",
+            q15: "Ich werde morgen Deutsch lernen."
+        };
+
+        const savedScore = localStorage.getItem("a2FinalTestScore");
+        const savedCompleted = localStorage.getItem("a2FinalTestCompleted");
+
+        const previousResult = document.getElementById("previousResult");
+
+        function showSavedResult() {
+            if (savedCompleted === "true" && savedScore !== null) {
+                previousResult.innerHTML =
+                    "<div class='saved-result'>" +
+                    "<h2>📌 لقد حللت الاختبار من قبل</h2>" +
+                    "<p>درجتك السابقة: <strong>" + savedScore + " / 15</strong></p>" +
+                    "<p>✅ الاختبار النهائي A2 مكتمل.</p>" +
+                    "<p>يمكنك مراجعة الإجابات الصحيحة بالأسفل.</p>" +
+                    "</div>";
+            }
+        }
+
+        showSavedResult();
+
+        document.getElementById("checkButton").addEventListener("click", function () {
+
+            let score = 0;
+            let wrongAnswers = [];
+
+            for (let i = 1; i <= 15; i++) {
+                const questionName = "q" + i;
+                const selected = document.querySelector(
+                    'input[name="' + questionName + '"]:checked'
+                );
+
+                if (selected && selected.value === answers[questionName]) {
+                    score++;
+                } else {
+                    wrongAnswers.push(
+                        "<div class='correct-answer'>" +
+                        "<strong>السؤال " + i + ":</strong> " +
+                        correctText[questionName] +
+                        "</div>"
+                    );
+                }
+            }
+
+            const result = document.getElementById("result");
+
+            if (score >= 9) {
+
+                localStorage.setItem("a2FinalTestCompleted", "true");
+                localStorage.setItem("a2FinalTestScore", score);
+
+                result.className = "result success";
+
+                result.innerHTML =
+                    "<h2>🎉 أحسنت!</h2>" +
+                    "<p>درجتك: <strong>" + score + " / 15</strong></p>" +
+                    "<p>💾 تم حفظ نتيجتك وتقدمك بنجاح!</p>" +
+                    "<p><strong>🏆 لقد أكملت مستوى A2!</strong></p>" +
+
+                    (wrongAnswers.length > 0
+                        ? "<h3>📌 الإجابات الصحيحة للأسئلة التي أخطأت فيها:</h3>" +
+                        wrongAnswers.join("")
+                        : "<p>🌟 كل إجاباتك صحيحة!</p>") +
+
+                    "<button type='button' class='final-button' onclick=\"window.location.href='a2.html'\">" +
+                    "⬅️ العودة إلى مستوى A2" +
+                    "</button>";
+
+                document.querySelectorAll("#quizForm input").forEach(function (input) {
+                    input.disabled = true;
+                });
+
+                document.getElementById("checkButton").disabled = true;
+
+                previousResult.innerHTML =
+                    "<div class='saved-result'>" +
+                    "<h2>📌 تم حفظ الاختبار</h2>" +
+                    "<p>درجتك: <strong>" + score + " / 15</strong></p>" +
+                    "<p>✅ الاختبار النهائي A2 مكتمل.</p>" +
+                    "</div>";
+
+            } else {
+
+                result.className = "result fail";
+
+                result.innerHTML =
+                    "<h2>❌ تحتاج إلى مراجعة بعض الدروس</h2>" +
+                    "<p>درجتك: <strong>" + score + " / 15</strong></p>" +
+                    "<p>لازم تجيب 9 من 15 على الأقل للنجاح.</p>" +
+                    "<h3>📌 الإجابات الصحيحة للأسئلة التي أخطأت فيها:</h3>" +
+                    wrongAnswers.join("") +
+                    "<br>" +
+                    "<button type='button' class='retry-button' onclick='location.reload()'>" +
+                    "🔄 إعادة الاختبار" +
+                    "</button>";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

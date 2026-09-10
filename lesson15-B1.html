@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 15 - deshalb / trotzdem / außerdem | German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #1f3c88;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 29px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #555;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background: #333;
+        }
+
+        .lesson-box,
+        .quiz-box,
+        .summary-box {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            margin-bottom: 22px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #1f3c88;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .example {
+            background: #eef3ff;
+            border-right: 5px solid #1f3c88;
+            padding: 12px 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        .important {
+            background: #fff4d6;
+            border-right: 5px solid #e0a000;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .word-box {
+            background: #f0f8f0;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background: #1f3c88;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f7f8fb;
+        }
+
+        .question {
+            margin-bottom: 22px;
+            padding: 15px;
+            background: #f8f9fc;
+            border-radius: 10px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 9px 0;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-left: 8px;
+        }
+
+        .submit-btn,
+        .retry-btn,
+        .next-btn {
+            border: none;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .submit-btn {
+            background: #1f3c88;
+        }
+
+        .submit-btn:hover {
+            background: #162d68;
+        }
+
+        .retry-btn {
+            background: #e67e22;
+        }
+
+        .retry-btn:hover {
+            background: #c9630d;
+        }
+
+        .next-btn {
+            background: #27ae60;
+        }
+
+        .next-btn:hover {
+            background: #1f8a4c;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .success {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .fail {
+            background: #fff0f0;
+            border-right: 5px solid #e74c3c;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .wrong-answer {
+            background: #fff7e6;
+            border-right: 5px solid #f39c12;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .completed {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        #nextContainer {
+            margin-top: 15px;
+        }
+
+        .de {
+            direction: ltr;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #1f3c88;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .lesson-box,
+            .quiz-box,
+            .summary-box {
+                padding: 16px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 Lesson 15 – deshalb / trotzdem / außerdem</h1>
+        <p>German with Farida | مستوى B1</p>
+    </header>
+
+    <div class="container">
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+        <div id="completedBox"></div>
+
+        <div class="lesson-box">
+
+            <h2>📚 ربط الأفكار في الألماني</h2>
+
+            <p>
+                في الدرس ده هنتعلم 3 كلمات مهمة جدًا في مستوى B1:
+            </p>
+
+            <div class="word-box">
+                <strong>deshalb</strong> = لذلك / ولهذا السبب
+                <br><br>
+                <strong>trotzdem</strong> = رغم ذلك / ومع ذلك
+                <br><br>
+                <strong>außerdem</strong> = بالإضافة إلى ذلك / علاوة على ذلك
+            </div>
+
+            <div class="important">
+                ⭐ الكلمات الثلاثة دي مهمة لأنها بتساعدنا نربط جمل وأفكار ببعض بطريقة أفضل.
+            </div>
+
+            <h3>🔹 1. deshalb = لذلك</h3>
+
+            <p>
+                بنستخدم <strong>deshalb</strong> لما تكون الجملة الثانية نتيجة للجملة الأولى.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Ich bin müde. Deshalb gehe ich früh ins Bett.
+                </div>
+                <div>
+                    أنا متعب. لذلك أذهب إلى السرير مبكرًا.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Es regnet. Deshalb bleibe ich zu Hause.
+                </div>
+                <div>
+                    إنها تمطر. لذلك أبقى في المنزل.
+                </div>
+            </div>
+
+            <h3>⚠️ ترتيب الجملة مع deshalb</h3>
+
+            <p>
+                لما تبدأ الجملة بـ <strong>deshalb</strong>، الفعل يأتي بعدها مباشرة.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Deshalb gehe ich nach Hause.
+                </div>
+                <div>
+                    لذلك أذهب إلى المنزل.
+                </div>
+            </div>
+
+            <p>
+                الترتيب:
+            </p>
+
+            <div class="important">
+                <strong>Deshalb + Verb + Subjekt + ...</strong>
+                <br><br>
+                Deshalb <strong>gehe</strong> ich nach Hause.
+            </div>
+
+            <h3>🔹 2. trotzdem = رغم ذلك / ومع ذلك</h3>
+
+            <p>
+                بنستخدم <strong>trotzdem</strong> لما تكون الجملة الثانية عكس المتوقع من الجملة الأولى.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Es regnet. Trotzdem gehe ich spazieren.
+                </div>
+                <div>
+                    إنها تمطر. ومع ذلك أذهب للمشي.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Ich bin müde. Trotzdem lerne ich Deutsch.
+                </div>
+                <div>
+                    أنا متعب. ومع ذلك أدرس الألمانية.
+                </div>
+            </div>
+
+            <h3>⚠️ ترتيب الجملة مع trotzdem</h3>
+
+            <p>
+                زي <strong>deshalb</strong>، لما تبدأ الجملة بـ <strong>trotzdem</strong>
+                يأتي الفعل بعدها مباشرة.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Trotzdem lerne ich Deutsch.
+                </div>
+                <div>
+                    ومع ذلك أدرس الألمانية.
+                </div>
+            </div>
+
+            <div class="important">
+                <strong>Trotzdem + Verb + Subjekt + ...</strong>
+                <br><br>
+                Trotzdem <strong>gehe</strong> ich spazieren.
+            </div>
+
+            <h3>🔹 3. außerdem = بالإضافة إلى ذلك</h3>
+
+            <p>
+                بنستخدم <strong>außerdem</strong> عشان نضيف معلومة أو فكرة جديدة.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Ich lerne Deutsch. Außerdem lerne ich Englisch.
+                </div>
+                <div>
+                    أدرس الألمانية. بالإضافة إلى ذلك أدرس الإنجليزية.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Das Hotel ist schön. Außerdem ist es günstig.
+                </div>
+                <div>
+                    الفندق جميل. بالإضافة إلى ذلك هو رخيص.
+                </div>
+            </div>
+
+            <h3>⚠️ ترتيب الجملة مع außerdem</h3>
+
+            <p>
+                لو بدأت الجملة بـ <strong>außerdem</strong>، الفعل يأتي بعدها مباشرة.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Außerdem habe ich viel gelernt.
+                </div>
+                <div>
+                    بالإضافة إلى ذلك تعلمت كثيرًا.
+                </div>
+            </div>
+
+            <div class="important">
+                <strong>Außerdem + Verb + Subjekt + ...</strong>
+                <br><br>
+                Außerdem <strong>habe</strong> ich viel gelernt.
+            </div>
+
+            <h3>🔹 الفرق بينهم</h3>
+
+            <table>
+                <tr>
+                    <th>الكلمة</th>
+                    <th>المعنى</th>
+                    <th>الاستخدام</th>
+                </tr>
+
+                <tr>
+                    <td>deshalb</td>
+                    <td>لذلك</td>
+                    <td>نتيجة</td>
+                </tr>
+
+                <tr>
+                    <td>trotzdem</td>
+                    <td>رغم ذلك</td>
+                    <td>عكس المتوقع</td>
+                </tr>
+
+                <tr>
+                    <td>außerdem</td>
+                    <td>بالإضافة إلى ذلك</td>
+                    <td>إضافة معلومة</td>
+                </tr>
+            </table>
+
+            <h3>🧠 أمثلة للمقارنة</h3>
+
+            <div class="example">
+                <div class="de">
+                    Ich bin krank. Deshalb bleibe ich zu Hause.
+                </div>
+                <div>
+                    أنا مريض. لذلك أبقى في المنزل.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Ich bin krank. Trotzdem gehe ich zur Schule.
+                </div>
+                <div>
+                    أنا مريض. ومع ذلك أذهب إلى المدرسة.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Ich lerne Deutsch. Außerdem lerne ich Spanisch.
+                </div>
+                <div>
+                    أدرس الألمانية. بالإضافة إلى ذلك أدرس الإسبانية.
+                </div>
+            </div>
+
+            <h3>🔹 مهم جدًا: الفعل في المركز الثاني</h3>
+
+            <p>
+                <strong>deshalb / trotzdem / außerdem</strong>
+                لا تجعل الجملة جملة فرعية.
+                لذلك الفعل يظل في <strong>المركز الثاني</strong>.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Deshalb gehe ich nach Hause.
+                </div>
+                <div>
+                    deshalb = المركز الأول
+                    <br>
+                    gehe = الفعل في المركز الثاني
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Trotzdem mache ich meine Hausaufgaben.
+                </div>
+                <div>
+                    trotzdem = المركز الأول
+                    <br>
+                    mache = الفعل في المركز الثاني
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Außerdem habe ich morgen einen Test.
+                </div>
+                <div>
+                    außerdem = المركز الأول
+                    <br>
+                    habe = الفعل في المركز الثاني
+                </div>
+            </div>
+
+            <h3>📌 ملخص سريع</h3>
+
+            <div class="word-box">
+                <strong>deshalb</strong> → نتيجة
+                <br>
+                Ich bin müde. Deshalb schlafe ich.
+                <br><br>
+
+                <strong>trotzdem</strong> → عكس المتوقع
+                <br>
+                Ich bin müde. Trotzdem lerne ich.
+                <br><br>
+
+                <strong>außerdem</strong> → إضافة
+                <br>
+                Ich lerne Deutsch. Außerdem lerne ich Englisch.
+            </div>
+
+        </div>
+
+        <div class="quiz-box" id="quiz">
+
+            <h2>📝 اختبار Lesson 15</h2>
+
+            <p>
+                لازم تجيب <strong>3 من 5</strong> على الأقل عشان تنجح وتفتح Lesson 16.
+            </p>
+
+            <div class="question">
+                <p>1️⃣ اختر الكلمة المناسبة:</p>
+
+                <p>
+                    Ich bin müde. ______ gehe ich früh ins Bett.
+                </p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    deshalb
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    trotzdem
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    außerdem
+                </label>
+            </div>
+
+            <div class="question">
+                <p>2️⃣ اختر الجملة الصحيحة:</p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    Trotzdem gehe ich spazieren.
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    Trotzdem ich gehe spazieren.
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    Trotzdem spazieren ich gehe.
+                </label>
+            </div>
+
+            <div class="question">
+                <p>3️⃣ ما معنى <strong>außerdem</strong>؟</p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    بسبب ذلك
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    رغم ذلك
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    بالإضافة إلى ذلك
+                </label>
+            </div>
+
+            <div class="question">
+                <p>4️⃣ اختر الكلمة المناسبة:</p>
+
+                <p>
+                    Es regnet. ______ gehe ich spazieren.
+                </p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    Deshalb
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    Trotzdem
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    Außerdem
+                </label>
+            </div>
+
+            <div class="question">
+                <p>5️⃣ اختر الجملة الصحيحة:</p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    Außerdem habe ich viel gelernt.
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    Außerdem ich habe viel gelernt.
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    Außerdem gelernt ich habe viel.
+                </label>
+            </div>
+
+            <button class="submit-btn" id="submitBtn" onclick="checkQuiz()">
+                ✅ تصحيح الاختبار
+            </button>
+
+            <div id="result"></div>
+
+            <div id="nextContainer"></div>
+
+        </div>
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+    </div>
+
+    <script>
+
+        const answers = {
+            q1: "a",
+            q2: "a",
+            q3: "c",
+            q4: "b",
+            q5: "a"
+        };
+
+        const correctText = {
+            q1: "deshalb",
+            q2: "Trotzdem gehe ich spazieren.",
+            q3: "بالإضافة إلى ذلك",
+            q4: "Trotzdem",
+            q5: "Außerdem habe ich viel gelernt."
+        };
+
+        function checkQuiz() {
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            if (submitBtn.disabled) {
+                return;
+            }
+
+            let score = 0;
+            let wrongAnswers = [];
+
+            for (let i = 1; i <= 5; i++) {
+
+                const selected = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                if (selected && selected.value === answers["q" + i]) {
+                    score++;
+                } else {
+                    wrongAnswers.push(i);
+                }
+            }
+
+            const result = document.getElementById("result");
+            const nextContainer = document.getElementById("nextContainer");
+
+            submitBtn.disabled = true;
+
+            let html = "";
+
+            if (score >= 3) {
+
+                localStorage.setItem("b1Lesson15Completed", "true");
+
+                html += `
+                    <div class="success">
+                        🎉 <strong>أحسنت! نجحت في Lesson 15.</strong>
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        💾 تم حفظ تقدمك بنجاح!
+                        <br><br>
+                        ✅ Lesson 15 مكتمل!
+                        <br>
+                        🔓 تم فتح Lesson 16.
+                    </div>
+                `;
+
+                if (score < 5 && wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function(q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+
+                nextContainer.innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson16-B1.html'">
+                        ➡️ الانتقال إلى Lesson 16
+                    </button>
+                `;
+
+            } else {
+
+                html += `
+                    <div class="fail">
+                        ❌ لم تنجح في الاختبار هذه المرة.
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        لازم تجيب 3 من 5 على الأقل.
+                    </div>
+                `;
+
+                if (wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function(q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+            }
+
+            html += `
+                <button class="retry-btn" onclick="retryQuiz()">
+                    🔄 إعادة الاختبار
+                </button>
+            `;
+
+            result.innerHTML = html;
+        }
+
+        function retryQuiz() {
+
+            const radios = document.querySelectorAll(
+                'input[type="radio"]'
+            );
+
+            radios.forEach(function(radio) {
+                radio.checked = false;
+                radio.disabled = false;
+            });
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            submitBtn.disabled = false;
+
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("nextContainer").innerHTML = "";
+
+            document.getElementById("quiz").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        function checkCompleted() {
+
+            if (localStorage.getItem("b1Lesson15Completed") === "true") {
+
+                document.getElementById("completedBox").innerHTML = `
+                    <div class="completed">
+                        ✅ Lesson 15 مكتمل بالفعل!
+                        <br><br>
+                        💾 تقدمك محفوظ.
+                        <br><br>
+                        🔓 Lesson 16 مفتوح.
+                        <br><br>
+                        يمكنك مراجعة الدرس والاختبار مرة أخرى.
+                    </div>
+                `;
+
+                document.getElementById("nextContainer").innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson16-B1.html'">
+                        ➡️ الانتقال إلى Lesson 16
+                    </button>
+                `;
+            }
+        }
+
+        checkCompleted();
+
+    </script>
+
+</body>
+
+</html>

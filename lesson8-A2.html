@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8 - Komparativ</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #555;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background: #333;
+        }
+
+        h1 {
+            background: #4f46e5;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #4f46e5;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .example {
+            background: #eef2ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #4f46e5;
+            color: white;
+        }
+
+        .important {
+            background: #fff7d6;
+            padding: 15px;
+            border-radius: 10px;
+            border-right: 5px solid #f0b400;
+        }
+
+        .quiz-question {
+            background: #f8fafc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        #checkButton,
+        #retryButton,
+        #nextButton {
+            border: none;
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        #checkButton {
+            background: #4f46e5;
+            color: white;
+        }
+
+        #retryButton {
+            background: #f59e0b;
+            color: white;
+        }
+
+        #nextButton {
+            background: #16a34a;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .correct-answer {
+            background: #ecfdf5;
+            color: #166534;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+        }
+
+        .success {
+            background: #dcfce7;
+            color: #166534;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .fail {
+            background: #fff7ed;
+            color: #9a3412;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .summary {
+            background: #eef2ff;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .summary p {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="a2.html" class="back-btn">⬅️ العودة إلى A2</a>
+
+    <h1>🇩🇪 Lesson 8 – Komparativ</h1>
+
+    <div class="card">
+        <h2>🎯 هدف الدرس</h2>
+        <p>
+            في الدرس ده هنتعلم إزاي نقارن بين حاجتين في الألماني،
+            زي: أكبر، أصغر، أسرع، أبطأ، أجمل...
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>1️⃣ يعني إيه Komparativ؟</h2>
+
+        <p><strong>Komparativ</strong> يعني صيغة المقارنة.</p>
+
+        <div class="example">
+            <strong>groß → größer</strong><br>
+            كبير → أكبر
+        </div>
+
+        <p>
+            لما نقارن بين حاجتين غالبًا بنستخدم:
+        </p>
+
+        <div class="important">
+            <strong>Komparativ + als</strong>
+        </div>
+
+        <div class="example">
+            <strong>Ali ist größer als Omar.</strong><br>
+            علي أكبر من عمر.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2️⃣ إزاي نكوّن الـ Komparativ؟</h2>
+
+        <p>
+            في أغلب الصفات بنضيف:
+            <strong>-er</strong>
+        </p>
+
+        <div class="important">
+            <strong>Adjektiv + er</strong>
+        </div>
+
+        <table>
+            <tr>
+                <th>الصفة</th>
+                <th>Komparativ</th>
+                <th>المعنى</th>
+            </tr>
+
+            <tr>
+                <td>klein</td>
+                <td>kleiner</td>
+                <td>أصغر</td>
+            </tr>
+
+            <tr>
+                <td>groß</td>
+                <td>größer</td>
+                <td>أكبر</td>
+            </tr>
+
+            <tr>
+                <td>schnell</td>
+                <td>schneller</td>
+                <td>أسرع</td>
+            </tr>
+
+            <tr>
+                <td>langsam</td>
+                <td>langsamer</td>
+                <td>أبطأ</td>
+            </tr>
+
+            <tr>
+                <td>alt</td>
+                <td>älter</td>
+                <td>أكبر سنًا</td>
+            </tr>
+
+            <tr>
+                <td>jung</td>
+                <td>jünger</td>
+                <td>أصغر سنًا</td>
+            </tr>
+
+            <tr>
+                <td>schön</td>
+                <td>schöner</td>
+                <td>أجمل</td>
+            </tr>
+
+            <tr>
+                <td>teuer</td>
+                <td>teurer</td>
+                <td>أغلى</td>
+            </tr>
+
+            <tr>
+                <td>billig</td>
+                <td>billiger</td>
+                <td>أرخص</td>
+            </tr>
+
+            <tr>
+                <td>kalt</td>
+                <td>kälter</td>
+                <td>أبرد</td>
+            </tr>
+        </table>
+
+        <div class="example">
+            <strong>Das Auto ist schnell.</strong><br>
+            السيارة سريعة.
+            <br><br>
+            <strong>Das Auto ist schneller.</strong><br>
+            السيارة أسرع.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3️⃣ استخدام als</h2>
+
+        <p>
+            لما نقول <strong>أكثر / أكبر من...</strong>
+            بنستخدم:
+        </p>
+
+        <div class="important">
+            <strong>Komparativ + als</strong>
+        </div>
+
+        <div class="example">
+            <strong>Mein Auto ist schneller als dein Auto.</strong><br>
+            سيارتي أسرع من سيارتك.
+        </div>
+
+        <div class="example">
+            <strong>Anna ist älter als Sara.</strong><br>
+            آنا أكبر سنًا من سارة.
+        </div>
+
+        <div class="example">
+            <strong>Der Sommer ist wärmer als der Winter.</strong><br>
+            الصيف أدفأ من الشتاء.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4️⃣ صفات بتتغير فيها حروف</h2>
+
+        <p>
+            في بعض الصفات بيحصل تغيير في حرف العلة.
+        </p>
+
+        <table>
+            <tr>
+                <th>الأصل</th>
+                <th>Komparativ</th>
+                <th>المعنى</th>
+            </tr>
+
+            <tr>
+                <td>alt</td>
+                <td>älter</td>
+                <td>أكبر سنًا</td>
+            </tr>
+
+            <tr>
+                <td>jung</td>
+                <td>jünger</td>
+                <td>أصغر سنًا</td>
+            </tr>
+
+            <tr>
+                <td>groß</td>
+                <td>größer</td>
+                <td>أكبر</td>
+            </tr>
+
+            <tr>
+                <td>kalt</td>
+                <td>kälter</td>
+                <td>أبرد</td>
+            </tr>
+
+            <tr>
+                <td>warm</td>
+                <td>wärmer</td>
+                <td>أدفأ</td>
+            </tr>
+        </table>
+
+        <p>
+            📌 مش كل الصفات بتتغير كده، فالأفضل نحفظ الكلمات الشائعة.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>5️⃣ كلمات مهمة ⭐</h2>
+
+        <h3>gut → besser</h3>
+        <p>جيد → أفضل</p>
+
+        <div class="example">
+            <strong>Deutsch ist besser als Englisch.</strong><br>
+            الألمانية أفضل من الإنجليزية.
+        </div>
+
+        <h3>viel → mehr</h3>
+        <p>كثير → أكثر</p>
+
+        <div class="example">
+            <strong>Ich habe mehr Zeit als du.</strong><br>
+            عندي وقت أكثر منك.
+        </div>
+
+        <h3>gern → lieber</h3>
+        <p>يفضل → يفضل أكثر</p>
+
+        <div class="example">
+            <strong>Ich trinke lieber Tee als Kaffee.</strong><br>
+            أنا أفضل الشاي على القهوة.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6️⃣ جمل مقارنة سهلة 📝</h2>
+
+        <div class="example">
+            <strong>Mein Bruder ist größer als ich.</strong><br>
+            أخي أكبر مني.
+        </div>
+
+        <div class="example">
+            <strong>Der Hund ist kleiner als das Pferd.</strong><br>
+            الكلب أصغر من الحصان.
+        </div>
+
+        <div class="example">
+            <strong>Heute ist es wärmer als gestern.</strong><br>
+            النهارده الجو أدفأ من امبارح.
+        </div>
+
+        <div class="example">
+            <strong>Dieser Film ist besser als der andere.</strong><br>
+            الفيلم ده أفضل من الفيلم الآخر.
+        </div>
+
+        <div class="example">
+            <strong>Der Zug ist schneller als der Bus.</strong><br>
+            القطار أسرع من الأتوبيس.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7️⃣ النفي مع المقارنة</h2>
+
+        <p>
+            ممكن نستخدم <strong>nicht</strong> عادي.
+        </p>
+
+        <div class="example">
+            <strong>Mein Auto ist nicht schneller als dein Auto.</strong><br>
+            سيارتي ليست أسرع من سيارتك.
+        </div>
+
+        <div class="example">
+            <strong>Heute ist es nicht kälter als gestern.</strong><br>
+            النهارده الجو مش أبرد من امبارح.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8️⃣ السؤال عن المقارنة ❓</h2>
+
+        <div class="example">
+            <strong>Wer ist größer?</strong><br>
+            مين الأكبر؟
+        </div>
+
+        <div class="example">
+            <strong>Was ist besser?</strong><br>
+            إيه الأفضل؟
+        </div>
+
+        <div class="example">
+            <strong>Welches Auto ist schneller?</strong><br>
+            أي سيارة أسرع؟
+        </div>
+
+        <div class="example">
+            <strong>Wer ist größer, Ali oder Omar?</strong><br>
+            مين الأكبر، علي ولا عمر؟
+            <br><br>
+            ➡️ <strong>Ali ist größer als Omar.</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🧠 قاعدة مهمة جدًا</h2>
+
+        <div class="important">
+            <strong>
+                فاعل + فعل + Komparativ + als + المقارنة
+            </strong>
+        </div>
+
+        <div class="example">
+            <strong>Ali ist größer als Omar.</strong>
+            <br><br>
+            Ali = الفاعل<br>
+            ist = الفعل<br>
+            größer = صيغة المقارنة<br>
+            als = من<br>
+            Omar = الشخص اللي بنقارن بيه
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🔥 تدريب سريع</h2>
+
+        <p>حوّل الصفات إلى Komparativ:</p>
+
+        <ol>
+            <li>klein → ؟</li>
+            <li>schnell → ؟</li>
+            <li>schön → ؟</li>
+            <li>alt → ؟</li>
+            <li>gut → ؟</li>
+        </ol>
+
+        <div class="example">
+            <strong>الإجابات:</strong><br>
+            1. kleiner<br>
+            2. schneller<br>
+            3. schöner<br>
+            4. älter<br>
+            5. besser
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>📌 ملخص Lesson 8</h2>
+
+        <div class="summary">
+
+            <p><strong>klein → kleiner</strong></p>
+            <p><strong>groß → größer</strong></p>
+            <p><strong>schnell → schneller</strong></p>
+            <p><strong>langsam → langsamer</strong></p>
+            <p><strong>alt → älter</strong></p>
+            <p><strong>jung → jünger</strong></p>
+            <p><strong>schön → schöner</strong></p>
+            <p><strong>kalt → kälter</strong></p>
+            <p><strong>warm → wärmer</strong></p>
+            <p><strong>gut → besser</strong></p>
+            <p><strong>viel → mehr</strong></p>
+            <p><strong>gern → lieber</strong></p>
+
+            <hr>
+
+            <p>
+                ⭐ أهم قاعدة:
+                <strong>Komparativ + als</strong>
+            </p>
+
+            <p>
+                <strong>Mein Bruder ist größer als ich.</strong>
+                <br>
+                أخي أكبر مني.
+            </p>
+
+            <p>
+                <strong>Der Zug ist schneller als der Bus.</strong>
+                <br>
+                القطار أسرع من الأتوبيس.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="card">
+
+        <h2>📝 اختبار Lesson 8</h2>
+
+        <div class="quiz-question">
+            <p><strong>1. Mein Bruder ist ___ als ich.</strong></p>
+
+            <label>
+                <input type="radio" name="q1" value="a">
+                a) groß
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="b">
+                b) größer
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="c">
+                c) am größten
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="d">
+                d) große
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>2. Der Zug ist schneller ___ der Bus.</strong></p>
+
+            <label>
+                <input type="radio" name="q2" value="a">
+                a) wie
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="b">
+                b) von
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="c">
+                c) als
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="d">
+                d) zu
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>3. ما صيغة المقارنة الصحيحة لكلمة gut؟</strong></p>
+
+            <label>
+                <input type="radio" name="q3" value="a">
+                a) guter
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="b">
+                b) gutter
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="c">
+                c) besser
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="d">
+                d) guterer
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>4. أي جملة صحيحة؟</strong></p>
+
+            <label>
+                <input type="radio" name="q4" value="a">
+                a) Anna ist groß als Sara.
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="b">
+                b) Anna ist größer wie Sara.
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="c">
+                c) Anna ist größer als Sara.
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="d">
+                d) Anna größer ist als Sara.
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>5. Heute ist es ___ als gestern.</strong></p>
+            <p>(دافئ → أدفأ)</p>
+
+            <label>
+                <input type="radio" name="q5" value="a">
+                a) warm
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="b">
+                b) wärmer
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="c">
+                c) wärmen
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="d">
+                d) warme
+            </label>
+        </div>
+
+        <button type="button" id="checkButton">
+            ✅ تصحيح الاختبار
+        </button>
+
+        <div id="result"></div>
+
+        <div id="nextLesson" style="display:none;">
+            <a href="Lesson9-A2.html" id="nextButton">
+                🔓 الانتقال إلى Lesson 9
+            </a>
+        </div>
+
+    </div>
+
+    <a href="a2.html" class="back-btn">⬅️ العودة إلى A2</a>
+
+</div>
+
+<script>
+    document.getElementById("checkButton").addEventListener("click", function () {
+
+        const answers = {
+            q1: "b",
+            q2: "c",
+            q3: "c",
+            q4: "c",
+            q5: "b"
+        };
+
+        const correctText = {
+            q1: "größer",
+            q2: "als",
+            q3: "besser",
+            q4: "Anna ist größer als Sara.",
+            q5: "wärmer"
+        };
+
+        let score = 0;
+        let resultHTML = "";
+
+        for (let question in answers) {
+
+            const selected = document.querySelector(
+                'input[name="' + question + '"]:checked'
+            );
+
+            if (selected && selected.value === answers[question]) {
+                score++;
+            } else {
+                resultHTML +=
+                    '<div class="correct-answer">✅ الإجابة الصحيحة: ' +
+                    correctText[question] +
+                    '</div>';
+            }
+        }
+
+        const result = document.getElementById("result");
+
+        if (score >= 3) {
+
+            localStorage.setItem("a2Lesson8Completed", "true");
+
+            result.innerHTML =
+                '<div class="success">' +
+                '🎉 ممتاز! نتيجتك: ' + score + '/5<br><br>' +
+                '💾 تم حفظ تقدمك بنجاح!<br><br>' +
+                '✅ Lesson 8 مكتمل!<br><br>' +
+                '🔓 تم فتح Lesson 9.' +
+                '</div>' +
+                resultHTML;
+
+            document.getElementById("nextLesson").style.display = "block";
+
+            document.querySelectorAll('input[type="radio"]').forEach(function (input) {
+                input.disabled = true;
+            });
+
+            document.getElementById("checkButton").disabled = true;
+
+        } else {
+
+            result.innerHTML =
+                '<div class="fail">' +
+                '❌ نتيجتك: ' + score + '/5<br><br>' +
+                'لازم تجيبي 3/5 على الأقل عشان تنجحي.' +
+                '</div>' +
+                resultHTML +
+                '<button type="button" id="retryButton">🔄 إعادة الاختبار</button>';
+
+            document.querySelectorAll('input[type="radio"]').forEach(function (input) {
+                input.disabled = true;
+            });
+
+            document.getElementById("checkButton").disabled = true;
+
+            document.getElementById("retryButton").addEventListener("click", function () {
+                location.reload();
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

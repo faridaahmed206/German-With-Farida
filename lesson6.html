@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الدرس السادس - German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 25px auto;
+        }
+
+        .section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #444;
+            margin-top: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #f0f0f0;
+        }
+
+        .example {
+            background: #f7f7f7;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .german {
+            direction: ltr;
+            text-align: left;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .exercise {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        button {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+
+        .wrong {
+            color: red;
+            font-weight: bold;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        #successMessage {
+            display: none;
+            background: #e8f7e8;
+            color: green;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #nextLesson,
+        #backToA1 {
+            display: none;
+        }
+
+        .dialogue {
+            background: #f7f7f7;
+            padding: 18px;
+            border-radius: 12px;
+            line-height: 2;
+        }
+
+        .note {
+            background: #fff8d9;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 الدرس السادس</h1>
+        <p>Tage, Monate, Datum</p>
+        <p>الأيام، الشهور والتاريخ</p>
+    </header>
+
+    <div class="container">
+
+        <!-- أهداف الدرس -->
+        <div class="section">
+            <h2>🎯 أهداف الدرس</h2>
+
+            <p>في نهاية الدرس هتعرف:</p>
+
+            <ul>
+                <li>تقول أيام الأسبوع بالألماني.</li>
+                <li>تعرف الشهور.</li>
+                <li>تسأل عن اليوم والتاريخ.</li>
+                <li>تقول تاريخ ميلادك.</li>
+                <li>تستخدم التاريخ في جمل بسيطة.</li>
+            </ul>
+        </div>
+
+
+        <!-- أيام الأسبوع -->
+        <div class="section">
+
+            <h2>📅 1. أيام الأسبوع — Die Wochentage</h2>
+
+            <table>
+
+                <tr>
+                    <th>Deutsch</th>
+                    <th>المعنى</th>
+                    <th>النطق</th>
+                </tr>
+
+                <tr>
+                    <td>Montag</td>
+                    <td>الاثنين</td>
+                    <td>مونتاج</td>
+                </tr>
+
+                <tr>
+                    <td>Dienstag</td>
+                    <td>الثلاثاء</td>
+                    <td>دينستاج</td>
+                </tr>
+
+                <tr>
+                    <td>Mittwoch</td>
+                    <td>الأربعاء</td>
+                    <td>ميتفوخ</td>
+                </tr>
+
+                <tr>
+                    <td>Donnerstag</td>
+                    <td>الخميس</td>
+                    <td>دونَرستاج</td>
+                </tr>
+
+                <tr>
+                    <td>Freitag</td>
+                    <td>الجمعة</td>
+                    <td>فرايتاج</td>
+                </tr>
+
+                <tr>
+                    <td>Samstag</td>
+                    <td>السبت</td>
+                    <td>زامستاج</td>
+                </tr>
+
+                <tr>
+                    <td>Sonntag</td>
+                    <td>الأحد</td>
+                    <td>زونتاج</td>
+                </tr>
+
+            </table>
+
+            <div class="note">
+                ⭐ <strong>معلومة:</strong>
+                أيام الأسبوع في الألماني بتتكتب بحرف كبير لأنها أسماء.
+            </div>
+
+            <div class="example">
+                <p class="german">Heute ist Montag.</p>
+                <p>اليوم الاثنين.</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Morgen ist Dienstag.</p>
+                <p>غدًا الثلاثاء.</p>
+            </div>
+
+        </div>
+
+
+        <!-- الشهور -->
+        <div class="section">
+
+            <h2>🗓️ 2. الشهور — Die Monate</h2>
+
+            <table>
+
+                <tr>
+                    <th>Deutsch</th>
+                    <th>المعنى</th>
+                    <th>النطق</th>
+                </tr>
+
+                <tr>
+                    <td>Januar</td>
+                    <td>يناير</td>
+                    <td>يانُوار</td>
+                </tr>
+
+                <tr>
+                    <td>Februar</td>
+                    <td>فبراير</td>
+                    <td>فيبرُوار</td>
+                </tr>
+
+                <tr>
+                    <td>März</td>
+                    <td>مارس</td>
+                    <td>ميرتس</td>
+                </tr>
+
+                <tr>
+                    <td>April</td>
+                    <td>أبريل</td>
+                    <td>أبريل</td>
+                </tr>
+
+                <tr>
+                    <td>Mai</td>
+                    <td>مايو</td>
+                    <td>ماي</td>
+                </tr>
+
+                <tr>
+                    <td>Juni</td>
+                    <td>يونيو</td>
+                    <td>يوني</td>
+                </tr>
+
+                <tr>
+                    <td>Juli</td>
+                    <td>يوليو</td>
+                    <td>يولي</td>
+                </tr>
+
+                <tr>
+                    <td>August</td>
+                    <td>أغسطس</td>
+                    <td>أوغوست</td>
+                </tr>
+
+                <tr>
+                    <td>September</td>
+                    <td>سبتمبر</td>
+                    <td>زِبتِمبر</td>
+                </tr>
+
+                <tr>
+                    <td>Oktober</td>
+                    <td>أكتوبر</td>
+                    <td>أوكتوبر</td>
+                </tr>
+
+                <tr>
+                    <td>November</td>
+                    <td>نوفمبر</td>
+                    <td>نوفِمبر</td>
+                </tr>
+
+                <tr>
+                    <td>Dezember</td>
+                    <td>ديسمبر</td>
+                    <td>دِتسِمبر</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- التاريخ -->
+        <div class="section">
+
+            <h2>📆 3. التاريخ — Das Datum</h2>
+
+            <p>لما نسأل عن التاريخ نقول:</p>
+
+            <div class="example">
+                <p class="german">Welches Datum ist heute?</p>
+                <p>ما التاريخ اليوم؟</p>
+            </div>
+
+            <p>وممكن نقول بشكل أبسط:</p>
+
+            <div class="example">
+                <p class="german">Der wievielte ist heute?</p>
+                <p>كام النهارده؟</p>
+            </div>
+
+            <h3>🗣️ أمثلة:</h3>
+
+            <div class="example">
+                <p class="german">Heute ist der 5. Mai.</p>
+                <p>اليوم 5 مايو.</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Heute ist der 10. August.</p>
+                <p>اليوم 10 أغسطس.</p>
+            </div>
+
+            <div class="note">
+                ⭐ لاحظ إننا بنستخدم <strong>der</strong> مع التاريخ.
+            </div>
+
+        </div>
+
+
+        <!-- عيد الميلاد -->
+        <div class="section">
+
+            <h2>🎂 4. تاريخ الميلاد</h2>
+
+            <div class="example">
+                <p class="german">Wann hast du Geburtstag?</p>
+                <p>متى عيد ميلادك؟</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Ich habe am 12. März Geburtstag.</p>
+                <p>عيد ميلادي يوم 12 مارس.</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Mein Geburtstag ist am 12. März.</p>
+                <p>عيد ميلادي يوم 12 مارس.</p>
+            </div>
+
+            <div class="note">
+                🔹 <strong>der Geburtstag</strong> = عيد الميلاد
+                <br>
+                النطق: جِبورتستاج
+            </div>
+
+        </div>
+
+
+        <!-- am -->
+        <div class="section">
+
+            <h2>🧠 5. أيام الأسبوع مع "am"</h2>
+
+            <p>
+                لما نتكلم عن حدوث شيء في يوم معين، غالبًا نستخدم:
+            </p>
+
+            <div class="example">
+                <p class="german">am + اليوم</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Am Montag lerne ich Deutsch.</p>
+                <p>يوم الاثنين أتعلم الألمانية.</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Am Freitag habe ich Deutsch.</p>
+                <p>يوم الجمعة عندي ألماني.</p>
+            </div>
+
+        </div>
+
+
+        <!-- كلمات جديدة -->
+        <div class="section">
+
+            <h2>🆕 5 كلمات جديدة</h2>
+
+            <table>
+
+                <tr>
+                    <th>Deutsch</th>
+                    <th>المعنى</th>
+                    <th>النطق</th>
+                </tr>
+
+                <tr>
+                    <td>heute</td>
+                    <td>اليوم</td>
+                    <td>هويته</td>
+                </tr>
+
+                <tr>
+                    <td>morgen</td>
+                    <td>غدًا</td>
+                    <td>مورجن</td>
+                </tr>
+
+                <tr>
+                    <td>gestern</td>
+                    <td>أمس</td>
+                    <td>جِسترن</td>
+                </tr>
+
+                <tr>
+                    <td>der Tag</td>
+                    <td>اليوم / اليوم كوحدة زمنية</td>
+                    <td>تاج</td>
+                </tr>
+
+                <tr>
+                    <td>das Datum</td>
+                    <td>التاريخ</td>
+                    <td>داتوم</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- التدريب -->
+        <div class="section">
+
+            <h2>🏋️ التدريب</h2>
+
+            <div class="exercise">
+
+                <p>
+                    <strong>1️⃣ Heute ist Dienstag.</strong>
+                    <br>
+                    يعني:
+                </p>
+
+                <label>
+                    <input type="radio" name="training1">
+                    a) اليوم الاثنين
+                </label>
+
+                <label>
+                    <input type="radio" name="training1">
+                    b) اليوم الثلاثاء
+                </label>
+
+                <label>
+                    <input type="radio" name="training1">
+                    c) اليوم الأربعاء
+                </label>
+
+            </div>
+
+
+            <div class="exercise">
+
+                <p>
+                    <strong>2️⃣ Ich habe am 5. ___ Geburtstag.</strong>
+                </p>
+
+                <label>
+                    <input type="radio" name="training2">
+                    a) März
+                </label>
+
+                <label>
+                    <input type="radio" name="training2">
+                    b) Montag
+                </label>
+
+                <label>
+                    <input type="radio" name="training2">
+                    c) Tag
+                </label>
+
+            </div>
+
+
+            <div class="exercise">
+
+                <p>
+                    <strong>3️⃣ ترجم:</strong>
+                    <br>
+                    Heute ist Freitag.
+                </p>
+
+                <input
+                    type="text"
+                    id="training3"
+                    placeholder="اكتب الترجمة بالعربي"
+                    style="width:90%; padding:12px; border:1px solid #ddd; border-radius:8px;"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- المحادثة -->
+        <div class="section">
+
+            <h2>💬 محادثة قصيرة</h2>
+
+            <div class="dialogue">
+
+                <p>
+                    <strong>A:</strong>
+                    Welcher Tag ist heute?
+                </p>
+
+                <p>
+                    <strong>B:</strong>
+                    Heute ist Montag.
+                </p>
+
+                <p>
+                    <strong>A:</strong>
+                    Wann hast du Geburtstag?
+                </p>
+
+                <p>
+                    <strong>B:</strong>
+                    Ich habe am 10. Juli Geburtstag.
+                </p>
+
+                <p>
+                    <strong>A:</strong>
+                    Und wann ist dein Geburtstag?
+                </p>
+
+                <p>
+                    <strong>B:</strong>
+                    Mein Geburtstag ist am 3. November.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- الاختبار -->
+        <div class="section">
+
+            <h2>📝 الاختبار النهائي</h2>
+
+            <p>
+                النجاح من <strong>3/5</strong> ✅
+            </p>
+
+
+            <!-- السؤال 1 -->
+            <div class="exercise">
+
+                <p>
+                    <strong>1. Was bedeutet „Montag“?</strong>
+                </p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    a) الأحد
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    b) الاثنين
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    c) الثلاثاء
+                </label>
+
+                <p id="feedback1"></p>
+
+            </div>
+
+
+            <!-- السؤال 2 -->
+            <div class="exercise">
+
+                <p>
+                    <strong>2. ما معنى „Dezember“؟</strong>
+                </p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    a) ديسمبر
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    b) أكتوبر
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    c) نوفمبر
+                </label>
+
+                <p id="feedback2"></p>
+
+            </div>
+
+
+            <!-- السؤال 3 -->
+            <div class="exercise">
+
+                <p>
+                    <strong>3. كيف تقول: اليوم الجمعة؟</strong>
+                </p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    a) Heute ist Freitag.
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    b) Morgen ist Freitag.
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    c) Heute ist Montag.
+                </label>
+
+                <p id="feedback3"></p>
+
+            </div>
+
+
+            <!-- السؤال 4 -->
+            <div class="exercise">
+
+                <p>
+                    <strong>
+                        4. أكمل:
+                        <br>
+                        Ich habe ___ 15. Mai Geburtstag.
+                    </strong>
+                </p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    a) im
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    b) am
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    c) der
+                </label>
+
+                <p id="feedback4"></p>
+
+            </div>
+
+
+            <!-- السؤال 5 -->
+            <div class="exercise">
+
+                <p>
+                    <strong>
+                        5. ماذا يعني:
+                        <br>
+                        Wann hast du Geburtstag?
+                    </strong>
+                </p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    a) ما اليوم؟
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    b) متى عيد ميلادك؟
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    c) ما التاريخ؟
+                </label>
+
+                <p id="feedback5"></p>
+
+            </div>
+
+
+            <button onclick="checkQuiz()">
+                تصحيح الاختبار
+            </button>
+
+            <div id="result"></div>
+
+            <div id="successMessage">
+                🎉 ممتاز! تم اجتياز الدرس السادس بنجاح.
+                <br>
+                تم حفظ الدرس السادس ويمكنك الآن الانتقال للدرس السابع.
+            </div>
+
+            <button
+                id="nextLesson"
+                onclick="window.location.href='lesson7.html'"
+            >
+                ➡️ الدرس السابع
+            </button>
+
+            <button
+                id="backToA1"
+                onclick="window.location.href='A1.html'"
+            >
+                🔙 الرجوع إلى مستوى A1
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function checkQuiz() {
+
+            const answers = {
+                q1: "b",
+                q2: "a",
+                q3: "a",
+                q4: "b",
+                q5: "b"
+            };
+
+            let score = 0;
+
+            for (let i = 1; i <= 5; i++) {
+
+                const selected = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                const feedback = document.getElementById(
+                    "feedback" + i
+                );
+
+                if (!selected) {
+
+                    feedback.textContent = "❌ لم يتم اختيار إجابة.";
+                    feedback.className = "wrong";
+
+                } else if (selected.value === answers["q" + i]) {
+
+                    score++;
+
+                    feedback.textContent = "✅ إجابة صحيحة!";
+                    feedback.className = "correct";
+
+                } else {
+
+                    feedback.textContent = "❌ إجابة خاطئة.";
+                    feedback.className = "wrong";
+
+                }
+            }
+
+
+            const result = document.getElementById("result");
+
+            result.textContent =
+                "نتيجتك: " + score + " / 5";
+
+
+            if (score >= 3) {
+
+                localStorage.setItem(
+                    "lesson6Completed",
+                    "true"
+                );
+
+                document.getElementById(
+                    "successMessage"
+                ).style.display = "block";
+
+
+                document.getElementById(
+                    "nextLesson"
+                ).style.display = "block";
+
+
+                document.getElementById(
+                    "backToA1"
+                ).style.display = "block";
+
+
+                alert("✅ تم حفظ الدرس السادس بنجاح!");
+
+            } else {
+
+                document.getElementById(
+                    "successMessage"
+                ).style.display = "none";
+
+
+                document.getElementById(
+                    "nextLesson"
+                ).style.display = "none";
+
+
+                document.getElementById(
+                    "backToA1"
+                ).style.display = "none";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

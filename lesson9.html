@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الدرس التاسع - Pronomen & sein</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            padding: 0;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #263238;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 20px;
+            padding: 22px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #263238;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #37474f;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #eceff1;
+        }
+
+        .german {
+            direction: ltr;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .note {
+            background: #fff8e1;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .example {
+            background: #f1f8e9;
+            padding: 12px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .word {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .question {
+            background: #fafafa;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+            font-size: 16px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        button {
+            background: #263238;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 8px 5px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        #nextLesson,
+        #backToA1,
+        #retryQuiz {
+            display: none;
+        }
+
+        .correct {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .wrong {
+            color: #c62828;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🇩🇪 الدرس التاسع</h1>
+    <p>Pronomen & sein</p>
+    <p>الضمائر + فعل sein</p>
+</header>
+
+<div class="container">
+
+    <!-- الأهداف -->
+    <div class="section">
+        <h2>🎯 أهداف الدرس</h2>
+
+        <ul>
+            <li>معرفة الضمائر الشخصية في الألماني.</li>
+            <li>معرفة تصريف فعل <b>sein</b>.</li>
+            <li>تكوين جمل بسيطة باستخدام الضمائر و sein.</li>
+            <li>تكوين أسئلة بسيطة باستخدام sein.</li>
+        </ul>
+    </div>
+
+    <!-- الضمائر -->
+    <div class="section">
+        <h2>1️⃣ الضمائر الشخصية — Personalpronomen</h2>
+
+        <table>
+            <tr>
+                <th>الألماني</th>
+                <th>النطق</th>
+                <th>المعنى</th>
+            </tr>
+
+            <tr>
+                <td class="german">ich</td>
+                <td>إش</td>
+                <td>أنا</td>
+            </tr>
+
+            <tr>
+                <td class="german">du</td>
+                <td>دو</td>
+                <td>أنت</td>
+            </tr>
+
+            <tr>
+                <td class="german">er</td>
+                <td>إير</td>
+                <td>هو</td>
+            </tr>
+
+            <tr>
+                <td class="german">sie</td>
+                <td>زي</td>
+                <td>هي</td>
+            </tr>
+
+            <tr>
+                <td class="german">es</td>
+                <td>إس</td>
+                <td>هو/هي لغير العاقل</td>
+            </tr>
+
+            <tr>
+                <td class="german">wir</td>
+                <td>فير</td>
+                <td>نحن</td>
+            </tr>
+
+            <tr>
+                <td class="german">ihr</td>
+                <td>إير</td>
+                <td>أنتم</td>
+            </tr>
+
+            <tr>
+                <td class="german">sie</td>
+                <td>زي</td>
+                <td>هم</td>
+            </tr>
+
+            <tr>
+                <td class="german">Sie</td>
+                <td>زي</td>
+                <td>حضرتك / حضراتكم</td>
+            </tr>
+        </table>
+
+        <div class="note">
+            📌 <b>ملاحظة:</b><br>
+            <b>sie</b> ممكن تعني "هي" أو "هم" حسب الجملة.<br>
+            أما <b>Sie</b> بحرف كبير فهي صيغة رسمية.
+        </div>
+    </div>
+
+    <!-- sein -->
+    <div class="section">
+        <h2>2️⃣ فعل sein</h2>
+
+        <p>
+            <b>sein = يكون</b>
+        </p>
+
+        <table>
+            <tr>
+                <th>الضمير</th>
+                <th>التصريف</th>
+                <th>المعنى</th>
+            </tr>
+
+            <tr>
+                <td class="german">ich</td>
+                <td class="german">bin</td>
+                <td>أكون</td>
+            </tr>
+
+            <tr>
+                <td class="german">du</td>
+                <td class="german">bist</td>
+                <td>تكون</td>
+            </tr>
+
+            <tr>
+                <td class="german">er</td>
+                <td class="german">ist</td>
+                <td>يكون</td>
+            </tr>
+
+            <tr>
+                <td class="german">sie</td>
+                <td class="german">ist</td>
+                <td>تكون</td>
+            </tr>
+
+            <tr>
+                <td class="german">es</td>
+                <td class="german">ist</td>
+                <td>يكون</td>
+            </tr>
+
+            <tr>
+                <td class="german">wir</td>
+                <td class="german">sind</td>
+                <td>نكون</td>
+            </tr>
+
+            <tr>
+                <td class="german">ihr</td>
+                <td class="german">seid</td>
+                <td>تكونون</td>
+            </tr>
+
+            <tr>
+                <td class="german">sie</td>
+                <td class="german">sind</td>
+                <td>يكونون</td>
+            </tr>
+
+            <tr>
+                <td class="german">Sie</td>
+                <td class="german">sind</td>
+                <td>تكون / تكونون رسميًا</td>
+            </tr>
+        </table>
+
+        <div class="note">
+            🧠 <b>احفظهم كده:</b><br><br>
+
+            ich <b>bin</b><br>
+            du <b>bist</b><br>
+            er / sie / es <b>ist</b><br>
+            wir <b>sind</b><br>
+            ihr <b>seid</b><br>
+            sie / Sie <b>sind</b>
+        </div>
+    </div>
+
+    <!-- أمثلة -->
+    <div class="section">
+        <h2>3️⃣ جمل بسيطة باستخدام sein</h2>
+
+        <div class="example">
+            <b class="german">Ich bin müde.</b><br>
+            أنا متعب.
+        </div>
+
+        <div class="example">
+            <b class="german">Du bist nett.</b><br>
+            أنت لطيف.
+        </div>
+
+        <div class="example">
+            <b class="german">Er ist Schüler.</b><br>
+            هو طالب.
+        </div>
+
+        <div class="example">
+            <b class="german">Sie ist Lehrerin.</b><br>
+            هي مُدرّسة.
+        </div>
+
+        <div class="example">
+            <b class="german">Wir sind Freunde.</b><br>
+            نحن أصدقاء.
+        </div>
+
+        <div class="example">
+            <b class="german">Ihr seid hier.</b><br>
+            أنتم هنا.
+        </div>
+
+        <div class="example">
+            <b class="german">Sie sind glücklich.</b><br>
+            هم سعداء.
+        </div>
+    </div>
+
+    <!-- السؤال -->
+    <div class="section">
+        <h2>4️⃣ السؤال باستخدام sein</h2>
+
+        <p>
+            في السؤال بنقدّم فعل <b>sein</b> على الضمير.
+        </p>
+
+        <div class="example">
+            <b class="german">Du bist müde.</b><br>
+            أنت متعب.
+        </div>
+
+        <div class="example">
+            <b class="german">Bist du müde?</b><br>
+            هل أنت متعب؟
+        </div>
+
+        <div class="example">
+            <b class="german">Ist er Schüler?</b><br>
+            هل هو طالب؟
+        </div>
+
+        <div class="example">
+            <b class="german">Seid ihr hier?</b><br>
+            هل أنتم هنا؟
+        </div>
+    </div>
+
+    <!-- كلمات جديدة -->
+    <div class="section">
+        <h2>🆕 3 كلمات جديدة</h2>
+
+        <div class="word">
+            <b class="german">müde</b><br>
+            النطق: موده<br>
+            المعنى: متعب
+        </div>
+
+        <div class="word">
+            <b class="german">nett</b><br>
+            النطق: نِت<br>
+            المعنى: لطيف
+        </div>
+
+        <div class="word">
+            <b class="german">glücklich</b><br>
+            النطق: جلوكليش<br>
+            المعنى: سعيد
+        </div>
+    </div>
+
+    <!-- التدريب -->
+    <div class="section">
+        <h2>📝 تدريب</h2>
+
+        <div class="question">
+            <p><b>1. Ich ___ müde.</b></p>
+
+            <label>
+                <input type="radio" name="training1" value="a">
+                a) bist
+            </label>
+
+            <label>
+                <input type="radio" name="training1" value="b">
+                b) bin
+            </label>
+
+            <label>
+                <input type="radio" name="training1" value="c">
+                c) sind
+            </label>
+        </div>
+
+        <div class="question">
+            <p><b>2. Wir ___ Freunde.</b></p>
+
+            <label>
+                <input type="radio" name="training2" value="a">
+                a) seid
+            </label>
+
+            <label>
+                <input type="radio" name="training2" value="b">
+                b) ist
+            </label>
+
+            <label>
+                <input type="radio" name="training2" value="c">
+                c) sind
+            </label>
+        </div>
+
+        <div class="question">
+            <p><b>3. حوّل الجملة إلى سؤال:</b></p>
+
+            <p class="german">Du bist müde.</p>
+
+            <input
+                type="text"
+                id="training3"
+                placeholder="اكتب السؤال بالألماني"
+            >
+        </div>
+
+        <button onclick="checkTraining()">تصحيح التدريب</button>
+
+        <div id="trainingResult"></div>
+    </div>
+
+    <!-- المحادثة -->
+    <div class="section">
+        <h2>🗣️ محادثة قصيرة</h2>
+
+        <div class="example">
+            <b>A:</b> Bist du müde?<br>
+            هل أنت متعب؟
+        </div>
+
+        <div class="example">
+            <b>B:</b> Ja, ich bin müde.
+        </div>
+
+        <div class="example">
+            <b>A:</b> Bist du Schüler?
+        </div>
+
+        <div class="example">
+            <b>B:</b> Ja, ich bin Schüler.
+        </div>
+
+        <div class="example">
+            <b>A:</b> Wie geht es dir?
+        </div>
+
+        <div class="example">
+            <b>B:</b> Ich bin glücklich.
+        </div>
+    </div>
+
+    <!-- الاختبار -->
+    <div class="section">
+        <h2>🎯 الاختبار النهائي</h2>
+
+        <div class="question">
+            <p><b>1. ما معنى ich؟</b></p>
+
+            <label>
+                <input type="radio" name="q1" value="a">
+                a) أنت
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="b">
+                b) أنا
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="c">
+                c) نحن
+            </label>
+
+            <div id="feedback1"></div>
+        </div>
+
+        <div class="question">
+            <p><b>2. اختار الجملة الصحيحة:</b></p>
+
+            <label>
+                <input type="radio" name="q2" value="a">
+                a) Ich bist müde.
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="b">
+                b) Ich bin müde.
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="c">
+                c) Ich sind müde.
+            </label>
+
+            <div id="feedback2"></div>
+        </div>
+
+        <div class="question">
+            <p><b>3. Du ___ nett.</b></p>
+
+            <label>
+                <input type="radio" name="q3" value="a">
+                a) bin
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="b">
+                b) bist
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="c">
+                c) sind
+            </label>
+
+            <div id="feedback3"></div>
+        </div>
+
+        <div class="question">
+            <p><b>4. اختار السؤال الصحيح:</b></p>
+
+            <label>
+                <input type="radio" name="q4" value="a">
+                a) Du bist müde?
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="b">
+                b) Bist du müde?
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="c">
+                c) Müde bist du?
+            </label>
+
+            <div id="feedback4"></div>
+        </div>
+
+        <div class="question">
+            <p><b>5. Wir ___ Freunde.</b></p>
+
+            <label>
+                <input type="radio" name="q5" value="a">
+                a) ist
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="b">
+                b) seid
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="c">
+                c) sind
+            </label>
+
+            <div id="feedback5"></div>
+        </div>
+
+        <button onclick="checkQuiz()">تصحيح الاختبار</button>
+
+        <div id="result"></div>
+
+        <button id="retryQuiz" onclick="retryQuiz()">
+            🔄 إعادة الاختبار
+        </button>
+
+        <button id="nextLesson" onclick="window.location.href='lesson10.html'">
+            ➡️ الدرس العاشر
+        </button>
+
+        <button id="backToA1" onclick="window.location.href='A1.html'">
+            🔙 الرجوع إلى مستوى A1
+        </button>
+    </div>
+
+</div>
+
+<script>
+
+    function checkTraining() {
+
+        let score = 0;
+
+        const answer1 = document.querySelector(
+            'input[name="training1"]:checked'
+        );
+
+        const answer2 = document.querySelector(
+            'input[name="training2"]:checked'
+        );
+
+        const answer3 = document.getElementById("training3").value.trim();
+
+        if (answer1 && answer1.value === "b") {
+            score++;
+        }
+
+        if (answer2 && answer2.value === "c") {
+            score++;
+        }
+
+        if (
+            answer3 === "Bist du müde?" ||
+            answer3 === "bist du müde?"
+        ) {
+            score++;
+        }
+
+        const result = document.getElementById("trainingResult");
+
+        if (score === 3) {
+            result.className = "correct";
+            result.innerHTML = "✅ ممتاز! كل إجابات التدريب صحيحة.";
+        } else {
+            result.className = "wrong";
+            result.innerHTML =
+                "❌ عندك " + score + " من 3 صحيحة. راجع الإجابات وحاول مرة تانية.";
+        }
+    }
+
+
+    function checkQuiz() {
+
+        const answers = {
+            q1: "b",
+            q2: "b",
+            q3: "b",
+            q4: "b",
+            q5: "c"
+        };
+
+        const correctText = {
+            q1: "b) أنا",
+            q2: "b) Ich bin müde.",
+            q3: "b) bist",
+            q4: "b) Bist du müde?",
+            q5: "c) sind"
+        };
+
+        let score = 0;
+
+        for (let i = 1; i <= 5; i++) {
+
+            const questionName = "q" + i;
+
+            const selected = document.querySelector(
+                'input[name="' + questionName + '"]:checked'
+            );
+
+            const feedback = document.getElementById(
+                "feedback" + i
+            );
+
+            if (!selected) {
+
+                feedback.className = "wrong";
+
+                feedback.innerHTML =
+                    "⚠️ لم يتم اختيار إجابة. الإجابة الصحيحة: " +
+                    correctText[questionName];
+
+            } else if (selected.value === answers[questionName]) {
+
+                score++;
+
+                feedback.className = "correct";
+
+                feedback.innerHTML = "✅ إجابة صحيحة!";
+
+            } else {
+
+                feedback.className = "wrong";
+
+                feedback.innerHTML =
+                    "❌ إجابة خاطئة — الإجابة الصحيحة: " +
+                    correctText[questionName];
+            }
+        }
+
+        const result = document.getElementById("result");
+
+        if (score >= 3) {
+
+            localStorage.setItem(
+                "lesson9Completed",
+                "true"
+            );
+
+            result.className = "correct";
+
+            result.innerHTML =
+                "🎉 ممتاز! نجحت في الاختبار بدرجة " +
+                score +
+                " من 5.<br>✅ تم حفظ الدرس التاسع بنجاح!";
+
+            document.getElementById("nextLesson").style.display =
+                "inline-block";
+
+            document.getElementById("backToA1").style.display =
+                "inline-block";
+
+            document.getElementById("retryQuiz").style.display =
+                "none";
+
+            alert("✅ تم حفظ الدرس التاسع بنجاح!");
+
+        } else {
+
+            result.className = "wrong";
+
+            result.innerHTML =
+                "❌ الدرجة " +
+                score +
+                " من 5. تحتاج إلى 3 من 5 للنجاح.";
+
+            document.getElementById("retryQuiz").style.display =
+                "inline-block";
+
+            document.getElementById("nextLesson").style.display =
+                "none";
+
+            document.getElementById("backToA1").style.display =
+                "inline-block";
+        }
+    }
+
+
+    function retryQuiz() {
+
+        for (let i = 1; i <= 5; i++) {
+
+            const selected = document.querySelector(
+                'input[name="q' + i + '"]:checked'
+            );
+
+            if (selected) {
+                selected.checked = false;
+            }
+
+            const feedback =
+                document.getElementById("feedback" + i);
+
+            feedback.innerHTML = "";
+            feedback.className = "";
+        }
+
+        document.getElementById("result").innerHTML = "";
+        document.getElementById("result").className = "";
+
+        document.getElementById("retryQuiz").style.display =
+            "none";
+
+        document.getElementById("nextLesson").style.display =
+            "none";
+
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth"
+        });
+    }
+
+</script>
+
+</body>
+</html>

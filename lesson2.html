@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lektion 2 - Begrüßung & Kennenlernen | German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7ff;
+            color: #222;
+        }
+
+        header {
+            background: white;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px #ddd;
+        }
+
+        header h1 {
+            color: #6c63ff;
+            margin: 0 0 10px;
+        }
+
+        header p {
+            margin: 0;
+            color: #666;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 18px;
+            box-shadow: 0 4px 15px #ddd;
+        }
+
+        h2 {
+            color: #6c63ff;
+        }
+
+        .word {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            margin: 8px 0;
+            background: #f8f8ff;
+            border-radius: 12px;
+        }
+
+        .german {
+            direction: ltr;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .meaning {
+            color: #555;
+        }
+
+        .sound {
+            background: #6c63ff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .conversation {
+            background: #fff8df;
+            padding: 20px;
+            border-radius: 15px;
+            line-height: 2.2;
+        }
+
+        .speaker {
+            font-weight: bold;
+            color: #6c63ff;
+        }
+
+        .question {
+            background: #f8f8ff;
+            padding: 18px;
+            margin: 15px 0;
+            border-radius: 12px;
+            line-height: 2;
+        }
+
+        .quiz-button {
+            background: #6c63ff;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        #result {
+            margin-top: 20px;
+            line-height: 2;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 10px;
+            color: #6c63ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🇩🇪 Lektion 2 — Begrüßung & Kennenlernen</h1>
+    <p>German with Farida</p>
+</header>
+
+<div class="container">
+
+    <div class="box">
+        <h2>🎯 هدف الدرس</h2>
+
+        <p>بعد إنهاء الدرس سيكون المتعلم قادرًا على:</p>
+
+        <ul>
+            <li>إلقاء التحية باللغة الألمانية.</li>
+            <li>السؤال عن حال شخص آخر.</li>
+            <li>التعريف بالنفس.</li>
+            <li>السؤال عن اسم شخص آخر.</li>
+            <li>إنهاء محادثة بسيطة.</li>
+        </ul>
+    </div>
+
+
+    <div class="box">
+
+        <h2>👋 التحية — Begrüßung</h2>
+
+        <div class="word">
+            <span>
+                <span class="german">Hallo</span>
+                <br>
+                <span class="meaning">مرحبًا</span>
+            </span>
+            <button class="sound" onclick="speak('Hallo')">🔊</button>
+        </div>
+
+        <div class="word">
+            <span>
+                <span class="german">Guten Morgen</span>
+                <br>
+                <span class="meaning">صباح الخير</span>
+            </span>
+            <button class="sound" onclick="speak('Guten Morgen')">🔊</button>
+        </div>
+
+        <div class="word">
+            <span>
+                <span class="german">Guten Tag</span>
+                <br>
+                <span class="meaning">نهارك سعيد / مرحبًا</span>
+            </span>
+            <button class="sound" onclick="speak('Guten Tag')">🔊</button>
+        </div>
+
+        <div class="word">
+            <span>
+                <span class="german">Guten Abend</span>
+                <br>
+                <span class="meaning">مساء الخير</span>
+            </span>
+            <button class="sound" onclick="speak('Guten Abend')">🔊</button>
+        </div>
+
+        <div class="word">
+            <span>
+                <span class="german">Gute Nacht</span>
+                <br>
+                <span class="meaning">تصبح على خير</span>
+            </span>
+            <button class="sound" onclick="speak('Gute Nacht')">🔊</button>
+        </div>
+
+        <div class="word">
+            <span>
+                <span class="german">Tschüss</span>
+                <br>
+                <span class="meaning">وداعًا</span>
+            </span>
+            <button class="sound" onclick="speak('Tschüss')">🔊</button>
+        </div>
+
+        <div class="word">
+            <span>
+                <span class="german">Auf Wiedersehen</span>
+                <br>
+                <span class="meaning">إلى اللقاء</span>
+            </span>
+            <button class="sound" onclick="speak('Auf Wiedersehen')">🔊</button>
+        </div>
+
+    </div>
+
+
+    <div class="box">
+
+        <h2>🙂 السؤال عن الحال</h2>
+
+        <div class="word">
+            <span>
+                <span class="german">Wie geht es dir?</span>
+                <br>
+                <span class="meaning">كيف حالك؟</span>
+            </span>
+            <button class="sound" onclick="speak('Wie geht es dir?')">🔊</button>
+        </div>
+
+        <div class="word">
+            <span>
+                <span class="german">Mir geht es gut.</span>
+                <br>
+                <span class="meaning">أنا بخير.</span>
+            </span>
+            <button class="sound" onclick="speak('Mir geht es gut.')">🔊</button>
+        </div>
+
+        <div class="word">
+            <span>
+                <span class="german">Danke.</span>
+                <br>
+                <span class="meaning">شكرًا.</span>
+            </span>
+            <button class="sound" onclick="speak('Danke.')">🔊</button>
+        </div>
+
+        <div class="word">
+            <span>
+                <span class="german">Bitte.</span>
+                <br>
+                <span class="meaning">من فضلك / العفو.</span>
+            </span>
+            <button class="sound" onclick="speak('Bitte.')">🔊</button>
+        </div>
+
+    </div>
+
+
+    <div class="box">
+
+        <h2>🙋 التعارف — Kennenlernen</h2>
+
+        <div class="word">
+            <span>
+                <span class="german">Wie heißt du?</span>
+                <br>
+                <span class="meaning">ما اسمك؟</span>
+            </span>
+            <button class="sound" onclick="speak('Wie heißt du?')">🔊</button>
+        </div>
+
+        <div class="word">
+            <span>
+                <span class="german">Ich heiße Farida.</span>
+                <br>
+                <span class="meaning">اسمي فريدة.</span>
+            </span>
+            <button class="sound" onclick="speak('Ich heiße Farida.')">🔊</button>
+        </div>
+
+        <div class="word">
+            <span>
+                <span class="german">Wer bist du?</span>
+                <br>
+                <span class="meaning">من أنت؟</span>
+            </span>
+            <button class="sound" onclick="speak('Wer bist du?')">🔊</button>
+        </div>
+
+        <div class="word">
+            <span>
+                <span class="german">Ich bin ...</span>
+                <br>
+                <span class="meaning">أنا ...</span>
+            </span>
+            <button class="sound" onclick="speak('Ich bin')">🔊</button>
+        </div>
+
+    </div>
+
+
+    <div class="box">
+
+        <h2>💬 محادثة قصيرة</h2>
+
+        <div class="conversation">
+
+            <p>
+                <span class="speaker">A:</span>
+                Hallo!
+                <button class="sound" onclick="speak('Hallo')">🔊</button>
+            </p>
+
+            <p>
+                <span class="speaker">B:</span>
+                Hallo!
+                <button class="sound" onclick="speak('Hallo')">🔊</button>
+            </p>
+
+            <p>
+                <span class="speaker">A:</span>
+                Wie heißt du?
+                <button class="sound" onclick="speak('Wie heißt du?')">🔊</button>
+            </p>
+
+            <p>
+                <span class="speaker">B:</span>
+                Ich heiße Farida.
+                <button class="sound" onclick="speak('Ich heiße Farida.')">🔊</button>
+            </p>
+
+            <p>
+                <span class="speaker">A:</span>
+                Wie geht es dir?
+                <button class="sound" onclick="speak('Wie geht es dir?')">🔊</button>
+            </p>
+
+            <p>
+                <span class="speaker">B:</span>
+                Mir geht es gut, danke!
+                <button class="sound" onclick="speak('Mir geht es gut, danke!')">🔊</button>
+            </p>
+
+            <p>
+                <span class="speaker">A:</span>
+                Tschüss!
+                <button class="sound" onclick="speak('Tschüss')">🔊</button>
+            </p>
+
+            <p>
+                <span class="speaker">B:</span>
+                Tschüss!
+                <button class="sound" onclick="speak('Tschüss')">🔊</button>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="box">
+
+        <h2>🧠 تدريب</h2>
+
+        <p>
+            حاول تكوين محادثة قصيرة باستخدام الكلمات التي تعلمتها.
+        </p>
+
+        <p>
+            مثال:
+        </p>
+
+        <p class="german">Hallo! Wie heißt du?</p>
+
+        <button class="sound" onclick="speak('Hallo! Wie heißt du?')">🔊</button>
+
+        <p class="german">Ich heiße Farida.</p>
+
+        <button class="sound" onclick="speak('Ich heiße Farida.')">🔊</button>
+
+    </div>
+
+
+    <div class="box" id="quiz">
+
+        <h2>📝 اختبار الدرس الثاني</h2>
+
+        <p>اختار الإجابة الصحيحة لكل سؤال:</p>
+
+        <div class="question">
+            <strong>1. ماذا تعني كلمة Hallo؟</strong><br>
+
+            <label>
+                <input type="radio" name="q1" value="مرحبا">
+                مرحبًا
+            </label><br>
+
+            <label>
+                <input type="radio" name="q1" value="شكرًا">
+                شكرًا
+            </label><br>
+
+            <label>
+                <input type="radio" name="q1" value="وداعًا">
+                وداعًا
+            </label><br>
+
+            <label>
+                <input type="radio" name="q1" value="صباح الخير">
+                صباح الخير
+            </label>
+        </div>
+
+
+        <div class="question">
+            <strong>2. كيف تقول «ما اسمك؟» بالألمانية؟</strong><br>
+
+            <label>
+                <input type="radio" name="q2" value="Wie heißt du?">
+                Wie heißt du?
+            </label><br>
+
+            <label>
+                <input type="radio" name="q2" value="Wie geht es dir?">
+                Wie geht es dir?
+            </label><br>
+
+            <label>
+                <input type="radio" name="q2" value="Guten Morgen">
+                Guten Morgen
+            </label><br>
+
+            <label>
+                <input type="radio" name="q2" value="Tschüss">
+                Tschüss
+            </label>
+        </div>
+
+
+        <div class="question">
+            <strong>3. ماذا تعني Mir geht es gut؟</strong><br>
+
+            <label>
+                <input type="radio" name="q3" value="أنا بخير">
+                أنا بخير
+            </label><br>
+
+            <label>
+                <input type="radio" name="q3" value="ما اسمك؟">
+                ما اسمك؟
+            </label><br>
+
+            <label>
+                <input type="radio" name="q3" value="إلى اللقاء">
+                إلى اللقاء
+            </label><br>
+
+            <label>
+                <input type="radio" name="q3" value="مساء الخير">
+                مساء الخير
+            </label>
+        </div>
+
+
+        <div class="question">
+            <strong>4. ماذا تقول عندما تريد أن تقول «شكرًا»؟</strong><br>
+
+            <label>
+                <input type="radio" name="q4" value="Bitte">
+                Bitte
+            </label><br>
+
+            <label>
+                <input type="radio" name="q4" value="Danke">
+                Danke
+            </label><br>
+
+            <label>
+                <input type="radio" name="q4" value="Tschüss">
+                Tschüss
+            </label><br>
+
+            <label>
+                <input type="radio" name="q4" value="Hallo">
+                Hallo
+            </label>
+        </div>
+
+
+        <div class="question">
+            <strong>5. ماذا تعني Tschüss؟</strong><br>
+
+            <label>
+                <input type="radio" name="q5" value="مرحبًا">
+                مرحبًا
+            </label><br>
+
+            <label>
+                <input type="radio" name="q5" value="وداعًا">
+                وداعًا
+            </label><br>
+
+            <label>
+                <input type="radio" name="q5" value="شكرًا">
+                شكرًا
+            </label><br>
+
+            <label>
+                <input type="radio" name="q5" value="كيف حالك؟">
+                كيف حالك؟
+            </label>
+        </div>
+
+
+        <button class="quiz-button" onclick="checkQuiz()">
+            إرسال الاختبار
+        </button>
+
+        <div id="result"></div>
+
+    </div>
+
+
+    <a class="back" href="A1.html">
+        ⬅️ العودة إلى مستوى A1
+    </a>
+
+</div>
+
+
+<script>
+
+    function speak(text) {
+
+        const speech = new SpeechSynthesisUtterance(text);
+
+        speech.lang = "de-DE";
+
+        speech.rate = 0.85;
+
+        window.speechSynthesis.cancel();
+
+        window.speechSynthesis.speak(speech);
+    }
+
+
+    function checkQuiz() {
+
+        const correctAnswers = {
+            q1: "مرحبا",
+            q2: "Wie heißt du?",
+            q3: "أنا بخير",
+            q4: "Danke",
+            q5: "وداعًا"
+        };
+
+        let score = 0;
+        let resultHTML = "";
+
+        document.querySelectorAll('#quiz input').forEach(function(input) {
+            input.disabled = true;
+        });
+
+        for (let question in correctAnswers) {
+
+            const selected = document.querySelector(
+                'input[name="' + question + '"]:checked'
+            );
+
+            const questionNumber = question.replace("q", "");
+
+            if (selected && selected.value === correctAnswers[question]) {
+
+                score++;
+
+                resultHTML += `
+                    <p style="color: green;">
+                        ✅ السؤال ${questionNumber}: إجابة صحيحة!
+                    </p>
+                `;
+
+            } else {
+
+                resultHTML += `
+                    <p style="color: red;">
+                        ❌ السؤال ${questionNumber}: إجابة خاطئة.
+                        <br>
+                        ✅ الإجابة الصحيحة:
+                        <strong>${correctAnswers[question]}</strong>
+                    </p>
+                `;
+            }
+        }
+
+        resultHTML += `
+            <hr>
+            <h3>🎯 نتيجتك النهائية: ${score} / 5</h3>
+        `;
+
+
+        if (score >= 3) {
+
+            // حفظ إكمال الدرس الثاني
+            localStorage.setItem("lesson2Completed", "true");
+
+            // رسالة تأكيد الحفظ
+            alert("✅ تم حفظ الدرس الثاني بنجاح!");
+
+
+            resultHTML += `
+                <p style="color: green; font-weight: bold;">
+                    🎉 مبروك! لقد اجتزت الاختبار.
+                </p>
+
+                <p style="color: green; font-weight: bold;">
+                    ✅ تم حفظ الدرس الثاني.
+                </p>
+
+                <p>
+                    يمكنك الآن الانتقال إلى الدرس الثالث.
+                </p>
+
+                <a href="lesson3.html">
+                    <button class="quiz-button">
+                        ➡️ الدرس الثالث
+                    </button>
+                </a>
+            `;
+
+        } else {
+
+            resultHTML += `
+                <p style="color: red;">
+                    ❌ لم تجتز الاختبار.
+                </p>
+
+                <p>
+                    تحتاج إلى 3/5 على الأقل للنجاح.
+                </p>
+
+                <button class="quiz-button" onclick="location.reload()">
+                    🔄 إعادة الاختبار
+                </button>
+            `;
+        }
+
+        document.getElementById("result").innerHTML = resultHTML;
+    }
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 17 - Partizip I & II | German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #1f3c88;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #555;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background: #333;
+        }
+
+        .lesson-box,
+        .quiz-box,
+        .summary-box {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            margin-bottom: 22px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #1f3c88;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .example {
+            background: #eef3ff;
+            border-right: 5px solid #1f3c88;
+            padding: 12px 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        .important {
+            background: #fff4d6;
+            border-right: 5px solid #e0a000;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .tip {
+            background: #eaf7ff;
+            border-right: 5px solid #3498db;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background: #1f3c88;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f7f8fb;
+        }
+
+        .question {
+            margin-bottom: 22px;
+            padding: 15px;
+            background: #f8f9fc;
+            border-radius: 10px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 9px 0;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-left: 8px;
+        }
+
+        .submit-btn,
+        .retry-btn,
+        .next-btn {
+            border: none;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .submit-btn {
+            background: #1f3c88;
+        }
+
+        .submit-btn:hover {
+            background: #162d68;
+        }
+
+        .retry-btn {
+            background: #e67e22;
+        }
+
+        .retry-btn:hover {
+            background: #c9630d;
+        }
+
+        .next-btn {
+            background: #27ae60;
+        }
+
+        .next-btn:hover {
+            background: #1f8a4c;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .success {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .fail {
+            background: #fff0f0;
+            border-right: 5px solid #e74c3c;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .wrong-answer {
+            background: #fff7e6;
+            border-right: 5px solid #f39c12;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .completed {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        #nextContainer {
+            margin-top: 15px;
+        }
+
+        .de-note {
+            direction: ltr;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .formula {
+            direction: ltr;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            background: #f1f3f6;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .lesson-box,
+            .quiz-box,
+            .summary-box {
+                padding: 16px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            .formula {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 Lesson 17 – Partizip I & II als Adjektive</h1>
+        <p>German with Farida | مستوى B1</p>
+    </header>
+
+    <div class="container">
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+        <div id="completedBox"></div>
+
+        <div class="lesson-box">
+
+            <h2>📚 Partizip I & II als Adjektive</h2>
+
+            <p>
+                في الدرس ده هنتعلم إزاي نستخدم
+                <strong>Partizip I</strong> و<strong>Partizip II</strong>
+                كصفات لوصف الأشخاص أو الأشياء.
+            </p>
+
+            <div class="important">
+                ⭐ يعني بدل ما نستخدم الفعل فقط، ممكن نحوله إلى شكل يستخدم كصفة.
+            </div>
+
+            <h3>🔹 أولًا: Partizip I</h3>
+
+            <p>
+                <strong>Partizip I</strong> غالبًا يدل على شيء يحدث الآن
+                أو على شخص أو شيء يقوم بالفعل.
+            </p>
+
+            <div class="formula">
+                Infinitiv + d
+            </div>
+
+            <p>
+                يعني بنأخذ الفعل في المصدر ونضيف له حرف
+                <strong>d</strong>.
+            </p>
+
+            <h3>📝 أمثلة</h3>
+
+            <table>
+                <tr>
+                    <th>الفعل</th>
+                    <th>Partizip I</th>
+                    <th>المعنى</th>
+                </tr>
+
+                <tr>
+                    <td>lachen</td>
+                    <td>lachend</td>
+                    <td>ضاحك</td>
+                </tr>
+
+                <tr>
+                    <td>schlafen</td>
+                    <td>schlafend</td>
+                    <td>نائم</td>
+                </tr>
+
+                <tr>
+                    <td>arbeiten</td>
+                    <td>arbeitend</td>
+                    <td>يعمل / عامل</td>
+                </tr>
+
+                <tr>
+                    <td>sprechen</td>
+                    <td>sprechend</td>
+                    <td>متحدث</td>
+                </tr>
+
+                <tr>
+                    <td>laufen</td>
+                    <td>laufend</td>
+                    <td>يمشي / جارٍ</td>
+                </tr>
+            </table>
+
+            <div class="example">
+                <div class="de-note">
+                    Das lachende Kind ist glücklich.
+                </div>
+                <div>الطفل الضاحك سعيد.</div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Ich sehe einen schlafenden Mann.
+                </div>
+                <div>أرى رجلًا نائمًا.</div>
+            </div>
+
+            <div class="important">
+                💡 عندما يأتي Partizip I قبل الاسم ويُستخدم كصفة،
+                فإنه يأخذ <strong>نهاية الصفة</strong> حسب الأداة والحالة.
+            </div>
+
+            <h3>🔹 Partizip I = فعل يحدث</h3>
+
+            <div class="example">
+                <div class="de-note">
+                    das spielende Kind
+                </div>
+                <div>الطفل الذي يلعب / الطفل اللاعب</div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    die singende Frau
+                </div>
+                <div>المرأة التي تغني</div>
+            </div>
+
+            <h3>🔹 ثانيًا: Partizip II</h3>
+
+            <p>
+                <strong>Partizip II</strong> هو الشكل الذي اتعلمناه قبل كده
+                مع <strong>Perfekt</strong> و<strong>Plusquamperfekt</strong>
+                و<strong>Passiv</strong>.
+            </p>
+
+            <p>
+                ويمكن استخدامه أيضًا كصفة لوصف شيء حدث أو تم.
+            </p>
+
+            <h3>📝 أمثلة</h3>
+
+            <table>
+                <tr>
+                    <th>Infinitiv</th>
+                    <th>Partizip II</th>
+                    <th>المعنى</th>
+                </tr>
+
+                <tr>
+                    <td>öffnen</td>
+                    <td>geöffnet</td>
+                    <td>مفتوح</td>
+                </tr>
+
+                <tr>
+                    <td>schließen</td>
+                    <td>geschlossen</td>
+                    <td>مغلق</td>
+                </tr>
+
+                <tr>
+                    <td>schreiben</td>
+                    <td>geschrieben</td>
+                    <td>مكتوب</td>
+                </tr>
+
+                <tr>
+                    <td>bauen</td>
+                    <td>gebaut</td>
+                    <td>مبني</td>
+                </tr>
+
+                <tr>
+                    <td>verletzen</td>
+                    <td>verletzt</td>
+                    <td>مصاب / متأذٍ</td>
+                </tr>
+            </table>
+
+            <div class="example">
+                <div class="de-note">
+                    Die Tür ist geöffnet.
+                </div>
+                <div>الباب مفتوح.</div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Das geschlossene Fenster ist sauber.
+                </div>
+                <div>النافذة المغلقة نظيفة.</div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Das geschriebene Buch liegt auf dem Tisch.
+                </div>
+                <div>الكتاب المكتوب موجود على الطاولة.</div>
+            </div>
+
+            <h3>🔹 الفرق بين Partizip I و Partizip II</h3>
+
+            <table>
+                <tr>
+                    <th>Partizip</th>
+                    <th>الفكرة</th>
+                    <th>مثال</th>
+                </tr>
+
+                <tr>
+                    <td>Partizip I</td>
+                    <td>الفعل يحدث / الشخص يقوم بالفعل</td>
+                    <td>das spielende Kind</td>
+                </tr>
+
+                <tr>
+                    <td>Partizip II</td>
+                    <td>الفعل حدث أو تم</td>
+                    <td>das geschlossene Fenster</td>
+                </tr>
+            </table>
+
+            <div class="example">
+                <div class="de-note">
+                    der schwimmende Junge
+                </div>
+                <div>الولد الذي يسبح</div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    der geschlossene Laden
+                </div>
+                <div>المحل المغلق</div>
+            </div>
+
+            <h3>🔹 Partizip I مع نهاية الصفة</h3>
+
+            <p>
+                لو Partizip I جاء قبل الاسم، لازم نضيف نهاية الصفة المناسبة.
+            </p>
+
+            <div class="example">
+                <div class="de-note">
+                    ein spielendes Kind
+                </div>
+                <div>طفل يلعب</div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    ein laufender Mann
+                </div>
+                <div>رجل يجري</div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    eine singende Frau
+                </div>
+                <div>امرأة تغني</div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    die arbeitenden Menschen
+                </div>
+                <div>الأشخاص الذين يعملون</div>
+            </div>
+
+            <h3>🔹 Partizip II مع نهاية الصفة</h3>
+
+            <div class="example">
+                <div class="de-note">
+                    ein geöffnetes Fenster
+                </div>
+                <div>نافذة مفتوحة</div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    eine geschlossene Tür
+                </div>
+                <div>باب مغلق</div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    die gekauften Bücher
+                </div>
+                <div>الكتب التي تم شراؤها</div>
+            </div>
+
+            <div class="tip">
+                💡 تقدر تفكر فيها كده:
+                <br><br>
+                <strong>Partizip I:</strong>
+                الشخص أو الشيء <strong>بيعمل</strong> الفعل.
+                <br>
+                <strong>Partizip II:</strong>
+                الفعل <strong>تم أو حدث</strong>.
+            </div>
+
+            <h3>🔹 أمثلة للمقارنة</h3>
+
+            <div class="example">
+                <div class="de-note">
+                    das brennende Licht
+                </div>
+                <div>المصباح المضيء / الذي يضيء.</div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    die geöffnete Tür
+                </div>
+                <div>الباب المفتوح.</div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    die wartenden Menschen
+                </div>
+                <div>الأشخاص المنتظرون.</div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    die gekauften Sachen
+                </div>
+                <div>الأشياء التي تم شراؤها.</div>
+            </div>
+
+        </div>
+
+        <div class="summary-box">
+
+            <h2>📌 ملخص الدرس</h2>
+
+            <table>
+                <tr>
+                    <th>النوع</th>
+                    <th>القاعدة</th>
+                    <th>مثال</th>
+                </tr>
+
+                <tr>
+                    <td>Partizip I</td>
+                    <td>Infinitiv + d</td>
+                    <td>lachend</td>
+                </tr>
+
+                <tr>
+                    <td>Partizip II</td>
+                    <td>شكل الماضي الثالث</td>
+                    <td>gelacht</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                🧠 احفظ:
+                <br><br>
+                <strong>Partizip I → الفعل بيحصل / الشخص بيعمل الفعل</strong>
+                <br>
+                <strong>Partizip II → الفعل حصل أو تم</strong>
+            </div>
+
+            <p>
+                ⭐ ولو استخدمت Partizip كصفة قبل اسم،
+                لازم تهتم بـ <strong>نهاية الصفة</strong>.
+            </p>
+
+        </div>
+
+        <div class="quiz-box" id="quiz">
+
+            <h2>📝 اختبار Lesson 17</h2>
+
+            <p>
+                لازم تجيب <strong>3 من 5</strong> على الأقل عشان تنجح وتفتح Lesson 18.
+            </p>
+
+            <div class="question">
+
+                <p>1️⃣ كيف نكوّن Partizip I؟</p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    Infinitiv + d
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    ge + Infinitiv + t
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    Infinitiv + en
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>2️⃣ ما هو Partizip I من الفعل <strong>lachen</strong>؟</p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    gelacht
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    lachend
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    gelachen
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>3️⃣ اختر الجملة الصحيحة:</p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    Das geschlossene Fenster ist sauber.
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    Das schließend Fenster ist sauber.
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    Das geschlossen Fenster ist sauber.
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>4️⃣ أي جملة تستخدم Partizip I بشكل صحيح؟</p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    Das spielende Kind ist glücklich.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    Das gespielt Kind ist glücklich.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    Das spielen Kind ist glücklich.
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>5️⃣ ما الفرق الأساسي بين Partizip I و Partizip II؟</p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    Partizip I يدل غالبًا على فعل يحدث، وPartizip II على فعل حدث أو تم.
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    الاتنين نفس الاستخدام تمامًا.
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    Partizip II يستخدم فقط مع المستقبل.
+                </label>
+
+            </div>
+
+            <button class="submit-btn" id="submitBtn" onclick="checkQuiz()">
+                ✅ تصحيح الاختبار
+            </button>
+
+            <div id="result"></div>
+
+            <div id="nextContainer"></div>
+
+        </div>
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+    </div>
+
+    <script>
+
+        const answers = {
+            q1: "a",
+            q2: "b",
+            q3: "a",
+            q4: "a",
+            q5: "a"
+        };
+
+        const correctText = {
+            q1: "Infinitiv + d",
+            q2: "lachend",
+            q3: "Das geschlossene Fenster ist sauber.",
+            q4: "Das spielende Kind ist glücklich.",
+            q5: "Partizip I يدل غالبًا على فعل يحدث، وPartizip II على فعل حدث أو تم."
+        };
+
+        function checkQuiz() {
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            if (submitBtn.disabled) {
+                return;
+            }
+
+            let score = 0;
+            let wrongAnswers = [];
+
+            for (let i = 1; i <= 5; i++) {
+
+                const selected = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                if (selected && selected.value === answers["q" + i]) {
+                    score++;
+                } else {
+                    wrongAnswers.push(i);
+                }
+            }
+
+            const result = document.getElementById("result");
+            const nextContainer = document.getElementById("nextContainer");
+
+            submitBtn.disabled = true;
+
+            let html = "";
+
+            if (score >= 3) {
+
+                localStorage.setItem("b1Lesson17Completed", "true");
+
+                html += `
+                    <div class="success">
+                        🎉 <strong>أحسنت! نجحت في Lesson 17.</strong>
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        💾 تم حفظ تقدمك بنجاح!
+                        <br><br>
+                        ✅ Lesson 17 مكتمل!
+                        <br>
+                        🔓 تم فتح Lesson 18.
+                    </div>
+                `;
+
+                if (score < 5 && wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function (q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+
+                nextContainer.innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson18-B1.html'">
+                        ➡️ الانتقال إلى Lesson 18
+                    </button>
+                `;
+
+            } else {
+
+                html += `
+                    <div class="fail">
+                        ❌ لم تنجح في الاختبار هذه المرة.
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        لازم تجيب 3 من 5 على الأقل.
+                    </div>
+                `;
+
+                if (wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function (q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+            }
+
+            html += `
+                <button class="retry-btn" onclick="retryQuiz()">
+                    🔄 إعادة الاختبار
+                </button>
+            `;
+
+            result.innerHTML = html;
+        }
+
+        function retryQuiz() {
+
+            const radios = document.querySelectorAll(
+                'input[type="radio"]'
+            );
+
+            radios.forEach(function (radio) {
+                radio.checked = false;
+                radio.disabled = false;
+            });
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            submitBtn.disabled = false;
+
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("nextContainer").innerHTML = "";
+
+            document.getElementById("quiz").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        function checkCompleted() {
+
+            if (localStorage.getItem("b1Lesson17Completed") === "true") {
+
+                document.getElementById("completedBox").innerHTML = `
+                    <div class="completed">
+                        ✅ Lesson 17 مكتمل بالفعل!
+                        <br><br>
+                        💾 تقدمك محفوظ.
+                        <br><br>
+                        🔓 Lesson 18 مفتوح.
+                        <br><br>
+                        يمكنك مراجعة الدرس والاختبار مرة أخرى.
+                    </div>
+                `;
+
+                document.getElementById("nextContainer").innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson18-B1.html'">
+                        ➡️ الانتقال إلى Lesson 18
+                    </button>
+                `;
+            }
+        }
+
+        checkCompleted();
+
+    </script>
+
+</body>
+
+</html>

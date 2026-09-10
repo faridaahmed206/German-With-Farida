@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الدرس الرابع عشر - mein / dein / sein / ihr</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        header {
+            background: #1f4e79;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1f4e79;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .german {
+            font-size: 21px;
+            font-weight: bold;
+            color: #1f4e79;
+        }
+
+        .pronunciation {
+            color: #777;
+            margin: 5px 0;
+        }
+
+        .meaning {
+            color: #444;
+        }
+
+        .note {
+            background: #eef6ff;
+            padding: 15px;
+            border-right: 5px solid #1f4e79;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #eaf2f8;
+        }
+
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            background: #fafafa;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .question label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 12px;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        button {
+            background: #1f4e79;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 8px 5px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .feedback {
+            margin-top: 8px;
+            padding: 10px;
+            border-radius: 7px;
+        }
+
+        .correct {
+            background: #e8f7e8;
+            color: #176b17;
+        }
+
+        .wrong {
+            background: #ffeaea;
+            color: #a00000;
+        }
+
+        #nextLesson,
+        #backToA1,
+        #retryQuiz {
+            display: none;
+        }
+
+        .dialogue {
+            background: #f8f8f8;
+            padding: 18px;
+            border-radius: 10px;
+            line-height: 2;
+        }
+
+        .word {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>🇩🇪 الدرس الرابع عشر</h1>
+
+    <p>mein / dein / sein / ihr</p>
+
+    <p>الملكية في اللغة الألمانية</p>
+
+</header>
+
+
+<div class="container">
+
+
+    <!-- الأهداف -->
+
+    <div class="section">
+
+        <h2>🎯 أهداف الدرس</h2>
+
+        <ul>
+
+            <li>فهم معنى mein / dein / sein / ihr.</li>
+
+            <li>قول: كتابي، كتابك، كتابه، كتابها.</li>
+
+            <li>التفرقة بين الملكية مع المذكر والمؤنث والمحايد.</li>
+
+            <li>استخدام كلمات الملكية في جمل بسيطة.</li>
+
+            <li>السؤال عن صاحب الشيء باستخدام Wem gehört...?</li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- كلمات الملكية -->
+
+    <div class="section">
+
+        <h2>📌 1. يعني إيه كلمات الملكية؟</h2>
+
+        <p>
+            كلمات الملكية بتوضح مين صاحب الشيء.
+        </p>
+
+        <p class="german">mein Buch</p>
+        <p class="meaning">= كتابي</p>
+
+        <p class="german">dein Buch</p>
+        <p class="meaning">= كتابك</p>
+
+        <p class="german">sein Buch</p>
+        <p class="meaning">= كتابه</p>
+
+        <p class="german">ihr Buch</p>
+        <p class="meaning">= كتابها</p>
+
+    </div>
+
+
+    <!-- أهم كلمات الملكية -->
+
+    <div class="section">
+
+        <h2>📚 2. أهم كلمات الملكية</h2>
+
+        <table>
+
+            <tr>
+                <th>الألماني</th>
+                <th>المعنى</th>
+            </tr>
+
+            <tr>
+                <td><b>mein</b></td>
+                <td>ـي / بتاعي</td>
+            </tr>
+
+            <tr>
+                <td><b>dein</b></td>
+                <td>ـك / بتاعك</td>
+            </tr>
+
+            <tr>
+                <td><b>sein</b></td>
+                <td>ـه / بتاعه</td>
+            </tr>
+
+            <tr>
+                <td><b>ihr</b></td>
+                <td>ـها / بتاعها</td>
+            </tr>
+
+        </table>
+
+
+        <p class="german">mein Bruder</p>
+        <p class="meaning">= أخي</p>
+
+        <p class="german">dein Bruder</p>
+        <p class="meaning">= أخوك</p>
+
+        <p class="german">sein Bruder</p>
+        <p class="meaning">= أخوه</p>
+
+        <p class="german">ihr Bruder</p>
+        <p class="meaning">= أخوها</p>
+
+    </div>
+
+
+    <!-- المذكر والمحايد -->
+
+    <div class="section">
+
+        <h2>🧠 3. مع المذكر والمحايد</h2>
+
+        <p>
+            مع الاسم المذكر والمحايد نستخدم:
+        </p>
+
+        <div class="note">
+
+            <b>mein / dein / sein / ihr</b>
+
+        </div>
+
+
+        <p class="german">mein Vater</p>
+        <p class="meaning">= أبي</p>
+
+        <p class="german">dein Vater</p>
+        <p class="meaning">= أبوك</p>
+
+        <p class="german">sein Vater</p>
+        <p class="meaning">= أبوه</p>
+
+        <p class="german">ihr Vater</p>
+        <p class="meaning">= أبوها</p>
+
+
+        <p class="german">mein Buch</p>
+        <p class="meaning">= كتابي</p>
+
+        <p class="german">dein Buch</p>
+        <p class="meaning">= كتابك</p>
+
+        <p class="german">sein Buch</p>
+        <p class="meaning">= كتابه</p>
+
+        <p class="german">ihr Buch</p>
+        <p class="meaning">= كتابها</p>
+
+    </div>
+
+
+    <!-- المؤنث -->
+
+    <div class="section">
+
+        <h2>👩 4. مع المؤنث</h2>
+
+        <p>
+            مع الاسم المؤنث نضيف حرف <b>e</b>:
+        </p>
+
+        <div class="note">
+
+            <b>meine / deine / seine / ihre</b>
+
+        </div>
+
+
+        <p class="german">meine Mutter</p>
+        <p class="meaning">= أمي</p>
+
+        <p class="german">deine Mutter</p>
+        <p class="meaning">= أمك</p>
+
+        <p class="german">seine Mutter</p>
+        <p class="meaning">= أمه</p>
+
+        <p class="german">ihre Mutter</p>
+        <p class="meaning">= أمها</p>
+
+
+        <p class="german">meine Tasche</p>
+        <p class="meaning">= حقيبتي</p>
+
+        <p class="german">deine Tasche</p>
+        <p class="meaning">= حقيبتك</p>
+
+        <p class="german">seine Tasche</p>
+        <p class="meaning">= حقيبته</p>
+
+        <p class="german">ihre Tasche</p>
+        <p class="meaning">= حقيبتها</p>
+
+    </div>
+
+
+    <!-- الجدول -->
+
+    <div class="section">
+
+        <h2>📊 5. جدول سريع</h2>
+
+        <table>
+
+            <tr>
+                <th></th>
+                <th>مذكر / محايد</th>
+                <th>مؤنث</th>
+            </tr>
+
+            <tr>
+                <td>أنا</td>
+                <td><b>mein</b></td>
+                <td><b>meine</b></td>
+            </tr>
+
+            <tr>
+                <td>أنت</td>
+                <td><b>dein</b></td>
+                <td><b>deine</b></td>
+            </tr>
+
+            <tr>
+                <td>هو</td>
+                <td><b>sein</b></td>
+                <td><b>seine</b></td>
+            </tr>
+
+            <tr>
+                <td>هي</td>
+                <td><b>ihr</b></td>
+                <td><b>ihre</b></td>
+            </tr>
+
+        </table>
+
+
+        <div class="note">
+
+            ⭐ ركز:
+
+            <br><br>
+
+            <b>mein Bruder</b>
+
+            <br>
+
+            لكن:
+
+            <br>
+
+            <b>meine Schwester</b>
+
+            <br><br>
+
+            لأن Bruder = der
+
+            <br>
+
+            و Schwester = die
+
+        </div>
+
+    </div>
+
+
+    <!-- أمثلة -->
+
+    <div class="section">
+
+        <h2>✏️ 6. أمثلة مهمة</h2>
+
+        <p class="german">Das ist mein Vater.</p>
+        <p class="meaning">= هذا أبي.</p>
+
+        <p class="german">Das ist meine Mutter.</p>
+        <p class="meaning">= هذه أمي.</p>
+
+        <p class="german">Das ist dein Buch.</p>
+        <p class="meaning">= هذا كتابك.</p>
+
+        <p class="german">Das ist deine Tasche.</p>
+        <p class="meaning">= هذه حقيبتك.</p>
+
+        <p class="german">Das ist sein Bruder.</p>
+        <p class="meaning">= هذا أخوه.</p>
+
+        <p class="german">Das ist seine Schwester.</p>
+        <p class="meaning">= هذه أخته.</p>
+
+        <p class="german">Das ist ihr Handy.</p>
+        <p class="meaning">= هذا هاتفها.</p>
+
+        <p class="german">Das ist ihre Uhr.</p>
+        <p class="meaning">= هذه ساعتُها.</p>
+
+    </div>
+
+
+    <!-- Wem gehört -->
+
+    <div class="section">
+
+        <h2>❓ 7. Wem gehört...?</h2>
+
+        <p class="german">Wem gehört das Buch?</p>
+
+        <p class="pronunciation">
+            فيم جيهورت داس بوخ؟
+        </p>
+
+        <p class="meaning">
+            = الكتاب ده بتاع مين؟
+        </p>
+
+
+        <div class="note">
+
+            <b>Das ist mein Buch.</b>
+
+            <br>
+
+            = ده كتابي.
+
+            <br><br>
+
+            أو:
+
+            <br><br>
+
+            <b>Das ist dein Buch.</b>
+
+            <br>
+
+            = ده كتابك.
+
+        </div>
+
+    </div>
+
+
+    <!-- كلمات جديدة -->
+
+    <div class="section">
+
+        <h2>🆕 3 كلمات جديدة</h2>
+
+        <div class="word">
+
+            <b>gehören</b>
+
+            <br>
+
+            النطق: جيهِـورن
+
+            <br>
+
+            المعنى: يخص / يكون ملكًا لـ
+
+        </div>
+
+
+        <div class="word">
+
+            <b>wem</b>
+
+            <br>
+
+            النطق: فيم
+
+            <br>
+
+            المعنى: لمن؟ / بتاع مين؟
+
+        </div>
+
+
+        <div class="word">
+
+            <b>Besitzer</b>
+
+            <br>
+
+            النطق: بِزيتسَر
+
+            <br>
+
+            المعنى: المالك / صاحب الشيء
+
+        </div>
+
+    </div>
+
+
+    <!-- التدريب -->
+
+    <div class="section">
+
+        <h2>📝 التدريب</h2>
+
+
+        <div class="question">
+
+            <p>
+                <b>1. Das ist ___ Bruder.</b>
+                <br>
+                "هذا أخي."
+            </p>
+
+            <label>
+                <input type="radio" name="training1" value="a">
+                a) meine
+            </label>
+
+            <label>
+                <input type="radio" name="training1" value="b">
+                b) mein
+            </label>
+
+            <label>
+                <input type="radio" name="training1" value="c">
+                c) ihr
+            </label>
+
+        </div>
+
+
+        <div class="question">
+
+            <p>
+                <b>2. Das ist ___ Tasche.</b>
+                <br>
+                "هذه حقيبتها."
+            </p>
+
+            <label>
+                <input type="radio" name="training2" value="a">
+                a) ihr
+            </label>
+
+            <label>
+                <input type="radio" name="training2" value="b">
+                b) ihre
+            </label>
+
+            <label>
+                <input type="radio" name="training2" value="c">
+                c) sein
+            </label>
+
+        </div>
+
+
+        <div class="question">
+
+            <p>
+                <b>3. اكتب بالألماني: هذا كتابك.</b>
+            </p>
+
+            <input
+                type="text"
+                id="training3"
+                placeholder="اكتب الإجابة هنا"
+            >
+
+        </div>
+
+
+        <button onclick="checkTraining()">
+            تصحيح التدريب
+        </button>
+
+
+        <div id="trainingResult"></div>
+
+    </div>
+
+
+    <!-- المحادثة -->
+
+    <div class="section">
+
+        <h2>🗣️ محادثة قصيرة</h2>
+
+        <div class="dialogue">
+
+            <b>A:</b> Wem gehört das Buch?
+
+            <br>
+            الكتاب ده بتاع مين؟
+
+            <br><br>
+
+            <b>B:</b> Das ist mein Buch.
+
+            <br>
+            ده كتابي.
+
+            <br><br>
+
+            <b>A:</b> Und wem gehört die Tasche?
+
+            <br>
+            والحقيبة دي بتاعة مين؟
+
+            <br><br>
+
+            <b>B:</b> Das ist ihre Tasche.
+
+            <br>
+            دي حقيبتها.
+
+            <br><br>
+
+            <b>A:</b> Ist das dein Handy?
+
+            <br>
+            هل ده هاتفك؟
+
+            <br><br>
+
+            <b>B:</b> Ja, das ist mein Handy.
+
+            <br>
+            أيوه، ده هاتفي.
+
+        </div>
+
+    </div>
+
+
+    <!-- الاختبار -->
+
+    <div class="section">
+
+        <h2>🧪 اختبار الدرس 14</h2>
+
+        <p>
+            درجة النجاح: <b>3 من 5</b> ✅
+        </p>
+
+
+        <!-- السؤال 1 -->
+
+        <div class="question">
+
+            <p>
+                <b>1. "أخي" بالألماني:</b>
+            </p>
+
+            <label>
+                <input type="radio" name="q1" value="a">
+                a) meine Bruder
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="b">
+                b) mein Bruder
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="c">
+                c) dein Bruder
+            </label>
+
+            <div id="feedback1"></div>
+
+        </div>
+
+
+        <!-- السؤال 2 -->
+
+        <div class="question">
+
+            <p>
+                <b>2. "أمها" بالألماني:</b>
+            </p>
+
+            <label>
+                <input type="radio" name="q2" value="a">
+                a) ihr Mutter
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="b">
+                b) ihre Mutter
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="c">
+                c) seine Mutter
+            </label>
+
+            <div id="feedback2"></div>
+
+        </div>
+
+
+        <!-- السؤال 3 -->
+
+        <div class="question">
+
+            <p>
+                <b>3. Das ist ___ Buch.</b>
+                <br>
+                "هذا كتابه."
+            </p>
+
+            <label>
+                <input type="radio" name="q3" value="a">
+                a) sein
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="b">
+                b) seine
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="c">
+                c) ihr
+            </label>
+
+            <div id="feedback3"></div>
+
+        </div>
+
+
+        <!-- السؤال 4 -->
+
+        <div class="question">
+
+            <p>
+                <b>4. Das ist ___ Tasche.</b>
+                <br>
+                "هذه حقيبتي."
+            </p>
+
+            <label>
+                <input type="radio" name="q4" value="a">
+                a) mein
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="b">
+                b) meine
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="c">
+                c) dein
+            </label>
+
+            <div id="feedback4"></div>
+
+        </div>
+
+
+        <!-- السؤال 5 -->
+
+        <div class="question">
+
+            <p>
+                <b>5. ماذا تعني Wem gehört das Buch?</b>
+            </p>
+
+            <label>
+                <input type="radio" name="q5" value="a">
+                a) أين الكتاب؟
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="b">
+                b) من يقرأ الكتاب؟
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="c">
+                c) الكتاب بتاع مين؟
+            </label>
+
+            <div id="feedback5"></div>
+
+        </div>
+
+
+        <button onclick="checkQuiz()">
+            تصحيح الاختبار
+        </button>
+
+
+        <button id="retryQuiz" onclick="retryQuiz()">
+            🔄 إعادة الاختبار
+        </button>
+
+
+        <div id="quizResult"></div>
+
+
+        <button
+            id="nextLesson"
+            onclick="window.location.href='lesson15.html'"
+        >
+            ➡️ الدرس الخامس عشر
+        </button>
+
+
+        <button
+            id="backToA1"
+            onclick="window.location.href='A1.html'"
+        >
+            🔙 الرجوع إلى مستوى A1
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+
+    // =========================
+    // تصحيح التدريب
+    // =========================
+
+    function checkTraining() {
+
+        let score = 0;
+
+        const answer1 =
+            document.querySelector(
+                'input[name="training1"]:checked'
+            );
+
+        const answer2 =
+            document.querySelector(
+                'input[name="training2"]:checked'
+            );
+
+        const answer3 =
+            document
+                .getElementById("training3")
+                .value
+                .trim()
+                .toLowerCase();
+
+
+        if (answer1 && answer1.value === "b") {
+            score++;
+        }
+
+
+        if (answer2 && answer2.value === "b") {
+            score++;
+        }
+
+
+        if (
+            answer3 === "das ist dein buch." ||
+            answer3 === "das ist dein buch"
+        ) {
+            score++;
+        }
+
+
+        const result =
+            document.getElementById("trainingResult");
+
+
+        if (score === 3) {
+
+            result.className = "result correct";
+
+            result.innerHTML =
+                "✅ ممتاز! كل إجابات التدريب صحيحة.";
+
+        } else {
+
+            result.className = "result wrong";
+
+            result.innerHTML =
+                "❌ عندك " +
+                score +
+                " من 3 صحيحة. راجع الإجابات وحاول مرة تانية.";
+
+        }
+
+    }
+
+
+
+    // =========================
+    // إجابات الاختبار
+    // =========================
+
+    const correctAnswers = {
+
+        q1: "b",
+
+        q2: "b",
+
+        q3: "a",
+
+        q4: "b",
+
+        q5: "c"
+
+    };
+
+
+    const correctText = {
+
+        q1: "b) mein Bruder",
+
+        q2: "b) ihre Mutter",
+
+        q3: "a) sein",
+
+        q4: "b) meine",
+
+        q5: "c) الكتاب بتاع مين؟"
+
+    };
+
+
+
+    // =========================
+    // تصحيح الاختبار
+    // =========================
+
+    function checkQuiz() {
+
+        let score = 0;
+
+
+        for (let i = 1; i <= 5; i++) {
+
+            const answer =
+                document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+
+            const feedback =
+                document.getElementById(
+                    "feedback" + i
+                );
+
+
+            if (!answer) {
+
+                feedback.className =
+                    "feedback wrong";
+
+                feedback.innerHTML =
+                    "⚠️ لم يتم اختيار إجابة. الإجابة الصحيحة: " +
+                    correctText["q" + i];
+
+            }
+
+            else if (
+                answer.value ===
+                correctAnswers["q" + i]
+            ) {
+
+                score++;
+
+                feedback.className =
+                    "feedback correct";
+
+                feedback.innerHTML =
+                    "✅ إجابة صحيحة!";
+
+            }
+
+            else {
+
+                feedback.className =
+                    "feedback wrong";
+
+                feedback.innerHTML =
+                    "❌ إجابة خاطئة — الإجابة الصحيحة: " +
+                    correctText["q" + i];
+
+            }
+
+        }
+
+
+        const result =
+            document.getElementById("quizResult");
+
+
+        // النجاح
+
+        if (score >= 3) {
+
+            result.className =
+                "result correct";
+
+            result.innerHTML =
+                "🎉 ممتاز! نجحت في الدرس 14 بدرجة " +
+                score +
+                " من 5.";
+
+
+            // حفظ الدرس
+
+            localStorage.setItem(
+                "lesson14Completed",
+                "true"
+            );
+
+
+            // إظهار الأزرار
+
+            document.getElementById(
+                "nextLesson"
+            ).style.display =
+                "inline-block";
+
+
+            document.getElementById(
+                "backToA1"
+            ).style.display =
+                "inline-block";
+
+
+            document.getElementById(
+                "retryQuiz"
+            ).style.display =
+                "none";
+
+
+            alert(
+                "✅ تم حفظ الدرس الرابع عشر بنجاح!"
+            );
+
+        }
+
+        // الرسوب
+
+        else {
+
+            result.className =
+                "result wrong";
+
+            result.innerHTML =
+                "❌ درجتك " +
+                score +
+                " من 5. تحتاج إلى 3 على الأقل للنجاح.";
+
+
+            document.getElementById(
+                "retryQuiz"
+            ).style.display =
+                "inline-block";
+
+
+            document.getElementById(
+                "nextLesson"
+            ).style.display =
+                "none";
+
+
+            document.getElementById(
+                "backToA1"
+            ).style.display =
+                "inline-block";
+
+        }
+
+    }
+
+
+
+    // =========================
+    // إعادة الاختبار
+    // =========================
+
+    function retryQuiz() {
+
+        for (let i = 1; i <= 5; i++) {
+
+            const answers =
+                document.querySelectorAll(
+                    'input[name="q' + i + '"]'
+                );
+
+
+            answers.forEach(
+                function(answer) {
+
+                    answer.checked = false;
+
+                }
+            );
+
+
+            document.getElementById(
+                "feedback" + i
+            ).innerHTML = "";
+
+
+            document.getElementById(
+                "feedback" + i
+            ).className = "";
+
+        }
+
+
+        document.getElementById(
+            "quizResult"
+        ).innerHTML = "";
+
+
+        document.getElementById(
+            "quizResult"
+        ).className = "";
+
+
+        document.getElementById(
+            "retryQuiz"
+        ).style.display = "none";
+
+
+        document.getElementById(
+            "nextLesson"
+        ).style.display = "none";
+
+    }
+
+</script>
+
+</body>
+
+</html>

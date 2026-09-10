@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 16 - Relativsätze B1 | German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #1f3c88;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #555;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background: #333;
+        }
+
+        .lesson-box,
+        .quiz-box,
+        .summary-box {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            margin-bottom: 22px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #1f3c88;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .example {
+            background: #eef3ff;
+            border-right: 5px solid #1f3c88;
+            padding: 12px 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        .important {
+            background: #fff4d6;
+            border-right: 5px solid #e0a000;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background: #1f3c88;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f7f8fb;
+        }
+
+        .question {
+            margin-bottom: 22px;
+            padding: 15px;
+            background: #f8f9fc;
+            border-radius: 10px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 9px 0;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-left: 8px;
+        }
+
+        .submit-btn,
+        .retry-btn,
+        .next-btn {
+            border: none;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .submit-btn {
+            background: #1f3c88;
+        }
+
+        .submit-btn:hover {
+            background: #162d68;
+        }
+
+        .retry-btn {
+            background: #e67e22;
+        }
+
+        .retry-btn:hover {
+            background: #c9630d;
+        }
+
+        .next-btn {
+            background: #27ae60;
+        }
+
+        .next-btn:hover {
+            background: #1f8a4c;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .success {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .fail {
+            background: #fff0f0;
+            border-right: 5px solid #e74c3c;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .wrong-answer {
+            background: #fff7e6;
+            border-right: 5px solid #f39c12;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .completed {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        #nextContainer {
+            margin-top: 15px;
+        }
+
+        .de {
+            direction: ltr;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .lesson-box,
+            .quiz-box,
+            .summary-box {
+                padding: 16px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 Lesson 16 – Relativsätze B1</h1>
+        <p>German with Farida | مستوى B1</p>
+    </header>
+
+    <div class="container">
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+        <div id="completedBox"></div>
+
+        <div class="lesson-box">
+
+            <h2>📚 Relativsätze – الجمل الموصولة</h2>
+
+            <p>
+                في A2 اتعلمنا الجمل الموصولة بشكل أساسي.
+                في B1 هنوسع الموضوع ونتعلم استخدامها مع حالات مختلفة:
+                <strong>Nominativ – Akkusativ – Dativ – Genitiv</strong>.
+            </p>
+
+            <div class="important">
+                ⭐ الجملة الموصولة بتضيف معلومات عن اسم موجود في الجملة الأساسية.
+            </div>
+
+            <h3>🔹 مثال بسيط</h3>
+
+            <div class="example">
+                <div class="de">
+                    Das ist der Mann, der in Berlin wohnt.
+                </div>
+                <div>هذا هو الرجل الذي يعيش في برلين.</div>
+            </div>
+
+            <p>
+                كلمة <strong>der</strong> هنا بتربط الجملتين، وبتشير إلى
+                <strong>der Mann</strong>.
+            </p>
+
+            <h3>🔹 ترتيب الجملة</h3>
+
+            <p>
+                أهم قاعدة:
+                <strong>الفعل المصرف يذهب إلى نهاية الجملة الموصولة.</strong>
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Das ist die Frau, die Deutsch spricht.
+                </div>
+                <div>هذه هي المرأة التي تتحدث الألمانية.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Ich kenne den Mann, der dort arbeitet.
+                </div>
+                <div>أنا أعرف الرجل الذي يعمل هناك.</div>
+            </div>
+
+            <h3>🔹 ضمائر الوصل الأساسية</h3>
+
+            <table>
+                <tr>
+                    <th>الحالة</th>
+                    <th>مذكر</th>
+                    <th>مؤنث</th>
+                    <th>محايد</th>
+                    <th>جمع</th>
+                </tr>
+
+                <tr>
+                    <td>Nominativ</td>
+                    <td>der</td>
+                    <td>die</td>
+                    <td>das</td>
+                    <td>die</td>
+                </tr>
+
+                <tr>
+                    <td>Akkusativ</td>
+                    <td>den</td>
+                    <td>die</td>
+                    <td>das</td>
+                    <td>die</td>
+                </tr>
+
+                <tr>
+                    <td>Dativ</td>
+                    <td>dem</td>
+                    <td>der</td>
+                    <td>dem</td>
+                    <td>denen</td>
+                </tr>
+
+                <tr>
+                    <td>Genitiv</td>
+                    <td>dessen</td>
+                    <td>deren</td>
+                    <td>dessen</td>
+                    <td>deren</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                💡 اختيار ضمير الوصل يعتمد على <strong>الجنس والعدد</strong>
+                للاسم، لكن الحالة تعتمد على <strong>وظيفته داخل الجملة الموصولة</strong>.
+            </div>
+
+            <h3>🔹 1. Nominativ</h3>
+
+            <p>
+                نستخدم Nominativ عندما يكون ضمير الوصل هو الفاعل في الجملة الموصولة.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Das ist der Junge, der Fußball spielt.
+                </div>
+                <div>هذا هو الولد الذي يلعب كرة القدم.</div>
+            </div>
+
+            <p>
+                <strong>der Junge</strong> مذكر، والضمير هو الفاعل، لذلك:
+                <strong>der</strong>.
+            </p>
+
+            <h3>🔹 2. Akkusativ</h3>
+
+            <p>
+                نستخدم Akkusativ عندما يكون ضمير الوصل مفعولًا به.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Das ist der Film, den ich gestern gesehen habe.
+                </div>
+                <div>هذا هو الفيلم الذي شاهدته أمس.</div>
+            </div>
+
+            <p>
+                الفيلم هو مفعول به للفعل <strong>gesehen</strong>، لذلك نستخدم:
+                <strong>den</strong>.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Die Frau, die ich kenne, arbeitet hier.
+                </div>
+                <div>المرأة التي أعرفها تعمل هنا.</div>
+            </div>
+
+            <h3>🔹 3. Dativ</h3>
+
+            <p>
+                لو الفعل أو حرف الجر يحتاج Dativ، نستخدم ضمير الوصل في Dativ.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Der Mann, dem ich helfe, ist mein Lehrer.
+                </div>
+                <div>الرجل الذي أساعده هو معلمي.</div>
+            </div>
+
+            <p>
+                الفعل <strong>helfen</strong> يأخذ Dativ، لذلك:
+                <strong>dem</strong>.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Die Frau, der ich danke, ist sehr nett.
+                </div>
+                <div>المرأة التي أشكرها لطيفة جدًا.</div>
+            </div>
+
+            <p>
+                الفعل <strong>danken</strong> يأخذ Dativ، لذلك استخدمنا:
+                <strong>der</strong>.
+            </p>
+
+            <h3>🔹 4. Genitiv</h3>
+
+            <p>
+                في B1 نبدأ باستخدام <strong>dessen / deren</strong>
+                للتعبير عن الملكية.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Das ist der Mann, dessen Auto neu ist.
+                </div>
+                <div>هذا هو الرجل الذي سيارته جديدة.</div>
+            </div>
+
+            <p>
+                <strong>dessen</strong> تُستخدم مع الاسم المذكر والمحايد.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Das ist die Frau, deren Sohn in Berlin lebt.
+                </div>
+                <div>هذه هي المرأة التي يعيش ابنها في برلين.</div>
+            </div>
+
+            <p>
+                <strong>deren</strong> تُستخدم مع الاسم المؤنث والجمع.
+            </p>
+
+            <h3>🔹 Relativsätze مع حروف الجر</h3>
+
+            <p>
+                لو عندنا حرف جر، حرف الجر يأتي قبل ضمير الوصل.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Das ist der Mann, mit dem ich gesprochen habe.
+                </div>
+                <div>هذا هو الرجل الذي تحدثت معه.</div>
+            </div>
+
+            <p>
+                <strong>mit + Dativ</strong> لذلك:
+                <strong>mit dem</strong>.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Das ist die Frau, mit der ich gearbeitet habe.
+                </div>
+                <div>هذه هي المرأة التي عملت معها.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Das ist das Thema, über das wir sprechen.
+                </div>
+                <div>هذا هو الموضوع الذي نتحدث عنه.</div>
+            </div>
+
+            <h3>🔹 مثال شامل</h3>
+
+            <div class="example">
+                <div class="de">
+                    Ich kenne den Studenten, der in Berlin studiert.
+                </div>
+                <div>أنا أعرف الطالب الذي يدرس في برلين.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Ich kenne den Studenten, den du gestern getroffen hast.
+                </div>
+                <div>أنا أعرف الطالب الذي قابلته أمس.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Ich kenne den Studenten, dem du geholfen hast.
+                </div>
+                <div>أنا أعرف الطالب الذي ساعدته.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Ich kenne den Studenten, dessen Bruder in Berlin lebt.
+                </div>
+                <div>أنا أعرف الطالب الذي يعيش أخوه في برلين.</div>
+            </div>
+
+        </div>
+
+        <div class="summary-box">
+
+            <h2>📌 ملخص سريع</h2>
+
+            <table>
+                <tr>
+                    <th>الحالة</th>
+                    <th>مذكر</th>
+                    <th>مؤنث</th>
+                    <th>محايد</th>
+                    <th>جمع</th>
+                </tr>
+
+                <tr>
+                    <td>Nominativ</td>
+                    <td>der</td>
+                    <td>die</td>
+                    <td>das</td>
+                    <td>die</td>
+                </tr>
+
+                <tr>
+                    <td>Akkusativ</td>
+                    <td>den</td>
+                    <td>die</td>
+                    <td>das</td>
+                    <td>die</td>
+                </tr>
+
+                <tr>
+                    <td>Dativ</td>
+                    <td>dem</td>
+                    <td>der</td>
+                    <td>dem</td>
+                    <td>denen</td>
+                </tr>
+
+                <tr>
+                    <td>Genitiv</td>
+                    <td>dessen</td>
+                    <td>deren</td>
+                    <td>dessen</td>
+                    <td>deren</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                ⭐ افتكر:
+                <br><br>
+                <strong>der Mann, der ...</strong> → Nominativ
+                <br>
+                <strong>der Mann, den ...</strong> → Akkusativ
+                <br>
+                <strong>der Mann, dem ...</strong> → Dativ
+                <br>
+                <strong>der Mann, dessen ...</strong> → Genitiv
+            </div>
+
+        </div>
+
+        <div class="quiz-box" id="quiz">
+
+            <h2>📝 اختبار Lesson 16</h2>
+
+            <p>
+                لازم تجيب <strong>3 من 5</strong> على الأقل عشان تنجح وتفتح Lesson 17.
+            </p>
+
+            <div class="question">
+
+                <p>1️⃣ اختر الإجابة الصحيحة:</p>
+
+                <p class="de">
+                    Das ist der Mann, ___ in Berlin wohnt.
+                </p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    der
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    den
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    dem
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>2️⃣ اختر الإجابة الصحيحة:</p>
+
+                <p class="de">
+                    Das ist der Film, ___ ich gestern gesehen habe.
+                </p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    der
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    den
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    dem
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>3️⃣ اختر الإجابة الصحيحة:</p>
+
+                <p class="de">
+                    Der Mann, ___ ich helfe, ist mein Lehrer.
+                </p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    der
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    den
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    dem
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>4️⃣ اختر الإجابة الصحيحة:</p>
+
+                <p class="de">
+                    Das ist die Frau, ___ Sohn in Berlin lebt.
+                </p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    dessen
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    deren
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    dem
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>5️⃣ اختر الإجابة الصحيحة:</p>
+
+                <p class="de">
+                    Das ist der Mann, mit ___ ich gesprochen habe.
+                </p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    der
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    dem
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    den
+                </label>
+
+            </div>
+
+            <button class="submit-btn" id="submitBtn" onclick="checkQuiz()">
+                ✅ تصحيح الاختبار
+            </button>
+
+            <div id="result"></div>
+
+            <div id="nextContainer"></div>
+
+        </div>
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+    </div>
+
+    <script>
+
+        const answers = {
+            q1: "a",
+            q2: "b",
+            q3: "c",
+            q4: "b",
+            q5: "b"
+        };
+
+        const correctText = {
+            q1: "der",
+            q2: "den",
+            q3: "dem",
+            q4: "deren",
+            q5: "dem"
+        };
+
+        function checkQuiz() {
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            if (submitBtn.disabled) {
+                return;
+            }
+
+            let score = 0;
+            let wrongAnswers = [];
+
+            for (let i = 1; i <= 5; i++) {
+
+                const selected = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                if (selected && selected.value === answers["q" + i]) {
+                    score++;
+                } else {
+                    wrongAnswers.push(i);
+                }
+            }
+
+            const result = document.getElementById("result");
+            const nextContainer = document.getElementById("nextContainer");
+
+            submitBtn.disabled = true;
+
+            let html = "";
+
+            if (score >= 3) {
+
+                localStorage.setItem("b1Lesson16Completed", "true");
+
+                html += `
+                    <div class="success">
+                        🎉 <strong>أحسنت! نجحت في Lesson 16.</strong>
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        💾 تم حفظ تقدمك بنجاح!
+                        <br><br>
+                        ✅ Lesson 16 مكتمل!
+                        <br>
+                        🔓 تم فتح Lesson 17.
+                    </div>
+                `;
+
+                /* لو النتيجة 5/5 لا يظهر قسم الغلط */
+
+                if (score < 5 && wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function(q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+
+                nextContainer.innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson17-B1.html'">
+                        ➡️ الانتقال إلى Lesson 17
+                    </button>
+                `;
+
+            } else {
+
+                html += `
+                    <div class="fail">
+                        ❌ لم تنجح في الاختبار هذه المرة.
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        لازم تجيب 3 من 5 على الأقل.
+                    </div>
+                `;
+
+                if (wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function(q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+            }
+
+            html += `
+                <button class="retry-btn" onclick="retryQuiz()">
+                    🔄 إعادة الاختبار
+                </button>
+            `;
+
+            result.innerHTML = html;
+        }
+
+        function retryQuiz() {
+
+            const radios = document.querySelectorAll(
+                'input[type="radio"]'
+            );
+
+            radios.forEach(function(radio) {
+                radio.checked = false;
+                radio.disabled = false;
+            });
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            submitBtn.disabled = false;
+
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("nextContainer").innerHTML = "";
+
+            document.getElementById("quiz").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        function checkCompleted() {
+
+            if (localStorage.getItem("b1Lesson16Completed") === "true") {
+
+                document.getElementById("completedBox").innerHTML = `
+                    <div class="completed">
+                        ✅ Lesson 16 مكتمل بالفعل!
+                        <br><br>
+                        💾 تقدمك محفوظ.
+                        <br><br>
+                        🔓 Lesson 17 مفتوح.
+                        <br><br>
+                        يمكنك مراجعة الدرس والاختبار مرة أخرى.
+                    </div>
+                `;
+
+                document.getElementById("nextContainer").innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson17-B1.html'">
+                        ➡️ الانتقال إلى Lesson 17
+                    </button>
+                `;
+            }
+        }
+
+        checkCompleted();
+
+    </script>
+
+</body>
+
+</html>

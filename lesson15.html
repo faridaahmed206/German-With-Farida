@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الدرس الخامس عشر - Uhrzeit & Termine</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        header {
+            background: #1f4e79;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1f4e79;
+            margin-top: 0;
+        }
+
+        .german {
+            font-size: 21px;
+            font-weight: bold;
+            color: #1f4e79;
+        }
+
+        .pronunciation {
+            color: #777;
+            margin: 5px 0;
+        }
+
+        .meaning {
+            color: #444;
+        }
+
+        .note {
+            background: #eef6ff;
+            padding: 15px;
+            border-right: 5px solid #1f4e79;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #eaf2f8;
+        }
+
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            background: #fafafa;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .question label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 12px;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        button {
+            background: #1f4e79;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 8px 5px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .feedback {
+            margin-top: 8px;
+            padding: 10px;
+            border-radius: 7px;
+        }
+
+        .correct {
+            background: #e8f7e8;
+            color: #176b17;
+        }
+
+        .wrong {
+            background: #ffeaea;
+            color: #a00000;
+        }
+
+        #nextLesson,
+        #backToA1,
+        #retryQuiz {
+            display: none;
+        }
+
+        .dialogue {
+            background: #f8f8f8;
+            padding: 18px;
+            border-radius: 10px;
+            line-height: 2;
+        }
+
+        .word {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🇩🇪 الدرس الخامس عشر</h1>
+
+    <p>Uhrzeit & Termine</p>
+
+    <p>الوقت والمواعيد</p>
+
+</header>
+
+
+<div class="container">
+
+
+    <!-- الأهداف -->
+
+    <div class="section">
+
+        <h2>🎯 أهداف الدرس</h2>
+
+        <ul>
+
+            <li>السؤال عن الساعة.</li>
+
+            <li>قول الساعة بالألماني.</li>
+
+            <li>السؤال عن موعد.</li>
+
+            <li>استخدام um مع الوقت.</li>
+
+            <li>عمل جمل بسيطة عن المواعيد.</li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- السؤال عن الساعة -->
+
+    <div class="section">
+
+        <h2>⏰ 1. السؤال عن الساعة</h2>
+
+        <p class="german">
+            Wie spät ist es?
+        </p>
+
+        <p class="pronunciation">
+            في شبيت إِست إِس؟
+        </p>
+
+        <p class="meaning">
+            = الساعة كام؟
+        </p>
+
+
+        <p class="german">
+            Wie viel Uhr ist es?
+        </p>
+
+        <p class="pronunciation">
+            في فيل أور إِست إِس؟
+        </p>
+
+        <p class="meaning">
+            = الساعة كام؟
+        </p>
+
+    </div>
+
+
+    <!-- قول الساعة -->
+
+    <div class="section">
+
+        <h2>🕐 2. قول الساعة</h2>
+
+        <p class="german">
+            Es ist ein Uhr.
+        </p>
+
+        <p class="meaning">
+            = الساعة واحدة.
+        </p>
+
+
+        <p class="german">
+            Es ist zwei Uhr.
+        </p>
+
+        <p class="meaning">
+            = الساعة الثانية.
+        </p>
+
+
+        <p class="german">
+            Es ist fünf Uhr.
+        </p>
+
+        <p class="meaning">
+            = الساعة الخامسة.
+        </p>
+
+
+        <div class="note">
+
+            لو فيه دقائق، بنقول الساعة وبعدها الدقائق:
+
+            <br><br>
+
+            <b>Es ist fünf Uhr zehn.</b>
+
+            <br>
+
+            = الساعة 5:10
+
+            <br><br>
+
+            <b>Es ist sieben Uhr dreißig.</b>
+
+            <br>
+
+            = الساعة 7:30
+
+        </div>
+
+    </div>
+
+
+    <!-- المواعيد -->
+
+    <div class="section">
+
+        <h2>📅 3. المواعيد</h2>
+
+        <p class="german">
+            der Termin
+        </p>
+
+        <p class="meaning">
+            = الموعد
+        </p>
+
+
+        <p class="german">
+            Ich habe einen Termin.
+        </p>
+
+        <p class="meaning">
+            = عندي موعد.
+        </p>
+
+
+        <p class="german">
+            Ich habe morgen einen Termin.
+        </p>
+
+        <p class="meaning">
+            = عندي موعد بكرة.
+        </p>
+
+
+        <p class="german">
+            Wann ist dein Termin?
+        </p>
+
+        <p class="meaning">
+            = موعدك إمتى؟
+        </p>
+
+
+        <p class="german">
+            Mein Termin ist um zehn Uhr.
+        </p>
+
+        <p class="meaning">
+            = موعدي الساعة 10.
+        </p>
+
+    </div>
+
+
+    <!-- um -->
+
+    <div class="section">
+
+        <h2>⏱️ 4. استخدام um</h2>
+
+        <p>
+            لما نقول إن حاجة بتحصل في وقت معين نستخدم:
+        </p>
+
+        <div class="note">
+
+            <b>um + الوقت</b>
+
+        </div>
+
+
+        <p class="german">
+            Ich lerne um acht Uhr.
+        </p>
+
+        <p class="meaning">
+            = أتعلم / أذاكر الساعة 8.
+        </p>
+
+
+        <p class="german">
+            Der Termin ist um neun Uhr.
+        </p>
+
+        <p class="meaning">
+            = الموعد الساعة 9.
+        </p>
+
+
+        <p class="german">
+            Ich habe um drei Uhr einen Termin.
+        </p>
+
+        <p class="meaning">
+            = عندي موعد الساعة 3.
+        </p>
+
+    </div>
+
+
+    <!-- كلمات جديدة -->
+
+    <div class="section">
+
+        <h2>🆕 3 كلمات جديدة</h2>
+
+
+        <div class="word">
+
+            <b>der Termin</b>
+
+            <br>
+
+            النطق: دير تِرمين
+
+            <br>
+
+            المعنى: الموعد
+
+        </div>
+
+
+        <div class="word">
+
+            <b>spät</b>
+
+            <br>
+
+            النطق: شبيت
+
+            <br>
+
+            المعنى: متأخر
+
+        </div>
+
+
+        <div class="word">
+
+            <b>früh</b>
+
+            <br>
+
+            النطق: فرو
+
+            <br>
+
+            المعنى: مبكر
+
+        </div>
+
+    </div>
+
+
+    <!-- التدريب -->
+
+    <div class="section">
+
+        <h2>📝 التدريب</h2>
+
+
+        <div class="question">
+
+            <p>
+                <b>1. Wie spät ist es?</b>
+            </p>
+
+            <label>
+                <input type="radio" name="training1" value="a">
+                a) Wann ist dein Termin?
+            </label>
+
+            <label>
+                <input type="radio" name="training1" value="b">
+                b) الساعة كام؟
+            </label>
+
+            <label>
+                <input type="radio" name="training1" value="c">
+                c) عندي موعد.
+            </label>
+
+        </div>
+
+
+        <div class="question">
+
+            <p>
+                <b>2. Ich habe einen Termin ___ zehn Uhr.</b>
+            </p>
+
+            <label>
+                <input type="radio" name="training2" value="a">
+                a) am
+            </label>
+
+            <label>
+                <input type="radio" name="training2" value="b">
+                b) um
+            </label>
+
+            <label>
+                <input type="radio" name="training2" value="c">
+                c) in
+            </label>
+
+        </div>
+
+
+        <div class="question">
+
+            <p>
+                <b>3. اكتب بالألماني: موعدي الساعة 8.</b>
+            </p>
+
+            <input
+                type="text"
+                id="training3"
+                placeholder="اكتب الإجابة هنا"
+            >
+
+        </div>
+
+
+        <button onclick="checkTraining()">
+            تصحيح التدريب
+        </button>
+
+
+        <div id="trainingResult"></div>
+
+    </div>
+
+
+    <!-- المحادثة -->
+
+    <div class="section">
+
+        <h2>🗣️ محادثة قصيرة</h2>
+
+        <div class="dialogue">
+
+            <b>A:</b> Wie spät ist es?
+
+            <br>
+            الساعة كام؟
+
+            <br><br>
+
+            <b>B:</b> Es ist sieben Uhr.
+
+            <br>
+            الساعة 7.
+
+            <br><br>
+
+            <b>A:</b> Wann ist dein Termin?
+
+            <br>
+            موعدك إمتى؟
+
+            <br><br>
+
+            <b>B:</b> Mein Termin ist um zehn Uhr.
+
+            <br>
+            موعدي الساعة 10.
+
+            <br><br>
+
+            <b>A:</b> Hast du morgen einen Termin?
+
+            <br>
+            عندك موعد بكرة؟
+
+            <br><br>
+
+            <b>B:</b> Ja, ich habe morgen einen Termin.
+
+            <br>
+            أيوه، عندي موعد بكرة.
+
+        </div>
+
+    </div>
+
+
+    <!-- الاختبار -->
+
+    <div class="section">
+
+        <h2>🧪 اختبار الدرس 15</h2>
+
+        <p>
+            درجة النجاح: <b>3 من 5</b> ✅
+        </p>
+
+
+        <!-- السؤال 1 -->
+
+        <div class="question">
+
+            <p>
+                <b>1. ماذا تعني: Wie spät ist es?</b>
+            </p>
+
+            <label>
+                <input type="radio" name="q1" value="a">
+                a) موعدك إمتى؟
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="b">
+                b) الساعة كام؟
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="c">
+                c) أين تسكن؟
+            </label>
+
+            <div id="feedback1"></div>
+
+        </div>
+
+
+        <!-- السؤال 2 -->
+
+        <div class="question">
+
+            <p>
+                <b>2. Ich habe einen Termin ___ neun Uhr.</b>
+            </p>
+
+            <label>
+                <input type="radio" name="q2" value="a">
+                a) um
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="b">
+                b) am
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="c">
+                c) der
+            </label>
+
+            <div id="feedback2"></div>
+
+        </div>
+
+
+        <!-- السؤال 3 -->
+
+        <div class="question">
+
+            <p>
+                <b>3. ماذا تعني: Ich habe einen Termin?</b>
+            </p>
+
+            <label>
+                <input type="radio" name="q3" value="a">
+                a) عندي موعد.
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="b">
+                b) أنا متأخر.
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="c">
+                c) الساعة كام؟
+            </label>
+
+            <div id="feedback3"></div>
+
+        </div>
+
+
+        <!-- السؤال 4 -->
+
+        <div class="question">
+
+            <p>
+                <b>4. أكمل: Mein Termin ist ___ zehn Uhr.</b>
+            </p>
+
+            <label>
+                <input type="radio" name="q4" value="a">
+                a) um
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="b">
+                b) am
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="c">
+                c) in
+            </label>
+
+            <div id="feedback4"></div>
+
+        </div>
+
+
+        <!-- السؤال 5 -->
+
+        <div class="question">
+
+            <p>
+                <b>5. أي جملة صحيحة؟</b>
+            </p>
+
+            <label>
+                <input type="radio" name="q5" value="a">
+                a) Ich habe ein Termin.
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="b">
+                b) Ich habe einen Termin.
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="c">
+                c) Ich bin einen Termin.
+            </label>
+
+            <div id="feedback5"></div>
+
+        </div>
+
+
+        <button onclick="checkQuiz()">
+            تصحيح الاختبار
+        </button>
+
+
+        <button id="retryQuiz" onclick="retryQuiz()">
+            🔄 إعادة الاختبار
+        </button>
+
+
+        <div id="quizResult"></div>
+
+
+        <button
+            id="nextLesson"
+            onclick="window.location.href='lesson16.html'"
+        >
+            ➡️ الدرس السادس عشر
+        </button>
+
+
+        <button
+            id="backToA1"
+            onclick="window.location.href='A1.html'"
+        >
+            🔙 الرجوع إلى مستوى A1
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+
+    // =========================
+    // تصحيح التدريب
+    // =========================
+
+    function checkTraining() {
+
+        let score = 0;
+
+
+        const answer1 =
+            document.querySelector(
+                'input[name="training1"]:checked'
+            );
+
+
+        const answer2 =
+            document.querySelector(
+                'input[name="training2"]:checked'
+            );
+
+
+        const answer3 =
+            document
+                .getElementById("training3")
+                .value
+                .trim()
+                .toLowerCase();
+
+
+        if (answer1 && answer1.value === "b") {
+            score++;
+        }
+
+
+        if (answer2 && answer2.value === "b") {
+            score++;
+        }
+
+
+        if (
+            answer3 === "mein termin ist um acht uhr." ||
+            answer3 === "mein termin ist um acht uhr"
+        ) {
+            score++;
+        }
+
+
+        const result =
+            document.getElementById("trainingResult");
+
+
+        if (score === 3) {
+
+            result.className = "result correct";
+
+            result.innerHTML =
+                "✅ ممتاز! كل إجابات التدريب صحيحة.";
+
+        } else {
+
+            result.className = "result wrong";
+
+            result.innerHTML =
+                "❌ عندك " +
+                score +
+                " من 3 صحيحة. راجع الإجابات وحاول مرة تانية.";
+
+        }
+
+    }
+
+
+
+    // =========================
+    // إجابات الاختبار
+    // =========================
+
+    const correctAnswers = {
+
+        q1: "b",
+
+        q2: "a",
+
+        q3: "a",
+
+        q4: "a",
+
+        q5: "b"
+
+    };
+
+
+    const correctText = {
+
+        q1: "b) الساعة كام؟",
+
+        q2: "a) um",
+
+        q3: "a) عندي موعد.",
+
+        q4: "a) um",
+
+        q5: "b) Ich habe einen Termin."
+
+    };
+
+
+
+    // =========================
+    // تصحيح الاختبار
+    // =========================
+
+    function checkQuiz() {
+
+        let score = 0;
+
+
+        for (let i = 1; i <= 5; i++) {
+
+            const answer =
+                document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+
+            const feedback =
+                document.getElementById(
+                    "feedback" + i
+                );
+
+
+            if (!answer) {
+
+                feedback.className =
+                    "feedback wrong";
+
+                feedback.innerHTML =
+                    "⚠️ لم يتم اختيار إجابة. الإجابة الصحيحة: " +
+                    correctText["q" + i];
+
+            }
+
+            else if (
+                answer.value ===
+                correctAnswers["q" + i]
+            ) {
+
+                score++;
+
+                feedback.className =
+                    "feedback correct";
+
+                feedback.innerHTML =
+                    "✅ إجابة صحيحة!";
+
+            }
+
+            else {
+
+                feedback.className =
+                    "feedback wrong";
+
+                feedback.innerHTML =
+                    "❌ إجابة خاطئة — الإجابة الصحيحة: " +
+                    correctText["q" + i];
+
+            }
+
+        }
+
+
+        const result =
+            document.getElementById("quizResult");
+
+
+        // النجاح
+
+        if (score >= 3) {
+
+            result.className =
+                "result correct";
+
+            result.innerHTML =
+                "🎉 ممتاز! نجحت في الدرس 15 بدرجة " +
+                score +
+                " من 5.";
+
+
+            localStorage.setItem(
+                "lesson15Completed",
+                "true"
+            );
+
+
+            document.getElementById(
+                "nextLesson"
+            ).style.display =
+                "inline-block";
+
+
+            document.getElementById(
+                "backToA1"
+            ).style.display =
+                "inline-block";
+
+
+            document.getElementById(
+                "retryQuiz"
+            ).style.display =
+                "none";
+
+
+            alert(
+                "✅ تم حفظ الدرس الخامس عشر بنجاح!"
+            );
+
+        }
+
+        // الرسوب
+
+        else {
+
+            result.className =
+                "result wrong";
+
+            result.innerHTML =
+                "❌ درجتك " +
+                score +
+                " من 5. تحتاج إلى 3 على الأقل للنجاح.";
+
+
+            document.getElementById(
+                "retryQuiz"
+            ).style.display =
+                "inline-block";
+
+
+            document.getElementById(
+                "nextLesson"
+            ).style.display =
+                "none";
+
+
+            document.getElementById(
+                "backToA1"
+            ).style.display =
+                "inline-block";
+
+        }
+
+    }
+
+
+
+    // =========================
+    // إعادة الاختبار
+    // =========================
+
+    function retryQuiz() {
+
+        for (let i = 1; i <= 5; i++) {
+
+            const answers =
+                document.querySelectorAll(
+                    'input[name="q' + i + '"]'
+                );
+
+
+            answers.forEach(
+                function(answer) {
+
+                    answer.checked = false;
+
+                }
+            );
+
+
+            document.getElementById(
+                "feedback" + i
+            ).innerHTML = "";
+
+
+            document.getElementById(
+                "feedback" + i
+            ).className = "";
+
+        }
+
+
+        document.getElementById(
+            "quizResult"
+        ).innerHTML = "";
+
+
+        document.getElementById(
+            "quizResult"
+        ).className = "";
+
+
+        document.getElementById(
+            "retryQuiz"
+        ).style.display = "none";
+
+
+        document.getElementById(
+            "nextLesson"
+        ).style.display = "none";
+
+    }
+
+</script>
+
+</body>
+
+</html>

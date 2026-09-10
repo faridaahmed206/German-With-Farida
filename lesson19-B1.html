@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 19 - Schreiben & Sprechen | German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #1f4e79;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .back {
+            display: inline-block;
+            background: #555;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #1f4e79;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .example {
+            background: #eef4fb;
+            border-right: 5px solid #1f4e79;
+            padding: 12px 15px;
+            margin: 12px 0;
+            border-radius: 6px;
+        }
+
+        .tip {
+            background: #fff7df;
+            border-right: 5px solid #e0a800;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+
+        .important {
+            background: #eaf7ea;
+            border-right: 5px solid #28a745;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+
+        .quiz-question {
+            margin-bottom: 22px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .quiz-question p {
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-left: 8px;
+        }
+
+        .submit-btn,
+        .retry-btn,
+        .next-btn {
+            border: none;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .submit-btn {
+            background: #1f4e79;
+        }
+
+        .retry-btn {
+            background: #6c757d;
+        }
+
+        .next-btn {
+            background: #28a745;
+        }
+
+        .submit-btn:hover,
+        .retry-btn:hover,
+        .next-btn:hover {
+            opacity: 0.9;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .fail {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .wrong {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+
+        .next-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        ul {
+            padding-right: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #eef4fb;
+        }
+
+        .completed-box {
+            background: #d4edda;
+            color: #155724;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 Lesson 19 – Schreiben & Sprechen</h1>
+        <p>الكتابة والتحدث في مستوى B1</p>
+    </header>
+
+    <div class="container">
+
+        <a class="back" href="B1.html">⬅️ العودة إلى مستوى B1</a>
+
+        <div id="completedBox"></div>
+
+        <div class="card">
+            <h2>📚 أولًا: Schreiben – الكتابة</h2>
+
+            <p>
+                في مستوى B1، لازم تعرف تكتب نص بسيط ومنظم عن موضوع معين،
+                وتقدر تعبر عن رأيك وتجاربك وأسبابك.
+            </p>
+
+            <h3>📝 1. بداية الرسالة أو النص</h3>
+
+            <div class="example">
+                <strong>Liebe Anna,</strong><br>
+                wie geht es dir? Ich möchte dir von meinem Urlaub erzählen.
+            </div>
+
+            <div class="example">
+                <strong>Sehr geehrte Damen und Herren,</strong><br>
+                ich schreibe Ihnen, weil ich eine Frage habe.
+            </div>
+
+            <h3>📝 2. التعبير عن الرأي</h3>
+
+            <p>من أهم العبارات في B1:</p>
+
+            <div class="example">
+                <strong>Ich denke, dass ...</strong><br>
+                أنا أعتقد أن...
+            </div>
+
+            <div class="example">
+                <strong>Meiner Meinung nach ...</strong><br>
+                في رأيي...
+            </div>
+
+            <div class="example">
+                <strong>Ich finde, dass ...</strong><br>
+                أرى / أعتقد أن...
+            </div>
+
+            <div class="example">
+                <strong>Ich bin der Meinung, dass ...</strong><br>
+                أنا من رأيي أن...
+            </div>
+
+            <h3>📝 3. إعطاء سبب</h3>
+
+            <div class="example">
+                <strong>Ich lerne Deutsch, weil ich in Deutschland studieren möchte.</strong><br>
+                أتعلم الألمانية لأنني أريد الدراسة في ألمانيا.
+            </div>
+
+            <div class="example">
+                <strong>Ich finde Sport wichtig, denn Sport ist gesund.</strong><br>
+                أرى أن الرياضة مهمة، لأن الرياضة مفيدة للصحة.
+            </div>
+
+            <h3>📝 4. التعبير عن النتيجة</h3>
+
+            <div class="example">
+                <strong>Ich war krank. Deshalb bin ich zu Hause geblieben.</strong><br>
+                كنت مريضًا. لذلك بقيت في المنزل.
+            </div>
+
+            <h3>📝 5. المقارنة أو ذكر جانب آخر</h3>
+
+            <div class="example">
+                <strong>Einerseits ist das praktisch, andererseits ist es teuer.</strong><br>
+                من ناحية هذا عملي، ومن ناحية أخرى هو غالي.
+            </div>
+
+            <h3>📝 6. إنهاء الرسالة</h3>
+
+            <div class="example">
+                <strong>Viele Grüße</strong><br>
+                تحياتي
+            </div>
+
+            <div class="example">
+                <strong>Mit freundlichen Grüßen</strong><br>
+                مع خالص التحية
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🗣️ ثانيًا: Sprechen – التحدث</h2>
+
+            <p>
+                في مستوى B1، مهم تعرف تتكلم عن موضوع وتشرح رأيك
+                وتدي أسباب وأمثلة.
+            </p>
+
+            <h3>💬 1. تقديم نفسك</h3>
+
+            <div class="example">
+                <strong>Ich heiße Farida. Ich komme aus Ägypten und lerne Deutsch.</strong><br>
+                اسمي فريدة. أنا من مصر وأتعلم الألمانية.
+            </div>
+
+            <h3>💬 2. التعبير عن الرأي</h3>
+
+            <div class="example">
+                <strong>Meiner Meinung nach ist Deutsch eine interessante Sprache.</strong><br>
+                في رأيي، الألمانية لغة ممتعة.
+            </div>
+
+            <h3>💬 3. الموافقة</h3>
+
+            <div class="example">
+                <strong>Ich stimme dir zu.</strong><br>
+                أنا أتفق معك.
+            </div>
+
+            <div class="example">
+                <strong>Das sehe ich auch so.</strong><br>
+                أنا أرى الأمر بنفس الطريقة.
+            </div>
+
+            <h3>💬 4. عدم الموافقة بأدب</h3>
+
+            <div class="example">
+                <strong>Ich bin nicht ganz deiner Meinung.</strong><br>
+                أنا لست متفقًا معك تمامًا.
+            </div>
+
+            <div class="example">
+                <strong>Ich sehe das etwas anders.</strong><br>
+                أنا أرى الأمر بشكل مختلف قليلًا.
+            </div>
+
+            <h3>💬 5. اقتراح شيء</h3>
+
+            <div class="example">
+                <strong>Wir könnten zusammen Deutsch lernen.</strong><br>
+                يمكننا أن نتعلم الألمانية معًا.
+            </div>
+
+            <div class="example">
+                <strong>Wie wäre es, wenn wir morgen lernen?</strong><br>
+                ما رأيك أن نتعلم غدًا؟
+            </div>
+
+            <h3>💬 6. طلب الرأي</h3>
+
+            <div class="example">
+                <strong>Was denkst du darüber?</strong><br>
+                ما رأيك في ذلك؟
+            </div>
+
+            <div class="example">
+                <strong>Wie findest du das?</strong><br>
+                ما رأيك في هذا؟
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🔗 ثالثًا: كلمات مهمة لربط الكلام</h2>
+
+            <table>
+                <tr>
+                    <th>Deutsch</th>
+                    <th>المعنى</th>
+                </tr>
+                <tr>
+                    <td>zuerst</td>
+                    <td>أولًا</td>
+                </tr>
+                <tr>
+                    <td>dann</td>
+                    <td>ثم</td>
+                </tr>
+                <tr>
+                    <td>danach</td>
+                    <td>بعد ذلك</td>
+                </tr>
+                <tr>
+                    <td>außerdem</td>
+                    <td>بالإضافة إلى ذلك</td>
+                </tr>
+                <tr>
+                    <td>deshalb</td>
+                    <td>لذلك</td>
+                </tr>
+                <tr>
+                    <td>trotzdem</td>
+                    <td>مع ذلك</td>
+                </tr>
+                <tr>
+                    <td>aber</td>
+                    <td>لكن</td>
+                </tr>
+                <tr>
+                    <td>weil</td>
+                    <td>لأن</td>
+                </tr>
+                <tr>
+                    <td>zum Beispiel</td>
+                    <td>على سبيل المثال</td>
+                </tr>
+                <tr>
+                    <td>am Ende</td>
+                    <td>في النهاية</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>⭐ مثال كامل لمستوى B1</h2>
+
+            <div class="example">
+                <strong>
+                    Meiner Meinung nach ist Sport sehr wichtig.
+                    Ich mache gern Sport, weil ich gesund bleiben möchte.
+                    Außerdem macht Sport Spaß.
+                    Deshalb versuche ich, jeden Tag aktiv zu sein.
+                </strong>
+                <br><br>
+                في رأيي، الرياضة مهمة جدًا.
+                أحب ممارسة الرياضة لأنني أريد أن أبقى بصحة جيدة.
+                بالإضافة إلى ذلك، الرياضة ممتعة.
+                لذلك أحاول أن أكون نشيطًا كل يوم.
+            </div>
+
+            <div class="important">
+                💡 في B1 حاول دائمًا إن كلامك يكون منظم:
+                <br>
+                <strong>رأي → سبب → مثال → نتيجة</strong>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📌 ملخص الدرس</h2>
+
+            <ul>
+                <li>تعلمنا أهم عبارات الكتابة في B1.</li>
+                <li>تعلمنا إزاي نعبر عن الرأي.</li>
+                <li>تعلمنا إزاي نعطي سبب ونتيجة.</li>
+                <li>تعلمنا عبارات الموافقة وعدم الموافقة بأدب.</li>
+                <li>تعلمنا إزاي نقترح فكرة ونطلب رأي شخص آخر.</li>
+                <li>تعلمنا كلمات مهمة لربط الأفكار.</li>
+            </ul>
+        </div>
+
+        <div class="card" id="quiz">
+            <h2>📝 اختبار Lesson 19</h2>
+
+            <div class="quiz-question">
+                <p>1️⃣ أي جملة تعبر عن الرأي؟</p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    Meiner Meinung nach ist Deutsch interessant.
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    Ich heiße Farida.
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    Ich komme aus Ägypten.
+                </label>
+            </div>
+
+            <div class="quiz-question">
+                <p>2️⃣ ماذا تعني كلمة „deshalb“؟</p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    لأن
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    لذلك
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    لكن
+                </label>
+            </div>
+
+            <div class="quiz-question">
+                <p>3️⃣ أي جملة تعبر عن الموافقة؟</p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    Ich stimme dir zu.
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    Ich sehe das etwas anders.
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    Was denkst du darüber?
+                </label>
+            </div>
+
+            <div class="quiz-question">
+                <p>4️⃣ أي جملة صحيحة لاقتراح شيء؟</p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    Wir könnten zusammen Deutsch lernen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    Wir Deutsch könnten zusammen lernen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    Zusammen wir könnten Deutsch lernen.
+                </label>
+            </div>
+
+            <div class="quiz-question">
+                <p>5️⃣ ماذا تعني „Wie findest du das?“</p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    أين تجد هذا؟
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    ما رأيك في هذا؟
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    لماذا تفعل هذا؟
+                </label>
+            </div>
+
+            <button class="submit-btn" id="submitBtn" onclick="checkQuiz()">
+                ✅ تصحيح الاختبار
+            </button>
+
+            <div id="result"></div>
+            <div id="nextContainer" class="next-container"></div>
+        </div>
+
+        <a class="back" href="B1.html">⬅️ العودة إلى مستوى B1</a>
+
+    </div>
+
+    <script>
+        const answers = {
+            q1: "a",
+            q2: "b",
+            q3: "a",
+            q4: "a",
+            q5: "b"
+        };
+
+        const correctText = {
+            q1: "Meiner Meinung nach ist Deutsch interessant.",
+            q2: "لذلك",
+            q3: "Ich stimme dir zu.",
+            q4: "Wir könnten zusammen Deutsch lernen.",
+            q5: "ما رأيك في هذا؟"
+        };
+
+        function checkQuiz() {
+
+            let score = 0;
+            let wrongAnswers = [];
+
+            for (let i = 1; i <= 5; i++) {
+
+                const selected = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                if (selected && selected.value === answers["q" + i]) {
+                    score++;
+                } else {
+                    wrongAnswers.push(i);
+                }
+            }
+
+            const result = document.getElementById("result");
+            const nextContainer = document.getElementById("nextContainer");
+
+            let html = "";
+
+            if (score >= 3) {
+
+                localStorage.setItem("b1Lesson19Completed", "true");
+
+                html += `
+                    <div class="result success">
+                        🎉 أحسنت! نجحت في Lesson 19.<br>
+                        نتيجتك: <strong>${score}/5</strong><br><br>
+                        💾 تم حفظ تقدمك بنجاح!<br>
+                        ✅ Lesson 19 مكتمل!<br>
+                        🔓 تم فتح Lesson 20.
+                    </div>
+                `;
+
+                if (score < 5 && wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong">
+                            <strong>❌ الأسئلة التي أخطأت فيها:</strong>
+                            <ul>
+                    `;
+
+                    wrongAnswers.forEach(function (q) {
+                        html += `
+                            <li>
+                                السؤال ${q}:<br>
+                                ✅ الإجابة الصحيحة:
+                                <strong>${correctText["q" + q]}</strong>
+                            </li>
+                        `;
+                    });
+
+                    html += `
+                            </ul>
+                        </div>
+                    `;
+                }
+
+                nextContainer.innerHTML = `
+                    <button class="next-btn" onclick="goNext()">
+                        ➡️ الانتقال إلى Lesson 20
+                    </button>
+                    <br>
+                    <button class="retry-btn" onclick="retryQuiz()">
+                        🔄 إعادة الاختبار
+                    </button>
+                `;
+
+            } else {
+
+                html += `
+                    <div class="result fail">
+                        ❌ لم تنجح في الاختبار بعد.<br>
+                        نتيجتك: <strong>${score}/5</strong><br>
+                        لازم تجيب 3/5 على الأقل للنجاح.
+                    </div>
+                `;
+
+                if (wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong">
+                            <strong>❌ الأسئلة التي أخطأت فيها:</strong>
+                            <ul>
+                    `;
+
+                    wrongAnswers.forEach(function (q) {
+                        html += `
+                            <li>
+                                السؤال ${q}:<br>
+                                ✅ الإجابة الصحيحة:
+                                <strong>${correctText["q" + q]}</strong>
+                            </li>
+                        `;
+                    });
+
+                    html += `
+                            </ul>
+                        </div>
+                    `;
+                }
+
+                nextContainer.innerHTML = `
+                    <button class="retry-btn" onclick="retryQuiz()">
+                        🔄 إعادة الاختبار
+                    </button>
+                `;
+            }
+
+            result.innerHTML = html;
+
+            document.querySelectorAll('input[type="radio"]').forEach(function (input) {
+                input.disabled = true;
+            });
+
+            document.getElementById("submitBtn").disabled = true;
+        }
+
+        function retryQuiz() {
+
+            document.querySelectorAll('input[type="radio"]').forEach(function (input) {
+                input.checked = false;
+                input.disabled = false;
+            });
+
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("nextContainer").innerHTML = "";
+            document.getElementById("submitBtn").disabled = false;
+
+            document.getElementById("quiz").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        function goNext() {
+            window.location.href = "Lesson20-B1.html";
+        }
+
+        function showCompleted() {
+
+            const completedBox = document.getElementById("completedBox");
+
+            if (localStorage.getItem("b1Lesson19Completed") === "true") {
+
+                completedBox.innerHTML = `
+                    <div class="completed-box">
+                        🎉 <strong>Lesson 19 مكتمل بالفعل!</strong><br>
+                        💾 تقدمك محفوظ بنجاح.<br>
+                        🔓 Lesson 20 مفتوح الآن.<br><br>
+
+                        <button class="next-btn" onclick="goNext()">
+                            ➡️ الانتقال إلى Lesson 20
+                        </button>
+                    </div>
+                `;
+            }
+        }
+
+        showCompleted();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10 - Indirekte Fragen | German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #1f3c88;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #555;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background: #333;
+        }
+
+        .lesson-box,
+        .quiz-box,
+        .summary-box {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            margin-bottom: 22px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #1f3c88;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .example {
+            background: #eef3ff;
+            border-right: 5px solid #1f3c88;
+            padding: 12px 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        .important {
+            background: #fff4d6;
+            border-right: 5px solid #e0a000;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .tip {
+            background: #eaf7ee;
+            border-right: 5px solid #27ae60;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background: #1f3c88;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f7f8fb;
+        }
+
+        .de {
+            direction: ltr;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .question {
+            margin-bottom: 22px;
+            padding: 15px;
+            background: #f8f9fc;
+            border-radius: 10px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 9px 0;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-left: 8px;
+        }
+
+        .submit-btn,
+        .retry-btn,
+        .next-btn {
+            border: none;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .submit-btn {
+            background: #1f3c88;
+        }
+
+        .submit-btn:hover {
+            background: #162d68;
+        }
+
+        .retry-btn {
+            background: #e67e22;
+        }
+
+        .retry-btn:hover {
+            background: #c9630d;
+        }
+
+        .next-btn {
+            background: #27ae60;
+        }
+
+        .next-btn:hover {
+            background: #1f8a4c;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .success {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .fail {
+            background: #fff0f0;
+            border-right: 5px solid #e74c3c;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .wrong-answer {
+            background: #fff7e6;
+            border-right: 5px solid #f39c12;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .completed {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        #nextContainer {
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .lesson-box,
+            .quiz-box,
+            .summary-box {
+                padding: 16px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 Lesson 10 – Indirekte Fragen</h1>
+        <p>German with Farida | مستوى B1</p>
+    </header>
+
+    <div class="container">
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+        <div id="completedBox"></div>
+
+        <div class="lesson-box">
+
+            <h2>📚 Indirekte Fragen = الأسئلة غير المباشرة</h2>
+
+            <p>
+                في الألماني عندنا نوعين من الأسئلة:
+                <strong>أسئلة مباشرة</strong> و<strong>أسئلة غير مباشرة</strong>.
+            </p>
+
+            <h3>🔹 أولًا: السؤال المباشر</h3>
+
+            <p>
+                السؤال المباشر هو السؤال العادي اللي بنسأله بشكل مباشر.
+            </p>
+
+            <div class="example">
+                <div class="de">Wo wohnst du?</div>
+                <div>أين تسكن؟</div>
+            </div>
+
+            <div class="example">
+                <div class="de">Wann kommt er?</div>
+                <div>متى يأتي؟</div>
+            </div>
+
+            <div class="example">
+                <div class="de">Wie heißt du?</div>
+                <div>ما اسمك؟</div>
+            </div>
+
+            <h3>🔹 ثانيًا: السؤال غير المباشر</h3>
+
+            <p>
+                السؤال غير المباشر بنستخدمه غالبًا بطريقة أكثر أدبًا أو داخل جملة أطول.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Können Sie mir sagen, wo du wohnst?
+                </div>
+                <div>هل يمكنك أن تخبرني أين تسكن؟</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Ich möchte wissen, wann er kommt.
+                </div>
+                <div>أريد أن أعرف متى يأتي.</div>
+            </div>
+
+            <div class="important">
+                ⭐ أهم قاعدة في الدرس:
+                <br><br>
+                في <strong>Indirekte Fragen</strong>، الفعل المصرف غالبًا يذهب إلى
+                <strong>آخر الجملة</strong>.
+            </div>
+
+            <h3>🔹 1. أسئلة W-Fragen</h3>
+
+            <p>
+                لو السؤال الأصلي فيه كلمة سؤال مثل:
+            </p>
+
+            <table>
+                <tr>
+                    <th>W-Frage</th>
+                    <th>المعنى</th>
+                </tr>
+                <tr>
+                    <td>wo</td>
+                    <td>أين</td>
+                </tr>
+                <tr>
+                    <td>wann</td>
+                    <td>متى</td>
+                </tr>
+                <tr>
+                    <td>warum</td>
+                    <td>لماذا</td>
+                </tr>
+                <tr>
+                    <td>wie</td>
+                    <td>كيف</td>
+                </tr>
+                <tr>
+                    <td>was</td>
+                    <td>ماذا</td>
+                </tr>
+                <tr>
+                    <td>wer</td>
+                    <td>من</td>
+                </tr>
+                <tr>
+                    <td>welcher / welche / welches</td>
+                    <td>أيّ</td>
+                </tr>
+            </table>
+
+            <p>
+                بنحتفظ بكلمة السؤال، لكن الفعل يذهب إلى آخر الجملة.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Wo wohnt Ali?
+                </div>
+                <div>أين يسكن علي؟</div>
+
+                <br>
+
+                <div class="de">
+                    Ich möchte wissen, wo Ali wohnt.
+                </div>
+                <div>أريد أن أعرف أين يسكن علي.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Wann kommt Sara?
+                </div>
+                <div>متى تأتي سارة؟</div>
+
+                <br>
+
+                <div class="de">
+                    Ich weiß nicht, wann Sara kommt.
+                </div>
+                <div>لا أعرف متى تأتي سارة.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Warum lernt er Deutsch?
+                </div>
+                <div>لماذا يتعلم الألمانية؟</div>
+
+                <br>
+
+                <div class="de">
+                    Ich möchte wissen, warum er Deutsch lernt.
+                </div>
+                <div>أريد أن أعرف لماذا يتعلم الألمانية.</div>
+            </div>
+
+            <h3>🔹 2. أسئلة Ja / Nein</h3>
+
+            <p>
+                لو السؤال الأصلي إجابته تكون <strong>Ja أو Nein</strong>،
+                مش بيكون عندنا W-Frage.
+            </p>
+
+            <p>
+                هنا بنستخدم <strong>ob</strong> بمعنى "هل / ما إذا".
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Kommt er heute?
+                </div>
+                <div>هل يأتي اليوم؟</div>
+
+                <br>
+
+                <div class="de">
+                    Ich weiß nicht, ob er heute kommt.
+                </div>
+                <div>لا أعرف هل سيأتي اليوم.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Hat er Zeit?
+                </div>
+                <div>هل لديه وقت؟</div>
+
+                <br>
+
+                <div class="de">
+                    Ich möchte wissen, ob er Zeit hat.
+                </div>
+                <div>أريد أن أعرف هل لديه وقت.</div>
+            </div>
+
+            <div class="important">
+                🧠 احفظها:
+                <br><br>
+                <strong>W-Frage → نفس كلمة السؤال</strong>
+                <br>
+                <strong>Ja/Nein-Frage → ob</strong>
+            </div>
+
+            <h3>🔹 3. ترتيب الجملة</h3>
+
+            <p>
+                ترتيب الجملة غير المباشرة يكون مثل ترتيب الجملة الثانوية:
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Ich weiß nicht, wo er wohnt.
+                </div>
+                <div>
+                    Ich weiß nicht + wo + er + wohnt.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Ich weiß nicht, ob er heute kommt.
+                </div>
+                <div>
+                    Ich weiß nicht + ob + er + heute + kommt.
+                </div>
+            </div>
+
+            <div class="tip">
+                💡 افتكر:
+                <br><br>
+                <strong>wo / wann / warum / wie / was...</strong>
+                أو
+                <strong>ob</strong>
+                ثم باقي الجملة، وفي النهاية الفعل.
+            </div>
+
+            <h3>🔹 4. عبارات مهمة لبدء السؤال غير المباشر</h3>
+
+            <table>
+                <tr>
+                    <th>الجملة</th>
+                    <th>المعنى</th>
+                </tr>
+                <tr>
+                    <td>Ich möchte wissen, ...</td>
+                    <td>أريد أن أعرف...</td>
+                </tr>
+                <tr>
+                    <td>Ich weiß nicht, ...</td>
+                    <td>لا أعرف...</td>
+                </tr>
+                <tr>
+                    <td>Können Sie mir sagen, ...?</td>
+                    <td>هل يمكنك أن تخبرني...؟</td>
+                </tr>
+                <tr>
+                    <td>Weißt du, ...?</td>
+                    <td>هل تعرف...؟</td>
+                </tr>
+            </table>
+
+            <h3>🔹 5. أمثلة إضافية</h3>
+
+            <div class="example">
+                <div class="de">
+                    Können Sie mir sagen, wo der Bahnhof ist?
+                </div>
+                <div>هل يمكنك أن تخبرني أين محطة القطار؟</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Weißt du, wann der Film beginnt?
+                </div>
+                <div>هل تعرف متى يبدأ الفيلم؟</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Ich weiß nicht, warum sie heute nicht kommt.
+                </div>
+                <div>لا أعرف لماذا لا تأتي اليوم.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Ich möchte wissen, ob das Geschäft heute geöffnet ist.
+                </div>
+                <div>أريد أن أعرف هل المتجر مفتوح اليوم.</div>
+            </div>
+
+            <h3>🔄 مقارنة سريعة</h3>
+
+            <table>
+                <tr>
+                    <th>السؤال المباشر</th>
+                    <th>السؤال غير المباشر</th>
+                </tr>
+                <tr>
+                    <td>Wo ist er?</td>
+                    <td>Ich weiß nicht, wo er ist.</td>
+                </tr>
+                <tr>
+                    <td>Wann kommt sie?</td>
+                    <td>Ich weiß nicht, wann sie kommt.</td>
+                </tr>
+                <tr>
+                    <td>Warum lernt er?</td>
+                    <td>Ich weiß nicht, warum er lernt.</td>
+                </tr>
+                <tr>
+                    <td>Kommt er?</td>
+                    <td>Ich weiß nicht, ob er kommt.</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div class="summary-box">
+
+            <h2>📌 ملخص Lesson 10</h2>
+
+            <p>
+                <strong>1.</strong> لو عندك W-Frage، بتفضل موجودة:
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Wo ist er? → Ich weiß nicht, wo er ist.
+                </div>
+            </div>
+
+            <p>
+                <strong>2.</strong> لو السؤال إجابته Ja / Nein، استخدم:
+                <strong>ob</strong>
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Kommt er? → Ich weiß nicht, ob er kommt.
+                </div>
+            </div>
+
+            <p>
+                <strong>3.</strong> الفعل المصرف يذهب إلى آخر الجملة.
+            </p>
+
+            <div class="important">
+                ⭐ القاعدة الذهبية:
+                <br><br>
+                <strong>W-Frage + ... + Verb</strong>
+                <br>
+                أو
+                <br>
+                <strong>ob + ... + Verb</strong>
+            </div>
+
+        </div>
+
+        <div class="quiz-box" id="quiz">
+
+            <h2>📝 اختبار Lesson 10</h2>
+
+            <p>
+                لازم تجيب <strong>3 من 5</strong> على الأقل عشان تنجح وتفتح Lesson 11.
+            </p>
+
+            <div class="question">
+
+                <p>1️⃣ اختر الجملة الصحيحة:</p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    Ich weiß nicht, wo er wohnt.
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    Ich weiß nicht, wo wohnt er.
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    Ich weiß nicht, wo er wohnen.
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>2️⃣ ماذا نستخدم مع سؤال Ja/Nein في السؤال غير المباشر؟</p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    ob
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    wo
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    warum
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>3️⃣ اختر الجملة الصحيحة:</p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    Ich weiß nicht, wann kommt er.
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    Ich weiß nicht, wann er kommt.
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    Ich weiß nicht, wann er kommen.
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>4️⃣ حوّل السؤال إلى سؤال غير مباشر:</p>
+
+                <p class="de">
+                    Kommt er heute?
+                </p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    Ich weiß nicht, ob er heute kommt.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    Ich weiß nicht, ob kommt er heute.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    Ich weiß nicht, dass er heute kommt.
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>5️⃣ حوّل السؤال إلى سؤال غير مباشر:</p>
+
+                <p class="de">
+                    Wo ist der Bahnhof?
+                </p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    Können Sie mir sagen, wo der Bahnhof ist?
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    Können Sie mir sagen, wo ist der Bahnhof?
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    Können Sie mir sagen, ob der Bahnhof ist?
+                </label>
+
+            </div>
+
+            <button class="submit-btn" id="submitBtn" onclick="checkQuiz()">
+                ✅ تصحيح الاختبار
+            </button>
+
+            <div id="result"></div>
+
+            <div id="nextContainer"></div>
+
+        </div>
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+    </div>
+
+    <script>
+
+        const answers = {
+            q1: "a",
+            q2: "a",
+            q3: "b",
+            q4: "a",
+            q5: "a"
+        };
+
+        const correctText = {
+            q1: "Ich weiß nicht, wo er wohnt.",
+            q2: "ob",
+            q3: "Ich weiß nicht, wann er kommt.",
+            q4: "Ich weiß nicht, ob er heute kommt.",
+            q5: "Können Sie mir sagen, wo der Bahnhof ist?"
+        };
+
+        function checkQuiz() {
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            if (submitBtn.disabled) {
+                return;
+            }
+
+            let score = 0;
+            let wrongAnswers = [];
+
+            for (let i = 1; i <= 5; i++) {
+
+                const selected = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                if (selected && selected.value === answers["q" + i]) {
+                    score++;
+                } else {
+                    wrongAnswers.push(i);
+                }
+            }
+
+            const result = document.getElementById("result");
+            const nextContainer = document.getElementById("nextContainer");
+
+            submitBtn.disabled = true;
+
+            let html = "";
+
+            if (score >= 3) {
+
+                localStorage.setItem("b1Lesson10Completed", "true");
+
+                html += `
+                    <div class="success">
+                        🎉 <strong>أحسنت! نجحت في Lesson 10.</strong>
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        💾 تم حفظ تقدمك بنجاح!
+                        <br><br>
+                        ✅ Lesson 10 مكتمل!
+                        <br>
+                        🔓 تم فتح Lesson 11.
+                    </div>
+                `;
+
+                if (score < 5 && wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function (q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+
+                nextContainer.innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson11-B1.html'">
+                        ➡️ الانتقال إلى Lesson 11
+                    </button>
+                `;
+
+            } else {
+
+                html += `
+                    <div class="fail">
+                        ❌ لم تنجح في الاختبار هذه المرة.
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        لازم تجيب 3 من 5 على الأقل.
+                    </div>
+                `;
+
+                if (wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function (q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+            }
+
+            html += `
+                <button class="retry-btn" onclick="retryQuiz()">
+                    🔄 إعادة الاختبار
+                </button>
+            `;
+
+            result.innerHTML = html;
+        }
+
+        function retryQuiz() {
+
+            const radios = document.querySelectorAll(
+                'input[type="radio"]'
+            );
+
+            radios.forEach(function (radio) {
+                radio.checked = false;
+                radio.disabled = false;
+            });
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            submitBtn.disabled = false;
+
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("nextContainer").innerHTML = "";
+
+            document.getElementById("quiz").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        function checkCompleted() {
+
+            if (localStorage.getItem("b1Lesson10Completed") === "true") {
+
+                document.getElementById("completedBox").innerHTML = `
+                    <div class="completed">
+                        ✅ Lesson 10 مكتمل بالفعل!
+                        <br><br>
+                        💾 تقدمك محفوظ.
+                        <br><br>
+                        🔓 Lesson 11 مفتوح.
+                        <br><br>
+                        يمكنك مراجعة الدرس والاختبار مرة أخرى.
+                    </div>
+                `;
+
+                document.getElementById("nextContainer").innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson11-B1.html'">
+                        ➡️ الانتقال إلى Lesson 11
+                    </button>
+                `;
+            }
+        }
+
+        checkCompleted();
+
+    </script>
+
+</body>
+
+</html>

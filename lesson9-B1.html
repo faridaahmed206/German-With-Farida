@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9 - Genitiv | German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #1f3c88;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #555;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background: #333;
+        }
+
+        .lesson-box,
+        .quiz-box,
+        .summary-box {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            margin-bottom: 22px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #1f3c88;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .example {
+            background: #eef3ff;
+            border-right: 5px solid #1f3c88;
+            padding: 12px 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        .important {
+            background: #fff4d6;
+            border-right: 5px solid #e0a000;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .tip {
+            background: #eaf7ff;
+            border-right: 5px solid #3498db;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background: #1f3c88;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f7f8fb;
+        }
+
+        .question {
+            margin-bottom: 22px;
+            padding: 15px;
+            background: #f8f9fc;
+            border-radius: 10px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 9px 0;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-left: 8px;
+        }
+
+        .submit-btn,
+        .retry-btn,
+        .next-btn {
+            border: none;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .submit-btn {
+            background: #1f3c88;
+        }
+
+        .submit-btn:hover {
+            background: #162d68;
+        }
+
+        .retry-btn {
+            background: #e67e22;
+        }
+
+        .retry-btn:hover {
+            background: #c9630d;
+        }
+
+        .next-btn {
+            background: #27ae60;
+        }
+
+        .next-btn:hover {
+            background: #1f8a4c;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .success {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .fail {
+            background: #fff0f0;
+            border-right: 5px solid #e74c3c;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .wrong-answer {
+            background: #fff7e6;
+            border-right: 5px solid #f39c12;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .completed {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        #nextContainer {
+            margin-top: 15px;
+        }
+
+        .de {
+            direction: ltr;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .lesson-box,
+            .quiz-box,
+            .summary-box {
+                padding: 16px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 Lesson 9 – Genitiv</h1>
+        <p>German with Farida | مستوى B1</p>
+    </header>
+
+    <div class="container">
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+        <div id="completedBox"></div>
+
+        <div class="lesson-box">
+
+            <h2>📚 ما هو Genitiv؟</h2>
+
+            <p>
+                <strong>Genitiv</strong> هو إحدى حالات الاسم في اللغة الألمانية.
+                بنستخدمه غالبًا للتعبير عن <strong>الملكية أو العلاقة بين شيئين</strong>.
+            </p>
+
+            <div class="example">
+                <div class="de">Das ist das Auto meines Vaters.</div>
+                <div>هذه سيارة والدي.</div>
+            </div>
+
+            <p>
+                هنا <strong>meines Vaters</strong> معناها "والدي"،
+                وبتوضح إن السيارة ملك للأب.
+            </p>
+
+            <div class="important">
+                ⭐ سؤال Genitiv غالبًا يكون:
+                <br>
+                <strong>Wessen?</strong> = لِمَن؟ / مَن صاحب الشيء؟
+            </div>
+
+            <h2>🔹 أدوات التعريف في Genitiv</h2>
+
+            <table>
+                <tr>
+                    <th>الجنس</th>
+                    <th>Nominativ</th>
+                    <th>Genitiv</th>
+                </tr>
+                <tr>
+                    <td>مذكر</td>
+                    <td>der</td>
+                    <td>des</td>
+                </tr>
+                <tr>
+                    <td>محايد</td>
+                    <td>das</td>
+                    <td>des</td>
+                </tr>
+                <tr>
+                    <td>مؤنث</td>
+                    <td>die</td>
+                    <td>der</td>
+                </tr>
+                <tr>
+                    <td>جمع</td>
+                    <td>die</td>
+                    <td>der</td>
+                </tr>
+            </table>
+
+            <div class="tip">
+                💡 احفظها كده:
+                <br><br>
+                <strong>der → des</strong>
+                <br>
+                <strong>das → des</strong>
+                <br>
+                <strong>die → der</strong>
+                <br>
+                <strong>Plural die → der</strong>
+            </div>
+
+            <h2>🔹 1. المذكر والمحايد</h2>
+
+            <p>
+                مع الاسم المذكر والمحايد، الاسم غالبًا يأخذ
+                <strong>-s أو -es</strong>.
+            </p>
+
+            <table>
+                <tr>
+                    <th>Nominativ</th>
+                    <th>Genitiv</th>
+                </tr>
+                <tr>
+                    <td>der Vater</td>
+                    <td>des Vaters</td>
+                </tr>
+                <tr>
+                    <td>der Mann</td>
+                    <td>des Mannes</td>
+                </tr>
+                <tr>
+                    <td>das Kind</td>
+                    <td>des Kindes</td>
+                </tr>
+                <tr>
+                    <td>das Haus</td>
+                    <td>des Hauses</td>
+                </tr>
+            </table>
+
+            <div class="example">
+                <div class="de">Das ist das Auto des Vaters.</div>
+                <div>هذه سيارة الأب.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">Die Tür des Hauses ist offen.</div>
+                <div>باب المنزل مفتوح.</div>
+            </div>
+
+            <h2>🔹 2. المؤنث</h2>
+
+            <p>
+                مع المؤنث، أداة التعريف تتحول من <strong>die</strong>
+                إلى <strong>der</strong>، والاسم نفسه لا يأخذ -s.
+            </p>
+
+            <div class="example">
+                <div class="de">Das ist das Auto der Frau.</div>
+                <div>هذه سيارة المرأة.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">Die Tasche der Mutter ist schön.</div>
+                <div>حقيبة الأم جميلة.</div>
+            </div>
+
+            <h2>🔹 3. الجمع Plural</h2>
+
+            <p>
+                في الجمع أيضًا تتحول أداة التعريف من <strong>die</strong>
+                إلى <strong>der</strong>.
+            </p>
+
+            <div class="example">
+                <div class="de">Das sind die Bücher der Schüler.</div>
+                <div>هذه كتب الطلاب.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">Die Namen der Kinder sind bekannt.</div>
+                <div>أسماء الأطفال معروفة.</div>
+            </div>
+
+            <h2>🔹 Genitiv مع أدوات النكرة</h2>
+
+            <table>
+                <tr>
+                    <th>الجنس</th>
+                    <th>Nominativ</th>
+                    <th>Genitiv</th>
+                </tr>
+                <tr>
+                    <td>مذكر</td>
+                    <td>ein</td>
+                    <td>eines</td>
+                </tr>
+                <tr>
+                    <td>محايد</td>
+                    <td>ein</td>
+                    <td>eines</td>
+                </tr>
+                <tr>
+                    <td>مؤنث</td>
+                    <td>eine</td>
+                    <td>einer</td>
+                </tr>
+            </table>
+
+            <div class="example">
+                <div class="de">Das ist das Auto eines Mannes.</div>
+                <div>هذه سيارة رجل.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">Das ist die Tasche einer Frau.</div>
+                <div>هذه حقيبة امرأة.</div>
+            </div>
+
+            <h2>🔹 Possessivartikel في Genitiv</h2>
+
+            <p>
+                أدوات الملكية مثل:
+                <strong>mein, dein, sein, ihr, unser, euer</strong>
+                تتغير أيضًا حسب Genitiv.
+            </p>
+
+            <table>
+                <tr>
+                    <th>Nominativ</th>
+                    <th>Genitiv</th>
+                </tr>
+                <tr>
+                    <td>mein Vater</td>
+                    <td>meines Vaters</td>
+                </tr>
+                <tr>
+                    <td>dein Bruder</td>
+                    <td>deines Bruders</td>
+                </tr>
+                <tr>
+                    <td>sein Auto</td>
+                    <td>seines Autos</td>
+                </tr>
+                <tr>
+                    <td>ihre Mutter</td>
+                    <td>ihrer Mutter</td>
+                </tr>
+            </table>
+
+            <div class="example">
+                <div class="de">Das ist das Haus meines Bruders.</div>
+                <div>هذا منزل أخي.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">Die Farbe ihres Autos ist schön.</div>
+                <div>لون سيارتها جميل.</div>
+            </div>
+
+            <h2>🔹 Genitiv للتعبير عن الملكية</h2>
+
+            <p>
+                بدل ما نقول:
+            </p>
+
+            <div class="example">
+                <div class="de">Das ist das Buch von meinem Bruder.</div>
+                <div>هذا كتاب أخي.</div>
+            </div>
+
+            <p>
+                في اللغة الرسمية والألمانية المتقدمة نقدر نقول:
+            </p>
+
+            <div class="example">
+                <div class="de">Das ist das Buch meines Bruders.</div>
+                <div>هذا كتاب أخي.</div>
+            </div>
+
+            <div class="important">
+                📌 في الكلام اليومي، <strong>von + Dativ</strong> شائعة جدًا،
+                لكن Genitiv مهم جدًا في اللغة المكتوبة والمستوى B1.
+            </div>
+
+            <h2>🔹 Genitiv مع أسماء الأشخاص</h2>
+
+            <p>
+                مع أسماء الأشخاص، ممكن نستخدم Genitiv بطريقة سهلة:
+            </p>
+
+            <div class="example">
+                <div class="de">Das ist Marias Buch.</div>
+                <div>هذا كتاب ماريا.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">Das ist Toms Auto.</div>
+                <div>هذه سيارة توم.</div>
+            </div>
+
+            <p>
+                لاحظ إننا مع اسم الشخص نضيف غالبًا <strong>-s</strong>
+                بدون أداة تعريف.
+            </p>
+
+            <h2>🧠 أمثلة إضافية</h2>
+
+            <div class="example">
+                <div class="de">Die Tür des Zimmers ist geschlossen.</div>
+                <div>باب الغرفة مغلق.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">Das Fahrrad meines Freundes ist neu.</div>
+                <div>دراجة صديقي جديدة.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">Die Meinung der Menschen ist wichtig.</div>
+                <div>رأي الناس مهم.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">Das Ende des Films war interessant.</div>
+                <div>نهاية الفيلم كانت مثيرة للاهتمام.</div>
+            </div>
+
+        </div>
+
+        <div class="summary-box">
+
+            <h2>📌 ملخص Genitiv</h2>
+
+            <table>
+                <tr>
+                    <th>الجنس</th>
+                    <th>الأداة في Genitiv</th>
+                    <th>مثال</th>
+                </tr>
+                <tr>
+                    <td>مذكر</td>
+                    <td>des</td>
+                    <td>des Vaters</td>
+                </tr>
+                <tr>
+                    <td>محايد</td>
+                    <td>des</td>
+                    <td>des Kindes</td>
+                </tr>
+                <tr>
+                    <td>مؤنث</td>
+                    <td>der</td>
+                    <td>der Mutter</td>
+                </tr>
+                <tr>
+                    <td>جمع</td>
+                    <td>der</td>
+                    <td>der Kinder</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                ⭐ أهم 4 حاجات:
+                <br><br>
+                <strong>der → des</strong>
+                <br>
+                <strong>das → des</strong>
+                <br>
+                <strong>die → der</strong>
+                <br>
+                <strong>Plural die → der</strong>
+                <br><br>
+                ومع المذكر والمحايد غالبًا الاسم يأخذ
+                <strong>-s / -es</strong>.
+            </div>
+
+        </div>
+
+        <div class="quiz-box" id="quiz">
+
+            <h2>📝 اختبار Lesson 9</h2>
+
+            <p>
+                لازم تجيب <strong>3 من 5</strong> على الأقل عشان تنجح وتفتح Lesson 10.
+            </p>
+
+            <div class="question">
+                <p>1️⃣ اختر الإجابة الصحيحة:</p>
+
+                <p class="de">Das ist das Auto ___ Vaters.</p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    des
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    der
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    den
+                </label>
+            </div>
+
+            <div class="question">
+                <p>2️⃣ اختر الإجابة الصحيحة:</p>
+
+                <p class="de">Die Tasche ___ Frau ist schön.</p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    des
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    der
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    die
+                </label>
+            </div>
+
+            <div class="question">
+                <p>3️⃣ ما هو سؤال Genitiv؟</p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    Wer?
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    Wessen?
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    Wem?
+                </label>
+            </div>
+
+            <div class="question">
+                <p>4️⃣ اختر الجملة الصحيحة:</p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    Das ist das Buch meines Bruders.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    Das ist das Buch mein Bruder.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    Das ist das Buch meinem Bruder.
+                </label>
+            </div>
+
+            <div class="question">
+                <p>5️⃣ اختر الإجابة الصحيحة:</p>
+
+                <p class="de">Die Namen ___ Kinder sind bekannt.</p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    des
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    den
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    der
+                </label>
+            </div>
+
+            <button class="submit-btn" id="submitBtn" onclick="checkQuiz()">
+                ✅ تصحيح الاختبار
+            </button>
+
+            <div id="result"></div>
+
+            <div id="nextContainer"></div>
+
+        </div>
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+    </div>
+
+    <script>
+
+        const answers = {
+            q1: "a",
+            q2: "b",
+            q3: "b",
+            q4: "a",
+            q5: "c"
+        };
+
+        const correctText = {
+            q1: "des",
+            q2: "der",
+            q3: "Wessen?",
+            q4: "Das ist das Buch meines Bruders.",
+            q5: "der"
+        };
+
+        function checkQuiz() {
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            if (submitBtn.disabled) {
+                return;
+            }
+
+            let score = 0;
+            let wrongAnswers = [];
+
+            for (let i = 1; i <= 5; i++) {
+
+                const selected = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                if (selected && selected.value === answers["q" + i]) {
+                    score++;
+                } else {
+                    wrongAnswers.push(i);
+                }
+            }
+
+            const result = document.getElementById("result");
+            const nextContainer = document.getElementById("nextContainer");
+
+            submitBtn.disabled = true;
+
+            let html = "";
+
+            if (score >= 3) {
+
+                localStorage.setItem("b1Lesson9Completed", "true");
+
+                html += `
+                    <div class="success">
+                        🎉 <strong>أحسنت! نجحت في Lesson 9.</strong>
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        💾 تم حفظ تقدمك بنجاح!
+                        <br><br>
+                        ✅ Lesson 9 مكتمل!
+                        <br>
+                        🔓 تم فتح Lesson 10.
+                    </div>
+                `;
+
+                if (score < 5 && wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function (q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+
+                nextContainer.innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson10-B1.html'">
+                        ➡️ الانتقال إلى Lesson 10
+                    </button>
+                `;
+
+            } else {
+
+                html += `
+                    <div class="fail">
+                        ❌ لم تنجح في الاختبار هذه المرة.
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        لازم تجيب 3 من 5 على الأقل.
+                    </div>
+                `;
+
+                if (wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function (q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+            }
+
+            html += `
+                <button class="retry-btn" onclick="retryQuiz()">
+                    🔄 إعادة الاختبار
+                </button>
+            `;
+
+            result.innerHTML = html;
+        }
+
+        function retryQuiz() {
+
+            const radios = document.querySelectorAll(
+                'input[type="radio"]'
+            );
+
+            radios.forEach(function (radio) {
+                radio.checked = false;
+                radio.disabled = false;
+            });
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            submitBtn.disabled = false;
+
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("nextContainer").innerHTML = "";
+
+            document.getElementById("quiz").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        function checkCompleted() {
+
+            if (localStorage.getItem("b1Lesson9Completed") === "true") {
+
+                document.getElementById("completedBox").innerHTML = `
+                    <div class="completed">
+                        ✅ Lesson 9 مكتمل بالفعل!
+                        <br><br>
+                        💾 تقدمك محفوظ.
+                        <br><br>
+                        🔓 Lesson 10 مفتوح.
+                        <br><br>
+                        يمكنك مراجعة الدرس والاختبار مرة أخرى.
+                    </div>
+                `;
+
+                document.getElementById("nextContainer").innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson10-B1.html'">
+                        ➡️ الانتقال إلى Lesson 10
+                    </button>
+                `;
+            }
+        }
+
+        checkCompleted();
+
+    </script>
+
+</body>
+
+</html>

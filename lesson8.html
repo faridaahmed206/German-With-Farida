@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الدرس الثامن - Der / Die / Das</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #182848, #4b6cb7);
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #304f91;
+            margin-top: 0;
+        }
+
+        .goal {
+            background: #eef3ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 8px 0;
+        }
+
+        .article-box {
+            padding: 18px;
+            border-radius: 12px;
+            margin: 12px 0;
+            background: #f7f7f7;
+        }
+
+        .german {
+            font-size: 21px;
+            font-weight: bold;
+            direction: ltr;
+            display: inline-block;
+        }
+
+        .pronunciation {
+            color: #777;
+        }
+
+        .meaning {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #eef3ff;
+        }
+
+        .example {
+            background: #f8f9fc;
+            padding: 12px;
+            margin: 8px 0;
+            border-right: 4px solid #4b6cb7;
+            border-radius: 8px;
+        }
+
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            background: #fafafa;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        button {
+            border: none;
+            border-radius: 10px;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #4b6cb7;
+            color: white;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .feedback {
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .success {
+            background: #e8f8ed;
+            color: #176b2c;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .fail {
+            background: #fff0f0;
+            color: #a32222;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #nextLesson,
+        #backToA1,
+        #retryQuiz {
+            display: none;
+            width: 100%;
+            margin-top: 12px;
+        }
+
+        .note {
+            background: #fff8df;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 الدرس الثامن</h1>
+        <p>Der / Die / Das</p>
+        <p>أدوات التعريف في اللغة الألمانية</p>
+    </header>
+
+    <div class="container">
+
+        <div class="section">
+            <h2>🎯 أهداف الدرس</h2>
+
+            <div class="goal">✅ تعرف الفرق بين Der و Die و Das.</div>
+            <div class="goal">✅ تعرف أداة التعريف المناسبة لبعض الكلمات.</div>
+            <div class="goal">✅ تحفظ كلمات جديدة مع أداة التعريف.</div>
+            <div class="goal">✅ تستخدم Der / Die / Das في جمل بسيطة.</div>
+        </div>
+
+        <div class="section">
+            <h2>📚 أولًا: يعني إيه Der / Die / Das؟</h2>
+
+            <p>
+                في اللغة الألمانية، كل اسم له جنس نحوي، ولذلك بنستخدم معاه أداة تعريف مناسبة.
+            </p>
+
+            <div class="article-box">
+                <span class="german">der</span>
+                <br>
+                <span class="meaning">للاسم المذكر</span>
+                <br>
+                <span class="pronunciation">النطق: دير</span>
+            </div>
+
+            <div class="article-box">
+                <span class="german">die</span>
+                <br>
+                <span class="meaning">للاسم المؤنث</span>
+                <br>
+                <span class="pronunciation">النطق: دي</span>
+            </div>
+
+            <div class="article-box">
+                <span class="german">das</span>
+                <br>
+                <span class="meaning">للاسم المحايد</span>
+                <br>
+                <span class="pronunciation">النطق: داس</span>
+            </div>
+
+            <div class="note">
+                💡 مهم جدًا: حاول تحفظ الاسم مع أداة التعريف بتاعته.
+                يعني ما تحفظش <b>Buch</b> لوحدها، احفظها:
+                <b>das Buch</b>.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🧠 أمثلة مهمة</h2>
+
+            <table>
+                <tr>
+                    <th>الأداة</th>
+                    <th>الكلمة</th>
+                    <th>المعنى</th>
+                    <th>النطق</th>
+                </tr>
+
+                <tr>
+                    <td>der</td>
+                    <td class="german">der Tisch</td>
+                    <td>الترابيزة</td>
+                    <td>دير تِش</td>
+                </tr>
+
+                <tr>
+                    <td>der</td>
+                    <td class="german">der Stuhl</td>
+                    <td>الكرسي</td>
+                    <td>دير شتول</td>
+                </tr>
+
+                <tr>
+                    <td>die</td>
+                    <td class="german">die Tasche</td>
+                    <td>الحقيبة</td>
+                    <td>دي تاشِه</td>
+                </tr>
+
+                <tr>
+                    <td>die</td>
+                    <td class="german">die Uhr</td>
+                    <td>الساعة</td>
+                    <td>دي أور</td>
+                </tr>
+
+                <tr>
+                    <td>das</td>
+                    <td class="german">das Buch</td>
+                    <td>الكتاب</td>
+                    <td>داس بوخ</td>
+                </tr>
+
+                <tr>
+                    <td>das</td>
+                    <td class="german">das Handy</td>
+                    <td>الموبايل</td>
+                    <td>داس هاندي</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>💬 جمل بسيطة</h2>
+
+            <div class="example">
+                <span class="german">Der Tisch ist groß.</span>
+                <br>
+                الترابيزة كبيرة.
+            </div>
+
+            <div class="example">
+                <span class="german">Der Stuhl ist schwarz.</span>
+                <br>
+                الكرسي أسود.
+            </div>
+
+            <div class="example">
+                <span class="german">Die Tasche ist blau.</span>
+                <br>
+                الحقيبة زرقاء.
+            </div>
+
+            <div class="example">
+                <span class="german">Die Uhr ist neu.</span>
+                <br>
+                الساعة جديدة.
+            </div>
+
+            <div class="example">
+                <span class="german">Das Buch ist rot.</span>
+                <br>
+                الكتاب أحمر.
+            </div>
+
+            <div class="example">
+                <span class="german">Das Handy ist neu.</span>
+                <br>
+                الموبايل جديد.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💡 نقطة مهمة</h2>
+
+            <p>
+                لما تتعلم كلمة ألماني جديدة، الأفضل تحفظها مع الأداة بتاعتها.
+            </p>
+
+            <div class="example">
+                ❌ Buch
+            </div>
+
+            <div class="example">
+                ✅ <span class="german">das Buch</span>
+            </div>
+
+            <div class="example">
+                ❌ Tasche
+            </div>
+
+            <div class="example">
+                ✅ <span class="german">die Tasche</span>
+            </div>
+
+            <div class="example">
+                ❌ Tisch
+            </div>
+
+            <div class="example">
+                ✅ <span class="german">der Tisch</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🆕 3 كلمات جديدة</h2>
+
+            <table>
+                <tr>
+                    <th>الألماني</th>
+                    <th>المعنى</th>
+                    <th>النطق</th>
+                </tr>
+
+                <tr>
+                    <td class="german">neu</td>
+                    <td>جديد</td>
+                    <td>نوي</td>
+                </tr>
+
+                <tr>
+                    <td class="german">alt</td>
+                    <td>قديم / كبير في السن</td>
+                    <td>ألت</td>
+                </tr>
+
+                <tr>
+                    <td class="german">schön</td>
+                    <td>جميل</td>
+                    <td>شون</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>📝 التدريب</h2>
+
+            <div class="question">
+                <p><b>1. أي أداة نستخدم مع كلمة „Tasche“؟</b></p>
+
+                <label>
+                    <input type="radio" name="training1" value="a">
+                    a) der
+                </label>
+
+                <label>
+                    <input type="radio" name="training1" value="b">
+                    b) die
+                </label>
+
+                <label>
+                    <input type="radio" name="training1" value="c">
+                    c) das
+                </label>
+            </div>
+
+            <div class="question">
+                <p><b>2. اختر الجملة الصحيحة:</b></p>
+
+                <label>
+                    <input type="radio" name="training2" value="a">
+                    a) Die Buch ist rot.
+                </label>
+
+                <label>
+                    <input type="radio" name="training2" value="b">
+                    b) Das Buch ist rot.
+                </label>
+
+                <label>
+                    <input type="radio" name="training2" value="c">
+                    c) Der Buch ist rot.
+                </label>
+            </div>
+
+            <div class="question">
+                <p><b>3. أكمل الجملة:</b></p>
+
+                <p class="german">___ Tisch ist groß.</p>
+
+                <label>
+                    <input type="radio" name="training3" value="a">
+                    a) Der
+                </label>
+
+                <label>
+                    <input type="radio" name="training3" value="b">
+                    b) Die
+                </label>
+
+                <label>
+                    <input type="radio" name="training3" value="c">
+                    c) Das
+                </label>
+            </div>
+
+            <button onclick="checkTraining()">تصحيح التدريب</button>
+
+            <div id="trainingResult"></div>
+        </div>
+
+        <div class="section">
+            <h2>💬 تطبيق ومحادثة قصيرة</h2>
+
+            <div class="example">
+                <b>A:</b>
+                <span class="german">Was ist das?</span>
+                <br>
+                ما هذا؟
+            </div>
+
+            <div class="example">
+                <b>B:</b>
+                <span class="german">Das ist ein Buch.</span>
+                <br>
+                هذا كتاب.
+            </div>
+
+            <div class="example">
+                <b>A:</b>
+                <span class="german">Welche Farbe hat das Buch?</span>
+                <br>
+                ما لون الكتاب؟
+            </div>
+
+            <div class="example">
+                <b>B:</b>
+                <span class="german">Das Buch ist rot.</span>
+                <br>
+                الكتاب أحمر.
+            </div>
+
+            <div class="example">
+                <b>A:</b>
+                <span class="german">Was ist das?</span>
+                <br>
+                ما هذا؟
+            </div>
+
+            <div class="example">
+                <b>B:</b>
+                <span class="german">Das ist eine Tasche.</span>
+                <br>
+                هذه حقيبة.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 اختبار الدرس الثامن</h2>
+
+            <p>
+                لازم تجيب <b>3 من 5</b> على الأقل عشان يتم حفظ الدرس.
+            </p>
+
+            <div class="question">
+                <p><b>1. أي أداة مع كلمة „Tisch“؟</b></p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    a) die
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    b) der
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    c) das
+                </label>
+
+                <div id="feedback1" class="feedback"></div>
+            </div>
+
+            <div class="question">
+                <p><b>2. اختر الجملة الصحيحة:</b></p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    a) Der Tasche ist blau.
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    b) Die Tasche ist blau.
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    c) Das Tasche ist blau.
+                </label>
+
+                <div id="feedback2" class="feedback"></div>
+            </div>
+
+            <div class="question">
+                <p><b>3. أكمل:</b></p>
+
+                <p class="german">___ Buch ist neu.</p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    a) Das
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    b) Die
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    c) Der
+                </label>
+
+                <div id="feedback3" class="feedback"></div>
+            </div>
+
+            <div class="question">
+                <p><b>4. اختر الترجمة الصحيحة لـ "الساعة جديدة":</b></p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    a) Der Uhr ist neu.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    b) Das Uhr ist neu.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    c) Die Uhr ist neu.
+                </label>
+
+                <div id="feedback4" class="feedback"></div>
+            </div>
+
+            <div class="question">
+                <p><b>5. ما أداة التعريف الصحيحة لكلمة „Handy“؟</b></p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    a) der
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    b) die
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    c) das
+                </label>
+
+                <div id="feedback5" class="feedback"></div>
+            </div>
+
+            <button onclick="checkQuiz()">تصحيح الاختبار</button>
+
+            <div id="quizResult"></div>
+
+            <button id="retryQuiz" onclick="retryQuiz()">
+                🔄 إعادة الاختبار
+            </button>
+
+            <button id="nextLesson" onclick="window.location.href='lesson9.html'">
+                ➡️ الدرس التاسع
+            </button>
+
+            <button id="backToA1" onclick="window.location.href='A1.html'">
+                🔙 الرجوع إلى مستوى A1
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+
+        function checkTraining() {
+
+            let score = 0;
+
+            const answer1 = document.querySelector('input[name="training1"]:checked');
+            const answer2 = document.querySelector('input[name="training2"]:checked');
+            const answer3 = document.querySelector('input[name="training3"]:checked');
+
+            if (answer1 && answer1.value === "b") {
+                score++;
+            }
+
+            if (answer2 && answer2.value === "b") {
+                score++;
+            }
+
+            if (answer3 && answer3.value === "a") {
+                score++;
+            }
+
+            document.getElementById("trainingResult").innerHTML =
+                "⭐ نتيجتك في التدريب: " + score + " / 3";
+        }
+
+
+        function checkQuiz() {
+
+            let score = 0;
+
+            const correctAnswers = {
+                q1: "b",
+                q2: "b",
+                q3: "a",
+                q4: "c",
+                q5: "c"
+            };
+
+            const correctText = {
+                q1: "b) der",
+                q2: "b) Die Tasche ist blau.",
+                q3: "a) Das",
+                q4: "c) Die Uhr ist neu.",
+                q5: "c) das"
+            };
+
+            for (let i = 1; i <= 5; i++) {
+
+                const answer = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                const feedback = document.getElementById("feedback" + i);
+
+                if (!answer) {
+
+                    feedback.textContent =
+                        "⚠️ لم يتم اختيار إجابة. الإجابة الصحيحة: " +
+                        correctText["q" + i];
+
+                    feedback.style.color = "#a32222";
+
+                } else if (answer.value === correctAnswers["q" + i]) {
+
+                    score++;
+
+                    feedback.textContent = "✅ إجابة صحيحة!";
+
+                    feedback.style.color = "#176b2c";
+
+                } else {
+
+                    feedback.textContent =
+                        "❌ إجابة خاطئة — الإجابة الصحيحة: " +
+                        correctText["q" + i];
+
+                    feedback.style.color = "#a32222";
+                }
+            }
+
+            const quizResult = document.getElementById("quizResult");
+            const retryButton = document.getElementById("retryQuiz");
+            const nextButton = document.getElementById("nextLesson");
+            const backButton = document.getElementById("backToA1");
+
+            backButton.style.display = "block";
+
+            if (score >= 3) {
+
+                localStorage.setItem("lesson8Completed", "true");
+
+                quizResult.className = "success";
+
+                quizResult.innerHTML =
+                    "🎉 ممتاز! نتيجتك " +
+                    score +
+                    " / 5<br>✅ تم حفظ الدرس الثامن بنجاح!";
+
+                nextButton.style.display = "block";
+                retryButton.style.display = "none";
+
+                alert("✅ تم حفظ الدرس الثامن بنجاح!");
+
+            } else {
+
+                quizResult.className = "fail";
+
+                quizResult.innerHTML =
+                    "❌ نتيجتك " +
+                    score +
+                    " / 5<br>" +
+                    "لازم تجيب 3 من 5 على الأقل عشان يتم حفظ الدرس.";
+
+                nextButton.style.display = "none";
+                retryButton.style.display = "block";
+            }
+        }
+
+
+        function retryQuiz() {
+
+            for (let i = 1; i <= 5; i++) {
+
+                const answers = document.querySelectorAll(
+                    'input[name="q' + i + '"]'
+                );
+
+                answers.forEach(function(answer) {
+                    answer.checked = false;
+                });
+
+                document.getElementById("feedback" + i).textContent = "";
+            }
+
+            document.getElementById("quizResult").innerHTML = "";
+            document.getElementById("quizResult").className = "";
+
+            document.getElementById("retryQuiz").style.display = "none";
+            document.getElementById("nextLesson").style.display = "none";
+
+            window.scrollTo({
+                top: document.querySelector("h2").offsetTop,
+                behavior: "smooth"
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>

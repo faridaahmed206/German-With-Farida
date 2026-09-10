@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الدرس الخامس - German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7ff;
+            color: #222;
+        }
+
+        header {
+            background: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #6c63ff;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #666;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #ddd;
+        }
+
+        .section h2 {
+            color: #6c63ff;
+            margin-top: 0;
+        }
+
+        .word-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .word-table th,
+        .word-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .word-table th {
+            background: #f0efff;
+        }
+
+        .example {
+            background: #f5f7ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+
+        .german {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .pronunciation {
+            color: #777;
+        }
+
+        .question {
+            background: #fafafa;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .option {
+            display: block;
+            background: white;
+            border: 1px solid #ddd;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background: #f0efff;
+        }
+
+        input[type="radio"] {
+            margin-left: 8px;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        .quiz button,
+        #backToA1,
+        #nextLesson {
+            background: #6c63ff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 17px;
+            margin: 10px auto;
+        }
+
+        .quiz button:hover,
+        #backToA1:hover,
+        #nextLesson:hover {
+            opacity: 0.9;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .success {
+            background: #dff6e4;
+            color: #218838;
+        }
+
+        .fail {
+            background: #ffe1e1;
+            color: #c62828;
+        }
+
+        .correct {
+            color: #218838;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .wrong {
+            color: #c62828;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        #backToA1,
+        #nextLesson {
+            display: none;
+        }
+
+        .speech-button {
+            background: #6c63ff;
+            color: white;
+            border: none;
+            padding: 7px 12px;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-right: 8px;
+        }
+
+        ul {
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 الدرس الخامس</h1>
+        <p>Die Familie</p>
+        <p>العائلة</p>
+    </header>
+
+
+    <div class="container">
+
+        <div class="section">
+            <h2>🎯 أهداف الدرس</h2>
+
+            <ul>
+                <li>معرفة أسماء أفراد العائلة بالألماني.</li>
+                <li>السؤال عن الإخوات.</li>
+                <li>التحدث عن أفراد العائلة.</li>
+                <li>استخدام mein و meine بشكل بسيط.</li>
+                <li>عمل محادثة قصيرة عن العائلة.</li>
+            </ul>
+        </div>
+
+
+        <div class="section">
+
+            <h2>👨‍👩‍👧‍👦 1. أفراد العائلة — Die Familie</h2>
+
+            <table class="word-table">
+
+                <tr>
+                    <th>🇩🇪 الألماني</th>
+                    <th>🇦🇪 المعنى</th>
+                    <th>🗣️ النطق</th>
+                </tr>
+
+                <tr>
+                    <td>die Familie</td>
+                    <td>العائلة</td>
+                    <td>دي فاميليِه</td>
+                </tr>
+
+                <tr>
+                    <td>der Vater</td>
+                    <td>الأب</td>
+                    <td>دير فاتَر</td>
+                </tr>
+
+                <tr>
+                    <td>die Mutter</td>
+                    <td>الأم</td>
+                    <td>دي موتَر</td>
+                </tr>
+
+                <tr>
+                    <td>der Bruder</td>
+                    <td>الأخ</td>
+                    <td>دير برودر</td>
+                </tr>
+
+                <tr>
+                    <td>die Schwester</td>
+                    <td>الأخت</td>
+                    <td>دي شفِستَر</td>
+                </tr>
+
+                <tr>
+                    <td>der Sohn</td>
+                    <td>الابن</td>
+                    <td>دير زون</td>
+                </tr>
+
+                <tr>
+                    <td>die Tochter</td>
+                    <td>الابنة</td>
+                    <td>دي توختَر</td>
+                </tr>
+
+                <tr>
+                    <td>die Eltern</td>
+                    <td>الوالدان</td>
+                    <td>دي إلتَرن</td>
+                </tr>
+
+                <tr>
+                    <td>der Opa</td>
+                    <td>الجد</td>
+                    <td>دير أوبا</td>
+                </tr>
+
+                <tr>
+                    <td>die Oma</td>
+                    <td>الجدة</td>
+                    <td>دي أوما</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>❓ 2. السؤال عن الإخوات</h2>
+
+            <div class="example">
+                <div class="german">Hast du Geschwister?</div>
+                <div>هل عندك إخوات؟</div>
+                <div class="pronunciation">هاست دو جيشفِستَر؟</div>
+            </div>
+
+            <div class="example">
+                <div class="german">Ja, ich habe einen Bruder.</div>
+                <div>أيوه، عندي أخ.</div>
+                <div class="pronunciation">يا، إش هابه آينِن برودر.</div>
+            </div>
+
+            <div class="example">
+                <div class="german">Ja, ich habe eine Schwester.</div>
+                <div>أيوه، عندي أخت.</div>
+                <div class="pronunciation">يا، إش هابه آينه شفِستَر.</div>
+            </div>
+
+            <div class="example">
+                <div class="german">Nein, ich habe keine Geschwister.</div>
+                <div>لأ، معنديش إخوات.</div>
+                <div class="pronunciation">ناين، إش هابه كاينه جيشفِستَر.</div>
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>👦 3. عندي أخ أو أخت</h2>
+
+            <div class="example">
+                <div class="german">Ich habe einen Bruder.</div>
+                <div>عندي أخ.</div>
+            </div>
+
+            <div class="example">
+                <div class="german">Ich habe eine Schwester.</div>
+                <div>عندي أخت.</div>
+            </div>
+
+            <div class="example">
+                <div class="german">Ich habe zwei Brüder.</div>
+                <div>عندي أخوين.</div>
+            </div>
+
+            <div class="example">
+                <div class="german">Ich habe zwei Schwestern.</div>
+                <div>عندي أختين.</div>
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>📚 4. الملكية — mein / meine</h2>
+
+            <p>هنستخدم هنا القاعدة بشكل بسيط:</p>
+
+            <div class="example">
+                <div class="german">mein Vater</div>
+                <div>أبي / والدي</div>
+            </div>
+
+            <div class="example">
+                <div class="german">mein Bruder</div>
+                <div>أخي</div>
+            </div>
+
+            <div class="example">
+                <div class="german">meine Mutter</div>
+                <div>أمي / والدتي</div>
+            </div>
+
+            <div class="example">
+                <div class="german">meine Schwester</div>
+                <div>أختي</div>
+            </div>
+
+            <p>
+                📌 بشكل بسيط:
+                <br>
+                <strong>mein</strong> + اسم مذكر
+                <br>
+                <strong>meine</strong> + اسم مؤنث
+            </p>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>💬 5. جمل مهمة</h2>
+
+            <div class="example">
+                <div class="german">Das ist mein Vater.</div>
+                <div>هذا أبي.</div>
+            </div>
+
+            <div class="example">
+                <div class="german">Das ist meine Mutter.</div>
+                <div>هذه أمي.</div>
+            </div>
+
+            <div class="example">
+                <div class="german">Das ist mein Bruder.</div>
+                <div>هذا أخي.</div>
+            </div>
+
+            <div class="example">
+                <div class="german">Das ist meine Schwester.</div>
+                <div>هذه أختي.</div>
+            </div>
+
+            <div class="example">
+                <div class="german">Meine Familie ist groß.</div>
+                <div>عائلتي كبيرة.</div>
+            </div>
+
+            <div class="example">
+                <div class="german">Meine Familie ist klein.</div>
+                <div>عائلتي صغيرة.</div>
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>🆕 6. خمس كلمات جديدة</h2>
+
+            <table class="word-table">
+
+                <tr>
+                    <th>🇩🇪 الكلمة</th>
+                    <th>🇦🇪 المعنى</th>
+                    <th>🗣️ النطق</th>
+                </tr>
+
+                <tr>
+                    <td>groß</td>
+                    <td>كبير</td>
+                    <td>جروس</td>
+                </tr>
+
+                <tr>
+                    <td>klein</td>
+                    <td>صغير</td>
+                    <td>كلاين</td>
+                </tr>
+
+                <tr>
+                    <td>Geschwister</td>
+                    <td>إخوات</td>
+                    <td>جيشفِستَر</td>
+                </tr>
+
+                <tr>
+                    <td>Eltern</td>
+                    <td>الوالدان</td>
+                    <td>إلتَرن</td>
+                </tr>
+
+                <tr>
+                    <td>zusammen</td>
+                    <td>معًا</td>
+                    <td>تسوزامن</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>✍️ 7. التدريب</h2>
+
+            <div class="question">
+
+                <p><strong>1.</strong> اختر الإجابة الصحيحة:</p>
+
+                <p>Was bedeutet „der Bruder“?</p>
+
+                <label class="option">
+                    <input type="radio" name="training1" value="a">
+                    أ) الأخت
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="training1" value="b">
+                    ب) الأخ
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="training1" value="c">
+                    ج) الأب
+                </label>
+
+
+                <p style="margin-top:20px;">
+                    <strong>2.</strong> أكمل:
+                </p>
+
+                <p>Das ist ___ Mutter.</p>
+
+                <label class="option">
+                    <input type="radio" name="training2" value="a">
+                    أ) mein
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="training2" value="b">
+                    ب) meine
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="training2" value="c">
+                    ج) meinen
+                </label>
+
+
+                <p style="margin-top:20px;">
+                    <strong>3.</strong> ما معنى:
+                </p>
+
+                <p>Hast du Geschwister?</p>
+
+                <label class="option">
+                    <input type="radio" name="training3" value="a">
+                    أ) هل عندك إخوات؟
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="training3" value="b">
+                    ب) اسمك إيه؟
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="training3" value="c">
+                    ج) إنت منين؟
+                </label>
+
+                <button onclick="checkTraining()">
+                    تصحيح التدريب
+                </button>
+
+                <div id="trainingResult"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>🗣️ 8. محادثة قصيرة</h2>
+
+            <div class="example">
+                <div class="german">A: Hast du Geschwister?</div>
+                <div>هل عندك إخوات؟</div>
+            </div>
+
+            <div class="example">
+                <div class="german">B: Ja, ich habe einen Bruder.</div>
+                <div>أيوه، عندي أخ.</div>
+            </div>
+
+            <div class="example">
+                <div class="german">A: Wie heißt dein Bruder?</div>
+                <div>اسم أخوك إيه؟</div>
+            </div>
+
+            <div class="example">
+                <div class="german">B: Er heißt ________.</div>
+                <div>اسمه ________.</div>
+            </div>
+
+        </div>
+
+
+        <div class="section quiz">
+
+            <h2>📝 9. امتحان الدرس الخامس</h2>
+
+            <p>
+                جاوب على الأسئلة واضغط على "تصحيح الاختبار".
+                النجاح من 3/5.
+            </p>
+
+
+            <div class="question">
+
+                <p><strong>السؤال 1:</strong></p>
+
+                <p>Was bedeutet „die Mutter“?</p>
+
+                <label class="option">
+                    <input type="radio" name="q1" value="a">
+                    أ) الأب
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q1" value="b">
+                    ب) الأم
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q1" value="c">
+                    ج) الأخت
+                </label>
+
+                <div id="feedback1"></div>
+
+            </div>
+
+
+            <div class="question">
+
+                <p><strong>السؤال 2:</strong></p>
+
+                <p>اختار الجملة الصحيحة:</p>
+
+                <label class="option">
+                    <input type="radio" name="q2" value="a">
+                    أ) Ich bin einen Bruder.
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q2" value="b">
+                    ب) Ich habe einen Bruder.
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q2" value="c">
+                    ج) Ich habe eine Bruder.
+                </label>
+
+                <div id="feedback2"></div>
+
+            </div>
+
+
+            <div class="question">
+
+                <p><strong>السؤال 3:</strong></p>
+
+                <p>أكمل:</p>
+
+                <p>Das ist ___ Schwester.</p>
+
+                <label class="option">
+                    <input type="radio" name="q3" value="a">
+                    أ) mein
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q3" value="b">
+                    ب) meine
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q3" value="c">
+                    ج) meinen
+                </label>
+
+                <div id="feedback3"></div>
+
+            </div>
+
+
+            <div class="question">
+
+                <p><strong>السؤال 4:</strong></p>
+
+                <p>Hast du Geschwister?</p>
+
+                <label class="option">
+                    <input type="radio" name="q4" value="a">
+                    أ) اسمك إيه؟
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q4" value="b">
+                    ب) عندك إخوات؟
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q4" value="c">
+                    ج) إنت منين؟
+                </label>
+
+                <div id="feedback4"></div>
+
+            </div>
+
+
+            <div class="question">
+
+                <p><strong>السؤال 5:</strong></p>
+
+                <p>اختار الترجمة الصحيحة:</p>
+
+                <p>Meine Familie ist klein.</p>
+
+                <label class="option">
+                    <input type="radio" name="q5" value="a">
+                    أ) عائلتي كبيرة.
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q5" value="b">
+                    ب) عائلتي صغيرة.
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q5" value="c">
+                    ج) عائلتي جديدة.
+                </label>
+
+                <div id="feedback5"></div>
+
+            </div>
+
+
+            <button onclick="checkQuiz()">
+                تصحيح الاختبار
+            </button>
+
+            <div id="result"></div>
+
+
+            <!-- زر الدرس السادس -->
+            <button
+                id="nextLesson"
+                onclick="window.location.href='lesson6.html'"
+            >
+                ➡️ الدرس السادس
+            </button>
+
+
+            <!-- زر الرجوع إلى A1 -->
+            <button
+                id="backToA1"
+                onclick="window.location.href='A1.html'"
+            >
+                🔙 الرجوع إلى مستوى A1
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function checkTraining() {
+
+            let score = 0;
+
+            const answers = {
+                training1: "b",
+                training2: "b",
+                training3: "a"
+            };
+
+            for (let question in answers) {
+
+                const selected =
+                    document.querySelector(
+                        'input[name="' + question + '"]:checked'
+                    );
+
+                if (selected && selected.value === answers[question]) {
+                    score++;
+                }
+            }
+
+            const result =
+                document.getElementById("trainingResult");
+
+            result.innerHTML =
+                "نتيجتك في التدريب: " +
+                score +
+                "/3";
+
+        }
+
+
+        function checkQuiz() {
+
+            let score = 0;
+
+            const answers = {
+                q1: "b",
+                q2: "b",
+                q3: "b",
+                q4: "b",
+                q5: "b"
+            };
+
+
+            for (let i = 1; i <= 5; i++) {
+
+                const selected =
+                    document.querySelector(
+                        'input[name="q' + i + '"]:checked'
+                    );
+
+                const feedback =
+                    document.getElementById("feedback" + i);
+
+
+                if (selected && selected.value === answers["q" + i]) {
+
+                    score++;
+
+                    feedback.className = "correct";
+                    feedback.innerHTML = "✅ إجابة صحيحة";
+
+                } else {
+
+                    feedback.className = "wrong";
+                    feedback.innerHTML =
+                        "❌ إجابة غير صحيحة";
+
+                }
+
+            }
+
+
+            const result =
+                document.getElementById("result");
+
+
+            if (score >= 3) {
+
+                result.className = "success";
+
+                result.innerHTML =
+                    "🎉 ممتاز! نتيجتك " +
+                    score +
+                    "/5" +
+                    "<br><br>" +
+                    "✅ تم حفظ الدرس الخامس بنجاح!";
+
+
+                localStorage.setItem(
+                    "lesson5Completed",
+                    "true"
+                );
+
+                // إظهار زر الدرس السادس بعد النجاح
+                document.getElementById("nextLesson").style.display = "block";
+
+            } else {
+
+                result.className = "fail";
+
+                result.innerHTML =
+                    "❌ نتيجتك " +
+                    score +
+                    "/5" +
+                    "<br>" +
+                    "محتاج 3/5 على الأقل للنجاح. جرّب مرة تانية!";
+
+                // يفضل زر الدرس السادس مخفي لو لم تنجح
+                document.getElementById("nextLesson").style.display = "none";
+
+            }
+
+
+            /* إظهار زر الرجوع بعد تصحيح الامتحان */
+
+            document.getElementById(
+                "backToA1"
+            ).style.display = "block";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

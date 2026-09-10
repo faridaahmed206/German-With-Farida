@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدرس الثامن عشر - Einkaufen & Preise</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        header {
+            background: #1f4e79;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1f4e79;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .goal {
+            background: #eef6ff;
+            padding: 15px;
+            border-radius: 10px;
+            line-height: 1.8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #1f4e79;
+            color: white;
+        }
+
+        .example {
+            background: #f8f8f8;
+            padding: 12px;
+            border-radius: 10px;
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+
+        .german {
+            font-size: 19px;
+            font-weight: bold;
+            color: #1f4e79;
+        }
+
+        .new-words {
+            background: #fff8e6;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            background: #fafafa;
+            border-radius: 10px;
+        }
+
+        .question label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button {
+            background: #1f4e79;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 8px 5px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        #quizResult {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #nextLesson,
+        #backToA1,
+        #retryQuiz {
+            display: none;
+        }
+
+        .dialogue {
+            background: #eef6ff;
+            padding: 20px;
+            border-radius: 12px;
+            line-height: 2;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .wrong {
+            color: #c62828;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🇩🇪 الدرس الثامن عشر</h1>
+    <p>Einkaufen & Preise</p>
+    <p>التسوق والأسعار</p>
+</header>
+
+<div class="container">
+
+    <!-- أهداف الدرس -->
+    <div class="section">
+        <h2>🎯 أهداف الدرس</h2>
+
+        <div class="goal">
+            في نهاية الدرس هتعرف:
+            <ul>
+                <li>تسأل عن سعر حاجة.</li>
+                <li>تقول سعر حاجة.</li>
+                <li>تستخدم جمل بسيطة في المحلات.</li>
+                <li>تسأل عن المقاس أو اللون.</li>
+                <li>تعمل محادثة قصيرة أثناء الشراء.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- كلمات التسوق -->
+    <div class="section">
+        <h2>🛍️ 1. كلمات مهمة في التسوق</h2>
+
+        <table>
+            <tr>
+                <th>الألماني</th>
+                <th>النطق</th>
+                <th>المعنى</th>
+            </tr>
+
+            <tr>
+                <td>der Laden</td>
+                <td>دير لادن</td>
+                <td>المحل</td>
+            </tr>
+
+            <tr>
+                <td>das Geschäft</td>
+                <td>داس جِشِفت</td>
+                <td>المتجر</td>
+            </tr>
+
+            <tr>
+                <td>der Preis</td>
+                <td>دير برايس</td>
+                <td>السعر</td>
+            </tr>
+
+            <tr>
+                <td>das Geld</td>
+                <td>داس جِلد</td>
+                <td>المال</td>
+            </tr>
+
+            <tr>
+                <td>die Tasche</td>
+                <td>دي تاشِه</td>
+                <td>الحقيبة</td>
+            </tr>
+
+            <tr>
+                <td>das T-Shirt</td>
+                <td>داس تي شيرت</td>
+                <td>التيشيرت</td>
+            </tr>
+
+            <tr>
+                <td>die Hose</td>
+                <td>دي هوزِه</td>
+                <td>البنطلون</td>
+            </tr>
+
+            <tr>
+                <td>die Schuhe</td>
+                <td>دي شوهِه</td>
+                <td>الأحذية</td>
+            </tr>
+
+            <tr>
+                <td>kaufen</td>
+                <td>كاوفِن</td>
+                <td>يشتري</td>
+            </tr>
+
+            <tr>
+                <td>bezahlen</td>
+                <td>بِتسالن</td>
+                <td>يدفع</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- السؤال عن السعر -->
+    <div class="section">
+        <h2>💰 2. السؤال عن السعر</h2>
+
+        <div class="example">
+            <div class="german">Wie viel kostet das?</div>
+            = بكام ده؟
+        </div>
+
+        <div class="example">
+            <div class="german">Wie viel kostet die Tasche?</div>
+            = الحقيبة بكام؟
+        </div>
+
+        <div class="example">
+            <div class="german">Wie viel kostet das T-Shirt?</div>
+            = التيشيرت بكام؟
+        </div>
+    </div>
+
+    <!-- قول السعر -->
+    <div class="section">
+        <h2>💵 3. قول السعر</h2>
+
+        <div class="example">
+            <div class="german">Das kostet 10 Euro.</div>
+            = ده سعره 10 يورو.
+        </div>
+
+        <div class="example">
+            <div class="german">Die Tasche kostet 20 Euro.</div>
+            = الحقيبة سعرها 20 يورو.
+        </div>
+
+        <div class="example">
+            <div class="german">Das T-Shirt kostet 15 Euro.</div>
+            = التيشيرت سعره 15 يورو.
+        </div>
+    </div>
+
+    <!-- غالي ورخيص -->
+    <div class="section">
+        <h2>🏷️ 4. رخيص وغالي</h2>
+
+        <div class="example">
+            <div class="german">billig</div>
+            = رخيص
+        </div>
+
+        <div class="example">
+            <div class="german">teuer</div>
+            = غالي
+        </div>
+
+        <div class="example">
+            <div class="german">Das ist billig.</div>
+            = ده رخيص.
+        </div>
+
+        <div class="example">
+            <div class="german">Das ist teuer.</div>
+            = ده غالي.
+        </div>
+
+        <div class="example">
+            <div class="german">Die Schuhe sind teuer.</div>
+            = الأحذية غالية.
+        </div>
+    </div>
+
+    <!-- جمل المحل -->
+    <div class="section">
+        <h2>🛒 5. جمل مهمة في المحل</h2>
+
+        <div class="example">
+            <div class="german">Ich möchte das T-Shirt.</div>
+            = أريد التيشيرت.
+        </div>
+
+        <div class="example">
+            <div class="german">Ich möchte diese Tasche.</div>
+            = أريد هذه الحقيبة.
+        </div>
+
+        <div class="example">
+            <div class="german">Ich kaufe die Schuhe.</div>
+            = أنا أشتري الأحذية.
+        </div>
+
+        <div class="example">
+            <div class="german">Ich bezahle 20 Euro.</div>
+            = أنا أدفع 20 يورو.
+        </div>
+
+        <div class="example">
+            <strong>Der Verkäufer</strong> = البائع
+            <br>
+            <strong>Die Verkäuferin</strong> = البائعة
+        </div>
+    </div>
+
+    <!-- اللون والمقاس -->
+    <div class="section">
+        <h2>👕 6. السؤال عن اللون والمقاس</h2>
+
+        <div class="example">
+            <div class="german">Welche Farbe?</div>
+            = أي لون؟
+        </div>
+
+        <div class="example">
+            <div class="german">Welche Farbe hat das T-Shirt?</div>
+            = التيشيرت لونه إيه؟
+        </div>
+
+        <div class="example">
+            <div class="german">Das T-Shirt ist blau.</div>
+            = التيشيرت أزرق.
+        </div>
+
+        <div class="example">
+            <div class="german">Welche Größe?</div>
+            = أي مقاس؟
+        </div>
+
+        <div class="example">
+            <div class="german">Welche Größe brauchst du?</div>
+            = محتاج مقاس إيه؟
+        </div>
+    </div>
+
+    <!-- كلمات جديدة -->
+    <div class="section">
+        <h2>🆕 3 كلمات جديدة</h2>
+
+        <div class="new-words">
+            <p><strong>billig</strong> — بِلِّش — رخيص</p>
+            <p><strong>teuer</strong> — تويا — غالي</p>
+            <p><strong>die Größe</strong> — دي جرويسِه — المقاس / الحجم</p>
+        </div>
+    </div>
+
+    <!-- التدريب -->
+    <div class="section">
+        <h2>✏️ تدريب</h2>
+
+        <div class="question">
+            <p><strong>1. Wie viel kostet das?</strong></p>
+
+            <label>
+                <input type="radio" name="training1" value="a">
+                a) ما لون هذا؟
+            </label>
+
+            <label>
+                <input type="radio" name="training1" value="b">
+                b) بكام ده؟
+            </label>
+
+            <label>
+                <input type="radio" name="training1" value="c">
+                c) أين المحل؟
+            </label>
+
+            <div id="training1Feedback" class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>2. Die Tasche ___ 20 Euro.</strong></p>
+
+            <label>
+                <input type="radio" name="training2" value="a">
+                a) kostet
+            </label>
+
+            <label>
+                <input type="radio" name="training2" value="b">
+                b) kaufen
+            </label>
+
+            <label>
+                <input type="radio" name="training2" value="c">
+                c) bezahlt
+            </label>
+
+            <div id="training2Feedback" class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>3. ترجم: التيشيرت غالي.</strong></p>
+
+            <input
+                type="text"
+                id="training3"
+                placeholder="اكتب الإجابة بالألماني"
+            >
+
+            <div id="training3Feedback" class="feedback"></div>
+        </div>
+
+        <button onclick="checkTraining()">تصحيح التدريب</button>
+    </div>
+
+    <!-- المحادثة -->
+    <div class="section">
+        <h2>🗣️ محادثة قصيرة</h2>
+
+        <div class="dialogue">
+            <strong>A:</strong> Guten Tag!<br>
+            <strong>B:</strong> Guten Tag!<br><br>
+
+            <strong>A:</strong> Wie viel kostet das T-Shirt?<br>
+            <strong>B:</strong> Das T-Shirt kostet 15 Euro.<br><br>
+
+            <strong>A:</strong> Welche Farbe hat es?<br>
+            <strong>B:</strong> Es ist blau.<br><br>
+
+            <strong>A:</strong> Das ist schön. Ich möchte das T-Shirt.<br>
+            <strong>B:</strong> Natürlich.<br><br>
+
+            <strong>A:</strong> Danke!<br>
+            <strong>B:</strong> Bitte!
+        </div>
+    </div>
+
+    <!-- الاختبار -->
+    <div class="section">
+        <h2>📝 اختبار الدرس</h2>
+
+        <div class="question">
+            <p><strong>1. Was bedeutet „der Preis“?</strong></p>
+
+            <label>
+                <input type="radio" name="q1" value="a">
+                a) المحل
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="b">
+                b) السعر
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="c">
+                c) المال
+            </label>
+
+            <div id="feedback1" class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>2. Wie viel ___ die Tasche?</strong></p>
+
+            <label>
+                <input type="radio" name="q2" value="a">
+                a) kostet
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="b">
+                b) kaufen
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="c">
+                c) ist
+            </label>
+
+            <div id="feedback2" class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>3. Das T-Shirt kostet 20 Euro.</strong></p>
+
+            <label>
+                <input type="radio" name="q3" value="a">
+                a) التيشيرت لونه أزرق.
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="b">
+                b) التيشيرت سعره 20 يورو.
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="c">
+                c) أنا أشتري التيشيرت.
+            </label>
+
+            <div id="feedback3" class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>4. Was bedeutet „teuer“?</strong></p>
+
+            <label>
+                <input type="radio" name="q4" value="a">
+                a) رخيص
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="b">
+                b) غالي
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="c">
+                c) جميل
+            </label>
+
+            <div id="feedback4" class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>5. أي جملة صحيحة؟</strong></p>
+
+            <label>
+                <input type="radio" name="q5" value="a">
+                a) Die Tasche kostet 10 Euro.
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="b">
+                b) Die Tasche kosten 10 Euro.
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="c">
+                c) Die Tasche kaufen 10 Euro.
+            </label>
+
+            <div id="feedback5" class="feedback"></div>
+        </div>
+
+        <button onclick="checkQuiz()">تصحيح الاختبار</button>
+
+        <div id="quizResult"></div>
+
+        <button id="retryQuiz" onclick="retryQuiz()">
+            🔄 إعادة الاختبار
+        </button>
+
+        <button id="nextLesson" onclick="goToNextLesson()">
+            ➡️ الدرس التاسع عشر
+        </button>
+
+        <button id="backToA1" onclick="goBackToA1()">
+            🔙 الرجوع إلى مستوى A1
+        </button>
+    </div>
+
+</div>
+
+<script>
+
+    // تصحيح التدريب
+    function checkTraining() {
+
+        const t1 = document.querySelector(
+            'input[name="training1"]:checked'
+        );
+
+        const t2 = document.querySelector(
+            'input[name="training2"]:checked'
+        );
+
+        const t3 = document.getElementById("training3").value.trim();
+
+        document.getElementById("training1Feedback").textContent =
+            t1 && t1.value === "b"
+                ? "✅ إجابة صحيحة"
+                : "❌ الإجابة الصحيحة: b) بكام ده؟";
+
+        document.getElementById("training1Feedback").className =
+            t1 && t1.value === "b"
+                ? "feedback success"
+                : "feedback wrong";
+
+
+        document.getElementById("training2Feedback").textContent =
+            t2 && t2.value === "a"
+                ? "✅ إجابة صحيحة"
+                : "❌ الإجابة الصحيحة: a) kostet";
+
+        document.getElementById("training2Feedback").className =
+            t2 && t2.value === "a"
+                ? "feedback success"
+                : "feedback wrong";
+
+
+        const correctT3 = [
+            "Das T-Shirt ist teuer.",
+            "Das T-Shirt ist teuer"
+        ];
+
+        const isCorrectT3 = correctT3.includes(t3);
+
+        document.getElementById("training3Feedback").textContent =
+            isCorrectT3
+                ? "✅ إجابة صحيحة"
+                : "❌ الإجابة الصحيحة: Das T-Shirt ist teuer.";
+
+        document.getElementById("training3Feedback").className =
+            isCorrectT3
+                ? "feedback success"
+                : "feedback wrong";
+    }
+
+
+    // تصحيح الاختبار
+    function checkQuiz() {
+
+        const answers = {
+            q1: "b",
+            q2: "a",
+            q3: "b",
+            q4: "b",
+            q5: "a"
+        };
+
+        const correctText = {
+            q1: "b) السعر",
+            q2: "a) kostet",
+            q3: "b) التيشيرت سعره 20 يورو.",
+            q4: "b) غالي",
+            q5: "a) Die Tasche kostet 10 Euro."
+        };
+
+        let score = 0;
+
+        for (let i = 1; i <= 5; i++) {
+
+            const question = "q" + i;
+
+            const selected = document.querySelector(
+                'input[name="' + question + '"]:checked'
+            );
+
+            const feedback = document.getElementById(
+                "feedback" + i
+            );
+
+            if (!selected) {
+
+                feedback.textContent =
+                    "⚠️ لم يتم اختيار إجابة. الإجابة الصحيحة: " +
+                    correctText[question];
+
+                feedback.className = "feedback wrong";
+
+            } else if (selected.value === answers[question]) {
+
+                score++;
+
+                feedback.textContent =
+                    "✅ إجابة صحيحة";
+
+                feedback.className = "feedback success";
+
+            } else {
+
+                feedback.textContent =
+                    "❌ إجابة خاطئة — الإجابة الصحيحة: " +
+                    correctText[question];
+
+                feedback.className = "feedback wrong";
+            }
+        }
+
+
+        const result = document.getElementById("quizResult");
+
+        if (score >= 3) {
+
+            result.textContent =
+                "🎉 ممتاز! نجحت في الاختبار بدرجة " +
+                score +
+                " من 5.";
+
+            result.className = "success";
+
+            // حفظ إتمام الدرس
+            localStorage.setItem(
+                "lesson18Completed",
+                "true"
+            );
+
+            // إظهار الأزرار
+            document.getElementById("nextLesson").style.display =
+                "inline-block";
+
+            document.getElementById("backToA1").style.display =
+                "inline-block";
+
+            document.getElementById("retryQuiz").style.display =
+                "none";
+
+            alert("✅ تم حفظ الدرس الثامن عشر بنجاح!");
+
+        } else {
+
+            result.textContent =
+                "❌ الدرجة " +
+                score +
+                " من 5. لازم تجيب 3 على الأقل للنجاح.";
+
+            result.className = "wrong";
+
+            document.getElementById("retryQuiz").style.display =
+                "inline-block";
+
+            document.getElementById("nextLesson").style.display =
+                "none";
+
+            document.getElementById("backToA1").style.display =
+                "inline-block";
+        }
+    }
+
+
+    // إعادة الاختبار
+    function retryQuiz() {
+
+        for (let i = 1; i <= 5; i++) {
+
+            const options = document.querySelectorAll(
+                'input[name="q' + i + '"]'
+            );
+
+            options.forEach(function(option) {
+                option.checked = false;
+            });
+
+            document.getElementById(
+                "feedback" + i
+            ).textContent = "";
+        }
+
+        document.getElementById("quizResult").textContent = "";
+
+        document.getElementById("retryQuiz").style.display =
+            "none";
+
+        document.getElementById("nextLesson").style.display =
+            "none";
+    }
+
+
+    // الدرس التالي
+    function goToNextLesson() {
+        window.location.href = "lesson19.html";
+    }
+
+
+    // الرجوع إلى A1
+    function goBackToA1() {
+        window.location.href = "A1.html";
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>اختبار B1 النهائي | German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #1f4e79;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .back {
+            display: inline-block;
+            background: #555;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #1f4e79;
+        }
+
+        .info {
+            background: #eef4fb;
+            border-right: 5px solid #1f4e79;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            background: #f8f9fa;
+            padding: 17px;
+            margin-bottom: 18px;
+            border-radius: 9px;
+        }
+
+        .question p {
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin: 9px 0;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-left: 8px;
+        }
+
+        button {
+            border: none;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .submit-btn {
+            background: #1f4e79;
+        }
+
+        .retry-btn {
+            background: #6c757d;
+            margin-top: 15px;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 18px;
+            border-radius: 9px;
+        }
+
+        .success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .fail {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .wrong {
+            background: #fff3cd;
+            color: #856404;
+            padding: 18px;
+            margin-top: 15px;
+            border-radius: 9px;
+        }
+
+        .saved {
+            background: #eaf7ea;
+            color: #155724;
+            padding: 18px;
+            border-radius: 9px;
+            margin-bottom: 20px;
+        }
+
+        .answers-box {
+            background: #eef4fb;
+            padding: 18px;
+            border-radius: 9px;
+            margin-top: 15px;
+        }
+
+        .answers-box li {
+            margin-bottom: 10px;
+        }
+
+        .back-bottom {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🏆 اختبار B1 النهائي</h1>
+        <p>German with Farida 🇩🇪</p>
+    </header>
+
+    <div class="container">
+
+        <!-- الرجوع إلى B1 -->
+        <a class="back" href="B1.html">⬅️ الرجوع إلى B1</a>
+
+        <!-- الاختبار المحفوظ -->
+        <div id="savedTest"></div>
+
+        <!-- معلومات الاختبار -->
+        <div class="card" id="testInfo">
+            <h2>📝 معلومات الاختبار</h2>
+
+            <div class="info">
+                <strong>عدد الأسئلة:</strong> 15 سؤال<br>
+                <strong>درجة النجاح:</strong> 9/15<br>
+                <strong>كل سؤال:</strong> درجة واحدة
+            </div>
+        </div>
+
+        <!-- الاختبار -->
+        <div class="card" id="testCard">
+
+            <h2>🇩🇪 اختبار مستوى B1</h2>
+
+            <!-- السؤال 1 -->
+            <div class="question">
+                <p>1️⃣ اختر الجملة الصحيحة في Konjunktiv II:</p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    Wenn ich Zeit hätte, würde ich Deutsch lernen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    Wenn ich Zeit habe, würde ich Deutsch lernen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    Wenn ich Zeit hätte, ich würde Deutsch lernen.
+                </label>
+            </div>
+
+            <!-- السؤال 2 -->
+            <div class="question">
+                <p>2️⃣ اختر الجملة الصحيحة في Passiv:</p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    Das Auto wird repariert.
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    Das Auto wird reparieren.
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    Das Auto repariert wird.
+                </label>
+            </div>
+
+            <!-- السؤال 3 -->
+            <div class="question">
+                <p>3️⃣ أكمل الجملة:</p>
+
+                <p>Nachdem ich gegessen ______, ging ich spazieren.</p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    hatte
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    habe
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    hat
+                </label>
+            </div>
+
+            <!-- السؤال 4 -->
+            <div class="question">
+                <p>4️⃣ اختر الجملة الصحيحة في Futur II:</p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    Ich werde Deutsch gelernt haben.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    Ich werde Deutsch lernen haben.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    Ich habe Deutsch gelernt werden.
+                </label>
+            </div>
+
+            <!-- السؤال 5 -->
+            <div class="question">
+                <p>5️⃣ اختر الجملة الصحيحة:</p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    Ein guter Mann hilft mir.
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    Ein gute Mann hilft mir.
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    Ein guten Mann hilft mir.
+                </label>
+            </div>
+
+            <!-- السؤال 6 -->
+            <div class="question">
+                <p>6️⃣ اختر الصيغة الصحيحة:</p>
+
+                <p>Ich sehe ______ Studenten.</p>
+
+                <label>
+                    <input type="radio" name="q6" value="a">
+                    den Student
+                </label>
+
+                <label>
+                    <input type="radio" name="q6" value="b">
+                    den Studenten
+                </label>
+
+                <label>
+                    <input type="radio" name="q6" value="c">
+                    dem Studenten
+                </label>
+            </div>
+
+            <!-- السؤال 7 -->
+            <div class="question">
+                <p>7️⃣ أي جملة تستخدم Genitiv بشكل صحيح؟</p>
+
+                <label>
+                    <input type="radio" name="q7" value="a">
+                    Das Auto meines Vaters ist neu.
+                </label>
+
+                <label>
+                    <input type="radio" name="q7" value="b">
+                    Das Auto mein Vater ist neu.
+                </label>
+
+                <label>
+                    <input type="radio" name="q7" value="c">
+                    Das Auto meinem Vaters ist neu.
+                </label>
+            </div>
+
+            <!-- السؤال 8 -->
+            <div class="question">
+                <p>8️⃣ أكمل السؤال غير المباشر:</p>
+
+                <p>Ich weiß nicht, wo er ______.</p>
+
+                <label>
+                    <input type="radio" name="q8" value="a">
+                    wohnt
+                </label>
+
+                <label>
+                    <input type="radio" name="q8" value="b">
+                    wohnt er
+                </label>
+
+                <label>
+                    <input type="radio" name="q8" value="c">
+                    wohnen
+                </label>
+            </div>
+
+            <!-- السؤال 9 -->
+            <div class="question">
+                <p>9️⃣ اختر الجملة الصحيحة مع Infinitiv mit „zu“:</p>
+
+                <label>
+                    <input type="radio" name="q9" value="a">
+                    Ich versuche, Deutsch zu lernen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q9" value="b">
+                    Ich versuche, zu Deutsch lernen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q9" value="c">
+                    Ich zu versuche Deutsch lernen.
+                </label>
+            </div>
+
+            <!-- السؤال 10 -->
+            <div class="question">
+                <p>🔟 اختر الجملة الصحيحة مع um ... zu:</p>
+
+                <label>
+                    <input type="radio" name="q10" value="a">
+                    Ich lerne Deutsch, um in Deutschland zu studieren.
+                </label>
+
+                <label>
+                    <input type="radio" name="q10" value="b">
+                    Ich lerne Deutsch, um in Deutschland studieren.
+                </label>
+
+                <label>
+                    <input type="radio" name="q10" value="c">
+                    Ich lerne Deutsch, zu um in Deutschland studieren.
+                </label>
+            </div>
+
+            <!-- السؤال 11 -->
+            <div class="question">
+                <p>1️⃣1️⃣ اختر الجملة الصحيحة:</p>
+
+                <label>
+                    <input type="radio" name="q11" value="a">
+                    Obwohl ich müde bin, lerne ich Deutsch.
+                </label>
+
+                <label>
+                    <input type="radio" name="q11" value="b">
+                    Obwohl ich müde bin, ich lerne Deutsch.
+                </label>
+
+                <label>
+                    <input type="radio" name="q11" value="c">
+                    Obwohl ich bin müde, lerne ich Deutsch.
+                </label>
+            </div>
+
+            <!-- السؤال 12 -->
+            <div class="question">
+                <p>1️⃣2️⃣ ماذا تعني „trotzdem“؟</p>
+
+                <label>
+                    <input type="radio" name="q12" value="a">
+                    لأن
+                </label>
+
+                <label>
+                    <input type="radio" name="q12" value="b">
+                    مع ذلك
+                </label>
+
+                <label>
+                    <input type="radio" name="q12" value="c">
+                    أولًا
+                </label>
+            </div>
+
+            <!-- السؤال 13 -->
+            <div class="question">
+                <p>1️⃣3️⃣ اختر الجملة الصحيحة في Relativsatz:</p>
+
+                <label>
+                    <input type="radio" name="q13" value="a">
+                    Das ist der Mann, der in Berlin wohnt.
+                </label>
+
+                <label>
+                    <input type="radio" name="q13" value="b">
+                    Das ist der Mann, den in Berlin wohnt.
+                </label>
+
+                <label>
+                    <input type="radio" name="q13" value="c">
+                    Das ist der Mann, die in Berlin wohnt.
+                </label>
+            </div>
+
+            <!-- السؤال 14 -->
+            <div class="question">
+                <p>1️⃣4️⃣ أي كلمة تمثل Partizip I؟</p>
+
+                <label>
+                    <input type="radio" name="q14" value="a">
+                    geschlossen
+                </label>
+
+                <label>
+                    <input type="radio" name="q14" value="b">
+                    spielend
+                </label>
+
+                <label>
+                    <input type="radio" name="q14" value="c">
+                    geschrieben
+                </label>
+            </div>
+
+            <!-- السؤال 15 -->
+            <div class="question">
+                <p>1️⃣5️⃣ في الكلمة المركبة الألمانية، جنس الكلمة غالبًا يتحدد بواسطة:</p>
+
+                <label>
+                    <input type="radio" name="q15" value="a">
+                    أول كلمة
+                </label>
+
+                <label>
+                    <input type="radio" name="q15" value="b">
+                    آخر كلمة
+                </label>
+
+                <label>
+                    <input type="radio" name="q15" value="c">
+                    عدد حروف الكلمة
+                </label>
+            </div>
+
+            <button class="submit-btn" id="submitBtn" onclick="checkTest()">
+                📝 إنهاء الاختبار
+            </button>
+
+            <div id="result"></div>
+
+        </div>
+
+        <!-- الرجوع إلى B1 -->
+        <a class="back back-bottom" href="B1.html">
+            ⬅️ الرجوع إلى B1
+        </a>
+
+    </div>
+
+    <script>
+
+        const answers = {
+            q1: "a",
+            q2: "a",
+            q3: "a",
+            q4: "a",
+            q5: "a",
+            q6: "b",
+            q7: "a",
+            q8: "a",
+            q9: "a",
+            q10: "a",
+            q11: "a",
+            q12: "b",
+            q13: "a",
+            q14: "b",
+            q15: "b"
+        };
+
+        const correctText = {
+            q1: "Wenn ich Zeit hätte, würde ich Deutsch lernen.",
+            q2: "Das Auto wird repariert.",
+            q3: "hatte",
+            q4: "Ich werde Deutsch gelernt haben.",
+            q5: "Ein guter Mann hilft mir.",
+            q6: "den Studenten",
+            q7: "Das Auto meines Vaters ist neu.",
+            q8: "wohnt",
+            q9: "Ich versuche, Deutsch zu lernen.",
+            q10: "Ich lerne Deutsch, um in Deutschland zu studieren.",
+            q11: "Obwohl ich müde bin, lerne ich Deutsch.",
+            q12: "مع ذلك",
+            q13: "Das ist der Mann, der in Berlin wohnt.",
+            q14: "spielend",
+            q15: "آخر كلمة"
+        };
+
+        function checkTest() {
+
+            let score = 0;
+            let wrongAnswers = [];
+
+            for (let i = 1; i <= 15; i++) {
+
+                const selected = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                if (selected && selected.value === answers["q" + i]) {
+                    score++;
+                } else {
+                    wrongAnswers.push(i);
+                }
+            }
+
+            const result = document.getElementById("result");
+
+            let html = "";
+
+            if (score >= 9) {
+
+                localStorage.setItem("b1FinalTestCompleted", "true");
+                localStorage.setItem("b1FinalTestScore", score);
+
+                html += `
+                    <div class="result success">
+                        🎉🎉 أحسنت! نجحت في الاختبار النهائي لـ B1!<br><br>
+
+                        🏆 نتيجتك:
+                        <strong>${score}/15</strong><br><br>
+
+                        💾 تم حفظ النتيجة بنجاح.<br>
+                        🔒 لن تحتاج إلى حل الاختبار مرة أخرى.
+                    </div>
+
+                    <div class="answers-box">
+                        <h3>📚 الإجابات الصحيحة</h3>
+
+                        <ol>
+                            ${createAllAnswers()}
+                        </ol>
+                    </div>
+                `;
+
+            } else {
+
+                html += `
+                    <div class="result fail">
+                        ❌ لم تنجح في الاختبار هذه المرة.<br><br>
+
+                        نتيجتك:
+                        <strong>${score}/15</strong><br><br>
+
+                        لازم تجيب <strong>9/15</strong> على الأقل للنجاح.
+                    </div>
+                `;
+
+                if (wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong">
+                            <h3>❌ الأسئلة التي أخطأت فيها والإجابات الصحيحة:</h3>
+
+                            <ol>
+                    `;
+
+                    wrongAnswers.forEach(function (q) {
+
+                        html += `
+                            <li>
+                                السؤال ${q}<br>
+                                ✅ الإجابة الصحيحة:
+                                <strong>${correctText["q" + q]}</strong>
+                            </li>
+                        `;
+
+                    });
+
+                    html += `
+                            </ol>
+                        </div>
+                    `;
+                }
+
+                html += `
+                    <button class="retry-btn" onclick="retryTest()">
+                        🔄 إعادة الاختبار
+                    </button>
+                `;
+            }
+
+            result.innerHTML = html;
+
+            if (score >= 9) {
+
+                document.querySelectorAll('input[type="radio"]').forEach(function (input) {
+                    input.disabled = true;
+                });
+
+                document.getElementById("submitBtn").disabled = true;
+
+                document.getElementById("testCard").scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            } else {
+
+                document.querySelectorAll('input[type="radio"]').forEach(function (input) {
+                    input.disabled = true;
+                });
+
+                document.getElementById("submitBtn").disabled = true;
+
+                document.getElementById("testCard").scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        }
+
+        function createAllAnswers() {
+
+            let html = "";
+
+            for (let i = 1; i <= 15; i++) {
+
+                html += `
+                    <li>
+                        السؤال ${i}:
+                        <strong>${correctText["q" + i]}</strong>
+                    </li>
+                `;
+            }
+
+            return html;
+        }
+
+        function retryTest() {
+
+            document.querySelectorAll('input[type="radio"]').forEach(function (input) {
+                input.checked = false;
+                input.disabled = false;
+            });
+
+            document.getElementById("result").innerHTML = "";
+
+            document.getElementById("submitBtn").disabled = false;
+
+            document.getElementById("testCard").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        function showSavedTest() {
+
+            if (localStorage.getItem("b1FinalTestCompleted") === "true") {
+
+                const score = localStorage.getItem("b1FinalTestScore");
+
+                document.getElementById("savedTest").innerHTML = `
+                    <div class="saved">
+
+                        🎉 <strong>تم حل الاختبار النهائي لـ B1 من قبل!</strong><br><br>
+
+                        🏆 درجتك المحفوظة:
+                        <strong>${score}/15</strong><br><br>
+
+                        🔒 لا يمكنك حل الاختبار مرة أخرى.<br>
+                        💾 نتيجتك محفوظة على هذا الجهاز.
+
+                        <div class="answers-box">
+
+                            <h3>📚 الإجابات الصحيحة للـ15 سؤال:</h3>
+
+                            <ol>
+                                ${createAllAnswers()}
+                            </ol>
+
+                        </div>
+
+                    </div>
+                `;
+
+                document.getElementById("testCard").style.display = "none";
+            }
+        }
+
+        showSavedTest();
+
+    </script>
+
+</body>
+
+</html>

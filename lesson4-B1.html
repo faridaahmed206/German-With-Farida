@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 4 B1 - Plusquamperfekt</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #1976d2;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0 0 8px;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #1976d2;
+            font-weight: bold;
+        }
+
+        .box {
+            background: white;
+            padding: 22px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .box h2 {
+            color: #1976d2;
+            margin-top: 0;
+        }
+
+        .example {
+            background: #f0f6ff;
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .german {
+            font-size: 18px;
+            font-weight: bold;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .meaning {
+            color: #555;
+        }
+
+        .formula {
+            background: #fff8e1;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            direction: ltr;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #1976d2;
+            color: white;
+        }
+
+        .note {
+            background: #e8f5e9;
+            padding: 14px;
+            border-radius: 10px;
+            margin-top: 12px;
+        }
+
+        .question {
+            background: #f8f9fc;
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        .check {
+            background: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 9px;
+            padding: 12px 22px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .check:disabled {
+            background: #aaa;
+            cursor: not-allowed;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .success {
+            background: #e8f5e9;
+            color: #176b2c;
+        }
+
+        .fail {
+            background: #ffebee;
+            color: #a51d2a;
+        }
+
+        .next-button {
+            display: none;
+            background: #16803c;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 9px;
+            margin-top: 15px;
+        }
+
+        .retry-button {
+            display: none;
+            background: #d88900;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 9px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 Lesson 4 – Plusquamperfekt</h1>
+        <p>الماضي الأسبق في اللغة الألمانية</p>
+    </header>
+
+    <div class="container">
+
+        <a class="back" href="B1.html">
+            ⬅️ العودة إلى مستوى B1
+        </a>
+
+
+        <!-- المقدمة -->
+        <div class="box">
+
+            <h2>📚 ما هو Plusquamperfekt؟</h2>
+
+            <p>
+                نستخدم <b>Plusquamperfekt</b> عندما نتحدث عن حدث حدث
+                <b>قبل حدث آخر في الماضي</b>.
+            </p>
+
+            <p>
+                يعني ببساطة: عندنا حدثان في الماضي، والحدث الأقدم نستخدم معه
+                Plusquamperfekt.
+            </p>
+
+            <div class="example">
+                <div class="german">
+                    Ich hatte gegessen, bevor ich zur Schule ging.
+                </div>
+
+                <div class="meaning">
+                    كنت قد أكلت قبل أن أذهب إلى المدرسة.
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- التركيب -->
+        <div class="box">
+
+            <h2>1️⃣ تركيب Plusquamperfekt</h2>
+
+            <div class="formula">
+                hatten / waren + Partizip II
+            </div>
+
+            <p>
+                نستخدم التصريف الماضي من <b>haben</b> أو <b>sein</b>،
+                ثم نضع <b>Partizip II</b> في نهاية الجملة.
+            </p>
+
+        </div>
+
+
+        <!-- haben -->
+        <div class="box">
+
+            <h2>2️⃣ Plusquamperfekt مع haben</h2>
+
+            <table>
+
+                <tr>
+                    <th>الضمير</th>
+                    <th>haben في Präteritum</th>
+                </tr>
+
+                <tr>
+                    <td>ich</td>
+                    <td>hatte</td>
+                </tr>
+
+                <tr>
+                    <td>du</td>
+                    <td>hattest</td>
+                </tr>
+
+                <tr>
+                    <td>er / sie / es</td>
+                    <td>hatte</td>
+                </tr>
+
+                <tr>
+                    <td>wir</td>
+                    <td>hatten</td>
+                </tr>
+
+                <tr>
+                    <td>ihr</td>
+                    <td>hattet</td>
+                </tr>
+
+                <tr>
+                    <td>sie / Sie</td>
+                    <td>hatten</td>
+                </tr>
+
+            </table>
+
+            <div class="example">
+                <div class="german">
+                    Ich hatte Deutsch gelernt.
+                </div>
+
+                <div class="meaning">
+                    كنت قد تعلمت الألمانية.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="german">
+                    Wir hatten das Essen gekocht.
+                </div>
+
+                <div class="meaning">
+                    كنا قد طبخنا الطعام.
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- sein -->
+        <div class="box">
+
+            <h2>3️⃣ Plusquamperfekt مع sein</h2>
+
+            <table>
+
+                <tr>
+                    <th>الضمير</th>
+                    <th>sein في Präteritum</th>
+                </tr>
+
+                <tr>
+                    <td>ich</td>
+                    <td>war</td>
+                </tr>
+
+                <tr>
+                    <td>du</td>
+                    <td>warst</td>
+                </tr>
+
+                <tr>
+                    <td>er / sie / es</td>
+                    <td>war</td>
+                </tr>
+
+                <tr>
+                    <td>wir</td>
+                    <td>waren</td>
+                </tr>
+
+                <tr>
+                    <td>ihr</td>
+                    <td>wart</td>
+                </tr>
+
+                <tr>
+                    <td>sie / Sie</td>
+                    <td>waren</td>
+                </tr>
+
+            </table>
+
+            <div class="example">
+                <div class="german">
+                    Ich war nach Hause gegangen.
+                </div>
+
+                <div class="meaning">
+                    كنت قد ذهبت إلى المنزل.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="german">
+                    Sie war nach Deutschland gefahren.
+                </div>
+
+                <div class="meaning">
+                    كانت قد سافرت إلى ألمانيا.
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- متى نستخدم haben و sein -->
+        <div class="box">
+
+            <h2>4️⃣ متى نستخدم haben ومتى نستخدم sein؟</h2>
+
+            <p>
+                القاعدة هنا تشبه قاعدة <b>Perfekt</b>.
+            </p>
+
+            <div class="note">
+                <b>haben</b> → مع معظم الأفعال.
+            </div>
+
+            <div class="note">
+                <b>sein</b> → غالبًا مع أفعال الحركة أو تغيير الحالة،
+                مثل gehen و fahren و kommen و werden.
+            </div>
+
+            <div class="example">
+                <div class="german">
+                    Ich hatte einen Film gesehen.
+                </div>
+
+                <div class="meaning">
+                    كنت قد شاهدت فيلمًا.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="german">
+                    Ich war nach Hause gegangen.
+                </div>
+
+                <div class="meaning">
+                    كنت قد ذهبت إلى المنزل.
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- bevor -->
+        <div class="box">
+
+            <h2>5️⃣ استخدام bevor</h2>
+
+            <p>
+                <b>bevor</b> تعني "قبل أن"، وتستخدم كثيرًا مع Plusquamperfekt
+                عندما نرتب حدثين في الماضي.
+            </p>
+
+            <div class="example">
+                <div class="german">
+                    Ich hatte gegessen, bevor ich zur Schule ging.
+                </div>
+
+                <div class="meaning">
+                    كنت قد أكلت قبل أن أذهب إلى المدرسة.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="german">
+                    Nachdem ich gegessen hatte, ging ich spazieren.
+                </div>
+
+                <div class="meaning">
+                    بعدما كنت قد أكلت، ذهبت للتمشية.
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- nachdem -->
+        <div class="box">
+
+            <h2>6️⃣ استخدام nachdem</h2>
+
+            <p>
+                <b>nachdem</b> تعني "بعدما".
+            </p>
+
+            <p>
+                عندما يكون عندنا حدثان في الماضي، يمكن استخدام Plusquamperfekt
+                للحدث الذي حدث أولًا.
+            </p>
+
+            <div class="example">
+                <div class="german">
+                    Nachdem ich meine Hausaufgaben gemacht hatte, sah ich fern.
+                </div>
+
+                <div class="meaning">
+                    بعدما كنت قد أنهيت واجبي، شاهدت التلفاز.
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- الفرق بين Perfekt و Plusquamperfekt -->
+        <div class="box">
+
+            <h2>7️⃣ الفرق بين Perfekt و Plusquamperfekt</h2>
+
+            <table>
+
+                <tr>
+                    <th>الزمن</th>
+                    <th>مثال</th>
+                    <th>المعنى</th>
+                </tr>
+
+                <tr>
+                    <td>Perfekt</td>
+                    <td>Ich habe gegessen.</td>
+                    <td>لقد أكلت.</td>
+                </tr>
+
+                <tr>
+                    <td>Plusquamperfekt</td>
+                    <td>Ich hatte gegessen.</td>
+                    <td>كنت قد أكلت.</td>
+                </tr>
+
+            </table>
+
+            <div class="note">
+                💡 تذكر: Plusquamperfekt = حدث أقدم من حدث آخر في الماضي.
+            </div>
+
+        </div>
+
+
+        <!-- ملخص -->
+        <div class="box">
+
+            <h2>📝 ملخص سريع</h2>
+
+            <ul>
+                <li>Plusquamperfekt يتحدث عن حدث حدث قبل حدث آخر في الماضي.</li>
+                <li>التركيب: <b>hatte / hatten + Partizip II</b>.</li>
+                <li>أو: <b>war / waren + Partizip II</b>.</li>
+                <li>Partizip II يأتي في نهاية الجملة.</li>
+                <li><b>bevor</b> = قبل أن.</li>
+                <li><b>nachdem</b> = بعدما.</li>
+            </ul>
+
+        </div>
+
+
+        <!-- الاختبار -->
+        <div class="box">
+
+            <h2>📝 اختبار Lesson 4</h2>
+
+            <p>
+                لازم تجيب على الأقل <b>3 من 5</b> عشان تنجح ويتفتح Lesson 5.
+            </p>
+
+
+            <!-- Q1 -->
+            <div class="question">
+
+                <p>1️⃣ اختر الجملة الصحيحة في Plusquamperfekt:</p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    Ich hatte Deutsch gelernt.
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    Ich habe Deutsch lernen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    Ich hatte Deutsch lernen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="d">
+                    Ich war Deutsch gelernt.
+                </label>
+
+            </div>
+
+
+            <!-- Q2 -->
+            <div class="question">
+
+                <p>2️⃣ أكمل:</p>
+
+                <p class="german">
+                    Ich ______ gegessen.
+                </p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    hatte
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    habe
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    bin
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="d">
+                    werde
+                </label>
+
+            </div>
+
+
+            <!-- Q3 -->
+            <div class="question">
+
+                <p>3️⃣ ما معنى <b>nachdem</b>؟</p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    بعدما
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    قبل أن
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    لأن
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="d">
+                    رغم أن
+                </label>
+
+            </div>
+
+
+            <!-- Q4 -->
+            <div class="question">
+
+                <p>4️⃣ اختر الجملة الصحيحة:</p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    Nachdem ich gegessen hatte, ging ich spazieren.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    Nachdem ich gegessen habe, ging ich spazieren.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    Nachdem ich gegessen, hatte ging ich spazieren.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="d">
+                    Nachdem ich hatte gegessen, ging ich spazieren.
+                </label>
+
+            </div>
+
+
+            <!-- Q5 -->
+            <div class="question">
+
+                <p>5️⃣ ما هو Plusquamperfekt من:</p>
+
+                <p class="german">
+                    Ich gehe nach Hause.
+                </p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    Ich war nach Hause gegangen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    Ich bin nach Hause gegangen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    Ich hatte nach Hause gehen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="d">
+                    Ich wurde nach Hause gegangen.
+                </label>
+
+            </div>
+
+
+            <button class="check" id="checkButton" onclick="checkQuiz()">
+                ✅ تصحيح الاختبار
+            </button>
+
+            <div id="result"></div>
+
+            <a href="Lesson5-B1.html" class="next-button" id="nextButton">
+                ➡️ الانتقال إلى Lesson 5
+            </a>
+
+            <button class="retry-button" id="retryButton" onclick="retryQuiz()">
+                🔄 إعادة الاختبار
+            </button>
+
+        </div>
+
+
+        <a class="back" href="B1.html">
+            ⬅️ العودة إلى مستوى B1
+        </a>
+
+    </div>
+
+
+    <script>
+
+        const answers = {
+            q1: "a",
+            q2: "a",
+            q3: "a",
+            q4: "a",
+            q5: "a"
+        };
+
+
+        const correctText = {
+            q1: "Ich hatte Deutsch gelernt.",
+            q2: "hatte",
+            q3: "بعدما",
+            q4: "Nachdem ich gegessen hatte, ging ich spazieren.",
+            q5: "Ich war nach Hause gegangen."
+        };
+
+
+        function checkQuiz() {
+
+            let score = 0;
+            let wrongAnswers = [];
+
+            for (let i = 1; i <= 5; i++) {
+
+                const selected =
+                    document.querySelector(
+                        'input[name="q' + i + '"]:checked'
+                    );
+
+                if (selected && selected.value === answers["q" + i]) {
+                    score++;
+                } else {
+                    wrongAnswers.push(i);
+                }
+            }
+
+
+            const result = document.getElementById("result");
+
+            result.style.display = "block";
+
+
+            let html =
+                "<strong>نتيجتك: " + score + "/5</strong><br><br>";
+
+
+            if (wrongAnswers.length > 0) {
+
+                html +=
+                    "<b>❌ الأسئلة التي أخطأت فيها وإجابتها الصحيحة:</b><br>";
+
+                wrongAnswers.forEach(function(number) {
+
+                    html +=
+                        "السؤال " + number +
+                        ": ✅ " +
+                        correctText["q" + number] +
+                        "<br>";
+
+                });
+            }
+
+
+            if (score >= 3) {
+
+                localStorage.setItem(
+                    "b1Lesson4Completed",
+                    "true"
+                );
+
+                html +=
+                    "<br>🎉 أحسنت! نجحت في Lesson 4.<br>" +
+                    "💾 تم حفظ تقدمك بنجاح!<br>" +
+                    "🔓 تم فتح Lesson 5.";
+
+                result.className = "success";
+
+                document.getElementById("nextButton").style.display =
+                    "inline-block";
+
+                document.getElementById("retryButton").style.display =
+                    "none";
+
+            } else {
+
+                html +=
+                    "<br><br>❌ تحتاج إلى مراجعة بسيطة.<br>" +
+                    "لازم تجيب 3/5 على الأقل للنجاح.";
+
+                result.className = "fail";
+
+                document.getElementById("nextButton").style.display =
+                    "none";
+
+                document.getElementById("retryButton").style.display =
+                    "inline-block";
+            }
+
+
+            result.innerHTML = html;
+
+
+            document.querySelectorAll("input").forEach(function(input) {
+                input.disabled = true;
+            });
+
+            document.getElementById("checkButton").disabled = true;
+        }
+
+
+        function retryQuiz() {
+
+            document.querySelectorAll("input").forEach(function(input) {
+                input.checked = false;
+                input.disabled = false;
+            });
+
+            document.getElementById("result").style.display =
+                "none";
+
+            document.getElementById("checkButton").disabled =
+                false;
+
+            document.getElementById("retryButton").style.display =
+                "none";
+
+            document.getElementById("nextButton").style.display =
+                "none";
+        }
+
+
+        if (
+            localStorage.getItem("b1Lesson4Completed") === "true"
+        ) {
+
+            document.getElementById("result").style.display =
+                "block";
+
+            document.getElementById("result").className =
+                "success";
+
+            document.getElementById("result").innerHTML =
+                "✅ Lesson 4 مكتمل بالفعل.<br>" +
+                "💾 تقدمك محفوظ.<br>" +
+                "🔓 Lesson 5 مفتوح.";
+
+            document.getElementById("nextButton").style.display =
+                "inline-block";
+        }
+
+    </script>
+
+</body>
+
+</html>

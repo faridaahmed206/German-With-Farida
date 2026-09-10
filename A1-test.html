@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>اختبار A1 النهائي</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+header {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.question {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.question h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+label {
+    display: block;
+    background: #f1f5f9;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+label:hover {
+    background: #e2e8f0;
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    border-radius: 12px;
+    padding: 14px 25px;
+    font-size: 17px;
+    cursor: pointer;
+    margin: 8px;
+}
+
+#checkButton {
+    background: #2563eb;
+    color: white;
+}
+
+#retryButton {
+    background: #f59e0b;
+    color: white;
+    display: none;
+}
+
+#backButton {
+    background: #64748b;
+    color: white;
+}
+
+.feedback {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.correct {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.wrong {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+#result {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.success {
+    background: #dcfce7;
+    color: #166534;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.fail {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.saved-result {
+    background: #dcfce7;
+    color: #166534;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.saved-answers {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.saved-answers h2 {
+    color: #333;
+}
+
+.saved-answer {
+    background: #f1f5f9;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🇩🇪 اختبار A1 النهائي</h1>
+    <p>اختبر كل اللي اتعلمته في مستوى A1</p>
+    <p>النجاح من 9 إجابات صحيحة من 15</p>
+</header>
+
+<div class="container">
+
+    <!-- منطقة النتيجة المحفوظة -->
+    <div id="savedResult"></div>
+
+
+    <!-- الاختبار -->
+    <div id="testContent">
+
+        <!-- السؤال 1 -->
+        <div class="question">
+            <h3>1️⃣ Woher kommst du?</h3>
+
+            <label>
+                <input type="radio" name="q1" value="a">
+                Ich wohne in Ägypten.
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="b">
+                Ich komme aus Ägypten.
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="c">
+                Ich bin Ägypten.
+            </label>
+
+            <div id="feedback-q1"></div>
+        </div>
+
+
+        <!-- السؤال 2 -->
+        <div class="question">
+            <h3>2️⃣ Ich ___ zwölf Jahre alt.</h3>
+
+            <label>
+                <input type="radio" name="q2" value="a">
+                bin
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="b">
+                bist
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="c">
+                ist
+            </label>
+
+            <div id="feedback-q2"></div>
+        </div>
+
+
+        <!-- السؤال 3 -->
+        <div class="question">
+            <h3>3️⃣ Welche Sprache lernst du?</h3>
+
+            <label>
+                <input type="radio" name="q3" value="a">
+                Ich lerne Deutsch.
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="b">
+                Ich komme aus Deutschland.
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="c">
+                Ich bin Deutsch.
+            </label>
+
+            <div id="feedback-q3"></div>
+        </div>
+
+
+        <!-- السؤال 4 -->
+        <div class="question">
+            <h3>4️⃣ Das ist ___ Schwester.</h3>
+
+            <label>
+                <input type="radio" name="q4" value="a">
+                mein
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="b">
+                meine
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="c">
+                meiner
+            </label>
+
+            <div id="feedback-q4"></div>
+        </div>
+
+
+        <!-- السؤال 5 -->
+        <div class="question">
+            <h3>5️⃣ Wann hast du Geburtstag?</h3>
+
+            <label>
+                <input type="radio" name="q5" value="a">
+                Ich bin zwölf Jahre alt.
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="b">
+                Ich habe am 10. Juli Geburtstag.
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="c">
+                Ich wohne in Juli.
+            </label>
+
+            <div id="feedback-q5"></div>
+        </div>
+
+
+        <!-- السؤال 6 -->
+        <div class="question">
+            <h3>6️⃣ Welche Farbe hat die Tasche?</h3>
+            <p>🎒 الحقيبة لونها أزرق.</p>
+
+            <label>
+                <input type="radio" name="q6" value="a">
+                Die Tasche ist rot.
+            </label>
+
+            <label>
+                <input type="radio" name="q6" value="b">
+                Die Tasche ist blau.
+            </label>
+
+            <label>
+                <input type="radio" name="q6" value="c">
+                Die Tasche ist schwarz.
+            </label>
+
+            <div id="feedback-q6"></div>
+        </div>
+
+
+        <!-- السؤال 7 -->
+        <div class="question">
+            <h3>7️⃣ ___ Fenster</h3>
+
+            <label>
+                <input type="radio" name="q7" value="a">
+                der
+            </label>
+
+            <label>
+                <input type="radio" name="q7" value="b">
+                die
+            </label>
+
+            <label>
+                <input type="radio" name="q7" value="c">
+                das
+            </label>
+
+            <div id="feedback-q7"></div>
+        </div>
+
+
+        <!-- السؤال 8 -->
+        <div class="question">
+            <h3>8️⃣ Wir ___ Deutsch.</h3>
+
+            <label>
+                <input type="radio" name="q8" value="a">
+                lernt
+            </label>
+
+            <label>
+                <input type="radio" name="q8" value="b">
+                lernst
+            </label>
+
+            <label>
+                <input type="radio" name="q8" value="c">
+                lernen
+            </label>
+
+            <div id="feedback-q8"></div>
+        </div>
+
+
+        <!-- السؤال 9 -->
+        <div class="question">
+            <h3>9️⃣ اختر الجملة الصحيحة للنفي:</h3>
+
+            <label>
+                <input type="radio" name="q9" value="a">
+                Ich habe nicht Buch.
+            </label>
+
+            <label>
+                <input type="radio" name="q9" value="b">
+                Ich habe kein Buch.
+            </label>
+
+            <label>
+                <input type="radio" name="q9" value="c">
+                Ich kein habe Buch.
+            </label>
+
+            <div id="feedback-q9"></div>
+        </div>
+
+
+        <!-- السؤال 10 -->
+        <div class="question">
+            <h3>🔟 كيف تقول: "أين تسكن؟"</h3>
+
+            <label>
+                <input type="radio" name="q10" value="a">
+                Woher kommst du?
+            </label>
+
+            <label>
+                <input type="radio" name="q10" value="b">
+                Wo wohnst du?
+            </label>
+
+            <label>
+                <input type="radio" name="q10" value="c">
+                Was machst du?
+            </label>
+
+            <div id="feedback-q10"></div>
+        </div>
+
+
+        <!-- السؤال 11 -->
+        <div class="question">
+            <h3>1️⃣1️⃣ Ich sehe ___ Tisch.</h3>
+
+            <label>
+                <input type="radio" name="q11" value="a">
+                der
+            </label>
+
+            <label>
+                <input type="radio" name="q11" value="b">
+                den
+            </label>
+
+            <label>
+                <input type="radio" name="q11" value="c">
+                die
+            </label>
+
+            <div id="feedback-q11"></div>
+        </div>
+
+
+        <!-- السؤال 12 -->
+        <div class="question">
+            <h3>1️⃣2️⃣ Mein Termin ist ___ zehn Uhr.</h3>
+
+            <label>
+                <input type="radio" name="q12" value="a">
+                in
+            </label>
+
+            <label>
+                <input type="radio" name="q12" value="b">
+                um
+            </label>
+
+            <label>
+                <input type="radio" name="q12" value="c">
+                am
+            </label>
+
+            <div id="feedback-q12"></div>
+        </div>
+
+
+        <!-- السؤال 13 -->
+        <div class="question">
+            <h3>1️⃣3️⃣ Wo kochst du?</h3>
+
+            <label>
+                <input type="radio" name="q13" value="a">
+                In der Küche.
+            </label>
+
+            <label>
+                <input type="radio" name="q13" value="b">
+                Im Garten.
+            </label>
+
+            <label>
+                <input type="radio" name="q13" value="c">
+                Im Schlafzimmer.
+            </label>
+
+            <div id="feedback-q13"></div>
+        </div>
+
+
+        <!-- السؤال 14 -->
+        <div class="question">
+            <h3>1️⃣4️⃣ Was machst du in deiner Freizeit?</h3>
+
+            <label>
+                <input type="radio" name="q14" value="a">
+                Ich habe einen Bruder.
+            </label>
+
+            <label>
+                <input type="radio" name="q14" value="b">
+                Ich spiele Fußball.
+            </label>
+
+            <label>
+                <input type="radio" name="q14" value="c">
+                Ich komme aus Ägypten.
+            </label>
+
+            <div id="feedback-q14"></div>
+        </div>
+
+
+        <!-- السؤال 15 -->
+        <div class="question">
+            <h3>1️⃣5️⃣ ترجم إلى الألمانية:</h3>
+            <p>أنا أريد كتابًا.</p>
+
+            <input
+                type="text"
+                id="q15"
+                placeholder="اكتب الإجابة بالألمانية"
+            >
+
+            <div id="feedback-q15"></div>
+        </div>
+
+
+        <div style="text-align:center;">
+
+            <button id="checkButton" onclick="checkTest()">
+                ✅ تصحيح الاختبار
+            </button>
+
+            <button id="retryButton" onclick="retryTest()">
+                🔄 إعادة الاختبار
+            </button>
+
+            <button id="backButton" onclick="goToA1()">
+                🔙 الرجوع إلى مستوى A1
+            </button>
+
+        </div>
+
+
+        <div id="result"></div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================================
+   الإجابات الصحيحة
+========================================= */
+
+const answers = {
+    q1: "b",
+    q2: "a",
+    q3: "a",
+    q4: "b",
+    q5: "b",
+    q6: "b",
+    q7: "c",
+    q8: "c",
+    q9: "b",
+    q10: "b",
+    q11: "b",
+    q12: "b",
+    q13: "a",
+    q14: "b"
+};
+
+
+const correctText = {
+    q1: "b) Ich komme aus Ägypten.",
+    q2: "a) bin",
+    q3: "a) Ich lerne Deutsch.",
+    q4: "b) meine",
+    q5: "b) Ich habe am 10. Juli Geburtstag.",
+    q6: "b) Die Tasche ist blau.",
+    q7: "c) das",
+    q8: "c) lernen",
+    q9: "b) Ich habe kein Buch.",
+    q10: "b) Wo wohnst du?",
+    q11: "b) den",
+    q12: "b) um",
+    q13: "a) In der Küche.",
+    q14: "b) Ich spiele Fußball.",
+    q15: "Ich möchte ein Buch."
+};
+
+
+/* =========================================
+   عند فتح صفحة الاختبار
+   نتحقق هل الاختبار تم حله بنجاح من قبل
+========================================= */
+
+window.onload = function() {
+
+    const completed =
+        localStorage.getItem("a1TestCompleted") === "true";
+
+    if (completed) {
+        showSavedResult();
+    }
+
+};
+
+
+/* =========================================
+   تصحيح الاختبار
+========================================= */
+
+function checkTest() {
+
+    let score = 0;
+
+    const savedAnswers = {};
+
+    /* الأسئلة من 1 إلى 14 */
+
+    for (let i = 1; i <= 14; i++) {
+
+        const selected =
+            document.querySelector(
+                `input[name="q${i}"]:checked`
+            );
+
+        const feedback =
+            document.getElementById(`feedback-q${i}`);
+
+        if (!selected) {
+
+            savedAnswers[`q${i}`] = "لم يتم اختيار إجابة";
+
+            feedback.className = "feedback wrong";
+
+            feedback.innerHTML =
+                `⚠️ لم يتم اختيار إجابة.<br>
+                الإجابة الصحيحة: ${correctText[`q${i}`]}`;
+
+        }
+
+        else if (selected.value === answers[`q${i}`]) {
+
+            score++;
+
+            savedAnswers[`q${i}`] =
+                selected.parentElement.textContent.trim();
+
+            feedback.className = "feedback correct";
+
+            feedback.innerHTML =
+                "✅ إجابة صحيحة!";
+
+        }
+
+        else {
+
+            savedAnswers[`q${i}`] =
+                selected.parentElement.textContent.trim();
+
+            feedback.className = "feedback wrong";
+
+            feedback.innerHTML =
+                `❌ إجابة خاطئة.<br>
+                الإجابة الصحيحة: ${correctText[`q${i}`]}`;
+
+        }
+
+    }
+
+
+    /* السؤال 15 */
+
+    const textAnswer =
+        document.getElementById("q15")
+        .value
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, " ");
+
+    const feedback15 =
+        document.getElementById("feedback-q15");
+
+
+    if (
+        textAnswer === "ich möchte ein buch." ||
+        textAnswer === "ich möchte ein buch"
+    ) {
+
+        score++;
+
+        savedAnswers.q15 =
+            document.getElementById("q15").value.trim();
+
+        feedback15.className = "feedback correct";
+
+        feedback15.innerHTML =
+            "✅ إجابة صحيحة!";
+
+    }
+
+    else {
+
+        savedAnswers.q15 =
+            document.getElementById("q15").value.trim()
+            || "لم يتم كتابة إجابة";
+
+        feedback15.className = "feedback wrong";
+
+        feedback15.innerHTML =
+            `❌ إجابة خاطئة.<br>
+            الإجابة الصحيحة: ${correctText.q15}`;
+
+    }
+
+
+    /* حساب النتيجة */
+
+    const percentage =
+        Math.round((score / 15) * 100);
+
+    const result =
+        document.getElementById("result");
+
+
+    /* =========================================
+       النجاح
+    ========================================= */
+
+    if (score >= 9) {
+
+        /* حفظ كل شيء */
+
+        localStorage.setItem(
+            "a1TestCompleted",
+            "true"
+        );
+
+        localStorage.setItem(
+            "a1TestScore",
+            score
+        );
+
+        localStorage.setItem(
+            "a1TestPercentage",
+            percentage
+        );
+
+        localStorage.setItem(
+            "a1TestAnswers",
+            JSON.stringify(savedAnswers)
+        );
+
+
+        result.className = "success";
+
+        result.innerHTML = `
+            🎉 مبروك! لقد نجحت في اختبار A1!<br><br>
+            نتيجتك: ${score} / 15<br>
+            النسبة: ${percentage}%<br><br>
+            🏆 تم حفظ نتيجتك وإجاباتك بنجاح.
+        `;
+
+
+        document.getElementById("retryButton")
+            .style.display = "none";
+
+    }
+
+    else {
+
+        result.className = "fail";
+
+        result.innerHTML = `
+            💪 لسه محتاج مراجعة بسيطة.<br><br>
+            نتيجتك: ${score} / 15<br>
+            النسبة: ${percentage}%<br><br>
+            النجاح من 9 / 15.
+        `;
+
+
+        document.getElementById("retryButton")
+            .style.display = "inline-block";
+    }
+
+
+    document.getElementById("checkButton")
+        .style.display = "none";
+}
+
+
+/* =========================================
+   عرض النتيجة المحفوظة
+========================================= */
+
+function showSavedResult() {
+
+    const score =
+        localStorage.getItem("a1TestScore");
+
+    const percentage =
+        localStorage.getItem("a1TestPercentage");
+
+    const saved =
+        localStorage.getItem("a1TestAnswers");
+
+    let savedAnswers = {};
+
+    if (saved) {
+        savedAnswers = JSON.parse(saved);
+    }
+
+
+    /* إخفاء الاختبار */
+
+    document.getElementById("testContent")
+        .style.display = "none";
+
+
+    /* عرض النتيجة */
+
+    const savedResult =
+        document.getElementById("savedResult");
+
+
+    let answersHTML = "";
+
+    for (let i = 1; i <= 15; i++) {
+
+        answersHTML += `
+            <div class="saved-answer">
+                <strong>السؤال ${i}:</strong>
+                ${savedAnswers[`q${i}`] || "لم يتم حفظ إجابة"}
+            </div>
+        `;
+
+    }
+
+
+    savedResult.innerHTML = `
+
+        <div class="saved-result">
+
+            ✅ تم حل اختبار A1 بالفعل
+
+            <br><br>
+
+            لا يمكن إعادة الاختبار بعد النجاح.
+            إجاباتك ونتيجتك محفوظة.
+
+            <br><br>
+
+            📊 درجتك: ${score} / 15
+
+            <br>
+
+            📈 النسبة: ${percentage}%
+
+        </div>
+
+
+        <div class="saved-answers">
+
+            <h2>📝 إجاباتك المحفوظة</h2>
+
+            ${answersHTML}
+
+            <div style="text-align:center; margin-top:20px;">
+
+                <button id="backButton" onclick="goToA1()">
+                    🔙 الرجوع إلى مستوى A1
+                </button>
+
+            </div>
+
+        </div>
+    `;
+
+}
+
+
+/* =========================================
+   إعادة الاختبار
+   مسموحة فقط لو لم يحدث نجاح
+========================================= */
+
+function retryTest() {
+
+    /* حماية إضافية */
+
+    if (
+        localStorage.getItem("a1TestCompleted") === "true"
+    ) {
+
+        showSavedResult();
+
+        return;
+    }
+
+
+    for (let i = 1; i <= 14; i++) {
+
+        const options =
+            document.querySelectorAll(
+                `input[name="q${i}"]`
+            );
+
+        options.forEach(option => {
+            option.checked = false;
+        });
+
+
+        const feedback =
+            document.getElementById(`feedback-q${i}`);
+
+        feedback.innerHTML = "";
+
+        feedback.className = "";
+
+    }
+
+
+    document.getElementById("q15").value = "";
+
+    document.getElementById("feedback-q15").innerHTML = "";
+
+    document.getElementById("feedback-q15").className = "";
+
+
+    document.getElementById("result").innerHTML = "";
+
+    document.getElementById("result").className = "";
+
+
+    document.getElementById("retryButton")
+        .style.display = "none";
+
+
+    document.getElementById("checkButton")
+        .style.display = "inline-block";
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* =========================================
+   الرجوع إلى A1
+========================================= */
+
+function goToA1() {
+
+    window.location.href = "A1.html";
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 14 - während / bevor / nachdem | German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #1f3c88;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #555;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background: #333;
+        }
+
+        .lesson-box,
+        .quiz-box,
+        .summary-box {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            margin-bottom: 22px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #1f3c88;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .example {
+            background: #eef3ff;
+            border-right: 5px solid #1f3c88;
+            padding: 12px 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        .important {
+            background: #fff4d6;
+            border-right: 5px solid #e0a000;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .tip {
+            background: #eaf7ed;
+            border-right: 5px solid #27ae60;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background: #1f3c88;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f7f8fb;
+        }
+
+        .de {
+            direction: ltr;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .question {
+            margin-bottom: 22px;
+            padding: 15px;
+            background: #f8f9fc;
+            border-radius: 10px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 9px 0;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-left: 8px;
+        }
+
+        button {
+            border: none;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            background: #1f3c88;
+        }
+
+        .submit-btn:hover {
+            background: #162d68;
+        }
+
+        .retry-btn {
+            background: #e67e22;
+            margin-top: 12px;
+        }
+
+        .retry-btn:hover {
+            background: #c9630d;
+        }
+
+        .next-btn {
+            background: #27ae60;
+            margin-top: 12px;
+        }
+
+        .next-btn:hover {
+            background: #1f8a4c;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .success {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .fail {
+            background: #fff0f0;
+            border-right: 5px solid #e74c3c;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .wrong-answer {
+            background: #fff7e6;
+            border-right: 5px solid #f39c12;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .completed {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        #nextContainer {
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .lesson-box,
+            .quiz-box,
+            .summary-box {
+                padding: 16px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 Lesson 14 – während / bevor / nachdem</h1>
+        <p>German with Farida | مستوى B1</p>
+    </header>
+
+    <div class="container">
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+        <div id="completedBox"></div>
+
+        <div class="lesson-box">
+
+            <h2>📚 während / bevor / nachdem</h2>
+
+            <p>
+                في الدرس ده هنتعلم 3 أدوات مهمة جدًا لربط الأحداث ببعض:
+            </p>
+
+            <table>
+                <tr>
+                    <th>الكلمة</th>
+                    <th>المعنى</th>
+                    <th>الفكرة</th>
+                </tr>
+                <tr>
+                    <td><strong>während</strong></td>
+                    <td>أثناء / بينما</td>
+                    <td>حدثان في نفس الوقت</td>
+                </tr>
+                <tr>
+                    <td><strong>bevor</strong></td>
+                    <td>قبل أن</td>
+                    <td>حدث يحصل قبل حدث آخر</td>
+                </tr>
+                <tr>
+                    <td><strong>nachdem</strong></td>
+                    <td>بعد أن</td>
+                    <td>حدث يحصل بعد حدث آخر</td>
+                </tr>
+            </table>
+
+            <div class="important">
+                ⭐ مهم جدًا:
+                <br>
+                <strong>während</strong> و<strong>bevor</strong> و<strong>nachdem</strong>
+                أدوات ربط للجمل الثانوية <strong>Nebensätze</strong>،
+                ولذلك الفعل المصرف يذهب إلى <strong>نهاية الجملة الثانوية</strong>.
+            </div>
+
+            <h3>🔹 1. während = أثناء / بينما</h3>
+
+            <p>
+                نستخدم <strong>während</strong> عندما يحدث شيئان في نفس الوقت.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Während ich esse, sehe ich fern.
+                </div>
+                <div>أثناء ما آكل، أشاهد التلفاز.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Während ich lerne, hört mein Bruder Musik.
+                </div>
+                <div>بينما أدرس، أخي يستمع إلى الموسيقى.</div>
+            </div>
+
+            <div class="tip">
+                💡 لاحظ:
+                <br>
+                <strong>Während ich esse</strong>
+                ← الفعل <strong>esse</strong> في نهاية الجملة الثانوية.
+            </div>
+
+            <h3>🔹 ترتيب الجملة مع während</h3>
+
+            <p>ممكن نبدأ بالجملة الرئيسية:</p>
+
+            <div class="example">
+                <div class="de">
+                    Ich sehe fern, während ich esse.
+                </div>
+                <div>أشاهد التلفاز بينما آكل.</div>
+            </div>
+
+            <p>أو نبدأ بالجملة الثانوية:</p>
+
+            <div class="example">
+                <div class="de">
+                    Während ich esse, sehe ich fern.
+                </div>
+                <div>بينما آكل، أشاهد التلفاز.</div>
+            </div>
+
+            <div class="important">
+                ⚠️ لو بدأت بالجملة الثانوية، بعد الفاصلة يأتي الفعل مباشرة:
+                <br><br>
+                <strong>Während ich esse, sehe ich fern.</strong>
+                <br>
+                وليس:
+                <br>
+                ❌ Während ich esse, ich sehe fern.
+            </div>
+
+            <h3>🔹 2. bevor = قبل أن</h3>
+
+            <p>
+                نستخدم <strong>bevor</strong> عندما نريد التعبير عن شيء يحدث
+                <strong>قبل</strong> شيء آخر.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Bevor ich schlafe, putze ich meine Zähne.
+                </div>
+                <div>قبل أن أنام، أنظف أسناني.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Ich mache meine Hausaufgaben, bevor ich spiele.
+                </div>
+                <div>أعمل واجبي قبل أن ألعب.</div>
+            </div>
+
+            <h3>🔹 ترتيب الجملة مع bevor</h3>
+
+            <div class="example">
+                <div class="de">
+                    Bevor ich zur Schule gehe, frühstücke ich.
+                </div>
+                <div>قبل أن أذهب إلى المدرسة، أتناول الإفطار.</div>
+            </div>
+
+            <p>وممكن نقول:</p>
+
+            <div class="example">
+                <div class="de">
+                    Ich frühstücke, bevor ich zur Schule gehe.
+                </div>
+                <div>أتناول الإفطار قبل أن أذهب إلى المدرسة.</div>
+            </div>
+
+            <div class="tip">
+                🧠 طريقة سهلة:
+                <br>
+                <strong>bevor = الأول ده يحصل → وبعده ده يحصل.</strong>
+            </div>
+
+            <h3>🔹 3. nachdem = بعد أن</h3>
+
+            <p>
+                نستخدم <strong>nachdem</strong> عندما نريد التعبير عن أن حدثًا
+                حصل أولًا، ثم حدث شيء آخر بعده.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Nachdem ich gegessen habe, gehe ich spazieren.
+                </div>
+                <div>بعد أن أكلت، أذهب للمشي.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Nachdem ich die Hausaufgaben gemacht habe, spiele ich.
+                </div>
+                <div>بعد أن أنجزت الواجب، ألعب.</div>
+            </div>
+
+            <div class="important">
+                ⭐ مع <strong>nachdem</strong> بنركز على ترتيب الأحداث:
+                <br><br>
+                1️⃣ الحدث الأول
+                <br>
+                2️⃣ الحدث الثاني
+            </div>
+
+            <h3>🔹 nachdem مع الأزمنة</h3>
+
+            <p>
+                في مستوى B1 مهم تعرف إن الزمن بعد <strong>nachdem</strong>
+                ممكن يختلف حسب الزمن المستخدم في الجملة.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Nachdem ich gegessen hatte, ging ich spazieren.
+                </div>
+                <div>بعدما كنت قد أكلت، ذهبت للمشي.</div>
+            </div>
+
+            <p>
+                هنا استخدمنا <strong>Plusquamperfekt</strong>
+                للحدث الذي حصل أولًا، و<strong>Präteritum</strong>
+                للحدث الذي حصل بعده.
+            </p>
+
+            <div class="example">
+                <div class="de">
+                    Nachdem er angekommen war, rief er mich an.
+                </div>
+                <div>بعدما كان قد وصل، اتصل بي.</div>
+            </div>
+
+            <h3>🔹 مقارنة الثلاثة</h3>
+
+            <table>
+                <tr>
+                    <th>الكلمة</th>
+                    <th>المعنى</th>
+                    <th>مثال</th>
+                </tr>
+                <tr>
+                    <td>während</td>
+                    <td>أثناء / بينما</td>
+                    <td>Während ich lerne, höre ich Musik.</td>
+                </tr>
+                <tr>
+                    <td>bevor</td>
+                    <td>قبل أن</td>
+                    <td>Bevor ich schlafe, lese ich.</td>
+                </tr>
+                <tr>
+                    <td>nachdem</td>
+                    <td>بعد أن</td>
+                    <td>Nachdem ich gegessen habe, gehe ich.</td>
+                </tr>
+            </table>
+
+            <h3>🧠 طريقة سهلة للحفظ</h3>
+
+            <div class="tip">
+                🟢 <strong>während</strong> = في نفس الوقت
+                <br><br>
+                🔵 <strong>bevor</strong> = قبل
+                <br><br>
+                🟠 <strong>nachdem</strong> = بعد
+            </div>
+
+            <h3>✍️ أمثلة إضافية</h3>
+
+            <div class="example">
+                <div class="de">
+                    Während ich koche, hört meine Schwester Musik.
+                </div>
+                <div>بينما أطبخ، أختي تستمع إلى الموسيقى.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Bevor ich das Haus verlasse, schließe ich die Tür.
+                </div>
+                <div>قبل أن أغادر المنزل، أغلق الباب.</div>
+            </div>
+
+            <div class="example">
+                <div class="de">
+                    Nachdem wir gegessen haben, trinken wir Tee.
+                </div>
+                <div>بعد أن أكلنا، نشرب الشاي.</div>
+            </div>
+
+        </div>
+
+        <div class="summary-box">
+
+            <h2>📌 ملخص الدرس</h2>
+
+            <p>
+                <strong>während</strong> → أثناء / بينما → حدثان في نفس الوقت.
+            </p>
+
+            <p>
+                <strong>bevor</strong> → قبل أن → الحدث الموجود بعدها يحصل قبل الحدث الآخر.
+            </p>
+
+            <p>
+                <strong>nachdem</strong> → بعد أن → الحدث الموجود بعدها يحصل أولًا،
+                ثم يحدث الحدث الآخر.
+            </p>
+
+            <div class="important">
+                ⭐ الثلاثة يعملون كـ <strong>Nebensatz</strong>،
+                لذلك الفعل المصرف يكون في نهاية الجملة الثانوية.
+            </div>
+
+        </div>
+
+        <div class="quiz-box" id="quiz">
+
+            <h2>📝 اختبار Lesson 14</h2>
+
+            <p>
+                لازم تجيب <strong>3 من 5</strong> على الأقل عشان تنجح وتفتح Lesson 15.
+            </p>
+
+            <div class="question">
+
+                <p>1️⃣ اختر الكلمة المناسبة:</p>
+
+                <p class="de">
+                    ______ ich lerne, höre ich Musik.
+                </p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    Während
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    Bevor
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    Nachdem
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>2️⃣ اختر الإجابة الصحيحة:</p>
+
+                <p class="de">
+                    Bevor ich schlafe, ______ ich meine Zähne.
+                </p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    putze
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    putzen
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    geputzt
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>3️⃣ ما معنى <strong>nachdem</strong>؟</p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    قبل أن
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    أثناء / بينما
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    بعد أن
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>4️⃣ اختر الجملة الصحيحة:</p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    Nachdem ich gegessen hatte, ging ich spazieren.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    Nachdem ich gegessen hatte, ich ging spazieren.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    Nachdem ich hatte gegessen, ging ich spazieren.
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>5️⃣ اختر الجملة الصحيحة:</p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    Während ich esse, sehe ich fern.
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    Während ich esse, ich sehe fern.
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    Während ich esse, fern sehe ich.
+                </label>
+
+            </div>
+
+            <button class="submit-btn" id="submitBtn" onclick="checkQuiz()">
+                ✅ تصحيح الاختبار
+            </button>
+
+            <div id="result"></div>
+
+            <div id="nextContainer"></div>
+
+        </div>
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+    </div>
+
+    <script>
+
+        const answers = {
+            q1: "a",
+            q2: "a",
+            q3: "c",
+            q4: "a",
+            q5: "a"
+        };
+
+        const correctText = {
+            q1: "Während ich lerne, höre ich Musik.",
+            q2: "putze",
+            q3: "بعد أن",
+            q4: "Nachdem ich gegessen hatte, ging ich spazieren.",
+            q5: "Während ich esse, sehe ich fern."
+        };
+
+        function checkQuiz() {
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            if (submitBtn.disabled) {
+                return;
+            }
+
+            let score = 0;
+            let wrongAnswers = [];
+
+            for (let i = 1; i <= 5; i++) {
+
+                const selected = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                if (selected && selected.value === answers["q" + i]) {
+                    score++;
+                } else {
+                    wrongAnswers.push(i);
+                }
+            }
+
+            const result = document.getElementById("result");
+            const nextContainer = document.getElementById("nextContainer");
+
+            submitBtn.disabled = true;
+
+            let html = "";
+
+            if (score >= 3) {
+
+                localStorage.setItem("b1Lesson14Completed", "true");
+
+                html += `
+                    <div class="success">
+                        🎉 <strong>أحسنت! نجحت في Lesson 14.</strong>
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        💾 تم حفظ تقدمك بنجاح!
+                        <br><br>
+                        ✅ Lesson 14 مكتمل!
+                        <br>
+                        🔓 تم فتح Lesson 15.
+                    </div>
+                `;
+
+                if (score < 5 && wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function (q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+
+                nextContainer.innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson15-B1.html'">
+                        ➡️ الانتقال إلى Lesson 15
+                    </button>
+                `;
+
+            } else {
+
+                html += `
+                    <div class="fail">
+                        ❌ لم تنجح في الاختبار هذه المرة.
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        لازم تجيب 3 من 5 على الأقل.
+                    </div>
+                `;
+
+                if (wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function (q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+            }
+
+            html += `
+                <button class="retry-btn" onclick="retryQuiz()">
+                    🔄 إعادة الاختبار
+                </button>
+            `;
+
+            result.innerHTML = html;
+        }
+
+        function retryQuiz() {
+
+            const radios = document.querySelectorAll(
+                'input[type="radio"]'
+            );
+
+            radios.forEach(function (radio) {
+                radio.checked = false;
+                radio.disabled = false;
+            });
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            submitBtn.disabled = false;
+
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("nextContainer").innerHTML = "";
+
+            document.getElementById("quiz").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        function checkCompleted() {
+
+            if (localStorage.getItem("b1Lesson14Completed") === "true") {
+
+                document.getElementById("completedBox").innerHTML = `
+                    <div class="completed">
+                        ✅ Lesson 14 مكتمل بالفعل!
+                        <br><br>
+                        💾 تقدمك محفوظ.
+                        <br><br>
+                        🔓 Lesson 15 مفتوح.
+                        <br><br>
+                        يمكنك مراجعة الدرس والاختبار مرة أخرى.
+                    </div>
+                `;
+
+                document.getElementById("nextContainer").innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson15-B1.html'">
+                        ➡️ الانتقال إلى Lesson 15
+                    </button>
+                `;
+            }
+        }
+
+        checkCompleted();
+
+    </script>
+
+</body>
+
+</html>

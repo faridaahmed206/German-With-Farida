@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الدرس السابع - German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 25px auto;
+        }
+
+        .section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #444;
+            margin-top: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #f0f0f0;
+        }
+
+        .example {
+            background: #f7f7f7;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .german {
+            direction: ltr;
+            text-align: left;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .exercise {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        button {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+
+        .wrong {
+            color: red;
+            font-weight: bold;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        #successMessage {
+            display: none;
+            background: #e8f7e8;
+            color: green;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #nextLesson,
+        #backToA1 {
+            display: none;
+        }
+
+        .dialogue {
+            background: #f7f7f7;
+            padding: 18px;
+            border-radius: 12px;
+            line-height: 2;
+        }
+
+        .note {
+            background: #fff8d9;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 الدرس السابع</h1>
+        <p>Farben, Alltagsgegenstände</p>
+        <p>الألوان، وأشياء الحياة اليومية</p>
+    </header>
+
+    <div class="container">
+
+        <!-- أهداف الدرس -->
+        <div class="section">
+            <h2>🎯 أهداف الدرس</h2>
+
+            <p>في نهاية الدرس هتعرف:</p>
+
+            <ul>
+                <li>تقول الألوان بالألماني.</li>
+                <li>توصف الأشياء بلونها.</li>
+                <li>تتعرف على أشياء يومية مهمة.</li>
+                <li>تستخدم Das ist... و Das sind...</li>
+                <li>تكوّن جمل بسيطة عن الأشياء اللي حواليك.</li>
+            </ul>
+        </div>
+
+
+        <!-- الألوان -->
+        <div class="section">
+
+            <h2>🎨 1. الألوان — Die Farben</h2>
+
+            <table>
+
+                <tr>
+                    <th>Deutsch</th>
+                    <th>المعنى</th>
+                    <th>النطق</th>
+                </tr>
+
+                <tr>
+                    <td>rot</td>
+                    <td>أحمر</td>
+                    <td>روت</td>
+                </tr>
+
+                <tr>
+                    <td>blau</td>
+                    <td>أزرق</td>
+                    <td>بلاو</td>
+                </tr>
+
+                <tr>
+                    <td>grün</td>
+                    <td>أخضر</td>
+                    <td>جرون</td>
+                </tr>
+
+                <tr>
+                    <td>gelb</td>
+                    <td>أصفر</td>
+                    <td>جِلب</td>
+                </tr>
+
+                <tr>
+                    <td>schwarz</td>
+                    <td>أسود</td>
+                    <td>شفارتس</td>
+                </tr>
+
+                <tr>
+                    <td>weiß</td>
+                    <td>أبيض</td>
+                    <td>فايس</td>
+                </tr>
+
+                <tr>
+                    <td>grau</td>
+                    <td>رمادي</td>
+                    <td>جراو</td>
+                </tr>
+
+                <tr>
+                    <td>braun</td>
+                    <td>بني</td>
+                    <td>براون</td>
+                </tr>
+
+                <tr>
+                    <td>orange</td>
+                    <td>برتقالي</td>
+                    <td>أورانج</td>
+                </tr>
+
+                <tr>
+                    <td>rosa</td>
+                    <td>وردي</td>
+                    <td>روزا</td>
+                </tr>
+
+            </table>
+
+
+            <h3>🗣️ أمثلة:</h3>
+
+            <div class="example">
+                <p class="german">Das ist rot.</p>
+                <p>هذا أحمر.</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Das Auto ist blau.</p>
+                <p>السيارة زرقاء.</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Die Tasche ist schwarz.</p>
+                <p>الحقيبة سوداء.</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Der Tisch ist braun.</p>
+                <p>الطاولة بنية.</p>
+            </div>
+
+        </div>
+
+
+        <!-- أشياء الحياة اليومية -->
+        <div class="section">
+
+            <h2>🏠 2. أشياء الحياة اليومية — Alltagsgegenstände</h2>
+
+            <table>
+
+                <tr>
+                    <th>Deutsch</th>
+                    <th>المعنى</th>
+                    <th>النطق</th>
+                </tr>
+
+                <tr>
+                    <td>der Tisch</td>
+                    <td>الطاولة</td>
+                    <td>تِش</td>
+                </tr>
+
+                <tr>
+                    <td>der Stuhl</td>
+                    <td>الكرسي</td>
+                    <td>شتول</td>
+                </tr>
+
+                <tr>
+                    <td>das Buch</td>
+                    <td>الكتاب</td>
+                    <td>بوخ</td>
+                </tr>
+
+                <tr>
+                    <td>der Kugelschreiber</td>
+                    <td>القلم الجاف</td>
+                    <td>كوجل شرايبر</td>
+                </tr>
+
+                <tr>
+                    <td>der Bleistift</td>
+                    <td>قلم الرصاص</td>
+                    <td>بلاي شتِفت</td>
+                </tr>
+
+                <tr>
+                    <td>das Handy</td>
+                    <td>الهاتف المحمول</td>
+                    <td>هاندي</td>
+                </tr>
+
+                <tr>
+                    <td>die Tasche</td>
+                    <td>الحقيبة</td>
+                    <td>تاشِه</td>
+                </tr>
+
+                <tr>
+                    <td>die Uhr</td>
+                    <td>الساعة</td>
+                    <td>أور</td>
+                </tr>
+
+                <tr>
+                    <td>die Flasche</td>
+                    <td>الزجاجة</td>
+                    <td>فلاشِه</td>
+                </tr>
+
+                <tr>
+                    <td>die Brille</td>
+                    <td>النظارة</td>
+                    <td>بريلِه</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- وصف الأشياء -->
+        <div class="section">
+
+            <h2>🗣️ 3. وصف الأشياء</h2>
+
+            <p>لما نشاور على شيء ونقول "هذا..." نستخدم:</p>
+
+            <div class="example">
+                <p class="german">Das ist + الشيء</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Das ist ein Buch.</p>
+                <p>هذا كتاب.</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Das ist ein Tisch.</p>
+                <p>هذه طاولة.</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Das ist eine Tasche.</p>
+                <p>هذه حقيبة.</p>
+            </div>
+
+            <p>ولما نتكلم عن أكثر من شيء:</p>
+
+            <div class="example">
+                <p class="german">Das sind Bücher.</p>
+                <p>هذه كتب.</p>
+            </div>
+
+        </div>
+
+
+        <!-- اللون مع الشيء -->
+        <div class="section">
+
+            <h2>🎨 4. اللون مع الشيء</h2>
+
+            <div class="example">
+                <p class="german">Das Buch ist rot.</p>
+                <p>الكتاب أحمر.</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Die Tasche ist blau.</p>
+                <p>الحقيبة زرقاء.</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Der Stuhl ist schwarz.</p>
+                <p>الكرسي أسود.</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Das Handy ist weiß.</p>
+                <p>الهاتف أبيض.</p>
+            </div>
+
+        </div>
+
+
+        <!-- ملاحظة -->
+        <div class="section">
+
+            <h2>🧠 ملاحظة مهمة</h2>
+
+            <div class="note">
+                الألوان في الألماني غالبًا بنستخدمها كصفات، ولذلك في الجملة العادية بتكون بحروف صغيرة.
+                <br><br>
+
+                ✅ <strong>Das Buch ist rot.</strong>
+                <br><br>
+
+                ❌ <strong>Das Buch ist Rot.</strong>
+            </div>
+
+        </div>
+
+
+        <!-- الكلمات الجديدة -->
+        <div class="section">
+
+            <h2>🆕 5 كلمات جديدة</h2>
+
+            <table>
+
+                <tr>
+                    <th>Deutsch</th>
+                    <th>المعنى</th>
+                    <th>النطق</th>
+                </tr>
+
+                <tr>
+                    <td>neu</td>
+                    <td>جديد</td>
+                    <td>نوي</td>
+                </tr>
+
+                <tr>
+                    <td>alt</td>
+                    <td>قديم</td>
+                    <td>ألت</td>
+                </tr>
+
+                <tr>
+                    <td>schön</td>
+                    <td>جميل</td>
+                    <td>شون</td>
+                </tr>
+
+            </table>
+
+            <div class="example">
+                <p class="german">Das Buch ist neu.</p>
+                <p>الكتاب جديد.</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Der Tisch ist alt.</p>
+                <p>الطاولة قديمة.</p>
+            </div>
+
+            <div class="example">
+                <p class="german">Die Tasche ist schön.</p>
+                <p>الحقيبة جميلة.</p>
+            </div>
+
+        </div>
+
+
+        <!-- التدريب -->
+        <div class="section">
+
+            <h2>🏋️ التدريب</h2>
+
+            <div class="exercise">
+
+                <p>
+                    <strong>1️⃣ Was bedeutet „blau“?</strong>
+                </p>
+
+                <label>
+                    <input type="radio" name="training1">
+                    a) أحمر
+                </label>
+
+                <label>
+                    <input type="radio" name="training1">
+                    b) أزرق
+                </label>
+
+                <label>
+                    <input type="radio" name="training1">
+                    c) أخضر
+                </label>
+
+            </div>
+
+
+            <div class="exercise">
+
+                <p>
+                    <strong>2️⃣ أكمل:</strong>
+                    <br>
+                    Das Buch ist ___.
+                </p>
+
+                <label>
+                    <input type="radio" name="training2">
+                    a) rot
+                </label>
+
+                <label>
+                    <input type="radio" name="training2">
+                    b) Tisch
+                </label>
+
+                <label>
+                    <input type="radio" name="training2">
+                    c) Tasche
+                </label>
+
+            </div>
+
+
+            <div class="exercise">
+
+                <p>
+                    <strong>3️⃣ ما معنى الجملة؟</strong>
+                    <br>
+                    Das ist eine Tasche.
+                </p>
+
+                <label>
+                    <input type="radio" name="training3">
+                    a) هذه حقيبة.
+                </label>
+
+                <label>
+                    <input type="radio" name="training3">
+                    b) هذا كتاب.
+                </label>
+
+                <label>
+                    <input type="radio" name="training3">
+                    c) هذه ساعة.
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- المحادثة -->
+        <div class="section">
+
+            <h2>💬 محادثة قصيرة</h2>
+
+            <div class="dialogue">
+
+                <p>
+                    <strong>A:</strong>
+                    Was ist das?
+                </p>
+
+                <p>
+                    <strong>B:</strong>
+                    Das ist ein Buch.
+                </p>
+
+                <p>
+                    <strong>A:</strong>
+                    Welche Farbe hat das Buch?
+                </p>
+
+                <p>
+                    <strong>B:</strong>
+                    Das Buch ist blau.
+                </p>
+
+                <p>
+                    <strong>A:</strong>
+                    Und was ist das?
+                </p>
+
+                <p>
+                    <strong>B:</strong>
+                    Das ist eine Tasche.
+                </p>
+
+                <p>
+                    <strong>A:</strong>
+                    Welche Farbe hat die Tasche?
+                </p>
+
+                <p>
+                    <strong>B:</strong>
+                    Die Tasche ist schwarz.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- الاختبار النهائي -->
+        <div class="section">
+
+            <h2>📝 الاختبار النهائي</h2>
+
+            <p>
+                النجاح من <strong>3/5</strong> ✅
+            </p>
+
+
+            <!-- السؤال 1 -->
+            <div class="exercise">
+
+                <p>
+                    <strong>1. Was bedeutet „grün“؟</strong>
+                </p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    a) أخضر
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    b) أصفر
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    c) أسود
+                </label>
+
+                <p id="feedback1"></p>
+
+            </div>
+
+
+            <!-- السؤال 2 -->
+            <div class="exercise">
+
+                <p>
+                    <strong>2. Was ist „der Stuhl“؟</strong>
+                </p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    a) الكتاب
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    b) الكرسي
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    c) الحقيبة
+                </label>
+
+                <p id="feedback2"></p>
+
+            </div>
+
+
+            <!-- السؤال 3 -->
+            <div class="exercise">
+
+                <p>
+                    <strong>3. أكمل:</strong>
+                    <br>
+                    Das Handy ist ___.
+                </p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    a) weiß
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    b) Buch
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    c) Tasche
+                </label>
+
+                <p id="feedback3"></p>
+
+            </div>
+
+
+            <!-- السؤال 4 -->
+            <div class="exercise">
+
+                <p>
+                    <strong>4. كيف تقول: هذه حقيبة؟</strong>
+                </p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    a) Das ist ein Buch.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    b) Das sind eine Tasche.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    c) Das ist eine Tasche.
+                </label>
+
+                <p id="feedback4"></p>
+
+            </div>
+
+
+            <!-- السؤال 5 -->
+            <div class="exercise">
+
+                <p>
+                    <strong>5. ماذا تعني:</strong>
+                    <br>
+                    Welche Farbe hat das Buch?
+                </p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    a) ما هذا الكتاب؟
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    b) ما لون الكتاب؟
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    c) أين الكتاب؟
+                </label>
+
+                <p id="feedback5"></p>
+
+            </div>
+
+
+            <button onclick="checkQuiz()">
+                تصحيح الاختبار
+            </button>
+
+            <div id="result"></div>
+
+            <div id="successMessage">
+                🎉 ممتاز! تم اجتياز الدرس السابع بنجاح.
+                <br>
+                تم حفظ الدرس السابع ويمكنك الآن الانتقال للدرس الثامن.
+            </div>
+
+            <button
+                id="nextLesson"
+                onclick="window.location.href='lesson8.html'"
+            >
+                ➡️ الدرس الثامن
+            </button>
+
+            <button
+                id="backToA1"
+                onclick="window.location.href='A1.html'"
+            >
+                🔙 الرجوع إلى مستوى A1
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function checkQuiz() {
+
+            const answers = {
+                q1: "a",
+                q2: "b",
+                q3: "a",
+                q4: "c",
+                q5: "b"
+            };
+
+            let score = 0;
+
+            for (let i = 1; i <= 5; i++) {
+
+                const selected = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                const feedback = document.getElementById(
+                    "feedback" + i
+                );
+
+                if (!selected) {
+
+                    feedback.textContent = "❌ لم يتم اختيار إجابة.";
+                    feedback.className = "wrong";
+
+                } else if (selected.value === answers["q" + i]) {
+
+                    score++;
+
+                    feedback.textContent = "✅ إجابة صحيحة!";
+                    feedback.className = "correct";
+
+                } else {
+
+                    feedback.textContent = "❌ إجابة خاطئة.";
+                    feedback.className = "wrong";
+
+                }
+            }
+
+
+            const result = document.getElementById("result");
+
+            result.textContent =
+                "نتيجتك: " + score + " / 5";
+
+
+            if (score >= 3) {
+
+                localStorage.setItem(
+                    "lesson7Completed",
+                    "true"
+                );
+
+                document.getElementById(
+                    "successMessage"
+                ).style.display = "block";
+
+                document.getElementById(
+                    "nextLesson"
+                ).style.display = "block";
+
+                document.getElementById(
+                    "backToA1"
+                ).style.display = "block";
+
+                alert("✅ تم حفظ الدرس السابع بنجاح!");
+
+            } else {
+
+                document.getElementById(
+                    "successMessage"
+                ).style.display = "none";
+
+                document.getElementById(
+                    "nextLesson"
+                ).style.display = "none";
+
+                document.getElementById(
+                    "backToA1"
+                ).style.display = "none";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

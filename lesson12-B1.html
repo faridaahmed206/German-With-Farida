@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 12 - um ... zu / damit | German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #1f3c88;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 29px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #555;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background: #333;
+        }
+
+        .lesson-box,
+        .quiz-box,
+        .summary-box {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            margin-bottom: 22px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #1f3c88;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .example {
+            background: #eef3ff;
+            border-right: 5px solid #1f3c88;
+            padding: 12px 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        .important {
+            background: #fff4d6;
+            border-right: 5px solid #e0a000;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background: #1f3c88;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f7f8fb;
+        }
+
+        .question {
+            margin-bottom: 22px;
+            padding: 15px;
+            background: #f8f9fc;
+            border-radius: 10px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 9px 0;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-left: 8px;
+        }
+
+        .submit-btn,
+        .retry-btn,
+        .next-btn {
+            border: none;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .submit-btn {
+            background: #1f3c88;
+        }
+
+        .submit-btn:hover {
+            background: #162d68;
+        }
+
+        .retry-btn {
+            background: #e67e22;
+        }
+
+        .retry-btn:hover {
+            background: #c9630d;
+        }
+
+        .next-btn {
+            background: #27ae60;
+        }
+
+        .next-btn:hover {
+            background: #1f8a4c;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .success {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .fail {
+            background: #fff0f0;
+            border-right: 5px solid #e74c3c;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .wrong-answer {
+            background: #fff7e6;
+            border-right: 5px solid #f39c12;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .completed {
+            background: #e9f8ef;
+            border-right: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        #nextContainer {
+            margin-top: 15px;
+        }
+
+        .de-note {
+            direction: ltr;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .formula {
+            background: #f0f4ff;
+            border: 1px solid #cdd8ff;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 19px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .lesson-box,
+            .quiz-box,
+            .summary-box {
+                padding: 16px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇩🇪 Lesson 12 – um … zu / damit</h1>
+        <p>German with Farida | مستوى B1</p>
+    </header>
+
+    <div class="container">
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+        <div id="completedBox"></div>
+
+        <div class="lesson-box">
+
+            <h2>📚 التعبير عن الهدف – Der Zweck</h2>
+
+            <p>
+                في الدرس ده هنتعلم إزاي نعبر عن <strong>الهدف أو الغرض</strong>
+                من القيام بشيء في اللغة الألمانية.
+            </p>
+
+            <div class="important">
+                ⭐ عندنا طريقتين مهمين جدًا:
+                <br><br>
+                <strong>um … zu</strong>
+                <br>
+                <strong>damit</strong>
+            </div>
+
+            <h3>🔹 أولًا: um … zu</h3>
+
+            <p>
+                بنستخدم <strong>um … zu</strong> لما يكون <strong>الفاعل في الجملتين هو نفسه</strong>.
+            </p>
+
+            <div class="formula">
+                الجملة الرئيسية + um + ... + zu + Infinitiv
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Ich lerne Deutsch, um in Deutschland zu studieren.
+                </div>
+                <div>
+                    أنا أتعلم الألمانية لكي أدرس في ألمانيا.
+                </div>
+            </div>
+
+            <p>
+                هنا الفاعل في الجملتين هو <strong>ich</strong>:
+            </p>
+
+            <ul>
+                <li>Ich lerne Deutsch.</li>
+                <li>Ich studiere in Deutschland.</li>
+            </ul>
+
+            <p>
+                لذلك نستخدم <strong>um … zu</strong>.
+            </p>
+
+            <h3>🔹 مكان zu</h3>
+
+            <p>
+                في تركيب <strong>um … zu</strong>، كلمة <strong>zu</strong>
+                تأتي قبل الفعل في صيغة المصدر.
+            </p>
+
+            <div class="example">
+                <div class="de-note">
+                    Ich gehe in die Bibliothek, um zu lernen.
+                </div>
+                <div>
+                    أذهب إلى المكتبة لكي أذاكر.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Ich spare Geld, um ein neues Handy zu kaufen.
+                </div>
+                <div>
+                    أوفر المال لكي أشتري هاتفًا جديدًا.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Er geht früh ins Bett, um morgen fit zu sein.
+                </div>
+                <div>
+                    يذهب إلى الفراش مبكرًا لكي يكون نشيطًا غدًا.
+                </div>
+            </div>
+
+            <h3>🔹 الأفعال المنفصلة مع um … zu</h3>
+
+            <p>
+                مع الأفعال المنفصلة، <strong>zu</strong> تأتي بين الجزء الأول
+                وباقي الفعل.
+            </p>
+
+            <div class="example">
+                <div class="de-note">
+                    Ich stehe früh auf, um pünktlich aufzustehen.
+                </div>
+                <div>
+                    أستيقظ مبكرًا لكي أستيقظ في الوقت المحدد.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Ich gehe in den Supermarkt, um Lebensmittel einzukaufen.
+                </div>
+                <div>
+                    أذهب إلى السوبرماركت لكي أشتري الطعام.
+                </div>
+            </div>
+
+            <div class="important">
+                💡 مثال:
+                <br><br>
+                einkaufen → ein<strong>zu</strong>kaufen
+                <br>
+                aufstehen → auf<strong>zu</strong>stehen
+            </div>
+
+            <h3>🔹 ثانيًا: damit</h3>
+
+            <p>
+                بنستخدم <strong>damit</strong> غالبًا لما يكون
+                <strong>الفاعل في الجملتين مختلفًا</strong>.
+            </p>
+
+            <div class="formula">
+                الجملة الرئيسية + damit + جملة فرعية
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Ich spreche langsam, damit du mich verstehst.
+                </div>
+                <div>
+                    أنا أتحدث ببطء لكي تفهمني.
+                </div>
+            </div>
+
+            <p>
+                لاحظ إن الفاعل مختلف:
+            </p>
+
+            <ul>
+                <li><strong>Ich</strong> spreche langsam.</li>
+                <li><strong>Du</strong> verstehst mich.</li>
+            </ul>
+
+            <p>
+                لذلك نستخدم <strong>damit</strong>.
+            </p>
+
+            <h3>🔹 الفعل مع damit</h3>
+
+            <p>
+                لأن <strong>damit</strong> بتبدأ جملة فرعية،
+                الفعل المصرف يذهب إلى <strong>آخر الجملة</strong>.
+            </p>
+
+            <div class="example">
+                <div class="de-note">
+                    Ich lerne viel, damit ich die Prüfung bestehe.
+                </div>
+                <div>
+                    أذاكر كثيرًا لكي أنجح في الامتحان.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Wir sprechen leise, damit das Baby schlafen kann.
+                </div>
+                <div>
+                    نتحدث بهدوء لكي يستطيع الطفل النوم.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Er arbeitet viel, damit seine Familie gut leben kann.
+                </div>
+                <div>
+                    هو يعمل كثيرًا لكي تستطيع عائلته أن تعيش بشكل جيد.
+                </div>
+            </div>
+
+            <h3>🔹 الفرق بين um … zu و damit</h3>
+
+            <table>
+                <tr>
+                    <th>التركيب</th>
+                    <th>متى نستخدمه؟</th>
+                    <th>مثال</th>
+                </tr>
+
+                <tr>
+                    <td>um … zu</td>
+                    <td>الفاعل نفسه</td>
+                    <td>Ich lerne, um die Prüfung zu bestehen.</td>
+                </tr>
+
+                <tr>
+                    <td>damit</td>
+                    <td>الفاعل مختلف</td>
+                    <td>Ich lerne, damit meine Eltern zufrieden sind.</td>
+                </tr>
+            </table>
+
+            <h3>🧠 مثال للمقارنة</h3>
+
+            <div class="example">
+                <div class="de-note">
+                    Ich lerne Deutsch, um in Deutschland zu arbeiten.
+                </div>
+                <div>
+                    أتعلم الألمانية لكي أعمل في ألمانيا.
+                </div>
+            </div>
+
+            <p>
+                الفاعل واحد: <strong>ich → ich</strong>
+                <br>
+                إذن نستخدم <strong>um … zu</strong>.
+            </p>
+
+            <div class="example">
+                <div class="de-note">
+                    Ich lerne Deutsch, damit meine Freunde mich verstehen.
+                </div>
+                <div>
+                    أتعلم الألمانية لكي يفهمني أصدقائي.
+                </div>
+            </div>
+
+            <p>
+                الفاعل مختلف: <strong>ich → meine Freunde</strong>
+                <br>
+                إذن نستخدم <strong>damit</strong>.
+            </p>
+
+            <h3>🔹 قاعدة مهمة جدًا</h3>
+
+            <div class="important">
+                ⭐ لو الفاعل واحد:
+                <br>
+                <strong>um … zu + Infinitiv</strong>
+                <br><br>
+                ⭐ لو الفاعل مختلف:
+                <br>
+                <strong>damit + جملة فرعية والفعل في الآخر</strong>
+            </div>
+
+            <h3>📝 أمثلة إضافية</h3>
+
+            <div class="example">
+                <div class="de-note">
+                    Sie geht zum Arzt, um gesund zu bleiben.
+                </div>
+                <div>
+                    تذهب إلى الطبيب لكي تظل بصحة جيدة.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Sie geht zum Arzt, damit der Arzt ihr helfen kann.
+                </div>
+                <div>
+                    تذهب إلى الطبيب لكي يستطيع الطبيب مساعدتها.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Wir fahren früh los, um pünktlich anzukommen.
+                </div>
+                <div>
+                    ننطلق مبكرًا لكي نصل في الموعد.
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="de-note">
+                    Wir fahren früh los, damit wir keinen Stau haben.
+                </div>
+                <div>
+                    ننطلق مبكرًا لكي لا نواجه زحامًا.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="summary-box">
+
+            <h2>📌 ملخص الدرس</h2>
+
+            <table>
+                <tr>
+                    <th>القاعدة</th>
+                    <th>الاستخدام</th>
+                </tr>
+
+                <tr>
+                    <td><strong>um … zu</strong></td>
+                    <td>الفاعل في الجملتين واحد</td>
+                </tr>
+
+                <tr>
+                    <td><strong>damit</strong></td>
+                    <td>الفاعل في الجملتين مختلف</td>
+                </tr>
+            </table>
+
+            <div class="formula">
+                um + ... + zu + Infinitiv
+            </div>
+
+            <div class="formula">
+                damit + ... + الفعل في آخر الجملة
+            </div>
+
+        </div>
+
+        <div class="quiz-box" id="quiz">
+
+            <h2>📝 اختبار Lesson 12</h2>
+
+            <p>
+                لازم تجيب <strong>3 من 5</strong> على الأقل عشان تنجح وتفتح Lesson 13.
+            </p>
+
+            <div class="question">
+
+                <p>1️⃣ اختر الإجابة الصحيحة:</p>
+
+                <p class="de-note">
+                    Ich lerne Deutsch, ___ in Deutschland zu arbeiten.
+                </p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    um
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    damit
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    weil
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>2️⃣ اختر الإجابة الصحيحة:</p>
+
+                <p class="de-note">
+                    Ich spreche langsam, ___ du mich verstehst.
+                </p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    um
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    damit
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    zu
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>3️⃣ أي جملة صحيحة؟</p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    Ich spare Geld, um ein neues Handy zu kaufen.
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    Ich spare Geld, um ein neues Handy kaufen zu.
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    Ich spare Geld, damit ein neues Handy zu kaufen.
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>4️⃣ متى نستخدم <strong>damit</strong> غالبًا؟</p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    عندما يكون الفاعل في الجملتين مختلفًا.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    عندما يكون الفاعل في الجملتين نفسه.
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    فقط مع الماضي.
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>5️⃣ أكمل الجملة:</p>
+
+                <p class="de-note">
+                    Wir lernen viel, damit wir die Prüfung ___.
+                </p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    bestehen
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    besteht
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    bestanden
+                </label>
+
+            </div>
+
+            <button class="submit-btn" id="submitBtn" onclick="checkQuiz()">
+                ✅ تصحيح الاختبار
+            </button>
+
+            <div id="result"></div>
+
+            <div id="nextContainer"></div>
+
+        </div>
+
+        <a href="B1.html" class="back-btn">⬅️ الرجوع إلى مستوى B1</a>
+
+    </div>
+
+    <script>
+
+        const answers = {
+            q1: "a",
+            q2: "b",
+            q3: "a",
+            q4: "a",
+            q5: "a"
+        };
+
+        const correctText = {
+            q1: "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+            q2: "Ich spreche langsam, damit du mich verstehst.",
+            q3: "Ich spare Geld, um ein neues Handy zu kaufen.",
+            q4: "عندما يكون الفاعل في الجملتين مختلفًا.",
+            q5: "bestehen"
+        };
+
+        function checkQuiz() {
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            if (submitBtn.disabled) {
+                return;
+            }
+
+            let score = 0;
+            let wrongAnswers = [];
+
+            for (let i = 1; i <= 5; i++) {
+
+                const selected = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                if (selected && selected.value === answers["q" + i]) {
+                    score++;
+                } else {
+                    wrongAnswers.push(i);
+                }
+            }
+
+            const result = document.getElementById("result");
+            const nextContainer = document.getElementById("nextContainer");
+
+            submitBtn.disabled = true;
+
+            for (let i = 1; i <= 5; i++) {
+
+                const options = document.querySelectorAll(
+                    'input[name="q' + i + '"]'
+                );
+
+                options.forEach(function (option) {
+                    option.disabled = true;
+                });
+            }
+
+            let html = "";
+
+            if (score >= 3) {
+
+                localStorage.setItem("b1Lesson12Completed", "true");
+
+                html += `
+                    <div class="success">
+                        🎉 <strong>أحسنت! نجحت في Lesson 12.</strong>
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        💾 تم حفظ تقدمك بنجاح!
+                        <br><br>
+                        ✅ Lesson 12 مكتمل!
+                        <br>
+                        🔓 تم فتح Lesson 13.
+                    </div>
+                `;
+
+                if (score < 5 && wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function (q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+
+                nextContainer.innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson13-B1.html'">
+                        ➡️ الانتقال إلى Lesson 13
+                    </button>
+                `;
+
+            } else {
+
+                html += `
+                    <div class="fail">
+                        ❌ لم تنجح في الاختبار هذه المرة.
+                        <br><br>
+                        نتيجتك: <strong>${score} / 5</strong>
+                        <br><br>
+                        لازم تجيب 3 من 5 على الأقل.
+                    </div>
+                `;
+
+                if (wrongAnswers.length > 0) {
+
+                    html += `
+                        <div class="wrong-answer">
+                            <strong>📌 الأسئلة التي أخطأت فيها:</strong>
+                    `;
+
+                    wrongAnswers.forEach(function (q) {
+
+                        html += `
+                            <p>
+                                ❌ السؤال ${q}
+                                <br>
+                                ✅ الإجابة الصحيحة:
+                                ${correctText["q" + q]}
+                            </p>
+                        `;
+
+                    });
+
+                    html += `</div>`;
+                }
+            }
+
+            html += `
+                <button class="retry-btn" onclick="retryQuiz()">
+                    🔄 إعادة الاختبار
+                </button>
+            `;
+
+            result.innerHTML = html;
+        }
+
+        function retryQuiz() {
+
+            const radios = document.querySelectorAll(
+                'input[type="radio"]'
+            );
+
+            radios.forEach(function (radio) {
+                radio.checked = false;
+                radio.disabled = false;
+            });
+
+            const submitBtn = document.getElementById("submitBtn");
+
+            submitBtn.disabled = false;
+
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("nextContainer").innerHTML = "";
+
+            document.getElementById("quiz").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        function checkCompleted() {
+
+            if (localStorage.getItem("b1Lesson12Completed") === "true") {
+
+                document.getElementById("completedBox").innerHTML = `
+                    <div class="completed">
+                        ✅ Lesson 12 مكتمل بالفعل!
+                        <br><br>
+                        💾 تقدمك محفوظ.
+                        <br><br>
+                        🔓 Lesson 13 مفتوح.
+                        <br><br>
+                        يمكنك مراجعة الدرس والاختبار مرة أخرى.
+                    </div>
+                `;
+
+                document.getElementById("nextContainer").innerHTML = `
+                    <button class="next-btn"
+                        onclick="window.location.href='Lesson13-B1.html'">
+                        ➡️ الانتقال إلى Lesson 13
+                    </button>
+                `;
+            }
+        }
+
+        checkCompleted();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A2 - German with Farida</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7ff;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2563eb, #60a5fa);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 35px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .progress-box {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px #ddd;
+            text-align: center;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 18px;
+            background: #e5e7eb;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: #2563eb;
+            transition: 0.4s;
+        }
+
+        .lesson {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px #ddd;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .lesson-info {
+            text-align: right;
+        }
+
+        .lesson h3 {
+            margin: 0 0 8px;
+        }
+
+        .lesson p {
+            margin: 0;
+            color: #666;
+        }
+
+        .lesson button {
+            border: none;
+            padding: 11px 20px;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            background: #2563eb;
+            color: white;
+        }
+
+        .lesson button:hover {
+            background: #1d4ed8;
+        }
+
+        .locked {
+            opacity: 0.6;
+        }
+
+        .locked button {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        .completed {
+            border-right: 6px solid #22c55e;
+        }
+
+        .completed button {
+            background: #22c55e;
+        }
+
+        .test-box {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px #ddd;
+        }
+
+        .test-box button {
+            background: #f59e0b;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 10px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .test-box button.locked-test {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+
+            .lesson {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .lesson-info {
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>🇩🇪 مستوى A2</h1>
+
+    <p>
+        المستوى الأساسي في اللغة الألمانية
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <!-- التقدم -->
+
+    <div class="progress-box">
+
+        <h2>📊 تقدمك في A2</h2>
+
+        <p id="progressText">
+            0 من 15 درس — 0%
+        </p>
+
+        <div class="progress-bar">
+
+            <div
+                class="progress"
+                id="progress">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <h2>📚 دروس A2</h2>
+
+
+    <!-- الدرس 1 -->
+
+    <div class="lesson" id="lesson1">
+
+        <div class="lesson-info">
+
+            <h3>📘 الدرس 1 — مراجعة A1</h3>
+
+            <p>
+                مراجعة أهم أساسيات المستوى السابق
+            </p>
+
+        </div>
+
+        <button onclick="openLesson(1)" id="button1">
+            ابدأ المراجعة
+        </button>
+
+    </div>
+
+
+    <!-- الدرس 2 -->
+
+    <div class="lesson locked" id="lesson2">
+
+        <div class="lesson-info">
+
+            <h3>📘 الدرس 2 — Perfekt</h3>
+
+            <p>
+                الماضي في اللغة الألمانية
+            </p>
+
+        </div>
+
+        <button onclick="openLesson(2)">
+            🔒 ابدأ
+        </button>
+
+    </div>
+
+
+    <!-- الدرس 3 -->
+
+    <div class="lesson locked" id="lesson3">
+
+        <div class="lesson-info">
+
+            <h3>📘 الدرس 3 — Präteritum</h3>
+
+            <p>
+                الماضي البسيط
+            </p>
+
+        </div>
+
+        <button onclick="openLesson(3)">
+            🔒 ابدأ
+        </button>
+
+    </div>
+
+
+    <!-- الدرس 4 -->
+
+    <div class="lesson locked" id="lesson4">
+
+        <div class="lesson-info">
+
+            <h3>📘 الدرس 4 — Modalverben</h3>
+
+            <p>
+                الأفعال الناقصة
+            </p>
+
+        </div>
+
+        <button onclick="openLesson(4)">
+            🔒 ابدأ
+        </button>
+
+    </div>
+
+
+    <!-- الدرس 5 -->
+
+    <div class="lesson locked" id="lesson5">
+
+        <div class="lesson-info">
+
+            <h3>📘 الدرس 5 — Dativ</h3>
+
+            <p>
+                حالة Dativ واستخداماتها
+            </p>
+
+        </div>
+
+        <button onclick="openLesson(5)">
+            🔒 ابدأ
+        </button>
+
+    </div>
+
+
+    <!-- الدرس 6 -->
+
+    <div class="lesson locked" id="lesson6">
+
+        <div class="lesson-info">
+
+            <h3>📘 الدرس 6 — Wechselpräpositionen</h3>
+
+            <p>
+                حروف الجر المتغيرة
+            </p>
+
+        </div>
+
+        <button onclick="openLesson(6)">
+            🔒 ابدأ
+        </button>
+
+    </div>
+
+
+    <!-- الدرس 7 -->
+
+    <div class="lesson locked" id="lesson7">
+
+        <div class="lesson-info">
+
+            <h3>📘 الدرس 7 — Reflexive Verben</h3>
+
+            <p>
+                الأفعال الانعكاسية
+            </p>
+
+        </div>
+
+        <button onclick="openLesson(7)">
+            🔒 ابدأ
+        </button>
+
+    </div>
+
+
+    <!-- الدرس 8 -->
+
+    <div class="lesson locked" id="lesson8">
+
+        <div class="lesson-info">
+
+            <h3>📘 الدرس 8 — Komparativ</h3>
+
+            <p>
+                المقارنة بين الأشياء
+            </p>
+
+        </div>
+
+        <button onclick="openLesson(8)">
+            🔒 ابدأ
+        </button>
+
+    </div>
+
+
+    <!-- الدرس 9 -->
+
+    <div class="lesson locked" id="lesson9">
+
+        <div class="lesson-info">
+
+            <h3>📘 الدرس 9 — Superlativ</h3>
+
+            <p>
+                صيغة التفضيل
+            </p>
+
+        </div>
+
+        <button onclick="openLesson(9)">
+            🔒 ابدأ
+        </button>
+
+    </div>
+
+
+    <!-- الدرس 10 -->
+
+    <div class="lesson locked" id="lesson10">
+
+        <div class="lesson-info">
+
+            <h3>📘 الدرس 10 — Nebensätze</h3>
+
+            <p>
+                الجمل الفرعية
+            </p>
+
+        </div>
+
+        <button onclick="openLesson(10)">
+            🔒 ابدأ
+        </button>
+
+    </div>
+
+
+    <!-- الدرس 11 -->
+
+    <div class="lesson locked" id="lesson11">
+
+        <div class="lesson-info">
+
+            <h3>📘 الدرس 11 — weil / dass</h3>
+
+            <p>
+                استخدام weil و dass
+            </p>
+
+        </div>
+
+        <button onclick="openLesson(11)">
+            🔒 ابدأ
+        </button>
+
+    </div>
+
+
+    <!-- الدرس 12 -->
+
+    <div class="lesson locked" id="lesson12">
+
+        <div class="lesson-info">
+
+            <h3>📘 الدرس 12 — Relativsätze</h3>
+
+            <p>
+                الجمل الموصولة
+            </p>
+
+        </div>
+
+        <button onclick="openLesson(12)">
+            🔒 ابدأ
+        </button>
+
+    </div>
+
+
+    <!-- الدرس 13 -->
+
+    <div class="lesson locked" id="lesson13">
+
+        <div class="lesson-info">
+
+            <h3>📘 الدرس 13 — Futur</h3>
+
+            <p>
+                المستقبل
+            </p>
+
+        </div>
+
+        <button onclick="openLesson(13)">
+            🔒 ابدأ
+        </button>
+
+    </div>
+
+
+    <!-- الدرس 14 -->
+
+    <div class="lesson locked" id="lesson14">
+
+        <div class="lesson-info">
+
+            <h3>📘 الدرس 14 — Alltag & Gespräche</h3>
+
+            <p>
+                مواقف ومحادثات يومية
+            </p>
+
+        </div>
+
+        <button onclick="openLesson(14)">
+            🔒 ابدأ
+        </button>
+
+    </div>
+
+
+    <!-- الدرس 15 -->
+
+    <div class="lesson locked" id="lesson15">
+
+        <div class="lesson-info">
+
+            <h3>📘 الدرس 15 — مراجعة A2</h3>
+
+            <p>
+                مراجعة شاملة للمستوى
+            </p>
+
+        </div>
+
+        <button onclick="openLesson(15)">
+            🔒 ابدأ
+        </button>
+
+    </div>
+
+
+    <!-- الاختبار النهائي -->
+
+    <div class="test-box">
+
+        <h2>🏆 اختبار A2 النهائي</h2>
+
+        <p id="finalTestText">
+            بعد إنهاء جميع الدروس يمكنك دخول الاختبار النهائي.
+        </p>
+
+        <button
+            onclick="openFinalTest()"
+            id="finalTestButton"
+            class="locked-test">
+            🔒 اختبار A2
+        </button>
+
+    </div>
+
+
+    <a href="index.html" class="back">
+        🔙 الرجوع للصفحة الرئيسية
+    </a>
+
+
+</div>
+
+
+<script>
+
+function updateProgress() {
+
+    let completed = 0;
+
+    /* حساب الدروس المكتملة */
+
+    for (let i = 1; i <= 15; i++) {
+
+        if (
+            localStorage.getItem(
+                "a2Lesson" + i + "Completed"
+            ) === "true"
+        ) {
+
+            completed++;
+
+        }
+
+    }
+
+
+    /* تحديث نسبة التقدم */
+
+    const percentage =
+        Math.round((completed / 15) * 100);
+
+
+    document.getElementById("progressText").innerHTML =
+        completed + " من 15 درس — " + percentage + "%";
+
+
+    document.getElementById("progress").style.width =
+        percentage + "%";
+
+
+    /* تحديث كل درس */
+
+    for (let i = 1; i <= 15; i++) {
+
+        const lesson =
+            document.getElementById("lesson" + i);
+
+        const button =
+            lesson.querySelector("button");
+
+
+        const isCompleted =
+            localStorage.getItem(
+                "a2Lesson" + i + "Completed"
+            ) === "true";
+
+
+        /* الدرس الأول متاح دائمًا */
+
+        if (i === 1) {
+
+            lesson.classList.remove("locked");
+
+            if (isCompleted) {
+
+                lesson.classList.add("completed");
+
+                button.innerHTML =
+                    "✅ مراجعة الدرس";
+
+            } else {
+
+                button.innerHTML =
+                    "ابدأ المراجعة";
+
+            }
+
+            continue;
+        }
+
+
+        /* هل الدرس السابق مكتمل؟ */
+
+        const previousCompleted =
+            localStorage.getItem(
+                "a2Lesson" + (i - 1) + "Completed"
+            ) === "true";
+
+
+        if (previousCompleted) {
+
+            lesson.classList.remove("locked");
+
+            if (isCompleted) {
+
+                lesson.classList.add("completed");
+
+                button.innerHTML =
+                    "✅ مراجعة الدرس";
+
+            } else {
+
+                button.innerHTML =
+                    "ابدأ";
+
+            }
+
+        } else {
+
+            lesson.classList.add("locked");
+
+            button.innerHTML =
+                "🔒 ابدأ";
+
+        }
+
+    }
+
+
+    /* الاختبار النهائي */
+
+    const finalButton =
+        document.getElementById("finalTestButton");
+
+    const finalTestText =
+        document.getElementById("finalTestText");
+
+    const finalTestCompleted =
+        localStorage.getItem("a2FinalTestCompleted") === "true";
+
+    const finalTestScore =
+        localStorage.getItem("a2FinalTestScore");
+
+
+    if (finalTestCompleted) {
+
+        finalButton.classList.remove("locked-test");
+
+        finalButton.innerHTML =
+            "🏆 فتح الاختبار مرة أخرى";
+
+        if (finalTestScore !== null) {
+
+            finalTestText.innerHTML =
+                "✅ تم حل الاختبار النهائي من قبل — درجتك: <strong>" +
+                finalTestScore +
+                " / 15</strong>";
+
+        } else {
+
+            finalTestText.innerHTML =
+                "✅ تم حل الاختبار النهائي من قبل.";
+
+        }
+
+    } else if (completed === 15) {
+
+        finalButton.classList.remove("locked-test");
+
+        finalButton.innerHTML =
+            "🏆 دخول اختبار A2";
+
+        finalTestText.innerHTML =
+            "بعد إنهاء جميع الدروس يمكنك دخول الاختبار النهائي.";
+
+    } else {
+
+        finalButton.classList.add("locked-test");
+
+        finalButton.innerHTML =
+            "🔒 اختبار A2";
+
+        finalTestText.innerHTML =
+            "بعد إنهاء جميع الدروس يمكنك دخول الاختبار النهائي.";
+
+    }
+
+}
+
+
+function openLesson(number) {
+
+    /* الدرس الأول */
+
+    if (number === 1) {
+
+        window.location.href =
+            "Lesson1-A2.html";
+
+        return;
+
+    }
+
+
+    /* التأكد من إنهاء الدرس السابق */
+
+    const previousCompleted =
+        localStorage.getItem(
+            "a2Lesson" + (number - 1) + "Completed"
+        ) === "true";
+
+
+    if (!previousCompleted) {
+
+        alert(
+            "🔒 لازم تكمّل الدرس السابق الأول."
+        );
+
+        return;
+
+    }
+
+
+    /* فتح ملف الدرس الصحيح */
+
+    window.location.href =
+        "Lesson" + number + "-A2.html";
+
+}
+
+
+function openFinalTest() {
+
+    let allCompleted = true;
+
+
+    for (let i = 1; i <= 15; i++) {
+
+        if (
+            localStorage.getItem(
+                "a2Lesson" + i + "Completed"
+            ) !== "true"
+        ) {
+
+            allCompleted = false;
+
+            break;
+
+        }
+
+    }
+
+
+    const finalTestCompleted =
+        localStorage.getItem("a2FinalTestCompleted") === "true";
+
+
+    /* لو الاختبار اتحل قبل كده */
+
+    if (finalTestCompleted) {
+
+        window.location.href =
+            "A2test.html";
+
+        return;
+
+    }
+
+
+    if (!allCompleted) {
+
+        alert(
+            "🔒 لازم تكمّل كل دروس A2 الأول قبل الاختبار النهائي."
+        );
+
+        return;
+
+    }
+
+
+    window.location.href =
+        "A2test.html";
+
+}
+
+
+/* تشغيل النظام */
+
+updateProgress();
+
+</script>
+
+</body>
+
+</html>
